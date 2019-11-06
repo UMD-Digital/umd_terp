@@ -1,0 +1,35 @@
+{
+    "name": "umd_digital/umd_terp",
+    "type": "drupal-theme",
+    "description": "Base Drupal 8 theme for UMD.",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0+",
+    "homepage": "https://github.com/UMD-Digital/umd_terp",
+    "minimum-stability": "dev",
+    "authors": [
+      {
+        "name": "Anthony Neumann",
+        "homepage": "https://www.drupal.org/u/agn507",
+        "role": "Maintainer"
+      },
+      {
+        "name": "Nick Rigby",
+        "homepage": "https://www.drupal.org/u/nickrigby",
+        "role": "Maintainer"
+      },
+      {
+        "name": "Dan Rogers",
+        "homepage": "https://www.drupal.org/u/dan_rogers",
+        "role": "Maintainer"
+      }
+    ],
+    "support": {
+      "issues": "http://idfive.com",
+      "source": "http://idfive.com"
+    },
+    "extra": {
+      "branch-alias": {
+        "8.x-1.x": "1.x-dev"
+      }
+    }
+  }
