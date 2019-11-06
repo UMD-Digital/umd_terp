@@ -1,0 +1,15 @@
+<div class="event card">
+  <div class="event-body">
+    {% if frequency %}
+      <div class="event-frequency">{{frequency}}</div>
+    {% endif %}
+    <div class="event-date">{{date}}</div>
+    <h3 class="event-title">{{title}}</h3>
+    <p class="event-description">{{description}}</p>
+    <div class="event-time-location">
+      <span>{{time}}</span>
+      <span>{{location}}</span>
+    </div>
+    <a href="{{cta.href}}" class="card-cta event-cta {{cta.style}}">{{cta.text}}</a>
+  </div>
+</div>

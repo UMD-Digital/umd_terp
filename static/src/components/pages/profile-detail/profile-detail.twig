@@ -1,0 +1,99 @@
+{% include "@hero" with hero %}
+<div class="container page-content">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      {% include "@breadcrumb" with breadcrumb %}
+      <h1>{{name}}</h1>
+      <a href="" class="back-to-link"><span class="icon icon-chevron-right" aria-hidden="true"></span>Back to People</a>
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-1000-11">
+            <div class="profile">
+              <div class="row">
+                <div class="col-600-4 col-1000-3">
+                  <div class="profile-photo">
+                    <img src="{{photo|path}}" alt="Portrait of {{name}}">
+                  </div>
+                </div>
+                <div class="col-600-8 col-1000-9">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="profile-header">
+                        <h2 class="profile-name">{{name}}</h2>
+                        <div class="profile-title">{{title}}</div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="profile-bio editor-content">{{bio}}</div>
+                    </div>
+                    <div class="col-1000-6">
+                      <h3 class="profile-subheading">Contact</h3>
+                      {% if contact.email %}
+                        <div><a href="mailto:{{contact.email}}">{{contact.email}}</a></div>
+                      {% endif %}
+                      {% if contact.address %}
+                        <div>{{contact.address}}</div>
+                      {% endif %}
+                      {% if contact.phone.number %}
+                        <div class="profile-phone">
+                          <a href="tel:+1{{contact.phone.number}}{% if contact.phone.ext %},{{contact.phone.ext}}{% endif %}">
+                            <span class="font-weight-bold">{{contact.phone.number}}</span>{% if contact.phone.ext %} ext. {{contact.phone.ext}}{% endif %}
+                          </a>
+                        </div>
+                      {% endif %}
+                      {% if contact.website %}
+                        <div>
+                          <a href="{{contact.website}}">Website</a>
+                        </div>
+                      {% endif %}
+                    </div>
+                    <div class="col-1000-6">
+                      <h3 class="profile-subheading">Department Information</h3>
+                      <ul>
+                        {% for department in departments %}
+                          <li><a href="{{department.url}}">{{department.name}}</a></li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                    <div class="col-12">
+                      <h3 class="profile-subheading">Area</h3>
+                      <ul>
+                        {% for area in areas %}
+                          <li><a href="{{area.url}}">{{area.name}}</a></li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                    <div class="col-12">
+                      <h3 class="profile-subheading">Courses</h3>
+                      <ul>
+                        {% for course in courses %}
+                          <li><a href="{{course.url}}">{{course.name}}</a></li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                    <div class="col-12">
+                      <h3 class="profile-subheading">Publications</h3>
+                      {% for pubYear in publicationsByYear %}
+                        <h4 class="profile-publication-year">{{pubYear.year}}</h4>
+                        <ul class="profile-publications">
+                          {% for publication in pubYear.publications %}
+                            <li>
+                              {% for author in publication.authors %}
+                                <a href="{{author.url}}">{{author.name}}</a>,&#32;
+                              {% endfor %}
+                              <span class="font-weight-bold">{{publication.title}}</span>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

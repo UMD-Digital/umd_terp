@@ -1,0 +1,18 @@
+<div class="card">
+  {% if content.field_ut_card_image|field_value %}
+    <div class="card-img-top">
+      <img src="{{ file_url(content.field_ut_card_image[0]['#media'].field_media_image.entity.uri.value | image_style('optimized')) }}" alt="placeholder alt text">
+    </div>
+  {% endif %}
+  <div class="card-body">
+      {% if content.field_ut_card_title|field_value %}
+        <div class="card-title">{{ content.field_ut_card_title|field_value }}</div>
+      {% endif %}
+      {% if content.field_ut_card_text|field_value %}
+        <div class="card-text">{{ content.field_ut_card_text|field_value }}</div>
+      {% endif %}
+      {% if content.field_ut_card_link.0 %}
+        {% include directory ~ '/templates/helpers/link.html.twig' with {'link': content.field_ut_card_link.0, 'classes': 'card-cta fancy-link' } %}
+      {% endif %}
+  </div>
+</div>

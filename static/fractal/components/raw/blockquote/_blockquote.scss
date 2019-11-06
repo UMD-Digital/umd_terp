@@ -1,0 +1,16 @@
+@import "variables";
+
+.blockquote {
+  margin: $blockquote-margin;
+  max-width: $blockquote-max-width;
+  padding: $blockquote-padding;
+  position: relative;
+  &:before,
+  &:after {
+    display: block;
+    height: $blockquote_icon-height;
+    font-size: $blockquote_icon-font-size;
+    font-weight: $blockquote_icon-font-weight;
+    line-height: $blockquote_icon-line-height;
+  }
+}

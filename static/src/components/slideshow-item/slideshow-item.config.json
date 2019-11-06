@@ -1,0 +1,11 @@
+{
+  "context": {
+    "image": {
+      "src": "http://via.placeholder.com/1000x600",
+      "alt": "placeholder alt text",
+      "caption": "Photos by John Smith & Jane Adams"
+    },
+    "title": "Slide Title Lorem",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."
+  }
+}

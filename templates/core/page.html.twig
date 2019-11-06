@@ -1,0 +1,43 @@
+{% include directory ~ '/templates/_includes/global/header.html.twig' %}
+
+<main id="main-content">
+  {% block hero %}
+    {% if hero_image %}
+			<div class="hero">
+				<div class="hero-media">
+					<img src="{{ hero_image }}" alt="Profiles hero alt text">
+				</div>
+			</div>
+    {% endif %}
+  {% endblock %}
+	{% block main %}
+		<div class="container page-content">
+			{{ page.help }}
+			{{ page.highlighted }}
+			<div class="row justify-content-center">
+				{% if page.sidebar|render|striptags|trim is not empty and not hide_sidebar %}
+					{% block sidebar %}
+						<div class="col-800-3 col-1000-2">
+							{{ page.sidebar }}
+						</div>
+					{% endblock %}
+						<div class="col-800-9 col-1000-10">
+							{% if logged_in and page.admin_tabs  %}
+								<div class="compartment admin--tabs">{{ page.admin_tabs }}</div>
+							{% endif %}
+							{{ page.content }}
+						</div>
+				{% else %}
+					<div class="col-12">
+						{% if logged_in and page.admin_tabs  %}
+							<div class="compartment admin--tabs">{{ page.admin_tabs }}</div>
+						{% endif %}
+						{{ page.content }}
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	{% endblock %}
+</main>
+
+{% include directory ~ '/templates/_includes/global/footer.html.twig' %}

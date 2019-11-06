@@ -1,0 +1,20 @@
+/* Accordion
+  ========================================================================== */
+
+$accordion-slide-duration: .5s;
+
+$accordion__label-background: $white;
+$accordion__section-border: 1px solid $gray-500;
+$accordion__label-font-family: $font-family-serif;
+$accordion__label-font-size: rem(26);
+$accordion__label-padding: rem(16) rem(24) rem(24) rem(54);
+$accordion__label-transition: $accordion-slide-duration box-shadow ease-in-out;
+
+$accordion__label--hover-color: $red;
+
+$accordion__label--active-background: $white;
+$accordion__label--active-color: $red;
+
+$accordion__content-background: $gray-100;
+$accordion__content-color: $gray-700;
+$accordion__content-padding: rem(24) rem(24) rem(36);

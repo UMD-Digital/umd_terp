@@ -1,0 +1,54 @@
+.profile-card.card {
+  background-color: $gray-100;
+  border-radius: rem(8);
+  color: $gray-900;
+  font-size: rem(17);
+  padding: rem(42) rem(42) rem(36);
+  margin-bottom: $grid-gutter-width;
+  &:hover {
+    @include media-breakpoint-up(800) {
+      transform: scale(1.05);
+    }
+    .card-body {
+      box-shadow: none;
+    }
+    .card-title {
+      color: inherit;
+    }
+  }
+  .card-img {
+    margin-bottom: rem(10);
+    &:before {
+      padding-bottom: 100%;
+    }
+  }
+  .card-body {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+  .card-title {
+    margin: 0;
+    padding: 0;
+    &:after {
+      display: none;
+    }
+  }
+  .card-cta {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+.profile-card-name {
+  text-transform: uppercase;
+}
+
+.profile-card-phone {
+  color: inherit;
+  font-size: rem(15);
+  font-weight: 700;
+  &:hover {
+    color: $red;
+  }
+}

@@ -1,0 +1,14 @@
+<div class="home-hero home-hero-dark">
+  <div class="max-bound">
+    {% if image %}
+      <div class="home-hero-media">
+        <img src="{{image.src|path}}" alt="{{image.alt}}"/>
+      </div>
+    {% endif %}
+    <div class="home-hero-content">
+      <div class="outer-pad">
+        <div class="editor-content">{{content}}</div>
+      </div>
+    </div>
+  </div>
+</div>

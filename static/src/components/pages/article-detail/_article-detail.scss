@@ -1,0 +1,47 @@
+.article-hero {
+  background-color: $gray-100;
+  padding: rem(42) 0;
+  @include media-breakpoint-up(800) {
+    padding: rem(64) 0;
+  }
+  @include media-breakpoint-up(1200) {
+    padding: rem(100) 0 rem(72);
+  }
+}
+
+.article-content {
+  p {
+    margin: rem(30) 0;
+  }
+  .section {
+    margin: 0;
+  }
+}
+
+.article-byline {
+  color: $gray-700;
+  font-size: rem(16);
+  margin: 0 0 rem(36);
+  > *:not(:last-child) {
+    &:after {
+      content: "•";
+      color: $red;
+      display: inline-block;
+      margin: 0 rem(4) 0 rem(6);
+    }
+  }
+}
+
+.article-author {
+  color: inherit;
+  font-weight: 700;
+  &:hover {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
+.article-categories {
+  border-top: 1px solid #EDEDED;
+  padding-top: rem(42);
+}

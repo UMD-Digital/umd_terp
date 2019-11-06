@@ -1,0 +1,16 @@
+<div id="accordion-{{ paragraph.id() }}" class="accordion">
+  {% for key, item in content.field_ut_accordion_items if key|first != '#' %}
+    <div class="card">
+      <div class="card-header" id="accordion-{{ paragraph.id() }}-header-{{ loop.index }}">
+        <button class="btn" data-toggle="collapse" data-target="#accordion-{{ paragraph.id() }}-content-{{ loop.index }}" aria-expanded="false" aria-controls="accordion-{{ paragraph.id() }}-content-{{ loop.index }}">
+          {{ item['#paragraph'].field_ut_accordion_item_title.value }}
+        </button>
+      </div>
+      <div id="accordion-{{ paragraph.id() }}-content-{{ loop.index }}" class="collapse" aria-labelledby="accordion-{{ paragraph.id() }}-header-{{ loop.index }}">
+        <div class="card-body">
+          {% include directory ~ '/templates/helpers/paragraph-content.html.twig' with { 'item': item, 'content': item['#paragraph'].field_ut_accordion_item_content } %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

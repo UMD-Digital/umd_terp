@@ -1,0 +1,14 @@
+<div class="embed-bg embed-bg-dark">
+  {% if caption %}
+    <figure>
+      <div class="embed-responsive embed-responsive-{{aspect.x}}by{{aspect.y}}">
+        <iframe class="embed-responsive-item" title="{{title}}" src="{{src}}" allowfullscreen></iframe>
+      </div>
+      <figcaption>{{caption}}</figcaption>
+    </figure>
+  {% else %}
+    <div class="embed-responsive embed-responsive-{{aspect.x}}by{{aspect.y}}">
+      <iframe class="embed-responsive-item" title="{{title}}" src="{{src}}" allowfullscreen></iframe>
+    </div>
+  {% endif %}
+</div>

@@ -1,0 +1,17 @@
+<div class="card card-hz">
+  <div class="card-img card-img-top">
+    <img src="{{image.src|path}}" alt="{{image.alt}}">
+    {% if imageText %}
+      <div class="card-img-text">{{imageText}}</div>
+    {% endif %}
+  </div>
+  <div class="card-body">
+    {% if title %}
+      <div class="card-title">{{title}}</div>
+    {% endif %}
+    <p class="card-text">{{content}}</p>
+    {% if cta %}
+      <a href="{{cta.href}}" class="card-cta fancy-link">{{cta.text}}</a>
+    {% endif %}
+  </div>
+</div>

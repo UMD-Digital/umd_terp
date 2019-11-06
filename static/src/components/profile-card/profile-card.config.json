@@ -1,0 +1,9 @@
+{
+  "context": {
+    "photo": "/img/Profiles_Photo_1.jpg",
+    "name": "John Doe",
+    "title": "Professor and Co-Director",
+    "phone": "555-555-5555",
+    "url": "https://google.com"
+  }
+}

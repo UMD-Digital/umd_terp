@@ -1,0 +1,18 @@
+<div class="carousel-item">
+  {% if image.caption %}
+    <figure>
+      <div class="carousel-image">
+        <img src="{{image.src|path}}" alt="{{image.alt}}">
+      </div>
+      <figcaption class="carousel-image-caption">{{image.caption}}</figcaption>
+    </figure>
+  {% else %}
+    <div class="carousel-image">
+      <img src="{{image.src|path}}" alt="{{image.alt}}">
+    </div>
+  {% endif %}
+  <div class="carousel-caption">
+    <div class="carousel-caption-title">{{title}}</div>
+    <div class="carousel-caption-content">{{content}}</div>
+  </div>
+</div>

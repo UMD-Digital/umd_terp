@@ -1,0 +1,100 @@
+.profile {
+  background-color: $gray-100;
+  border-radius: rem(8);
+  color: $gray-700;
+  font-size: rem(17);
+  padding: rem(72) rem(30);
+  a {
+    text-decoration: underline;
+  }
+  li {
+    &:not(:last-child) {
+      margin-bottom: rem(4);
+    }
+  }
+}
+
+.profile-subheading {
+  color: $black;
+  font-family: $font-family-sans-serif;
+  font-size: rem(16);
+  font-weight: 700;
+  line-height: (32 / 16);
+  margin-top: rem(24) !important;
+  margin-bottom: rem(12);
+  padding-bottom: rem(4);
+  position: relative;
+  text-transform: uppercase;
+  &:after {
+    content: "";
+    background-color: $gray-300;
+    display: block;
+    height: 2px;
+    width: 75%;
+    max-width: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.profile-photo {
+  margin: 0 auto rem(16);
+  max-width: 195px;
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.profile-header {
+  border-bottom: 1px solid $gray-300;
+  margin-bottom: rem(20);
+  padding-bottom: rem(15);
+}
+
+.profile-name {
+  color: $black;
+  font-family: $font-family-sans-serif;
+  font-size: rem(22);
+  font-weight: 700;
+  line-height: (32 / 22);
+  margin: 0 0 0 rem(4);
+  text-transform: uppercase;
+}
+
+.profile-bio {
+  margin-bottom: rem(32);
+}
+
+.profile-phone {
+  a {
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+.profile-publication-year {
+  color: $black;
+  font-family: $font-family-sans-serif;
+  font-size: rem(16);
+  font-weight: 700;
+  line-height: (32 / 16);
+  margin: 0 0 rem(4);
+}
+
+.profile-publications {
+  margin-bottom: rem(20);
+}

@@ -1,0 +1,19 @@
+<div class="card-group-bg card-group-bg-dark">
+  <div class="card-group">
+    {% for card in cards %}
+      <div class="card-wrap">
+        {% include "@card" with card %}
+      </div>
+    {% endfor %}
+  </div>
+  <div class="card-group-nav">
+    <button class="card-group-nav-button card-group-nav-prev" aria-label="View previous Card">
+      <span class="sr-only">View previous card</span>
+      <span class="icon icon-chevron-right" aria-hidden="true"></span>
+    </button>
+    <button class="card-group-nav-button card-group-nav-next" aria-label="View next Card">
+      <span class="sr-only">View next card</span>
+      <span class="icon icon-chevron-right" aria-hidden="true"></span>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div id="{{id}}" class="accordion">
+  {% for item in items %}
+    {% include "@accordion-item" with {
+      "title": item.title,
+      "content": item.content,
+      "accordionId": id,
+      "headerId": id ~ "-header-" ~ loop.index,
+      "contentId": id ~ "-content-" ~ loop.index
+    } %}
+  {% endfor %}
+</div>

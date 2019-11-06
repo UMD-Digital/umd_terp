@@ -1,0 +1,25 @@
+{
+  "context": {
+    "quote": "Lorem Ipsum Dolor Sit Amet duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore",
+    "photo": {
+      "src": "http://via.placeholder.com/300x300",
+      "alt": "Portrait of Firstname Lastname ’19"
+    },
+    "author": "Firstname Lastname ’19",
+    "title": "Title goes here"
+  },
+  "variants": [
+    {
+      "name": "dark",
+      "context": {
+        "quote": "Lorem Ipsum Dolor Sit Amet duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore",
+        "photo": {
+          "src": "http://via.placeholder.com/300x300",
+          "alt": "Portrait of Firstname Lastname ’19"
+        },
+        "author": "Firstname Lastname ’19",
+        "title": "Title goes here"
+      }
+    }
+  ]
+}

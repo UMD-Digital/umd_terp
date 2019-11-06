@@ -1,0 +1,27 @@
+{%
+  set header_classes = [
+    'site-header',
+    umd_terp_header_light ? 'site-header-light',
+  ]
+%}
+<header class="{{ header_classes|join(' ') }}">
+  <div class="max-bound">
+    <nav class="navbar navbar-expand-800" aria-label="Main">
+      <a class="navbar-brand" href="#">
+        <img src="{{ assets_path }}/img/Placeholder_Logo_Light.svg" alt="{{ site_name }} logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-offcanvas" aria-controls="navbar-offcanvas" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-hamburger-icon" role="presentation">
+          <span role="presentation"></span>
+          <span role="presentation"></span>
+          <span role="presentation"></span>
+          <span role="presentation"></span>
+        </span>
+        <span class="sr-only"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-offcanvas">
+        {{ drupal_menu('header', 1, 2, TRUE) }}
+      </div>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,35 @@
+{
+  "context": {
+    "content": "<h1>Heading 1 lorem ipsum dolor sit </h1><h2>Subhead style</h2><p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Link text integer.</p><p><a href=\"\" class=\"btn btn-primary\">Button</a></p>",
+    "image": null
+  },
+  "variants": [
+    {
+      "name": "dark",
+      "context": {
+        "content": "<h1>Heading 1 lorem ipsum dolor sit </h1><h2>Subhead style</h2><p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Link text integer.</p><p><a href=\"\" class=\"btn btn-primary\">Button</a></p>",
+        "image": null
+      }
+    },
+    {
+      "name": "img",
+      "context": {
+        "content": "<h1>Heading 1 lorem ipsum dolor sit </h1><h2>Subhead style</h2><p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Link text integer.</p><p><a href=\"\" class=\"btn btn-primary\">Button</a></p>",
+        "image": {
+          "src": "/img/Home_Hero.jpg",
+          "alt": ""
+        }
+      }
+    },
+    {
+      "name": "bg",
+      "context": {
+        "content": "<h1>Heading 1 lorem ipsum dolor sit </h1><h2>Subhead style</h2><p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Link text integer.</p><p><a href=\"\" class=\"btn btn-primary\">Button</a></p>",
+        "image": {
+          "src": "/img/Home_Hero.jpg",
+          "alt": ""
+        }
+      }
+    }
+  ]
+}

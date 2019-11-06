@@ -1,0 +1,18 @@
+<table class="table table-stacked table-striped table-dark" data-tablesaw-mode="stack">
+  <thead>
+    <tr>
+      {% for header in rows[0] %}
+        <th>{{header}}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in 1..(rows.length - 1) %}
+      <tr>
+        {% for column in rows[i] %}
+          <td>{{column}}</td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

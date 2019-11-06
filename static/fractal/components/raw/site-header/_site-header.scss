@@ -1,0 +1,204 @@
+.site-header {
+  background-color: $gray-900;
+  &-light {
+    background-color: $white;
+  }
+}
+
+.navbar {
+  @include media-breakpoint-up(800) {
+    padding: 0 rem(24);
+  }
+  @include media-breakpoint-up(1200) {
+    padding: 0 rem(64);
+  }
+  a {
+    color: $white;
+    display: block;
+    transition: .25s color ease-in-out;
+    &:hover {
+      color: $yellow;
+    }
+    .site-header-light & {
+      color: $gray-900;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+  .navbar-brand {
+    @include media-breakpoint-up(800) {
+      height: rem(58);
+    }
+    img {
+      display: block;
+      height: 100%;
+      width: auto;
+    }
+  }
+  .navbar-collapse {
+    @include media-breakpoint-down(799) {
+      margin-top: $navbar-padding-y;
+      margin-right: -$navbar-padding-x;
+      margin-bottom: -$navbar-padding-y;
+      margin-left: -$navbar-padding-x;
+    }
+    @include media-breakpoint-up(800) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+  .navbar-nav {
+    @include media-breakpoint-up(800) {
+      margin-left: auto;
+    }
+    > li {
+      font-size: rem(19);
+      > a {
+        padding: rem(24) rem(32);
+        @include media-breakpoint-down(799) {
+          background-color: $gray-700;
+          border-bottom: 1px solid $gray-600;
+        }
+        padding: rem(28) rem(18) rem(30);
+        .site-header-light & {
+          @include media-breakpoint-down(799) {
+            background-color: $gray-100;
+            border-bottom: 1px solid $gray-300;
+          }
+        }
+      }
+    }
+    .dropdown-menu {
+      border-bottom: 1px solid $gray-600;
+      .site-header-light & {
+        border-bottom: 1px solid $gray-300;
+      }
+      li {
+        font-size: rem(17);
+        letter-spacing: rem(-.25);
+      }
+      a {
+        background-color: $gray-900;
+        padding: rem(14) rem(50);
+        @include media-breakpoint-up(800) {
+          padding: rem(14) rem(16);
+        }
+        .site-header-light & {
+          background-color: $gray-200;
+        }
+      }
+    }
+  }
+  .dropdown-toggle {
+    position: relative;
+    &:after {
+      display: none;
+    }
+    .icon {
+      font-size: rem(12);
+      position: absolute;
+      top: 50%;
+      right: rem(20);
+      transform: translate3d(0, -50%, 0);
+      @include media-breakpoint-up(800) {
+        display: none;
+      }
+    }
+    &[aria-expanded="true"] {
+      .icon {
+        transform: translate3d(0, -50%, 0) rotate(180deg);
+      }
+    }
+  }
+  .navbar-secondary {
+    background-color: $red;
+    padding: rem(30) rem(30) rem(18);
+    @include media-breakpoint-up(800) {
+      padding: rem(10) rem(24);
+    }
+    .max-bound {
+      display: flex;
+    }
+    ul {
+      margin-right: auto;
+      margin-left: auto;
+      @include media-breakpoint-up(800) {
+        margin-right: 0;
+      }
+    }
+    li {
+      display: inline-block;
+      font-size: rem(13);
+      font-weight: 700;
+      line-height: (26 / 13);
+      text-transform: uppercase;
+      @include media-breakpoint-down(799) {
+        margin-bottom: rem(12);
+      }
+      &:not(:first-child) {
+        margin-left: rem(26);
+      }
+    }
+  }
+}
+
+.navbar-toggler {
+  height: rem(44);
+  width: rem(44);
+  position: relative;
+}
+
+.navbar-hamburger-icon {
+  display: inline-block;
+  height: 17px;
+  width: 30px;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  span[role="presentation"] {
+    background-color: $white;
+    display: block;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform-origin: center;
+    &:nth-child(1),
+    &:nth-child(4) {
+      transition: .25s opacity ease-in-out;
+      transform: translate3d(-50%, 0, 0);
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      top: 50%;
+      transition: .25s transform ease-in-out;
+      transform: translate3d(-50%, -50%, 0);
+    }
+    &:nth-child(1) {
+      top: 0;
+    }
+    &:nth-child(4) {
+      bottom: 0;
+    }
+    .site-header-light & {
+      background-color: $gray-900;
+    }
+  }
+  .navbar-toggler[aria-expanded="true"] & {
+    span[role="presentation"] {
+      &:nth-child(1),
+      &:nth-child(4) {
+        opacity: 0;
+      }
+      &:nth-child(2) {
+        transform: translate3d(-50%, -50%, 0) rotate(45deg);
+      }
+      &:nth-child(3) {
+        transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+      }
+    }
+  }
+}

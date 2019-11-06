@@ -1,0 +1,36 @@
+@import "variables";
+
+.image-bg {
+  padding: rem(15);
+  @include media-breakpoint-up(800) {
+    padding: rem(40) rem(36);
+  }
+  figure {
+    margin-bottom: 0;
+  }
+  &-dark {
+    background-color: $gray-900;
+    figcaption {
+      color: #fff;
+    }
+  }
+}
+
+.image-media {
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    padding-bottom: $image__aspect-ratio;
+  }
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

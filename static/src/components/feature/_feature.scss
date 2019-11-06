@@ -1,0 +1,116 @@
+.feature {
+  display: flex;
+  position: relative;
+  .page-section .outer-pad & {
+    margin-top: -$outer-pad-y;
+    margin-right: -$outer-pad-x;
+    margin-bottom: -$outer-pad-y;
+    margin-left: -$outer-pad-x;
+  }
+  &:before {
+    content: "";
+    background-color: inherit;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    z-index: 0;
+  }
+  &.bg-light-gray {
+    color: $black;
+  }
+  &.bg-dark-gray {
+    color: $white;
+  }
+  &.bg-red {
+    color: $white;
+  }
+  &.bg-dark-red {
+    color: $white;
+  }
+  &.bg-yellow {
+    color: $black;
+  }
+  &.bg-white {
+    color: $black;
+  }
+  &.bg-black {
+    color: $white;
+  }
+}
+
+.feature-media {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  @include media-breakpoint-up(800) {
+    left: 0;
+    width: 50%;
+  }
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .feature-reverse & {
+    @include media-breakpoint-up(800) {
+      right: 0;
+      left: auto;
+    }
+  }
+  .feature-bg & {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  .page-section .feature-bg & {
+    @include media-breakpoint-up(1440) {
+      right: calc((100vw - 1440px) / -2);
+      left: calc((100vw - 1440px) / -2);
+      width: 100vw;
+    }
+  }
+}
+
+.feature-content {
+  @include media-breakpoint-up(800) {
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-left: auto;
+    position: relative;
+    width: 50%;
+    z-index: 2;
+  }
+  .feature-reverse & {
+    margin-left: 0;
+  }
+  .feature-bg & {
+    @include media-breakpoint-up(800) {
+      max-width: 555px;
+    }
+    .outer-pad {
+      background-color: $white;
+      color: $black;
+    }
+  }
+  .page-section .outer-pad & {
+    @include media-breakpoint-up(800) {
+      align-items: center;
+      display: flex;
+      min-height: 43.75vw; // 630px
+    }
+    @include media-breakpoint-up(1440) {
+      min-height: 630px;
+    }
+  }
+}

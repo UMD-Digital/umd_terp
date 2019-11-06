@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Theme override to display a UMD Terp Basic Page node.
+ */
+#}
+<div class="editor-content">
+  <h1>{{ node.title.value }}</h1>
+  {% if content.body|field_value %}
+    {{ content.body|field_value }}
+  {% endif %}
+</div>
+
+{{ content.field_umdt_ct_sections }}

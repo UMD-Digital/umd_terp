@@ -1,0 +1,10 @@
+{% for body_key, body_item in content %}
+  {# Use the same render array as item and set the '#paragraph'. #}
+  {% set section_body = item %}
+  {# Load the entity for the current translation #}
+  {% set section_body = section_body|merge({'#paragraph': content[body_key].entity}) %}
+  {# Remove the cache keys so it doesn't repeat the first value. #}
+  {% set section_body = section_body|merge({'#cache': {}}) %}
+  {# Print the compiled section body. #}
+  {{ section_body }}
+{% endfor %}

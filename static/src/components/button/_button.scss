@@ -1,0 +1,26 @@
+.btn {
+  background-color: transparent;
+  border-color: $gray-400;
+  color: #777474;
+  cursor: pointer;
+  &:hover {
+    background-color: $white;
+    border-color: $yellow;
+    color: $black;
+  }
+  &:not(.btn-link) {
+    letter-spacing: rem(1.04);
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .33);
+      font-weight: 700;
+    }
+  }
+  &-primary {
+    @extend %btn-red;
+  }
+  &-secondary {
+    @extend %btn-yellow;
+  }
+}

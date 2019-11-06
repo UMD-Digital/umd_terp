@@ -1,0 +1,194 @@
+
+/* Base
+  ========================================================================== */
+
+$body-color: #000000;
+$font-size-base: 1rem; // 17px (this needs to be specified in rem for core bootstrap functions to work)
+$rem-base: 18px;
+$line-height-lg: (30 / 18);
+$line-height-sm: 1.2;
+$max-bound-width: 1440px;
+$outer-pad-y: 84px;
+$outer-pad-x: 120px;
+$headings-margin-bottom: 24px;
+
+/* Colors
+  ==========================================================================*/
+
+$red: #E21833;
+$dark-red: #9F001C;
+$yellow: #FFD520;
+$gray-100: #F7F7F7;
+$gray-200: #EAEAEA;
+$gray-300: #D8D8D8;
+$gray-400: #C8C8C8;
+$gray-500: #979797;
+$gray-600: #666666;
+$gray-700: #4A4A4A;
+$gray-800: #333333;
+$gray-900: #222222;
+$gray-1000: #181818;
+$white: #FFFFFF;
+$black: #000000;
+
+$grays: (
+  "1000": $gray-1000
+);
+
+$colors: (
+  "gray-light": $gray-100,
+  "gray-dark": $gray-900,
+  "red": $red,
+  "dark-red": $dark-red,
+  "yellow": $yellow
+);
+
+$theme-colors: (
+  "light-gray": $gray-100,
+  "dark-gray": $gray-900,
+  "red": $red,
+  "dark-red": $dark-red,
+  "yellow": $yellow,
+  "white": $white,
+  "black": $black
+);
+
+/* Typography
+  ========================================================================== */
+
+$font-family-sans-serif: 'Source Sans Pro', sans-serif;
+$font-family-serif: 'Crimson Text', serif;
+
+$link-color: $red;
+$link-hover-color: $dark-red;
+
+$hr-opacity: 1;
+
+/* Lists
+  ========================================================================== */
+
+$list-margin: 2rem 0;
+$list-padding: 0 0 0 2rem;
+
+/* Layout
+  ========================================================================== */
+
+$grid-breakpoints: (
+  0: 0,
+  399: 399px,
+  400: 400px,
+  599: 599px,
+  600: 600px,
+  799: 799px,
+  800: 800px,
+  999: 999px,
+  1000: 1000px,
+  1199: 1199px,
+  1200: 1200px,
+  1439: 1439px,
+  1440: 1440px
+);
+
+$container-max-widths: (
+  400: 1240px
+);
+
+/* Breadcrumbs
+  ========================================================================== */
+
+$breadcrumb-font-size: .7222rem;
+$breadcrumb-padding-y: 0;
+$breadcrumb-padding-x: 0;
+$breadcrumb-item-padding-x: 0;
+$breadcrumb-margin-bottom: 0;
+$breadcrumb-bg: transparent;
+$breadcrumb-divider: quote(">");
+$breadcrumb-border-radius: 0;
+
+/* Button
+  ========================================================================== */
+
+$btn-border-radius: 0;
+$btn-border-width: 2px;
+$btn-font-size: .889rem;
+$btn-line-height: (20 / 16);
+$btn-padding-x: 3.1rem;
+$btn-padding-y: .889rem;
+$btn-transition:
+  .3s background-color ease-in-out,
+  .3s border-color ease-in-out,
+  .3s box-shadow ease-in-out,
+  .3s color ease-in-out,
+  .3s font-weight ease-in-out;
+
+
+/* Table
+  ========================================================================== */
+
+$table-cell-padding: .667rem 1rem;
+$table-cell-vertical-align: middle;
+$table-bg: #fff;
+$table-accent-bg: #F8F8F8;
+$table-border-width: 0;
+$table-dark-bg: $gray-900;
+$table-dark-accent-bg: $gray-800;
+$table-striped-order: even;
+
+/* Carousel
+  ========================================================================== */
+
+$carousel-control-width: auto;
+$carousel-control-opacity: 1;
+$carousel-control-hover-opacity: 1;
+$carousel-control-prev-icon-bg: none;
+$carousel-control-next-icon-bg: none;
+
+/* Card
+  ========================================================================== */
+
+$card-border-width: 1px;
+$card-border-radius: 0;
+$card-border-color: $gray-500;
+$card__image-ar: 66.667%;
+
+/* Embed
+  ========================================================================== */
+$embed-responsive-aspect-ratios: (
+  "2by1": (
+    x: 2,
+    y: 1
+  )
+);
+
+/* Tab Panel
+  ========================================================================== */
+$nav-tabs-border-width: 7px;
+$nav-tabs-border-color: $gray-300;
+$nav-tabs-link-hover-border-color: transparent transparent $gray-500;
+$nav-tabs-link-active-border-color: transparent transparent $red;
+$nav-tabs-link-active-color: $red;
+$nav-tabs-border-radius: 0;
+
+/* Navbar
+  ========================================================================== */
+$navbar-padding-x: 1rem;
+$navbar-padding-y: .5rem;
+
+$navbar-brand-height: 2.3125rem;
+$navbar-brand-padding-y: 0;
+
+$navbar-toggler-padding-x: 0;
+$navbar-toggler-padding-y: 0;
+$navbar-toggler-border-radius: 0;
+
+/* Dropdown
+  ========================================================================== */
+$dropdown-bg: $gray-900;
+$dropdown-padding-y: 0;
+$dropdown-border-radius: 0;
+$dropdown-border-width: 0;
+$dropdown-box-shadow: none;
+$dropdown-link-hover-bg: $gray-900;
+$dropdown-divider-margin-y: 0;
+$dropdown-inner-border-radius: 0;
+$dropdown-spacer: 0;

@@ -1,0 +1,12 @@
+{
+  "context": {
+    "header": {
+      "schoolName": "Placeholder College",
+      "logo": "/img/Placeholder_Logo_Light.svg"
+    },
+    "footer": {
+      "schoolName": "Placeholder College",
+      "logo": "/img/Placeholder_Logo_Dark.svg"
+    }
+  }
+}

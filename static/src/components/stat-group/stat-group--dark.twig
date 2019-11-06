@@ -1,0 +1,19 @@
+<div class="stat-group-bg stat-group-bg-dark">
+  <div class="stat-group">
+    {% for stat in stats %}
+      <div class="stat-wrap">
+        {% include "@stat" with stat %}
+      </div>
+    {% endfor %}
+  </div>
+  <div class="stat-group-nav">
+    <button class="stat-group-nav-button stat-group-nav-prev" aria-label="View previous stat">
+      <span class="sr-only">View previous stat</span>
+      <span class="icon icon-chevron-right" aria-hidden="true"></span>
+    </button>
+    <button class="stat-group-nav-button stat-group-nav-next" aria-label="View next stat">
+      <span class="sr-only">View next stat</span>
+      <span class="icon icon-chevron-right" aria-hidden="true"></span>
+    </button>
+  </div>
+</div>

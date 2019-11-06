@@ -1,0 +1,71 @@
+{
+  "context": {
+    "pager": true,
+    "items": [
+      {
+        "image": {
+          "src": "http://via.placeholder.com/1000x600",
+          "alt": "placeholder alt text",
+          "caption": "Photos by John Smith & Jane Adams"
+        },
+        "title": "Slide Title Lorem 1",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."
+      },
+      {
+        "image": {
+          "src": "http://via.placeholder.com/1000x600",
+          "alt": "placeholder alt text",
+          "caption": "Photos by John Smith & Jane Adams"
+        },
+        "title": "Slide Title Lorem Ipsum 2",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."
+      },
+      {
+        "image": {
+          "src": "http://via.placeholder.com/1000x600",
+          "alt": "placeholder alt text",
+          "caption": "Photos by John Smith & Jane Adams"
+        },
+        "title": "Slide Title Dolor 3",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."
+      }
+    ]
+  },
+  "variants": [
+    {
+      "name": "dark",
+      "context": {
+        "pager": true,
+        "items": [
+          {
+            "image": {
+              "src": "http://via.placeholder.com/1000x600",
+              "alt": "placeholder alt text",
+              "caption": "Photos by John Smith & Jane Adams"
+            },
+            "title": "Slide Title Lorem 1",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."
+          },
+          {
+            "image": {
+              "src": "http://via.placeholder.com/1000x600",
+              "alt": "placeholder alt text",
+              "caption": "Photos by John Smith & Jane Adams"
+            },
+            "title": "Slide Title Lorem Ipsum 2",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."
+          },
+          {
+            "image": {
+              "src": "http://via.placeholder.com/1000x600",
+              "alt": "placeholder alt text",
+              "caption": "Photos by John Smith & Jane Adams"
+            },
+            "title": "Slide Title Dolor 3",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."
+          }
+        ]
+      }
+    }
+  ]
+}

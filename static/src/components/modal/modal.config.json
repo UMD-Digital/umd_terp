@@ -1,0 +1,8 @@
+{
+  "context": {
+    "id": "exampleModal",
+    "title": "Modal title",
+    "content": "<p>Modal body text goes here.</p>",
+    "fade": true
+  }
+}

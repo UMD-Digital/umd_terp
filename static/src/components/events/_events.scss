@@ -1,0 +1,66 @@
+.events-bg {
+  padding: rem(60) rem(24) rem(72);
+  @include media-breakpoint-up(800) {
+    margin: 0 auto;
+    max-width: rem(1010);
+    padding: rem(40) rem(32) rem(50);
+  }
+  &-dark {
+    background-color: $gray-900;
+    color: $white;
+    .event.card {
+      @extend %event-dark;
+    }
+    .events-calendar-cta {
+      color: $yellow;
+      &:hover {
+        border-color: $yellow;
+        color: $yellow;
+      }
+    }
+  }
+  .page-section .outer-pad & {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.events-heading {
+  margin: 0 0 rem(28);
+}
+
+.events {
+  @include media-breakpoint-up(800) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: rem(-25);
+  }
+}
+
+.event-wrap {
+  display: flex;
+  margin-bottom: rem(25);
+  width: 100%;
+  @include media-breakpoint-up(800) {
+    flex: 0 0 50%;
+    padding-left: rem(25);
+  }
+  @include media-breakpoint-up(1200) {
+    flex: 0 0 33.333%;
+  }
+  &:first-child:nth-last-child(2),
+  &:last-child:nth-child(2) {
+    @include media-breakpoint-up(800) {
+      flex: 0 0 50%;
+    }
+  }
+  .event.card {
+    flex: 1;
+  }
+}
+
+.events-calendar-cta {
+  display: inline-block;
+  margin-top: rem(15);
+}

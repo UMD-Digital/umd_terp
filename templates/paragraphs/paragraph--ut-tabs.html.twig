@@ -1,0 +1,16 @@
+<ul class="nav nav-tabs" role="tablist">
+  {% for key, item in content.field_ut_tabs_items if key|first != '#' %}
+    <li class="nav-item">
+      <a class="nav-link{% if loop.first %} active{% endif %}" id="tabs-{{ paragraph.id() }}-tab-{{ loop.index }}" data-toggle="tab" href="#tabs-{{ paragraph.id() }}-pane-{{ loop.index }}" role="tab" aria-controls="tabs-{{ paragraph.id() }}-pane-{{ loop.index }}"{% if loop.first %} aria-selected="true"{% endif %}>
+        {{ item['#paragraph'].field_ut_tabs_item_title.value }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+<div class="tab-content editor-content">
+  {% for key, item in content.field_ut_tabs_items if key|first != '#' %}
+    <div class="tab-pane fade{% if loop.first %} show active{% endif %}" id="tabs-{{ paragraph.id() }}-pane-{{ loop.index }}" role="tabpanel" aria-labelledby="tabs-{{ paragraph.id() }}-tab-{{ loop.index }}">
+      {% include directory ~ '/templates/helpers/paragraph-content.html.twig' with { 'item': item, 'content': item['#paragraph'].field_ut_tabs_item_content } %}
+    </div>
+  {% endfor %}
+</div>

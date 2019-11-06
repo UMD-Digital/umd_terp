@@ -1,0 +1,73 @@
+.lightbox {
+  background-color: rgba($gray-900, .9);
+  display: flex;
+  justify-content: center;
+  padding: rem(130) 0 rem(30);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: .5s opacity ease-in-out,
+    .5s visibility ease-in-out;
+  z-index: 100;
+  &[aria-hidden="true"] {
+    opacity: 0;
+    visibility: hidden;
+  }
+  @include media-breakpoint-up(800) {
+    padding-bottom: rem(90);
+  }
+}
+
+.lightbox-inner {
+  flex: 1;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.lightbox-content {
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 0 rem(30);
+  position: relative;
+  @include media-breakpoint-up(800) {
+    padding: 0 rem(90);
+  }
+}
+
+.lightbox-close-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  height: rem(44);
+  width: rem(44);
+  padding: 0;
+  position: absolute;
+  top: rem(20);
+  right: rem(20);
+  @include media-breakpoint-up(800) {
+    right: rem(32);
+    top: rem(28);
+  }
+  &:before,
+  &:after {
+    content: "";
+    background-color: $white;
+    display: block;
+    height: rem(2.5);
+    width: rem(36);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  &:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}

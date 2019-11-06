@@ -1,0 +1,155 @@
+{
+  "preview": "@page-preview",
+  "context": {
+    "category": "Category Name",
+    "title": "Long Article Title - Lorem Ipsum Dolor Sit Amet Lorem Ipsum",
+    "subhead": "Heading 4 - Subhead style for Article Thendrerit id, lorem. Maecenas nec odio et ante.",
+    "author": "John Smith",
+    "publishDate": "July 28, 2019",
+    "featuredImage": {
+      "media": {
+        "src": "http://via.placeholder.com/1920x1080",
+        "alt": "placeholder alt"
+      },
+      "caption": "Photos by John Smith & Jane Adams"
+    },
+    "cardGroup": {
+      "heading": "Heading 3 - Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante.",
+      "cards": [
+        {
+          "image": {
+            "src": "/img/KS_Carousel_1.jpg",
+            "alt": "placeholder alt text"
+          },
+          "imageText": "",
+          "title": "Card title 1",
+          "content": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "cta": {
+            "text": "Learn More",
+            "href": "https://google.com"
+          }
+        },
+        {
+          "image": {
+            "src": "/img/KS_Carousel_2.jpg",
+            "alt": "placeholder alt text"
+          },
+          "imageText": "",
+          "title": "Card title 2",
+          "content": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "cta": {
+            "text": "Learn More",
+            "href": "https://google.com"
+          }
+        },
+        {
+          "image": {
+            "src": "/img/KS_Carousel_3.jpg",
+            "alt": "placeholder alt text"
+          },
+          "imageText": "",
+          "title": "Card title 3",
+          "content": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "cta": {
+            "text": "Learn More",
+            "href": "https://google.com"
+          }
+        }
+      ]
+    },
+    "slideshow": {
+      "pager": true,
+      "items": [
+        {
+          "image": {
+            "src": "/img/Article_Slide_1.jpg",
+            "alt": "placeholder alt text",
+            "caption": "Photos by John Smith & Jane Adams"
+          },
+          "title": "Slide Title Lorem 1",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."
+        },
+        {
+          "image": {
+            "src": "http://via.placeholder.com/1000x600",
+            "alt": "placeholder alt text",
+            "caption": "Photos by John Smith & Jane Adams"
+          },
+          "title": "Slide Title Lorem Ipsum 2",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."
+        },
+        {
+          "image": {
+            "src": "http://via.placeholder.com/1000x600",
+            "alt": "placeholder alt text",
+            "caption": "Photos by John Smith & Jane Adams"
+          },
+          "title": "Slide Title Dolor 3",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."
+        }
+      ]
+    },
+    "videoEmbed": {
+      "src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "title": "Rick Astley - Never Gonna Give You Up (Video)",
+      "aspect": {
+        "x": 2,
+        "y": 1
+      },
+      "caption": "Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque. Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel rhoncus nibh, ut tincidunt turpis."
+    },
+    "relatedStories": {
+      "heading": "Related Stories",
+      "cards": [
+        {
+          "image": {
+            "src": "/img/KS_Carousel_1.jpg",
+            "alt": "placeholder alt text"
+          },
+          "imageText": "May 28, 2019",
+          "title": "Story title 1",
+          "content": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "cta": {
+            "text": "Read More",
+            "href": "https://google.com"
+          }
+        },
+        {
+          "image": {
+            "src": "/img/KS_Carousel_2.jpg",
+            "alt": "placeholder alt text"
+          },
+          "imageText": "May 30, 2019",
+          "title": "Story title 2",
+          "content": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "cta": {
+            "text": "Read More",
+            "href": "https://google.com"
+          }
+        },
+        {
+          "image": {
+            "src": "/img/KS_Carousel_3.jpg",
+            "alt": "placeholder alt text"
+          },
+          "imageText": "May 30, 2019",
+          "title": "Story title 3",
+          "content": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "cta": {
+            "text": "Read More",
+            "href": "https://google.com"
+          }
+        }
+      ]
+    },
+    "taglist": {
+      "heading": "Categories",
+      "tags": [
+        "Lorem Category",
+        "Lorem Category",
+        "Lorem Category",
+        "Lorem Category"
+      ]
+    }
+  }
+}

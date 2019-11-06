@@ -1,0 +1,16 @@
+core: 8.x
+type: theme
+name: UMD Terp
+description: 'UMD Terp (umd_terp), is a drupal 8 base theme suitable for all UMD projects.'
+package: UMD.EDU
+
+libraries:
+  - umd_terp/global
+regions:
+   main_menu: 'Main Menu'
+   admin_tabs: 'Admin Tabs'
+   help: 'Help'
+   breadcrumbs: 'Breadcrumbs'
+   sidebar: 'Sidebar'
+   content: 'Content'
+   footer_menu: 'Footer Menu'

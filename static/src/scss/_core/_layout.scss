@@ -1,0 +1,46 @@
+.max-bound {
+  width: 100%;
+  max-width: $max-bound-width;
+  margin: 0 auto;
+}
+
+.page-section {
+  background-color: $white;
+  color: $black;
+  &.bg-red {
+    color: $white;
+  }
+}
+
+.section {
+  margin: rem(72) 0;
+  @include media-breakpoint-up(800) {
+    margin: rem(90) 0;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.outer-pad {
+  padding: $outer-pad-y $outer-pad-x;
+}
+
+.page-content {
+  padding: rem(20) rem(36) 0;
+  @include media-breakpoint-up(800) {
+    padding: rem(45) rem(36) rem(80);
+  }
+}
+
+.article-hero-content {
+  padding-right: rem(36);
+  padding-left: rem(36);
+}
+
+.editor-content {
+  @include clearfix();
+}

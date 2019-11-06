@@ -1,0 +1,24 @@
+<ul class="feed">
+  {% for item in items %}
+    <li>
+      <div class="feed-item">
+        <div class="row no-gutters align-items-start">
+          <div class="col-12 col-600-4 col-800-12 col-1000-4">
+            <div class="feed-item-img">
+              <img src="{{item.img.src|path}}" alt="{{item.img.alt}}">
+            </div>
+          </div>
+          <div class="col">
+            <div class="feed-item-body">
+              <div class="feed-item-date">{{item.date}}</div>
+              <h2 class="feed-item-title">
+                <a href="{{item.url}}">{{item.title}}</a>
+              </h2>
+              <p class="feed-item-description">{{item.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

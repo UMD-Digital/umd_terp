@@ -1,0 +1,17 @@
+{
+  "context": {
+    "id": "accordion-0",
+    "first-open": true,
+    "open-multiple": true,
+    "items": [
+      {
+        "title": "Accordion 1",
+        "content": "<p>This is the content area of accordion 1</p>"
+      },
+      {
+        "title": "Accordion 2",
+        "content": "<p>This is the content area of accordion 2</p>"
+      }
+    ]
+  }
+}

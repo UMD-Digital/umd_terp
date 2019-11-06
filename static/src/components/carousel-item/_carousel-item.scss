@@ -1,0 +1,117 @@
+.carousel-item {
+  margin: 0 rem(7.5);
+  position: relative;
+  width: calc(70% - #{rem(15)});
+  @include media-breakpoint-up(800) {
+    width: calc(33.333% - #{rem(15)});
+  }
+  &:hover,
+  &:focus {
+    .carousel-caption {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  .lightbox-carousel & {
+    margin: 0;
+    width: 100%;
+  }
+  figure {
+    margin: 0;
+  }
+}
+
+.carousel-image {
+  position: relative;
+  .lightbox-carousel & {
+    margin-bottom: rem(95);
+    @include media-breakpoint-up(800) {
+      margin-bottom: 0;
+    }
+    &:before {
+      padding-bottom: 50%;
+    }
+  }
+  &:before {
+    content: "";
+    display: block;
+    padding-bottom: 66.667%;
+  }
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.carousel-image-caption {
+  .carousel-bg & {
+    @include sr-only();
+  }
+  .lightbox-carousel & {
+    color: $white;
+    margin: 0 auto;
+    max-width: 60%;
+    text-align: center;
+    @include media-breakpoint-up(800) {
+      max-width: none;
+      text-align: right;
+    }
+  }
+}
+
+.carousel-caption {
+  .carousel-bg & {
+    background-color: rgba($gray-800, .85);
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: .25s opacity ease-in-out,
+      .25s visibility ease-in-out;
+    visibility: hidden;
+  }
+}
+
+.carousel-caption-title {
+  color: $white;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  .carousel-bg & {
+    font-size: rem(16);
+    letter-spacing: rem(.35);
+    line-height: (18 / 16);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .lightbox-carousel & {
+    font-size: rem(20);
+    line-height: (22 / 20);
+    letter-spacing: rem(.45);
+    margin-bottom: rem(8);
+    text-align: left;
+  }
+}
+
+.carousel-caption-content {
+  .carousel-bg & {
+    @include sr-only();
+  }
+  .lightbox-carousel & {
+    color: $white;
+  }
+}

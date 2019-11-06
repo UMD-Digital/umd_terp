@@ -1,0 +1,32 @@
+.stat {
+  text-align: center;
+  &-dark {
+    @extend %stat-dark;
+  }
+}
+
+.stat-number {
+  color: $red;
+  font-size: rem(80);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: rem(27);
+  padding-bottom: rem(27);
+  position: relative;
+  &:after {
+    content: "";
+    background-color: $gray-300;
+    display: block;
+    height: rem(2);
+    width: rem(60);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.stat-text {
+  color: $gray-700;
+  font-size: rem(17);
+}

@@ -1,0 +1,60 @@
+.stat-group-bg {
+  background: $white;
+  padding: rem(25) rem(58) rem(105);
+  position: relative;
+  @include media-breakpoint-up(800) {
+    padding: rem(70) rem(30) rem(40);
+  }
+  &-dark {
+    background-color: $gray-900;
+    .stat {
+      @extend %stat-dark;
+    }
+  }
+  .page-section .outer-pad & {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .flickity-page-dots {
+    bottom: rem(-44);
+    transform: translateY(100%);
+  }
+}
+
+.stat-group {
+  @include media-breakpoint-up(800) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -$grid-gutter-width;
+  }
+  &:after {
+    content: "flickity";
+    display: none;
+    @include media-breakpoint-up(800) {
+      content: "";
+    }
+  }
+}
+
+.stat-wrap {
+  width: 100%;
+  @include media-breakpoint-up(800) {
+    flex: 0 0 50%;
+    margin-bottom: $grid-gutter-width;
+    padding-left: $grid-gutter-width;
+  }
+  @include media-breakpoint-up(1200) {
+    flex: 0 0 33.333%;
+  }
+}
+
+.stat-group-nav {
+  @include media-breakpoint-up(800) {
+    display: none;
+  }
+}
+
+.stat-group-nav-button {
+  @extend %carousel-nav-button--minimal;
+}

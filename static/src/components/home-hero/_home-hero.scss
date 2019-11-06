@@ -1,0 +1,70 @@
+.home-hero {
+  background-color: $white;
+  min-height: 550px;
+  > .max-bound {
+    position: relative;
+  }
+  &.home-hero-dark,
+  &.home-hero-bg {
+    color: $white;
+    h1 {
+      color: $yellow;
+    }
+    .btn {
+      @extend %btn-yellow;
+    }
+  }
+  &.home-hero-dark {
+    background-color: $gray-900;
+  }
+  &.home-hero-bg {
+    background-color: $black;
+  }
+}
+
+.home-hero-content {
+  position: relative;
+  z-index: 10;
+  &:not(:only-child) {
+    width: 50%;
+  }
+  &:only-child {
+    h2, h3, h4, h5, h6, p {
+      max-width: 50%;
+    }
+  }
+}
+
+.home-hero-media {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 0;
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .home-hero-bg & {
+    left: 0;
+    width: 100%;
+    &:before {
+      content: "";
+      background-image: linear-gradient(268deg, transparent 1%, rgba($black, .75) 75%, $black 100%);
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+}

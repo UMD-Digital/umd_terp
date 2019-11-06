@@ -1,0 +1,22 @@
+<div class="slideshow-bg">
+  <div class="slideshow-nav">
+    <button class="slideshow-nav-control slideshow-control-prev" aria-label="Previous slide">
+      <span class="icon icon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Previous slide</span>
+    </button>
+    <span><span class="slideshow-nav-current-index">1</span> of {{items.length}}</span>
+    <button class="slideshow-nav-control slideshow-control-next" aria-label="Next slide">
+      <span class="icon icon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next slide</span>
+    </button>
+  </div>
+  <div class="slideshow">
+    {% for item in items %}
+      {% include "@slideshow-item" with {
+        "image": item.image,
+        "title": item.title,
+        "content": item.content
+      } %}
+    {% endfor %}
+  </div>
+</div>

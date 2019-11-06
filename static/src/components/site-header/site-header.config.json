@@ -1,0 +1,15 @@
+{
+  "context": {
+    "schoolName": "Placeholder College",
+    "logo": "/img/Placeholder_Logo_Light.svg"
+  },
+  "variants": [
+    {
+      "name": "light",
+      "context": {
+        "schoolName": "Placeholder College",
+        "logo": "/img/Placeholder_Logo_Dark.svg"
+      }
+    }
+  ]
+}

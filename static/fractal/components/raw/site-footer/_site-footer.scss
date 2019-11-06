@@ -1,0 +1,151 @@
+.site-footer {
+  text-align: center;
+}
+
+.site-footer-main {
+  background-color: $gray-100;
+  padding: 0 rem(40);
+  .max-bound {
+    max-width: rem(1095);
+  }
+  a {
+    color: $gray-600;
+    transition: .25s color ease-in-out;
+    &:hover {
+      color: $gray-900;
+      text-decoration: underline;
+    }
+  }
+  .site-footer-social {
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.site-footer-nav {
+  margin: 0 auto;
+  padding: rem(60) 0;
+  position: relative;
+  &:after {
+    content: "";
+    background-color: $gray-300;
+    display: block;
+    height: 3px;
+    position: absolute;
+    right: rem(-40);
+    bottom: 0;
+    left: rem(-40);
+    @include media-breakpoint-up(800) {
+      right: 0;
+      left: 0;
+    }
+  }
+  li {
+    display: inline-block;
+    font-size: rem(14);
+    letter-spacing: rem(.5);
+    text-transform: lowercase;
+    &:not(:last-child) {
+      &:after {
+        content: "|";
+        color: $red;
+        display: inline-block;
+        margin: 0 rem(28);
+      }
+    }
+  }
+}
+
+.site-footer-about {
+  color: $gray-700;
+  font-size: rem(14);
+  padding: rem(60) 0;
+  @include media-breakpoint-up(800) {
+    display: flex;
+  }
+}
+
+.site-footer-logo {
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 0 auto rem(24);
+  max-width: rem(275);
+  width: 100%;
+  @include media-breakpoint-up(800) {
+    margin-right: rem(32);
+  }
+  @include media-breakpoint-up(1200) {
+    margin-right: rem(56);
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.site-footer-address {
+  margin: 0 auto rem(32);
+  @include media-breakpoint-up(800) {
+    text-align: left;
+  }
+}
+
+.site-footer-social {
+  margin: 0 auto;
+  max-width: rem(295);
+  @include media-breakpoint-up(800) {
+    flex-grow: 0;
+    flex-grow: 0;
+    max-width: none;
+    width: 33.333%;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  li {
+    align-items: center;
+    display: flex;
+    flex: 1 1 0px;
+    justify-content: center;
+    max-width: 25%;
+  }
+  [class*="icon"] {
+    font-size: rem(17);
+  }
+  .icon-youtube {
+    font-size: rem(13);
+  }
+}
+
+.site-footer-legal {
+  background-color: $gray-900;
+  padding: rem(42) rem(40) rem(56);
+  @include media-breakpoint-up(800) {
+    padding: rem(32) rem(40);
+  }
+  ul {
+    text-align: center;
+  }
+  li {
+    color: #8E8E8E;
+    display: inline-block;
+    font-size: rem(14);
+    font-weight: 700;
+    line-height: (29 / 14);
+    &:not(:last-child) {
+      &:after {
+        content: "|";
+        display: inline-block;
+        margin: 0 rem(8);
+      }
+    }
+  }
+  a {
+    color: inherit;
+  }
+}

@@ -1,0 +1,12 @@
+<ul class="nav nav-tabs" role="tablist">
+  {% for section in sections %}
+    <li class="nav-item">
+      <a class="nav-link{% if loop.first %} active{% endif %}" id="{{id}}-tab-{{loop.index}}" data-toggle="tab" href="#{{id}}-pane-{{loop.index}}" role="tab" aria-controls="{{id}}-pane-{{loop.index}}"{% if loop.first %} aria-selected="true"{% endif %}>{{section.label}}</a>
+    </li>
+  {% endfor %}
+</ul>
+<div class="tab-content editor-content">
+  {% for section in sections %}
+    <div class="tab-pane{% if fade %} fade{% endif %}{% if loop.first %} show active{% endif %}" id="{{id}}-pane-{{loop.index}}" role="tabpanel" aria-labelledby="{{id}}-tab-{{loop.index}}">{{section.body}}</div>
+  {% endfor %}
+</div>

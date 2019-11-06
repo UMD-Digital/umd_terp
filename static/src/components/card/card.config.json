@@ -1,0 +1,33 @@
+{
+  "context": {
+    "image": {
+      "src": "http://via.placeholder.com/400x250/ddd/ddd",
+      "alt": "placeholder alt text"
+    },
+    "imageText": "",
+    "title": "Card title",
+    "content": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    "cta": {
+      "text": "Learn More",
+      "href": "https://google.com"
+    }
+  },
+  "variants": [
+    {
+      "name": "hz",
+      "context": {
+        "image": {
+          "src": "http://via.placeholder.com/400x250/ddd/ddd",
+          "alt": "placeholder alt text"
+        },
+        "imageText": "",
+        "title": "Card title",
+        "content": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "cta": {
+          "text": "Learn More",
+          "href": "https://google.com"
+        }
+      }
+    }
+  ]
+}

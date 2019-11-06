@@ -1,0 +1,17 @@
+.page-section {
+  &.page-section-ut_image_with_text {
+    background-color: $gray-100;
+    .outer-pad {
+      @include media-breakpoint-up(1000) {
+        padding-top: rem(124);
+        padding-bottom: rem(132);
+      }
+    }
+  }
+  &.page-section-ut_blockquote {
+    background-color: $red;
+  }
+  &.page-section-ut_stat_group {
+    background-color: $gray-900;
+  }
+}

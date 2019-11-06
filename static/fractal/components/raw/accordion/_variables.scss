@@ -1,0 +1,67 @@
+/*
+ * Core
+ *
+ */
+
+$accordion-margin: 0 !default;
+$accordion-padding: 0 !default;
+$accordion-slide-duration: .5s !default;
+
+/*
+ * Header
+ *
+ */
+
+$accordion__header-background: transparent !default;
+$accordion__header-border: none !default;
+$accordion__header-border: none !default;
+$accordion__header-border-radius: 0 !default;
+$accordion__header-margin: 0 !default;
+$accordion__header-padding: 0 !default;
+
+/*
+ * Label
+ *
+ */
+
+$accordion__label-display: block !default;
+$accordion__label-border: none !default;
+$accordion__label-padding: 0 !default;
+$accordion__label-margin: 0 !default;
+$accordion__label-background: $gray-100 !default;
+$accordion__label-color: inherit !default;
+$accordion__label-text-align: left !default;
+$accordion__label-text-decoration: none !default;
+$accordion__label-text-transform: none !default;
+$accordion__label-transform: none !default;
+$accordion__label-font-family: $font-family-sans-serif !default;
+$accordion__label-font-size: 1rem !default;
+$accordion__label-transition: none !default;
+
+$accordion__label--hover-color: $accordion__label-color !default;
+$accordion__label--hover-background: $accordion__label-background !default;
+
+$accordion__label--active-background: inherit !default;
+$accordion__label--active-color: inherit !default;
+
+/*
+ * Section
+ *
+ */
+
+$accordion__section-background: none !default;
+$accordion__section-border: none !default;
+$accordion__section-margin: 0 !default;
+$accordion__section-padding: 0 !default;
+$accordion__section-transition: $accordion-slide-duration height ease-in-out !default;
+
+
+/*
+ * Content
+ *
+ */
+
+$accordion__content-background: none !default;
+$accordion__content-border: none !default;
+$accordion__content-color: inherit !default;
+$accordion__content-padding: 0 !default;

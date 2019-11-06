@@ -1,0 +1,100 @@
+.event.card {
+  border: 2px solid $gray-300;
+  padding: rem(20) rem(20) rem(32);
+  &[role="link"] {
+    transition: .25s background-color ease-in-out,
+      .25s border-color ease-in-out,
+      .25s box-shadow ease-in-out,
+      .25s transform ease-in-out;
+    &:hover {
+      border-color: $red;
+    }
+  }
+  &.event-dark {
+    @extend %event-dark;
+  }
+}
+
+.event-date,
+.event-title,
+.event-description,
+.event-time-location {
+  transition: .25s color ease-in-out;
+}
+
+.event-frequency {
+  border: 2px solid $gray-200;
+  color: $red;
+  display: table;
+  font-size: rem(12);
+  font-weight: 600;
+  letter-spacing: rem(1);
+  line-height: (16 / 12);
+  margin-bottom: rem(12);
+  padding: rem(4) rem(9);
+  text-transform: uppercase;
+  transition: .25s border-color ease-in-out,
+    .25s color ease-in-out;
+}
+
+.event-date {
+  color: $gray-700;
+  font-size: rem(13);
+  letter-spacing: rem(1);
+  line-height: (16 / 13);
+  margin-bottom: rem(10);
+  text-transform: uppercase;
+  &:first-child {
+    margin-top: rem(36);
+  }
+}
+
+.event-title {
+  color: $gray-700;
+  font-size: rem(22);
+  font-weight: 600;
+  margin: 0 0 rem(12);
+}
+
+.event-description {
+  font-size: rem(16);
+  margin: 0;
+}
+
+.event-time-location {
+  color: $gray-700;
+  font-size: rem(12);
+  margin: rem(12) 0 rem(16);
+  > span {
+    &:not(:last-child) {
+      &:after {
+        content: "•";
+        color: $red;
+        display: inline-block;
+        margin: 0 rem(2) 0 rem(4);
+        transition: .25s color ease-in-out;
+      }
+    }
+  }
+}
+
+.event-cta.card-cta {
+  font-size: rem(15);
+  letter-spacing: rem(1);
+  &.fancy-link {
+    font-weight: 700;
+    margin-top: rem(30);
+    text-transform: uppercase;
+  }
+  &.btn {
+    background-color: $red;
+    border-color: $red;
+    color: $white;
+    font-weight: 600;
+    padding: rem(10) rem(28) rem(12);
+    &:hover {
+      background-color: $dark-red;
+      border-color: $dark-red;
+    }
+  }
+}

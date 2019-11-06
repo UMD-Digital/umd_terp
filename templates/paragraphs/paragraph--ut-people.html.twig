@@ -1,0 +1,14 @@
+<div class="mb-5">
+  {% if content.field_ut_people_title|field_value %}
+    <h2 class="h3">{{ content.field_ut_people_title|field_value }}</h2>
+  {% endif %}
+  <div class="container">
+    <div class="row">
+      {% for person in content.field_ut_people_people|field_value %}
+        <div class="col-600-6 col-1000-4">
+          {{ person }}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

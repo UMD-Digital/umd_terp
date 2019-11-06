@@ -1,0 +1,237 @@
+%card-dark {
+  &[role="link"] {
+    &:hover,
+    &:focus {
+      .card-body {
+        background-color: $white;
+        box-shadow: inset 0 -3px 0 $yellow,
+          inset -3px 0 0 $yellow,
+          inset 3px 0 0 $yellow;
+      }
+      .card-title {
+        color: $black;
+      }
+      .card-text {
+        color: $gray-700;
+      }
+      .card-cta {
+        color: $red;
+      }
+    }
+  }
+  .card-body {
+    background-color: $gray-1000;
+    box-shadow: inset 0 0 0 1px $gray-1000;
+  }
+  .card-title {
+    color: $white;
+    &:after {
+      background-color: $yellow;
+    }
+  }
+  .card-text {
+    color: $white;
+  }
+  .card-cta {
+    color: $yellow;
+  }
+}
+
+%card-hz {
+  @include media-breakpoint-up(800) {
+    border: 1px solid $gray-500;
+    display: flex;
+    flex-direction: row;
+  }
+  &[role="link"] {
+    &:hover {
+      @include media-breakpoint-up(800) {
+        border: 3px solid $red;
+        transform: scale(1.025);
+        .card-body {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  .card-img {
+    @include media-breakpoint-up(800) {
+      flex-grow: 0;
+      flex-shrink: 0;
+      width: 36%;
+    }
+  }
+  .card-img-text {
+    @include media-breakpoint-up(800) {
+      background-color: transparent;
+    }
+  }
+  .card-body {
+    @include media-breakpoint-up(800) {
+      align-items: flex-start;
+      box-shadow: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: rem(24) rem(40);
+    }
+    @include media-breakpoint-up(1000) {
+      padding: rem(32) rem(60)
+    }
+    @include media-breakpoint-up(1200) {
+      padding: rem(42) rem(95);
+    }
+  }
+  .card-title {
+    width: 100%;
+  }
+  .card-text {
+    @include media-breakpoint-up(800) {
+      width: 100%;
+    }
+  }
+  .card-cta {
+    @include media-breakpoint-up(800) {
+      align-self: flex-start;
+    }
+  }
+}
+
+%stat-dark {
+  .stat-number {
+    color: $yellow;
+    &:after {
+      background-color: $red;
+    }
+  }
+  .stat-text {
+    color: $white;
+  }
+}
+
+%carousel-nav-button--minimal {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  height: rem(44);
+  width: rem(44);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  .icon {
+    color: $red;
+    display: inline-block;
+    font-size: rem(22);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  [class*="-bg-dark"] & {
+    .icon {
+      color: $yellow;
+    }
+  }
+  &[class*="prev"] {
+    left: 0;
+    .icon {
+      transform: translate(-50%, -50%) scale(-1);
+    }
+  }
+  &[class*="next"] {
+    right: 0;
+  }
+}
+
+%event-dark {
+  background-color: $gray-900;
+  border-color: #5D5D5D;
+  &[role="link"] {
+    &:hover {
+      background-color: $white;
+      border-color: $yellow;
+      .event-date,
+      .event-title,
+      .event-description,
+      .event-time-location {
+        color: $black;
+      }
+      .event-frequency {
+        border-color: $gray-200;
+        color: $red;
+      }
+      .event-cta {
+        &.fancy-link {
+          color: $red;
+        }
+      }
+      .event-time-location {
+        > span {
+          &:not(:last-child) {
+            &:after {
+              color: $red;
+            }
+          }
+        }
+      }
+    }
+  }
+  .event-frequency {
+    border-color: $gray-700;
+    color: $yellow;
+  }
+  .event-date,
+  .event-title,
+  .event-description,
+  .event-time-location {
+    color: $white;
+  }
+  .event-time-location {
+    > span {
+      &:not(:last-child) {
+        &:after {
+          color: $yellow;
+        }
+      }
+    }
+  }
+  .event-cta {
+    &.fancy-link {
+      color: $yellow;
+    }
+  }
+}
+
+%btn-red {
+  border-color: $red !important;
+  color: $red !important;
+  &:hover {
+    background-color: $red !important;
+    border-color: $red !important;
+    color: $white !important;
+  }
+}
+
+%btn-yellow {
+  border-color: $yellow !important;
+  color: $yellow !important;
+  &:hover {
+    background-color: $yellow !important;
+    border-color: $yellow !important;
+    color: $black !important;
+  }
+}
+
+%label {
+  color: $gray-700;
+  display: inline-block;
+  font-size: rem(14);
+  font-weight: 700;
+  letter-spacing: rem(1.05);
+  line-height: (16 / 14);
+  margin-bottom: rem(8);
+  text-transform: uppercase;
+}

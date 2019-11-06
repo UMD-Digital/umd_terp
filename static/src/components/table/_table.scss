@@ -1,0 +1,89 @@
+@import "variables";
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  empty-cells: show;
+}
+
+.table-stacked {
+  @include media-breakpoint-down($table-media-query-down) {
+    background-color: transparent !important;
+  }
+  thead {
+    display: none;
+    @include media-breakpoint-up($table-media-query-up) {
+      display: table-header-group;
+    }
+  }
+  tbody {
+    tr {
+      display: table;
+      margin-bottom: rem(30);
+      width: 100%;
+      @include media-breakpoint-down($table-media-query-down) {
+        background-color: transparent !important;
+        border: 1px solid $gray-300;
+      }
+      @include media-breakpoint-up($table-media-query-up) {
+        display: table-row;
+        margin-bottom: 0;
+        width: auto;
+      }
+    }
+  }
+  td {
+    display: table-row;
+    @include media-breakpoint-up($table-media-query-up) {
+      display: table-cell;
+    }
+    &:not(:last-child) {
+      @include media-breakpoint-down($table-media-query-down) {
+        border-bottom: 1px solid $gray-300;
+      }
+    }
+  }
+  .tablesaw-cell-label,
+  .tablesaw-cell-content {
+    display: table-cell;
+    padding: rem(20);
+    vertical-align: middle;
+    width: 50%;
+  }
+  .tablesaw-cell-label {
+    background-color: #8D8D8D;
+    border-right: 1px solid $gray-300;
+    color: $white;
+    text-align: center;
+    @include media-breakpoint-up($table-media-query-up) {
+      display: none;
+    }
+  }
+  &.table-dark {
+    .tablesaw-cell-label {
+      background-color: $yellow;
+      border-right: 1px solid $gray-500;
+      color: $black;
+    }
+    .tablesaw-cell-content {
+      @include media-breakpoint-down($table-media-query-down) {
+        background-color: $gray-800;
+        color: $white;
+      }
+    }
+    td {
+      &:not(:last-child) {
+        @include media-breakpoint-down($table-media-query-down) {
+          border-bottom: 1px solid $gray-500;
+        }
+      }
+    }
+    tbody {
+      tr {
+        @include media-breakpoint-down($table-media-query-down) {
+          border: 1px solid $gray-500;
+        }
+      }
+    }
+  }
+}

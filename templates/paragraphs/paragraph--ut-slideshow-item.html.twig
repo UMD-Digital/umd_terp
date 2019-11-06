@@ -1,0 +1,18 @@
+<div class="slideshow-item">
+  <figure>
+    <div class="slideshow-image">
+      <img src="{{ file_url(content.field_ut_slideshow_item_image[0]['#media'].field_media_image.entity.uri.value | image_style('optimized')) }}" alt="placeholder alt text">
+    </div>
+    {% if content.field_ut_slideshow_item_caption|field_value %}
+      <figcaption class="slideshow-image-caption">{{ content.field_ut_slideshow_item_caption|field_value }}</figcaption>
+    {% endif %}
+  </figure>
+  <div class="slideshow-caption">
+    {% if content.field_ut_slideshow_item_title|field_value %}
+      <div class="slideshow-caption-title">{{ content.field_ut_slideshow_item_title|field_value }}</div>
+    {% endif %}
+    {% if content.field_ut_slideshow_item_text|field_value %}
+      <div class="slideshow-caption-content">{{ content.field_ut_slideshow_item_text|field_value }}</div>
+    {% endif %}
+  </div>
+</div>

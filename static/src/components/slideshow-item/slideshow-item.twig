@@ -1,0 +1,18 @@
+<div class="slideshow-item">
+  {% if image.caption %}
+    <figure>
+      <div class="slideshow-image">
+        <img src="{{image.src|path}}" alt="{{image.alt}}">
+      </div>
+      <figcaption class="slideshow-image-caption">{{image.caption}}</figcaption>
+    </figure>
+  {% else %}
+    <div class="slideshow-image">
+      <img src="{{image.src|path}}" alt="{{image.alt}}">
+    </div>
+  {% endif %}
+  <div class="slideshow-caption">
+    <div class="slideshow-caption-title">{{title}}</div>
+    <div class="slideshow-caption-content">{{content}}</div>
+  </div>
+</div>

@@ -1,0 +1,199 @@
+{% include "@hero" with hero %}
+<div class="container page-content">
+  <div class="row justify-content-center">
+    <div class="col-800-3 col-1000-2">
+      {% include "@subnav" %}
+    </div>
+    <div class="col-800 col-1000-10">
+      {% include "@breadcrumb" with breadcrumb %}
+      <div class="editor-content">
+        <h1>Kitchen Sink</h1>
+        <p>Lead In - In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+        <h2>Heading 2 - Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</h2>
+        <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        <a href="">Link text</a> integer tincidunt. Cras dapibus.
+        <a href="/node/16546">Link text hover</a> vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+        <h3>Heading 3 - Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante.</h3>
+        <h4>Heading 4 - Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante.</h4>
+        <h5>Heading 5&nbsp;- Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante.</h5>
+        <h6>Heading 6&nbsp;- Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante.</h6>
+        <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+        <h2>Text With an Image - Right Aligned</h2>
+        <figure role="group" class="align-right">
+          <img alt="Image description lorem ipsum dolor sit amet" src="{{ "/img/KS_Embedded_1.jpg"|path }}">
+          <figcaption>Image description lorem ipsum dolor sit amet</figcaption>
+        </figure>
+        <p>Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet lectus. Vestibulum auctor varius tortor, sit amet rutrum mauris cursus vel. Quisque ac dapibus nunc. Fusce vel congue turpis. Suspendisse vel purus ac.</p>
+        <p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit.</p>
+        <p>Quisque rutrum. Aenean imperdiet. ENam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.</p>
+        <h2>Text With an Image - Left Aligned</h2>
+        <figure role="group" class="align-left">
+          <img alt="Image description lorem ipsum dolor sit amet" src="{{ "/img/KS_Embedded_2.jpg"|path }}">
+          <figcaption>Image description lorem ipsum dolor sit amet</figcaption>
+        </figure>
+        <p>Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet lectus. Vestibulum auctor varius tortor, sit amet rutrum mauris cursus vel. Quisque ac dapibus nunc. Fusce vel congue turpis. Suspendisse vel purus ac.</p>
+        <p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit.</p>
+        <p><img alt="Image description lorem ipsum dolor sit amet" src="{{ "/img/KS_Embedded_1.jpg"|path }}" class="align-right">Quisque rutrum. Aenean imperdiet. ENam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.</p>
+        <p>Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet lectus. Vestibulum auctor varius tortor, sit amet rutrum mauris cursus vel. Quisque ac dapibus nunc. Fusce vel congue turpis. Suspendisse vel purus ac.</p>
+        <p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit.</p>
+        <p><img alt="Left aligned" src="{{ "/img/KS_Embedded_2.jpg"|path }}" class="align-left">Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet lectus. Vestibulum auctor varius tortor, sit amet rutrum mauris cursus vel. Quisque ac dapibus nunc. Fusce vel congue turpis. Suspendisse vel purus ac.</p>
+        <p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit.</p>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec quam felis, ultricies nec.
+            <ul>
+              <li>Second level aenean commodo ligula eget dolor.</li>
+              <li>Aenean massa.
+                <ul>
+                  <li>Third level aenean massa.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Donec quam felis, ultricies nec.</li>
+          <li>Nulla consequat massa quis enim.</li>
+        </ul>
+        <ol>
+          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec quam felis, ultricies nec.
+            <ol>
+              <li>Second level aenean commodo ligula eget dolor.</li>
+              <li>Aenean massa.
+                <ol>
+                  <li>Third level aenean massa.</li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li>Donec quam felis, ultricies nec.</li>
+          <li>Nulla consequat massa quis enim.</li>
+        </ol>
+      </div>
+      <h2>2-Column Widget</h2>
+      <div class="section section-ut_text_2_columns">
+        <div class="container-fluid p-0 editor-content">
+          <div class="row">
+            <div class="col-800">
+              <p>Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet lectus. Vestibulum auctor varius tortor, sit amet rutrum mauris cursus vel. Quisque ac dapibus nunc.</p>
+            </div>
+            <div class="col-800">
+              <p>Fusce vel congue turpis. Suspendisse vel purus ac velit euismod consequat nec quis arcu. Ut at ipsum sapien. Sed arcu sapien, malesuada ut lorem id, imperdiet dignissim ex. Vivamus quam arcu, auctor sit amet nulla quis, auctor pharetra erat. Integer eu tempus turpis, et ultrices.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2>3-Column Widget</h2>
+      <div class="section section-ut_text_3_columns">
+        <div class="container-fluid p-0 editor-content">
+          <div class="row">
+            <div class="col-800">
+              <p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa. Vestibulum sed metus in lorem tristique ullamcorper id vitae erat. Nulla mollis sapien sollicitudin lacinia lacinia. Vivamus facilisis dolor et massa placerat, at vestibulum nisl egestas.</p>
+            </div>
+            <div class="col-800">
+              <p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa. Vestibulum sed metus in lorem tristique ullamcorper id vitae erat. Nulla mollis sapien sollicitudin lacinia lacinia. Vivamus facilisis dolor et massa placerat, at vestibulum nisl egestas.</p>
+            </div>
+            <div class="col-800">
+              <p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa. Vestibulum sed metus in lorem tristique ullamcorper id vitae erat. Nulla mollis sapien sollicitudin lacinia lacinia. Vivamus facilisis dolor et massa placerat, at vestibulum nisl egestas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <a href="http://www.google.com" class="fancy-link">Call to Action</a>
+        <a href="http://www.google.com" class="fancy-link">Call to Action</a>
+      </div>
+      <div class="section">
+        {% include "@button--primary" with button %}
+        {% include "@button--secondary" with button %}
+      </div>
+      <div class="section section-ut_divider">
+        <hr class="path--kitchen-sink divider default">
+      </div>
+      <div class="section section-ut_divider">
+        <hr class="path--kitchen-sink divider medium">
+      </div>
+      <div class="section section-ut_divider">
+        <hr class="path--kitchen-sink divider large">
+      </div>
+      <div class="section section-ut_divider">
+        <hr class="path--kitchen-sink divider xlarge">
+      </div>
+      <div class="section section-ut_accordion">
+        {% include "@accordion" with accordion %}
+      </div>
+      <div class="section section-ut_blockquote">
+        {% include "@blockquote" with blockquote %}
+      </div>
+      <div class="section section-ut_blockquote">
+        {% include "@blockquote" with blockquoteAuthor %}
+      </div>
+      <div class="section section-ut_blockquote">
+        {% include "@blockquote--dark" with blockquote %}
+      </div>
+      <div class="section section-ut_blockquote">
+        {% include "@blockquote" with blockquoteAuthor %}
+      </div>
+      <div class="section section-ut_table">
+        {% include "@table" with table %}
+      </div>
+      <div class="section section-ut_table">
+        {% include "@table--dark" with table %}
+      </div>
+      <div class="section section-ut_slideshow">
+        {% include "@slideshow" with slideshow %}
+      </div>
+      <div class="section section-ut_slideshow">
+        {% include "@slideshow--dark" with slideshow %}
+      </div>
+      <div class="section section-ut_card_group">
+        {% include "@card-group" with cardGroup3Up %}
+      </div>
+      <div class="section section-ut_card_group">
+        {% include "@card-group--dark" with cardGroup3Up %}
+      </div>
+      <div class="section section-ut_card_group">
+        {% include "@card-group" with cardGroup2Up %}
+      </div>
+      <div class="section section-ut_card_group">
+        {% include "@card-group--dark" with cardGroup2Up %}
+      </div>
+      <div class="section section-ut_video">
+        {% include "@embed" with videoEmbed %}
+      </div>
+      <div class="section section-ut_video">
+        {% include "@embed--dark" with videoEmbed %}
+      </div>
+      <div class="section section-ut_image_with_text">
+        {% include "@image" with imageWidget %}
+      </div>
+      <div class="section section-ut_image_with_text">
+        {% include "@image--dark" with imageWidget %}
+      </div>
+      <div class="section section-ut_carousel">
+        {% include "@carousel" with carousel %}
+      </div>
+      <div class="section section-ut_carousel">
+        {% include "@carousel--dark" with carousel %}
+      </div>
+      <div class="section section-ut_related_stories">
+        {% include "@card-group" with relatedStories %}
+      </div>
+      <div class="section">
+        {% include "@pagination" %}
+      </div>
+      <div class="section section-ut_stat_group">
+        {% include "@stat-group" with statGroup %}
+      </div>
+      <div class="section">
+        {% include "@stat-group--dark" with statGroup %}
+      </div>
+      <div class="section section-ut_tabs">
+        {% include "@tab-panel" with tabPanel %}
+      </div>
+      <div class="section section-ut_events">
+        {% include "@events" with events %}
+      </div>
+      <div class="section section-ut_events">
+        {% include "@events--dark" with events %}
+      </div>
+    </div>
+  </div>
+</div>

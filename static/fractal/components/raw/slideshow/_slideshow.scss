@@ -1,0 +1,52 @@
+@import "variables";
+
+.slideshow-bg {
+  background-color: $white;
+  color: $gray-700;
+  padding: 0 rem(35) rem(35);
+  &-dark {
+    background-color: $gray-900;
+    color: $white;
+  }
+}
+
+.slideshow-nav {
+  align-items: center;
+  display: flex;
+  font-size: rem(17);
+  line-height: (26 / 17);
+  justify-content: flex-end;
+}
+
+.slideshow-nav-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: $red;
+  display: flex;
+  justify-content: center;
+  height: rem(44);
+  width: rem(44);
+  position: static;
+  .slideshow-bg-dark & {
+    color: $yellow;
+  }
+  .icon {
+    display: inline-block;
+    font-size: rem(17);
+  }
+}
+
+.slideshow-control-prev:hover,
+.slideshow-control-next:hover {
+  cursor: pointer;
+}
+
+.slideshow-control-prev {
+  .icon {
+    transform: scale(-1);
+  }
+}

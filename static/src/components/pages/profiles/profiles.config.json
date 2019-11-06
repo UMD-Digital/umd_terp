@@ -1,0 +1,65 @@
+{
+  "preview": "@page-preview",
+  "context": {
+    "hero": {
+      "image": {
+        "src": "/img/KS_Hero.jpg",
+        "alt": "Profiles hero alt text"
+      }
+    },
+    "breadcrumb": {
+      "items": [
+        "Home",
+        "Link",
+        "People"
+      ]
+    },
+    "departments": [
+      {
+        "name": "Leadership",
+        "profiles": [
+          {
+            "photo": "/img/Profiles_Photo_1.jpg",
+            "name": "John Doe",
+            "title": "Professor and Co-Director",
+            "phone": "555-555-5555",
+            "url": "https://google.com"
+          },
+          {
+            "photo": "/img/Profiles_Photo_2.jpg",
+            "name": "George Bradford",
+            "title": "Professor and Co-Director",
+            "phone": "555-555-5555",
+            "url": "https://google.com"
+          }
+        ]
+      },
+      {
+        "name": "Faculty",
+        "profiles": [
+          {
+            "photo": "/img/Profiles_Photo_3.jpg",
+            "name": "Carl Jones",
+            "title": "Professor and Co-Director",
+            "phone": "555-555-5555",
+            "url": "https://google.com"
+          },
+          {
+            "photo": "/img/Profiles_Photo_4.jpg",
+            "name": "Jamie Fox",
+            "title": "Professor and Co-Director",
+            "phone": "555-555-5555",
+            "url": "https://google.com"
+          },
+          {
+            "photo": "/img/Profiles_Photo_5.jpg",
+            "name": "Nita Simons",
+            "title": "Professor and Co-Director",
+            "phone": "555-555-5555",
+            "url": "https://google.com"
+          }
+        ]
+      }
+    ]
+  }
+}

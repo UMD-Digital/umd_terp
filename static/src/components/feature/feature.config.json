@@ -1,0 +1,25 @@
+{
+  "context": {
+    "reverse": false,
+    "bg": "white",
+    "content": "<h2>Heading 2 - Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</h2>",
+    "image": {
+      "src": "/img/Feature_1.jpg",
+      "alt": ""
+    }
+  },
+  "variants": [
+    {
+      "name": "bg",
+      "context": {
+        "reverse": false,
+        "bg": "white",
+        "content": "<h2>Heading 2 - Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</h2>",
+        "image": {
+          "src": "/img/Feature_2.jpg",
+          "alt": ""
+        }
+      }
+    }
+  ]
+}

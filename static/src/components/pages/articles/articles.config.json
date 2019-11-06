@@ -1,0 +1,81 @@
+{
+  "preview": "@page-preview",
+  "context": {
+    "hero": {
+      "image": {
+        "src": "/img/KS_Hero.jpg",
+        "alt": "News hero alt text"
+      }
+    },
+    "breadcrumb": {
+      "items": [
+        "Home",
+        "News"
+      ]
+    },
+    "feed": {
+      "items": [
+        {
+          "img": {
+            "src": "/img/Articles_Feed_Item_1.jpg",
+            "alt": "placeholder alt text"
+          },
+          "title": "Article Title 1",
+          "url": "https://google.com",
+          "date": "June 28, 2019",
+          "description": "Fusce vel congue turpis. Suspendisse vel purus ac velit euismod consequat nec quis arcu. Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet."
+        },
+        {
+          "img": {
+            "src": "/img/Articles_Feed_Item_2.jpg",
+            "alt": "placeholder alt text"
+          },
+          "title": "Article Title 2",
+          "url": "https://google.com",
+          "date": "June 28, 2019",
+          "description": "Fusce vel congue turpis. Suspendisse vel purus ac velit euismod consequat nec quis arcu. Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet."
+        },
+        {
+          "img": {
+            "src": "/img/Articles_Feed_Item_3.jpg",
+            "alt": "placeholder alt text"
+          },
+          "title": "Article Title 3",
+          "url": "https://google.com",
+          "date": "June 28, 2019",
+          "description": "Fusce vel congue turpis. Suspendisse vel purus ac velit euismod consequat nec quis arcu. Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet."
+        },
+        {
+          "img": {
+            "src": "/img/Articles_Feed_Item_1.jpg",
+            "alt": "placeholder alt text"
+          },
+          "title": "Article Title 4",
+          "url": "https://google.com",
+          "date": "June 28, 2019",
+          "description": "Fusce vel congue turpis. Suspendisse vel purus ac velit euismod consequat nec quis arcu. Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet."
+        },
+        {
+          "img": {
+            "src": "/img/Articles_Feed_Item_2.jpg",
+            "alt": "placeholder alt text"
+          },
+          "title": "Article Title 5",
+          "url": "https://google.com",
+          "date": "June 28, 2019",
+          "description": "Fusce vel congue turpis. Suspendisse vel purus ac velit euismod consequat nec quis arcu. Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet."
+        },
+        {
+          "img": {
+            "src": "/img/Articles_Feed_Item_3.jpg",
+            "alt": "placeholder alt text"
+          },
+          "title": "Article Title 6",
+          "url": "https://google.com",
+          "date": "June 28, 2019",
+          "description": "Fusce vel congue turpis. Suspendisse vel purus ac velit euismod consequat nec quis arcu. Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet."
+        }
+      ]
+    }
+  }
+}

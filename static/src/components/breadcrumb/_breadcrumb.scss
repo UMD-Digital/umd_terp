@@ -1,0 +1,30 @@
+.breadcrumb {
+  color: $gray-700;
+  margin-bottom: rem(20);
+  @include media-breakpoint-down(799) {
+    border-top: 1px solid #EDEDED;
+    padding-top: rem(24);
+  }
+  @include media-breakpoint-up(800) {
+    border-bottom: 1px solid #EDEDED;
+    padding-bottom: rem(14);
+  }
+}
+
+.breadcrumb-item {
+  line-height: (26 / 13);
+  text-transform: uppercase;
+  &.breadcrumb--active {
+    font-weight: 700;
+  }
+  &:before {
+    margin: 0 rem(5);
+  }
+  a {
+    color: inherit;
+    transition: .25s color ease-in-out;
+    &:hover {
+      color: $red;
+    }
+  }
+}

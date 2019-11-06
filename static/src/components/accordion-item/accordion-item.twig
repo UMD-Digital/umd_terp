@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-header" id="{{headerId}}">
+    <button class="btn" data-toggle="collapse" data-target="#{{contentId}}" aria-expanded="false" aria-controls="{{contentId}}">
+      {{title}}
+    </button>
+  </div>
+  <div id="{{contentId}}" class="collapse" aria-labelledby="{{headerId}}"{% if open-multiple == false %} data-parent="#{{accordionId}}"{% endif %}>
+    <div class="card-body">
+      {{content|raw}}
+    </div>
+  </div>
+</div>

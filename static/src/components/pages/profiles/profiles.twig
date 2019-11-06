@@ -1,0 +1,26 @@
+{% include "@hero" with hero %}
+<div class="container page-content">
+  <div class="row justify-content-center">
+    <div class="col-800-3 col-1000-2">
+      {% include "@subnav" %}
+    </div>
+    <div class="col-800 col-1000-10">
+      {% include "@breadcrumb" with breadcrumb %}
+      <h1>People</h1>
+      {% for department in departments %}
+        <div class="mb-5">
+          <h2 class="h3">{{department.name}}</h2>
+          <div class="container">
+            <div class="row">
+              {% for profile in department.profiles %}
+                <div class="col-600-6 col-1000-4">
+                  {% include "@profile-card" with profile %}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

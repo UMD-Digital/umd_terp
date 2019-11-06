@@ -1,0 +1,218 @@
+{
+  "preview": "@page-preview",
+  "context": {
+    "hero": {
+      "image": {
+        "src": "/img/KS_Hero.jpg",
+        "alt": "Profile detail hero alt text"
+      }
+    },
+    "breadcrumb": {
+      "items": [
+        "Home",
+        "Link",
+        "People",
+        "John Doe"
+      ]
+    },
+    "photo": "/img/Profiles_Photo_1.jpg",
+    "name": "John Doe",
+    "title": "[Title] [Affiliation], [Title2] [Affiliation2], [Title3] [Affiliation3]",
+    "bio": "<p>Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet lectus. Vestibulum auctor varius tortor, sit amet rutrum mauris cursus vel.</p>",
+    "contact": {
+      "email": "johndoe@umd.edu",
+      "address": "3100F Atlantic Building",
+      "phone": {
+        "number": "555-555-5555",
+        "ext": "555"
+      },
+      "website": "https://google.com"
+    },
+    "departments": [
+      {
+        "name": "Department Name Here",
+        "url": "https://google.com"
+      },
+      {
+        "name": "Department Name Here",
+        "url": "https://google.com"
+      }
+    ],
+    "areas": [
+      {
+        "name": "Cybersecurity",
+        "url": "https://google.com"
+      },
+      {
+        "name": "Networks",
+        "url": "https://google.com"
+      },
+      {
+        "name": "System Administration",
+        "url": "https://google.com"
+      }
+    ],
+    "courses": [
+      {
+        "name": "Course Name Here lorem ipsum dolor sit amet (Spring 2020)",
+        "url": "https://google.com"
+      },
+      {
+        "name": "Course Name Here lorem ipsum dolor sit amet (Fall 2019)",
+        "url": "https://google.com"
+      },
+      {
+        "name": "Course Name Here lorem ipsum dolor sit amet (Spring 2019)",
+        "url": "https://google.com"
+      }
+    ],
+    "publicationsByYear": [
+      {
+        "year": "2019",
+        "publications": [
+          {
+            "title": "Sed luctus blandit quam, eget accumsan mi.",
+            "authors": [
+              {
+                "name": "A. Name",
+                "url": "https://google.com"
+              },
+              {
+                "name": "B. Name",
+                "url": "https://google.com"
+              },
+              {
+                "name": "C. Name",
+                "url": "https://google.com"
+              }
+            ]
+          },
+          {
+            "title": "Sed luctus blandit quam, eget accumsan mi.",
+            "authors": [
+              {
+                "name": "A. Name",
+                "url": "https://google.com"
+              },
+              {
+                "name": "B. Name",
+                "url": "https://google.com"
+              },
+              {
+                "name": "C. Name",
+                "url": "https://google.com"
+              }
+            ]
+          },
+          {
+            "title": "Sed luctus blandit quam, eget accumsan mi.",
+            "authors": [
+              {
+                "name": "A. Name",
+                "url": "https://google.com"
+              },
+              {
+                "name": "B. Name",
+                "url": "https://google.com"
+              },
+              {
+                "name": "C. Name",
+                "url": "https://google.com"
+              }
+            ]
+          },
+          {
+            "title": "Sed luctus blandit quam, eget accumsan mi.",
+            "authors": [
+              {
+                "name": "A. Name",
+                "url": "https://google.com"
+              },
+              {
+                "name": "B. Name",
+                "url": "https://google.com"
+              },
+              {
+                "name": "C. Name",
+                "url": "https://google.com"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "year": "2018",
+        "publications": [
+          {
+            "title": "Sed luctus blandit quam, eget accumsan mi.",
+            "authors": [
+              {
+                "name": "A. Name",
+                "url": "https://google.com"
+              },
+              {
+                "name": "B. Name",
+                "url": "https://google.com"
+              },
+              {
+                "name": "C. Name",
+                "url": "https://google.com"
+              }
+            ]
+          },
+          {
+            "title": "Sed luctus blandit quam, eget accumsan mi.",
+            "authors": [
+              {
+                "name": "A. Name",
+                "url": "https://google.com"
+              },
+              {
+                "name": "B. Name",
+                "url": "https://google.com"
+              },
+              {
+                "name": "C. Name",
+                "url": "https://google.com"
+              }
+            ]
+          },
+          {
+            "title": "Sed luctus blandit quam, eget accumsan mi.",
+            "authors": [
+              {
+                "name": "A. Name",
+                "url": "https://google.com"
+              },
+              {
+                "name": "B. Name",
+                "url": "https://google.com"
+              },
+              {
+                "name": "C. Name",
+                "url": "https://google.com"
+              }
+            ]
+          },
+          {
+            "title": "Sed luctus blandit quam, eget accumsan mi.",
+            "authors": [
+              {
+                "name": "A. Name",
+                "url": "https://google.com"
+              },
+              {
+                "name": "B. Name",
+                "url": "https://google.com"
+              },
+              {
+                "name": "C. Name",
+                "url": "https://google.com"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

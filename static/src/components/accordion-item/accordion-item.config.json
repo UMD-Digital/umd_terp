@@ -1,0 +1,9 @@
+{
+  "context": {
+    "title": "Accordion 1",
+    "content": "<p>This is the content area of accordion 1</p>",
+    "accordionId": "accordion-1",
+    "headerId": "accordion-1-header-1",
+    "contentId": "accordion-1-content-1"
+  }
+}

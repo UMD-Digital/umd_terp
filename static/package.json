@@ -1,0 +1,71 @@
+{
+  "name": "fractal-bootstrap",
+  "version": "0.1.0",
+  "description": "Bootstrap boilerplate for idfive web projects using Fractal",
+  "main": "index.js",
+  "scripts": {
+    "serve": "webpack-dev-server --mode development --open",
+    "watch": "webpack --mode development --watch",
+    "build": "webpack --mode production",
+    "fractal": "concurrently --kill-others-on-fail \"npm run watch\" \"fractal start --sync\"",
+    "prefractal:build": "npm run build",
+    "fractal:build": "fractal build"
+  },
+  "author": {
+    "name": "idfive",
+    "email": "code@idfive.com",
+    "url": "https://idfive.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@frctl/fractal": "git+https://github.com/frctl/fractal.git",
+    "@frctl/twig": "git+https://github.com/frctl/twig.git",
+    "@types/node": "^10.10.1",
+    "ajv": "^6.5.2",
+    "autoprefixer": "^7.1.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "concurrently": "^3.5.0",
+    "copy-webpack-plugin": "^4.1.1",
+    "css-loader": "^0.28.0",
+    "extract-loader": "^3.0.0",
+    "file-loader": "^1.1.11",
+    "handlebars-loader": "^1.6.0",
+    "html-loader": "^0.5.1",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.9.2",
+    "normalize-scss": "^7.0.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-focus-within": "^3.0.0",
+    "postcss-loader": "^2.0.5",
+    "postcss-object-fit-images": "^1.1.2",
+    "resolve-url-loader": "^3.0.0",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.1",
+    "terser-webpack-plugin": "^1.2.1",
+    "ts-loader": "^5.1.0",
+    "typescript": "^3.0.3",
+    "url-loader": "^1.1.1",
+    "vue-loader": "^15.4.2",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.0.0",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/idfivellc/fractal-bootstrap"
+  },
+  "dependencies": {
+    "bootstrap": "git+https://github.com/twbs/bootstrap",
+    "flickity": "^2.2.1",
+    "flickity-fullscreen": "^1.1.1",
+    "flickity-imagesloaded": "^2.0.0",
+    "focus-within": "^3.0.2",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
+    "silc-core": "^0.6.0",
+    "tablesaw": "^3.1.2"
+  }
+}

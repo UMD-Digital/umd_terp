@@ -1,0 +1,92 @@
+.card-group-bg {
+  background: $white;
+  padding: rem(70) rem(44);
+  position: relative;
+  @include media-breakpoint-up(800) {
+    padding: rem(50) rem(30) rem(30);
+  }
+  &-dark {
+    background-color: $gray-900;
+    color: $white;
+    .card {
+      @extend %card-dark;
+    }
+    .card-group-cta {
+      color: $yellow;
+      &:hover {
+        border-color: $yellow;
+        color: $yellow;
+      }
+    }
+  }
+  .flickity-page-dots {
+    bottom: rem(-18);
+    transform: translateY(100%);
+  }
+}
+
+.card-group {
+  display: block;
+  @include media-breakpoint-up(800) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: rem(-25);
+  }
+  &:after {
+    content: "flickity";
+    display: none;
+    @include media-breakpoint-up(800) {
+      content: "";
+    }
+  }
+  .flickity-slider {
+    .card-wrap {
+      margin-bottom: 0;
+    }
+  }
+  .card {
+    &[role="link"] {
+      &:hover {
+        @include media-breakpoint-down(799) {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+
+.card-wrap {
+  display: flex;
+  margin-bottom: rem(25);
+  width: 100%;
+  @include media-breakpoint-up(800) {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: rem(25);
+  }
+  @include media-breakpoint-up(1200) {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+  &:first-child:nth-last-child(2),
+  &:last-child:nth-child(2) {
+    @include media-breakpoint-up(800) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  .card {
+    flex: 1;
+  }
+}
+
+.card-group-nav {
+  @include media-breakpoint-up(800) {
+    display: none;
+  }
+}
+
+.card-group-nav-button {
+  @extend %carousel-nav-button--minimal;
+}

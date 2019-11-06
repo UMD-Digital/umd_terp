@@ -1,0 +1,8 @@
+global:
+  version: VERSION
+  css:
+    base:
+     static/build/css/index.css: {}
+     static/build/css/print.css: { media: print }
+  js:
+    static/build/js/index.js: {}

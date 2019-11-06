@@ -1,0 +1,13 @@
+<div class="events-bg events-bg-dark">
+  <h2 class="events-heading h3">Events</h2>
+  <div class="events">
+    {% for event in events %}
+      <div class="event-wrap">
+        {% include "@event" with event %}
+      </div>
+    {% endfor %}
+  </div>
+  <div class="text-center">
+    <a href="" class="events-calendar-cta fancy-link">View Full Calendar</a>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="image-bg">
+  {% if caption %}
+    <figure>
+      <div class="image-media">
+        <img src="{{media.src|path}}" alt="{{media.alt}}" />
+      </div>
+      <figcaption>{{caption}}</figcaption>
+    </figure>
+  {% else %}
+    <div class="image-media">
+      <img src="{{media.src|path}}" alt="{{media.alt}}" />
+    </div>
+  {% endif %}
+</div>

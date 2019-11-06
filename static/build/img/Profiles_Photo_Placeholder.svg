@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="230px" height="260px" viewBox="0 0 230 260" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Style-Guide-Elements" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Faculty-&amp;-Staff-List-Copy-9" transform="translate(0.000000, -3.000000)">
+            <g id="Group-2" transform="translate(0.000000, 3.000000)">
+                <g id="Group">
+                    <polygon id="Rectangle" fill="#EDEEEF" points="0 0 230 0 230 260 0 260"></polygon>
+                    <g id="Figure" transform="translate(42.000000, 60.000000)" fill="#5A646E" fill-rule="nonzero" opacity="0.256417411">
+                        <path d="M70.9974093,79.6956522 C92.37967,79.6956522 109.689119,61.8689931 109.689119,39.8478261 C109.689119,17.826659 92.37967,0 70.9974093,0 C49.6151486,0 32.3056995,17.826659 32.3056995,39.8478261 C32.3056995,61.8689931 49.6151486,79.6956522 70.9974093,79.6956522 Z" id="Shape"></path>
+                        <path d="M102.687707,84.503997 L101.467655,84.2934783 L100.450945,84.9250343 C92.1139231,90.6090392 82.1501654,93.7668196 72.1864077,93.7668196 C62.22265,93.7668196 52.2588924,90.6090392 43.9218706,84.9250343 L42.9051607,84.2934783 L41.6851087,84.503997 C14.4372815,91.6616326 0,109.766241 0,137.133671 L0,140.291451 L141.72937,140.291451 L144.372815,140.080933 L144.372815,136.923152 C144.372815,109.766241 129.935534,91.6616326 102.687707,84.503997 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

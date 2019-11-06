@@ -1,0 +1,87 @@
+html {
+  font-size: $rem-base;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: $link-color;
+  transition: .25s color ease-in-out;
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+hr {
+  border-bottom: 1px solid #EDEDED;
+  border-top: 0;
+  margin: rem(16) 0 rem(8);
+  &.medium {
+    border-width: 3px;
+  }
+  &.large {
+    border-width: 5px;
+  }
+  &.xlarge {
+    border-width: 8px;
+  }
+}
+
+.align {
+  &-right,
+  &-left {
+    margin-bottom: rem(24);
+    @include media-breakpoint-down(799) {
+      margin-top: rem(24);
+      margin-right: auto;
+      margin-left: auto;
+    }
+    @include media-breakpoint-up(800) {
+      max-width: 50%;
+    }
+  }
+  &-right {
+    @include media-breakpoint-up(800) {
+      float: right;
+      margin-left: rem(30);
+    }
+  }
+  &-left {
+    @include media-breakpoint-up(800) {
+      float: left;
+      margin-right: rem(30);
+    }
+  }
+}
+
+img.align-left,
+img.align-right {
+  display: block;
+  height: auto;
+}
+
+figure.align-left,
+figure.align-right {
+  @include media-breakpoint-down(799) {
+    display: table;
+    max-width: 100%;
+  }
+  img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+figcaption {
+  color: #404245;
+  font-size: rem(14);
+  line-height: (23 / 14);
+  margin-top: rem(8);
+}

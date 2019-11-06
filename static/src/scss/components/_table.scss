@@ -1,0 +1,88 @@
+.table {
+  &.table-dark {
+    thead {
+      background-color: $yellow;
+      color: $black;
+    }
+    th {
+      border-color: $black;
+    }
+    th {
+      font-size: rem(18);
+      &:first-child {
+        @include media-breakpoint-up($table-media-query-up) {
+          border-left: 1px solid $yellow;
+        }
+      }
+      &:last-child {
+        @include media-breakpoint-up($table-media-query-up) {
+          border-right: 1px solid $yellow;
+        }
+      }
+      &:not(:last-child) {
+        @include media-breakpoint-up($table-media-query-up) {
+          border-right: 1px solid $black;
+        }
+      }
+    }
+    td {
+      font-size: rem(17);
+      @include media-breakpoint-up($table-media-query-up) {
+        border-right: 1px solid $gray-500;
+      }
+      &:first-child {
+        @include media-breakpoint-up($table-media-query-up) {
+          border-left: 1px solid $gray-500;
+        }
+      }
+    }
+    tbody {
+      tr {
+        &:last-child {
+          td {
+            border-bottom: 1px solid $black;
+          }
+        }
+      }
+    }
+  }
+  thead {
+    background-color: #8D8D8D;
+    color: $white;
+    text-align: center;
+  }
+  th {
+    font-size: rem(18);
+    &:first-child {
+      border-left: 1px solid #8D8D8D;
+    }
+    &:last-child {
+      border-right: 1px solid #8D8D8D;
+    }
+    &:not(:last-child) {
+      border-right: 1px solid $gray-300;
+    }
+  }
+  td {
+    font-size: rem(17);
+    @include media-breakpoint-up($table-media-query-up) {
+      border-right: 1px solid $gray-300;
+    }
+    &:first-child {
+      @include media-breakpoint-up($table-media-query-up) {
+        border-left: 1px solid $gray-300;
+      }
+    }
+  }
+  tbody {
+    tr {
+      &:last-child {
+        td {
+          @include media-breakpoint-up($table-media-query-up) {
+            border-bottom: 1px solid $gray-300;
+          }
+        }
+      }
+    }
+  }
+}

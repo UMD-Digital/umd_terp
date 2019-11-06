@@ -1,0 +1,60 @@
+<div class="article-hero">
+  <div class="container article-hero-content">
+    <div class="row justify-content-center">
+      <div class="col-800 col-1000-10">
+        <span class="label">{{category}}</span>
+        <h1>{{title}}</h1>
+        {% if subhead %}
+          <p class="article-subhead h4">{{subhead}}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container page-content article-content">
+  <div class="row justify-content-center">
+    <div class="col-800 col-1000-10">
+      <div class="article-byline">
+        <a href="" rel="author" class="article-author">{{author}}</a>
+        <span>{{publishDate}}</span>
+      </div>
+      <div class="section section-umd_terp_image_with_text">
+        {% include "@image" with featuredImage %}
+      </div>
+      <div class="section">
+        <div class="editor-content">
+          <p>Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet lectus. Vestibulum auctor varius tortor, sit amet rutrum mauris cursus vel. Quisque ac dapibus nunc. Fusce vel congue turpis. Suspendisse vel purus ac velit euismod consequat nec quis arcu. Ut at ipsum sapien. Sed arcu sapien, malesuada ut lorem id, imperdiet dignissim ex. Vivamus quam arcu, auctor sit amet nulla quis, auctor pharetra erat. Integer eu tempus turpis, et ultrices.</p>
+          <p>Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet lectus. Vestibulum auctor varius tortor, sit amet rutrum mauris cursus vel. Quisque ac dapibus nunc. Fusce vel congue turpis. Suspendisse vel purus ac velit euismod consequat nec quis arcu. Ut at ipsum sapien. Sed arcu sapien, malesuada ut lorem id, imperdiet dignissim ex. Vivamus quam arcu, auctor sit amet nulla quis, auctor pharetra erat. Integer eu tempus turpis, et ultrices.</p>
+        </div>
+      </div>
+      <div class="section section-umd_terp_card_group">
+        {% include "@card-group" with cardGroup %}
+      </div>
+      <div class="section">
+        <div class="editor-content">
+          <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+          <h3>Heading 4 - Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante.</h3>
+          <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+        </div>
+      </div>
+      <div class="section section-umd_terp_slideshow">
+        {% include "@slideshow" with slideshow %}
+      </div>
+      <div class="section">
+        <div class="editor-content">
+          <p>Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet lectus. Vestibulum auctor varius tortor, sit amet rutrum mauris cursus vel. Quisque ac dapibus nunc. Fusce vel congue turpis. Suspendisse vel purus ac velit euismod consequat nec quis arcu. Ut at ipsum sapien. Sed arcu sapien, malesuada ut lorem id, imperdiet dignissim ex. Vivamus quam arcu, auctor sit amet nulla quis, auctor pharetra erat. Integer eu tempus turpis, et ultrices.</p>
+          <p>Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet lectus. Vestibulum auctor varius tortor, sit amet rutrum mauris cursus vel. Quisque ac dapibus nunc. Fusce vel congue turpis. Suspendisse vel purus ac velit euismod consequat nec quis arcu. Ut at ipsum sapien. Sed arcu sapien, malesuada ut lorem id, imperdiet dignissim ex. Vivamus quam arcu, auctor sit amet nulla quis, auctor pharetra erat. Integer eu tempus turpis, et ultrices.</p>
+        </div>
+      </div>
+      <div class="section section-umd_terp_video">
+        {% include "@embed" with videoEmbed %}
+      </div>
+      <div class="section section-umd_terp_related_stories">
+        {% include "@card-group" with relatedStories %}
+      </div>
+      <div class="article-categories">
+        {% include "@taglist" with taglist %}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="carousel-item">
+  <figure>
+    <div class="carousel-image">
+      <img src="{{ file_url(content.field_ut_carousel_item_image[0]['#media'].field_media_image.entity.uri.value | image_style('optimized')) }}" alt="placeholder alt text">
+    </div>
+    {% if content.field_ut_carousel_item_caption|field_value %}
+      <figcaption class="carousel-image-caption">{{ content.field_ut_carousel_item_caption|field_value }}</figcaption>
+    {% endif %}
+  </figure>
+  <div class="carousel-caption">
+    {% if content.field_ut_carousel_item_title|field_value %}
+      <div class="carousel-caption-title">{{ content.field_ut_carousel_item_title|field_value }}</div>
+    {% endif %}
+    {% if content.field_ut_carousel_item_text|field_value %}
+      <div class="carousel-caption-content">{{ content.field_ut_carousel_item_text|field_value }}</div>
+    {% endif %}
+  </div>
+</div>

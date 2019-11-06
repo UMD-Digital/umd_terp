@@ -1,0 +1,23 @@
+@function strip-unit($number) {
+  @if type-of($number)=='number'and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@function em($size, $context-size: $rem-base) {
+  @return (strip-unit($size) / strip-unit($context-size)) * 1em;
+}
+
+@function rem($size, $context-size: $rem-base) {
+  @return (strip-unit($size) / strip-unit($context-size)) * 1rem;
+}
+
+@function vw($size, $viewport-width) {
+  @return (strip-unit($size) / strip-unit($viewport-width)) * 100vw;
+}
+
+@function vh($size, $viewport-height) {
+  @return (strip-unit($size) / strip-unit($viewport-height)) * 100vh;
+}

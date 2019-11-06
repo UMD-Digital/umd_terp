@@ -1,0 +1,362 @@
+{
+  "preview": "@page-preview",
+  "context": {
+    "title": "Kitchen Sink",
+		"hero": {
+			"image": {
+        "src": "/img/KS_Hero.jpg",
+        "alt": "Kitchen sink hero alt text"
+      }
+    },
+    "breadcrumb": {
+      "items": [
+        "Home",
+        "Link",
+        "Breadcrumbs"
+      ]
+    },
+    "button": {
+      "text": "Button"
+    },
+    "accordion": {
+      "id": "ks-accordion",
+      "first-open": true,
+      "open-multiple": true,
+      "items": [
+        {
+          "title": "Accordion 1",
+          "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"
+        },
+        {
+          "title": "Accordion 2",
+          "content": "<p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit.</p>"
+        }
+      ]
+    },
+    "blockquote": {
+      "quote": "Lorem Ipsum Dolor Sit Amet duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore",
+      "photo": null,
+      "author": "",
+      "title": ""
+    },
+    "blockquoteAuthor": {
+      "quote": "Lorem Ipsum Dolor Sit Amet duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore",
+      "photo": {
+        "src": "/img/KS_Blockquote.jpg",
+        "alt": "Portrait of Firstname Lastname ’19"
+      },
+      "author": "Firstname Lastname ’19",
+      "title": "Title goes here"
+    },
+    "table": {
+      "caption": "",
+      "rows": [
+        [
+          "Column One",
+          "Column Two",
+          "Column Three",
+          "Column Four"
+        ],
+        [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum explicabo placeat dicta, dolores ipsam eligendi nulla temporibus magni voluptate numquam labore suscipit illum culpa modi aperiam at doloremque beatae ipsa?",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum explicabo placeat dicta, dolores ipsam eligendi nulla temporibus magni voluptate numquam labore suscipit illum culpa modi aperiam at doloremque beatae ipsa?",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum explicabo placeat dicta, dolores ipsam eligendi nulla temporibus magni voluptate numquam labore suscipit illum culpa modi aperiam at doloremque beatae ipsa?",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum explicabo placeat dicta, dolores ipsam eligendi nulla temporibus magni voluptate numquam labore suscipit illum culpa modi aperiam at doloremque beatae ipsa?"
+        ],
+        [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum explicabo placeat dicta, dolores ipsam eligendi nulla temporibus magni voluptate numquam labore suscipit illum culpa modi aperiam at doloremque beatae ipsa?",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum explicabo placeat dicta, dolores ipsam eligendi nulla temporibus magni voluptate numquam labore suscipit illum culpa modi aperiam at doloremque beatae ipsa?",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum explicabo placeat dicta, dolores ipsam eligendi nulla temporibus magni voluptate numquam labore suscipit illum culpa modi aperiam at doloremque beatae ipsa?",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum explicabo placeat dicta, dolores ipsam eligendi nulla temporibus magni voluptate numquam labore suscipit illum culpa modi aperiam at doloremque beatae ipsa?"
+        ],
+        [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum explicabo placeat dicta, dolores ipsam eligendi nulla temporibus magni voluptate numquam labore suscipit illum culpa modi aperiam at doloremque beatae ipsa?",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum explicabo placeat dicta, dolores ipsam eligendi nulla temporibus magni voluptate numquam labore suscipit illum culpa modi aperiam at doloremque beatae ipsa?",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum explicabo placeat dicta, dolores ipsam eligendi nulla temporibus magni voluptate numquam labore suscipit illum culpa modi aperiam at doloremque beatae ipsa?",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum explicabo placeat dicta, dolores ipsam eligendi nulla temporibus magni voluptate numquam labore suscipit illum culpa modi aperiam at doloremque beatae ipsa?"
+        ]
+      ]
+    },
+    "slideshow": {
+      "pager": true,
+      "items": [
+        {
+          "image": {
+            "src": "http://via.placeholder.com/1000x600",
+            "alt": "placeholder alt text",
+            "caption": "Photos by John Smith & Jane Adams"
+          },
+          "title": "Slide Title Lorem 1",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."
+        },
+        {
+          "image": {
+            "src": "http://via.placeholder.com/1000x600",
+            "alt": "placeholder alt text",
+            "caption": "Photos by John Smith & Jane Adams"
+          },
+          "title": "Slide Title Lorem Ipsum 2",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."
+        },
+        {
+          "image": {
+            "src": "http://via.placeholder.com/1000x600",
+            "alt": "placeholder alt text",
+            "caption": "Photos by John Smith & Jane Adams"
+          },
+          "title": "Slide Title Dolor 3",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."
+        }
+      ]
+    },
+    "cardGroup3Up": {
+      "heading": "",
+      "cards": [
+        {
+          "image": {
+            "src": "/img/KS_Carousel_1.jpg",
+            "alt": "placeholder alt text"
+          },
+          "imageText": "",
+          "title": "Card title 1",
+          "content": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "cta": {
+            "text": "Learn More",
+            "href": "https://google.com"
+          }
+        },
+        {
+          "image": {
+            "src": "/img/KS_Carousel_2.jpg",
+            "alt": "placeholder alt text"
+          },
+          "imageText": "",
+          "title": "Card title 2",
+          "content": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "cta": {
+            "text": "Learn More",
+            "href": "https://google.com"
+          }
+        },
+        {
+          "image": {
+            "src": "/img/KS_Carousel_3.jpg",
+            "alt": "placeholder alt text"
+          },
+          "imageText": "",
+          "title": "Card title 3",
+          "content": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "cta": {
+            "text": "Learn More",
+            "href": "https://google.com"
+          }
+        }
+      ]
+    },
+    "cardGroup2Up": {
+      "heading": "",
+      "cards": [
+        {
+          "image": {
+            "src": "/img/KS_Carousel_1.jpg",
+            "alt": "placeholder alt text"
+          },
+          "imageText": "",
+          "title": "Card title 1",
+          "content": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "cta": {
+            "text": "Learn More",
+            "href": "https://google.com"
+          }
+        },
+        {
+          "image": {
+            "src": "/img/KS_Carousel_2.jpg",
+            "alt": "placeholder alt text"
+          },
+          "imageText": "",
+          "title": "Card title 2",
+          "content": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "cta": {
+            "text": "Learn More",
+            "href": "https://google.com"
+          }
+        }
+      ]
+    },
+    "videoEmbed": {
+      "src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "title": "Rick Astley - Never Gonna Give You Up (Video)",
+      "aspect": {
+        "x": 2,
+        "y": 1
+      },
+      "caption": "Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque. Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel rhoncus nibh, ut tincidunt turpis."
+    },
+    "imageWidget": {
+      "media": {
+        "src": "/img/KS_Image_Widget.jpg",
+        "alt": "placeholder alt"
+      },
+      "caption": "Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque. Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel rhoncus nibh, ut tincidunt turpis."
+    },
+    "carousel": {
+      "items": [
+        {
+          "image": {
+            "src": "/img/KS_Carousel_1.jpg",
+            "alt": "placeholder alt text",
+            "caption": "Photos by John Smith & Jane Adams"
+          },
+          "title": "Slide Title Lorem 1",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."
+        },
+        {
+          "image": {
+            "src": "/img/KS_Carousel_2.jpg",
+            "alt": "placeholder alt text",
+            "caption": "Photos by John Smith & Jane Adams"
+          },
+          "title": "Slide Title Lorem Ipsum 2",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."
+        },
+        {
+          "image": {
+            "src": "/img/KS_Carousel_3.jpg",
+            "alt": "placeholder alt text",
+            "caption": "Photos by John Smith & Jane Adams"
+          },
+          "title": "Slide Title Dolor 3",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."
+        },
+        {
+          "image": {
+            "src": "/img/KS_Carousel_4.jpg",
+            "alt": "placeholder alt text",
+            "caption": "Photos by John Smith & Jane Adams"
+          },
+          "title": "Slide Title Dolor 4",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."
+        }
+      ]
+    },
+    "relatedStories": {
+      "heading": "Related Stories",
+      "cards": [
+        {
+          "image": {
+            "src": "/img/KS_Carousel_1.jpg",
+            "alt": "placeholder alt text"
+          },
+          "imageText": "May 28, 2019",
+          "title": "Story title 1",
+          "content": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "cta": {
+            "text": "Read More",
+            "href": "https://google.com"
+          }
+        },
+        {
+          "image": {
+            "src": "/img/KS_Carousel_2.jpg",
+            "alt": "placeholder alt text"
+          },
+          "imageText": "May 30, 2019",
+          "title": "Story title 2",
+          "content": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "cta": {
+            "text": "Read More",
+            "href": "https://google.com"
+          }
+        },
+        {
+          "image": {
+            "src": "/img/KS_Carousel_3.jpg",
+            "alt": "placeholder alt text"
+          },
+          "imageText": "May 30, 2019",
+          "title": "Story title 3",
+          "content": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "cta": {
+            "text": "Read More",
+            "href": "https://google.com"
+          }
+        }
+      ]
+    },
+    "statGroup": {
+      "stats": [
+        {
+          "number": "36M",
+          "text": "Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, nec tortor erat a elemen."
+        },
+        {
+          "number": "1600",
+          "text": "Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla."
+        },
+        {
+          "number": "2890",
+          "text": "Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, sceleris."
+        }
+      ]
+    },
+    "tabPanel": {
+      "id": "ks-tabs",
+      "fade": true,
+      "sections": [
+        {
+          "label": "Active Tab",
+          "body": "<figure role=\"group\" class=\"align-left\"><img alt=\"Image description lorem ipsum dolor sit amet\" src=\"https://via.placeholder.com/1080x720\"><figcaption>Image description lorem ipsum dolor sit amet</figcaption></figure><p>Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet lectus. Vestibulum auctor varius tortor, sit amet rutrum mauris cursus vel. Quisque ac dapibus nunc. Fusce vel congue turpis. Suspendisse vel purus ac.</p>"
+        },
+        {
+          "label": "Short Inactive Tab",
+          "body": "<p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>"
+        },
+        {
+          "label": "Long Title Lorem Ipsum Inactive Tab",
+          "body": "<p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>"
+        }
+      ]
+    },
+    "events": {
+      "events": [
+        {
+          "frequency": "",
+          "date": "May 13 - June 12, 2019",
+          "title": "Event Title Will Go Here",
+          "time": "10:00am - 12:00pm",
+          "location": "Brendan Aribe Center",
+          "cta": {
+            "href": "https://google.com",
+            "text": "Learn More",
+            "style": "fancy-link"
+          }
+        },
+        {
+          "frequency": "Weekly",
+          "date": "June 28, 2019",
+          "title": "Event Title Will Go Here",
+          "time": "10:00am - 12:00pm",
+          "location": "Brendan Aribe Center",
+          "cta": {
+            "href": "https://google.com",
+            "text": "Register",
+            "style": "btn"
+          }
+        },
+        {
+          "frequency": "Ongoing",
+          "date": "June 19, 2019",
+          "title": "Event Title Will Go Here",
+          "time": "10:00am - 12:00pm",
+          "location": "Brendan Aribe Center",
+          "cta": {
+            "href": "https://google.com",
+            "text": "Register",
+            "style": "btn"
+          }
+        }
+      ]
+    }
+	}
+}

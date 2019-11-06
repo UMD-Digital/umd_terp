@@ -1,0 +1,14 @@
+{% include "@hero" with hero %}
+<div class="container page-content">
+  <div class="row justify-content-center">
+    <div class="col-800-3 col-1000-2">
+      {% include "@subnav" %}
+    </div>
+    <div class="col-800 col-1000-10">
+      {% include "@breadcrumb" with breadcrumb %}
+      <h1>News</h1>
+      {% include "@feed" with feed %}
+      {% include "@pagination" %}
+    </div>
+  </div>
+</div>

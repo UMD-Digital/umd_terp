@@ -1,0 +1,9 @@
+<div class="editor-content">
+  <figure role="group" class="align-left">
+    <img alt="" src="{{ file_url(content.field_ut_image_with_text_image[0]['#media'].field_media_image.entity.uri.value | image_style('optimized')) }}">
+    {% if content.field_ut_image_with_text_caption|field_value %}
+      <figcaption>{{ content.field_ut_image_with_text_caption|field_value }}</figcaption>
+    {% endif %}
+  </figure>
+  {{ content.field_ut_image_with_text_text|field_value }}
+</div>

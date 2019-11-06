@@ -1,0 +1,14 @@
+{#
+  IMPORTANT: We need to use nested span tags around
+  the link text to allow spaceless to remove whitespace
+  before and after the link text.
+#}
+{% spaceless %}
+  <a href="{{ link['#url'] }}" class="{{ classes }}" target="{{ link['#options'].attributes.target|default('_self') }}">
+    {% if title %}
+      {{ title }}
+    {% else %}
+      {{ link['#title'] }}
+    {% endif %}
+  </a>
+{% endspaceless %}

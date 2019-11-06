@@ -1,0 +1,39 @@
+{
+  "context": {
+    "stats": [
+      {
+        "number": "36M",
+        "text": "Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, nec tortor erat a elemen."
+      },
+      {
+        "number": "1600",
+        "text": "Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla."
+      },
+      {
+        "number": "2890",
+        "text": "Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, sceleris."
+      }
+    ]
+  },
+  "variants": [
+    {
+      "name": "dark",
+      "context": {
+        "stats": [
+          {
+            "number": "36M",
+            "text": "Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, nec tortor erat a elemen."
+          },
+          {
+            "number": "1600",
+            "text": "Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla."
+          },
+          {
+            "number": "2890",
+            "text": "Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, sceleris."
+          }
+        ]
+      }
+    }
+  ]
+}
