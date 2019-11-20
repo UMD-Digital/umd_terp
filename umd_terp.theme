@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @file
+ */
+
 require "vendor/autoload.php";
 
 use Drupal\taxonomy\Entity\Term;
@@ -17,3 +21,4 @@ require_once('inc/functions.inc');
 require_once('inc/preprocess.inc');
 require_once('inc/alter.inc');
 require_once('inc/node.inc');
+

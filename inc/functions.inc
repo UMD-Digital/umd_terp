@@ -53,7 +53,7 @@ function _umd_terp_extend_theme_variables(&$variables) {
 }
 
 /**
- * Custom function to help with previews/revisions
+ * Custom function to help with previews/revisions.
  */
 function _umd_terp_get_node_by_route() {
   $route_name = \Drupal::routeMatch()->getRouteName();
