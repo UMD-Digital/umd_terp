@@ -1,7 +1,7 @@
 {
     "name": "umd_digital/umd_terp",
     "type": "drupal-theme",
-    "description": "Base Drupal 8 theme for UMD.",
+    "description": "UMD Terp is the base theme for all UMD drupal 8 projects.",
     "keywords": ["Drupal"],
     "license": "GPL-2.0+",
     "homepage": "https://github.com/UMD-Digital/umd_terp",
@@ -26,10 +26,5 @@
     "support": {
       "issues": "http://idfive.com",
       "source": "http://idfive.com"
-    },
-    "extra": {
-      "branch-alias": {
-        "8.x-1.x": "1.x-dev"
-      }
     }
   }
