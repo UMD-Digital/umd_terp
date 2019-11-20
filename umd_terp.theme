@@ -13,12 +13,6 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Template\Attribute;
 use Drupal\Core\Render\Element;
 
-
-// Shared API functions
-
-//  API Integrations
-
-// Theme related hooks.
 require_once('inc/functions.inc');
 require_once('inc/preprocess.inc');
 require_once('inc/alter.inc');

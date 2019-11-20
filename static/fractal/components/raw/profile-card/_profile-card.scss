@@ -4,6 +4,7 @@
   color: $gray-900;
   font-size: rem(17);
   padding: rem(42) rem(42) rem(36);
+  margin-bottom: $grid-gutter-width;
   &:hover {
     @include media-breakpoint-up(800) {
       transform: scale(1.05);

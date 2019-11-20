@@ -47,12 +47,18 @@ hr {
     }
   }
   &-right {
+    @include media-breakpoint-down(799) {
+      float: none;
+    }
     @include media-breakpoint-up(800) {
       float: right;
       margin-left: rem(30);
     }
   }
   &-left {
+    @include media-breakpoint-down(799) {
+      float: none;
+    }
     @include media-breakpoint-up(800) {
       float: left;
       margin-right: rem(30);

@@ -44,9 +44,9 @@
 @import "_core/layout";
 @import "_core/placeholder-selectors";
 @import "_core/vendor";
+@import "_core/forms";
 
 // Components
-@import "components/overrides";
 @import "../components/accordion/accordion";
 @import "../components/blockquote/blockquote";
 @import "../components/button/button";
@@ -55,6 +55,7 @@
 @import "../components/card-group/card-group";
 @import "../components/carousel/carousel";
 @import "../components/carousel-item/carousel-item";
+@import "../components/embed/embed";
 @import "../components/events/events";
 @import "../components/event/event";
 @import "../components/feature/feature";
@@ -77,11 +78,9 @@
 
 @import "components/accordion";
 @import "components/blockquote";
-@import "components/embed";
 @import "components/table";
 @import "components/tab-panel";
 
 // Pages
 @import "../components/pages/article-detail/article-detail";
-@import "../components/pages/home/home";
 @import "../components/pages/profile-detail/profile-detail";

@@ -313,10 +313,35 @@
                             <code class="Code Code--lang-SCSS FileBrowser-code">
                                 <pre>@<span class="hljs-keyword">import</span> <span class="hljs-string">"variables"</span>;
 
+<span class="hljs-selector-class">.section</span><span class="hljs-selector-class">.section-ut_slideshow</span> {
+  <span class="hljs-attribute">margin-bottom</span>: rem(<span class="hljs-number">15</span>);
+  @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
+    <span class="hljs-attribute">margin-bottom</span>: rem(<span class="hljs-number">25</span>);
+  }
+  <span class="hljs-selector-class">.page-content</span> &amp; {
+    @<span class="hljs-keyword">include</span> media-breakpoint-down(<span class="hljs-number">799</span>) {
+      <span class="hljs-attribute">margin-right</span>: rem(-<span class="hljs-number">24</span>);
+      <span class="hljs-attribute">margin-left</span>: rem(-<span class="hljs-number">24</span>);
+    }
+  }
+}
+
+<span class="hljs-selector-class">.page-section</span><span class="hljs-selector-class">.page-section-ut_slideshow</span> {
+  &gt; <span class="hljs-selector-class">.max-bound</span> &gt; <span class="hljs-selector-class">.outer-pad</span> {
+    <span class="hljs-attribute">padding-bottom</span>: rem(<span class="hljs-number">30</span>);
+    @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
+      <span class="hljs-attribute">padding-bottom</span>: rem(<span class="hljs-number">50</span>);
+    }
+  }
+}
+
 <span class="hljs-selector-class">.slideshow-bg</span> {
   <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$white</span>;
   <span class="hljs-attribute">color</span>: <span class="hljs-variable">$gray-700</span>;
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> rem(<span class="hljs-number">35</span>) rem(<span class="hljs-number">35</span>);
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> rem(<span class="hljs-number">24</span>) rem(<span class="hljs-number">35</span>);
+  @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> rem(<span class="hljs-number">35</span>) rem(<span class="hljs-number">35</span>);
+  }
   &amp;-dark {
     <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$gray-900</span>;
     <span class="hljs-attribute">color</span>: <span class="hljs-variable">$white</span>;
@@ -378,7 +403,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">878 Bytes</span>
+                    <span class="Meta-value">1.4 KB</span>
                 </li>
             </ul>
         </div>
@@ -427,6 +452,7 @@ export class Slideshow {
   protected element: HTMLElement;
   protected elementNavNext: HTMLElement;
   protected elementNavPrevious: HTMLElement;
+  protected slides: NodeListOf<span class="hljs-tag">&lt;<span class="hljs-name">HTMLElement</span>&gt;</span>;
   protected slideshow: Flickity;
 
   constructor(element: HTMLElement) {
@@ -434,18 +460,21 @@ export class Slideshow {
       this.element = element;
       this.elementNavNext = this.element.querySelector(".slideshow-control-next");
       this.elementNavPrevious = this.element.querySelector(".slideshow-control-prev");
-      this.slideshow = new Flickity(this.element.querySelector(".slideshow"), {
-        contain: true,
-        imagesLoaded: true,
-        wrapAround: true,
-        lazyLoad: 2,
-        prevNextButtons: false,
-        pageDots: false,
-        adaptiveHeight: true
-      });
-
-      this.addCarouselEventListeners();
-      this.handleSlideTransition();
+      this.slides = this.element.querySelectorAll(".slideshow-item");
+      if (this.slides.length &gt; 1) {
+        this.slideshow = new Flickity(this.element.querySelector(".slideshow"), {
+          contain: true,
+          imagesLoaded: true,
+          wrapAround: true,
+          lazyLoad: 2,
+          prevNextButtons: false,
+          pageDots: false,
+          adaptiveHeight: true
+        });
+        
+        this.addCarouselEventListeners();
+        this.handleSlideTransition();
+      }
     }
   }
 
@@ -489,7 +518,7 @@ export default function initSlideshow() {
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.6 KB</span>
+                    <span class="Meta-value">1.8 KB</span>
                 </li>
             </ul>
         </div>

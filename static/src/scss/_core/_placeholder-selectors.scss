@@ -206,22 +206,24 @@
 }
 
 %btn-red {
-  border-color: $red !important;
-  color: $red !important;
-  &:hover {
-    background-color: $red !important;
-    border-color: $red !important;
-    color: $white !important;
+  border-color: $red;
+  color: $red;
+  &:hover,
+  &:focus {
+    background-color: $red;
+    border-color: $red;
+    color: $white;
   }
 }
 
 %btn-yellow {
-  border-color: $yellow !important;
-  color: $yellow !important;
-  &:hover {
-    background-color: $yellow !important;
-    border-color: $yellow !important;
-    color: $black !important;
+  border-color: $yellow;
+  color: $yellow;
+  &:hover,
+  &:focus {
+    background-color: $yellow;
+    border-color: $yellow;
+    color: $black;
   }
 }
 
@@ -234,4 +236,31 @@
   line-height: (16 / 14);
   margin-bottom: rem(8);
   text-transform: uppercase;
+}
+
+%form-label {
+  color: $red;
+  display: block;
+  font-size: rem(16);
+  font-weight: 700;
+  line-height: (26 / 16);
+  margin-bottom: rem(10);
+  text-transform: uppercase;
+}
+
+%form-text-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: $white;
+  border: 2px solid $gray-300;
+  border-radius: 0;
+  font-size: rem(16);
+  line-height: (26 / 16);
+  padding: rem(14) rem(20) rem(13);
+  width: 100%;
+  &::placeholder {
+    color: $gray-500;
+    opacity: 1;
+  }
 }

@@ -14,7 +14,9 @@
         </div>
         <div class="site-footer-address">
           <strong>{{ site_name }}</strong><br>
-          <span>{{ umd_terp_address }} </span><span class="text-red" aria-hidden="true">&nbsp;·&nbsp;</span><a href="tel:+{{ umd_terp_phone|preg_replace('/[^0-9]/', '') }}">{{ umd_terp_phone }}</a>
+          <span>{{ umd_terp_address }} </span><br>
+          <span class="text-red" aria-hidden="true">&nbsp;·&nbsp;</span><a href="tel:+{{ umd_terp_phone|preg_replace('/[^0-9]/', '') }}">{{ umd_terp_phone }}</a>
+          <span class="text-red" aria-hidden="true">&nbsp;·&nbsp;</span><a href="mailto:{{ umd_terp_email }}">{{ umd_terp_email }}</a>
         </div>
         <div class="site-footer-social">
           {% include directory ~ '/templates/partials/social-links.html.twig' %}

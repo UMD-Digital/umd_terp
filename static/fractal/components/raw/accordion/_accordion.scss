@@ -21,6 +21,7 @@
         display: $accordion__label-display;
         font-family: $accordion__label-font-family;
         font-size: $accordion__label-font-size;
+        font-weight: $accordion__label-font-weight;
         margin: $accordion__label-margin;
         padding: $accordion__label-padding;
         text-align: $accordion__label-text-align;
@@ -32,6 +33,7 @@
         &:focus {
           background: $accordion__label--hover-background;
           color: $accordion__label--hover-color;
+          font-weight: $accordion__label-font-weight;
         }
         &[aria-expanded="true"] {
           background: $accordion__label--active-background;

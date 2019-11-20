@@ -1,8 +1,8 @@
 .home-hero {
   background-color: $white;
-  min-height: 550px;
   > .max-bound {
     position: relative;
+    min-height: 550px;
   }
   &.home-hero-dark,
   &.home-hero-bg {
@@ -26,7 +26,9 @@
   position: relative;
   z-index: 10;
   &:not(:only-child) {
-    width: 50%;
+    @include media-breakpoint-up(800) {
+      width: 50%;
+    }
   }
   &:only-child {
     h2, h3, h4, h5, h6, p {
@@ -36,12 +38,23 @@
 }
 
 .home-hero-media {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 50%;
+  position: relative;
   z-index: 0;
+  @include media-breakpoint-up(800) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+  }
+  &:before {
+    content: "";
+    display: block;
+    padding-bottom: 56.25%;
+    @include media-breakpoint-up(800) {
+      display: none;
+    }
+  }
   img {
     display: block;
     height: 100%;
@@ -55,7 +68,7 @@
   .home-hero-bg & {
     left: 0;
     width: 100%;
-    &:before {
+    &:after {
       content: "";
       background-image: linear-gradient(268deg, transparent 1%, rgba($black, .75) 75%, $black 100%);
       display: block;

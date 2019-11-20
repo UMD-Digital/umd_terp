@@ -1,3 +1,29 @@
+.section.section-ut_card_group,
+.section.section-ut_news {
+  margin: 0 0 rem(20);
+  @include media-breakpoint-up(800) {
+    margin: rem(10) 0 rem(30);
+  }
+  .page-content & {
+    @include media-breakpoint-down(799) {
+      margin-right: rem(-24);
+      margin-left: rem(-24);
+    }
+  }
+}
+
+.page-section.page-section-ut_card_group,
+.page-section.page-section-ut_news {
+  > .max-bound > .outer-pad {
+    padding-top: rem(4);
+    padding-bottom: 0;
+    @include media-breakpoint-up(800) {
+      padding-top: rem(44);
+      padding-bottom: rem(54);
+    }
+  }
+}
+
 .card-group-bg {
   background: $white;
   padding: rem(70) rem(44);
@@ -89,4 +115,16 @@
 
 .card-group-nav-button {
   @extend %carousel-nav-button--minimal;
+}
+
+.card-group-cta.fancy-link {
+  @include media-breakpoint-down(799) {
+    display: inline-block;
+    margin-right: 0;
+  }
+  .card-group-nav + .text-center & {
+    @include media-breakpoint-down(799) {
+      margin-top: rem(48);
+    }
+  }
 }

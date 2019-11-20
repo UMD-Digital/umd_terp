@@ -1,5 +1,4 @@
 .lightbox {
-  background-color: rgba($gray-900, .9);
   display: flex;
   justify-content: center;
   padding: rem(130) 0 rem(30);
@@ -11,13 +10,29 @@
   transition: .5s opacity ease-in-out,
     .5s visibility ease-in-out;
   z-index: 100;
+  @include media-breakpoint-up(800) {
+    padding-bottom: rem(90);
+  }
   &[aria-hidden="true"] {
     opacity: 0;
     visibility: hidden;
   }
-  @include media-breakpoint-up(800) {
-    padding-bottom: rem(90);
+  .toolbar-vertical & {
+    padding-top: rem(169);
   }
+  .toolbar-horizontal & {
+    padding-top: rem(209);
+  }
+}
+
+.lightbox-overlay {
+  background-color: rgba($gray-900, .9);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
 }
 
 .lightbox-inner {
@@ -25,6 +40,8 @@
   height: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .lightbox-content {
@@ -69,5 +86,11 @@
   }
   &:after {
     transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  .toolbar-vertical & {
+    top: rem(67);
+  }
+  .toolbar-horizontal & {
+    top: rem(107);
   }
 }

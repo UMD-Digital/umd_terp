@@ -36,6 +36,12 @@
         }
       }
     }
+    &:first-child {
+      margin-left: auto;
+    }
+    &:last-child {
+      margin-right: auto;
+    }
   }
   .icon-fancy-link-arrow {
     display: inline-block;

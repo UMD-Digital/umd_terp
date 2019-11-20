@@ -4,5 +4,8 @@
 {% endblock %}
 
 {% block main %}
+  {% if logged_in and page.admin_tabs  %}
+		<div class="compartment admin--tabs">{{ page.admin_tabs }}</div>
+	{% endif %}
   {{ page.content }}
 {% endblock %}

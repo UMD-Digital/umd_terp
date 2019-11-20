@@ -6,22 +6,15 @@
 #}
 <div class="feed-item">
   <div class="row no-gutters align-items-start">
-    <div class="col-12 col-600-4 col-800-12 col-1000-4">
-      <div class="feed-item-img">
-        {% set photo = assets_path ~ '/img/Profiles_Photo_Placeholder.svg' %}
-        {% if content.fied_umdt_ct_person_photo|field_value %}
-          {% set photo = file_url(content.fied_umdt_ct_person_photo|field_target_entity.uri.value | image_style('optimized')) %}
-        {% endif %}
-        <img src="{{ photo }}" alt="placeholder alt text">
-      </div>
-    </div>
     <div class="col">
       <div class="feed-item-body">
-        <div class="feed-item-date">{{ node.createdtime|date('F j, Y') }}</div>
+        <div class="feed-item-date">{{ content.field_umdt_ct_article_date|field_value }}</div>
         <h2 class="feed-item-title">
           <a href="{{ link }}">{{ node.title.value }}</a>
         </h2>
-        <p class="feed-item-description">Fusce vel congue turpis. Suspendisse vel purus ac velit euismod consequat nec quis arcu. Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet.</p>
+        <div class="feed-item-description">
+          {{ content.body }}
+        </div>
       </div>
     </div>
   </div>

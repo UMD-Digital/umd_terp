@@ -1,3 +1,27 @@
+.section.section-ut_events {
+  margin: 0 0 rem(60);
+  @include media-breakpoint-up(800) {
+    margin: rem(10) 0 rem(20);
+  }
+  .page-content & {
+    @include media-breakpoint-down(799) {
+      margin-right: rem(-24);
+      margin-left: rem(-24);
+    }
+  }
+}
+
+.page-section.page-section-ut_events {
+  > .max-bound > .outer-pad {
+    padding-top: rem(4);
+    padding-bottom: 0;
+    @include media-breakpoint-up(800) {
+      padding-top: rem(44);
+      padding-bottom: rem(34);
+    }
+  }
+}
+
 .events-bg {
   padding: rem(60) rem(24) rem(72);
   @include media-breakpoint-up(800) {
@@ -18,10 +42,6 @@
         color: $yellow;
       }
     }
-  }
-  .page-section .outer-pad & {
-    padding-top: 0;
-    padding-bottom: 0;
   }
 }
 

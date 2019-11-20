@@ -1,15 +1,15 @@
 {% include directory ~ '/templates/_includes/global/header.html.twig' %}
 
 <main id="main-content">
-  {% block hero %}
-    {% if hero_image %}
-			<div class="hero">
-				<div class="hero-media">
-					<img src="{{ hero_image }}" alt="Profiles hero alt text">
+  	{% block hero %}
+		{% if hero_image %}
+				<div class="hero">
+					<div class="hero-media">
+						<img src="{{ hero_image }}" alt="">
+					</div>
 				</div>
-			</div>
-    {% endif %}
-  {% endblock %}
+		{% endif %}
+  	{% endblock %}
 	{% block main %}
 		<div class="container page-content">
 			{{ page.help }}
@@ -21,20 +21,14 @@
 							{{ page.sidebar }}
 						</div>
 					{% endblock %}
-						<div class="col-800-9 col-1000-10">
-							{% if logged_in and page.admin_tabs  %}
-								<div class="compartment admin--tabs">{{ page.admin_tabs }}</div>
-							{% endif %}
-							{{ page.content }}
-						</div>
-				{% else %}
-					<div class="col-12">
-						{% if logged_in and page.admin_tabs  %}
-							<div class="compartment admin--tabs">{{ page.admin_tabs }}</div>
-						{% endif %}
-						{{ page.content }}
-					</div>
 				{% endif %}
+				<div class="col-800-9 col-1000-10">
+					{{ page.breadcrumbs }}
+					{% if logged_in and page.admin_tabs  %}
+						<div class="compartment admin--tabs">{{ page.admin_tabs }}</div>
+					{% endif %}
+					{{ page.content }}
+				</div>
 			</div>
 		</div>
 	{% endblock %}

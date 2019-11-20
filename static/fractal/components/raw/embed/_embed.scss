@@ -1,0 +1,28 @@
+.section.section-ut_video {
+  margin: rem(35) 0;
+  @include media-breakpoint-up(800) {
+    margin: rem(20) 0;
+  }
+  .page-content & {
+    @include media-breakpoint-down(799) {
+      margin-right: rem(-24);
+      margin-left: rem(-24);
+    }
+  }
+}
+
+.embed-bg {
+  padding: rem(15) rem(24);
+  @include media-breakpoint-up(800) {
+    padding: rem(40) rem(36);
+  }
+  figure {
+    margin-bottom: 0;
+  }
+  &-dark {
+    background-color: $gray-900;
+    figcaption {
+      color: #fff;
+    }
+  }
+}

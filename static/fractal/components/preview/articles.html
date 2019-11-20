@@ -117,6 +117,113 @@
                         <li class="breadcrumb-item breadcrumb--active" aria-current="page">News</li>
             </ol>
 </nav>      <h1>News</h1>
+      <form class="views-exposed-form" data-drupal-selector="views-exposed-form-articles-block-1" action="/articles" method="get" id="views-exposed-form-articles-block-1" accept-charset="UTF-8">
+
+
+        <!-- THEME DEBUG -->
+        <!-- THEME HOOK: 'views_exposed_form' -->
+        <!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-exposed-form.html.twig' -->
+
+
+        <!-- THEME DEBUG -->
+        <!-- THEME HOOK: 'form_element' -->
+        <!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/form-element.html.twig' -->
+          <div class="js-form-item form-item js-form-type-textfield form-item-search js-form-item-search"> <!-- THEME DEBUG -->
+          <!-- THEME HOOK: 'form_element_label' -->
+          <!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/form-element-label.html.twig' --><label for="edit-search"> Search</label>
+          <!-- END OUTPUT from 'core/themes/stable/templates/form/form-element-label.html.twig' -->
+
+
+          <!-- THEME DEBUG -->
+          <!-- THEME HOOK: 'input__textfield' -->
+          <!-- FILE NAME SUGGESTIONS:
+            * input--textfield.html.twig
+            x input.html.twig
+          -->
+          <!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/input.html.twig' -->
+        <input
+          data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="30" maxlength="128" class="form-text"> <!-- END OUTPUT from 'core/themes/stable/templates/form/input.html.twig' -->
+
+
+        </div>
+
+        <!-- END OUTPUT from 'core/themes/stable/templates/form/form-element.html.twig' -->
+
+
+        <!-- THEME DEBUG -->
+        <!-- THEME HOOK: 'form_element' -->
+        <!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/form-element.html.twig' -->
+          <div class="js-form-item form-item js-form-type-select form-item-field-umdt-ct-article-categories js-form-item-field-umdt-ct-article-categories"> <!-- THEME DEBUG -->
+          <!-- THEME HOOK: 'form_element_label' -->
+          <!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/form-element-label.html.twig' --><label for="edit-field-umdt-ct-article-categories"> Category</label>
+          <!-- END OUTPUT from 'core/themes/stable/templates/form/form-element-label.html.twig' -->
+
+
+          <!-- THEME DEBUG -->
+          <!-- THEME HOOK: 'select' -->
+          <!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/select.html.twig' -->
+            <select data-drupal-selector="edit-field-umdt-ct-article-categories" id="edit-field-umdt-ct-article-categories" name="field_umdt_ct_article_categories" class="form-select"> <option value="All" selected="selected">- Any -</option>
+            <option value="2">Alumni News</option>
+            <option value="3">Faculty News</option>
+            <option value="4">Staff News</option>
+            <option value="1">Student News</option>
+          </select>
+          <!-- END OUTPUT from 'core/themes/stable/templates/form/select.html.twig' -->
+
+
+        </div>
+
+        <!-- END OUTPUT from 'core/themes/stable/templates/form/form-element.html.twig' -->
+
+
+        <!-- THEME DEBUG -->
+        <!-- THEME HOOK: 'form_element' -->
+        <!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/form-element.html.twig' -->
+          <div class="js-form-item form-item js-form-type-select form-item-field-umdt-ct-article-author js-form-item-field-umdt-ct-article-author"> <!-- THEME DEBUG -->
+          <!-- THEME HOOK: 'form_element_label' -->
+          <!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/form-element-label.html.twig' --><label for="edit-field-umdt-ct-article-author"> Author</label>
+          <!-- END OUTPUT from 'core/themes/stable/templates/form/form-element-label.html.twig' -->
+
+
+          <!-- THEME DEBUG -->
+          <!-- THEME HOOK: 'select' -->
+          <!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/select.html.twig' -->
+            <select data-drupal-selector="edit-field-umdt-ct-article-author" id="edit-field-umdt-ct-article-author" name="field_umdt_ct_article_author" class="form-select"> <option value="" selected="selected">- Any -</option>
+            <option value="12">Carl Jones</option>
+            <option value="11">George Bradford</option>
+            <option value="13">Jamie Fox</option>
+            <option value="10">John Doe</option>
+            <option value="14">Nita Simons</option>
+          </select>
+          <!-- END OUTPUT from 'core/themes/stable/templates/form/select.html.twig' -->
+
+
+        </div>
+
+        <!-- END OUTPUT from 'core/themes/stable/templates/form/form-element.html.twig' -->
+
+
+        <!-- THEME DEBUG -->
+        <!-- THEME HOOK: 'container' -->
+        <!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/container.html.twig' -->
+          <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"> <!-- THEME DEBUG -->
+          <!-- THEME HOOK: 'input__submit' -->
+          <!-- FILE NAME SUGGESTIONS:
+            * input--submit.html.twig
+            x input.html.twig
+          -->
+          <!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/input.html.twig' -->
+        <input data-drupal-selector="edit-submit-articles" type="submit" id="edit-submit-articles" value="Apply" class="btn btn-primary button js-form-submit form-submit"> <!-- END OUTPUT from 'core/themes/stable/templates/form/input.html.twig' -->
+
+        </div>
+
+        <!-- END OUTPUT from 'core/themes/stable/templates/form/container.html.twig' -->
+
+
+        <!-- END OUTPUT from 'core/themes/stable/templates/views/views-exposed-form.html.twig' -->
+
+
+      </form>
       <ul class="feed">
       <li>
       <div class="feed-item">
@@ -241,13 +348,6 @@
   </ul>
       <nav class="pager" role="navigation" aria-labelledby="pagination-heading--mtv2RWOwtQk">
   <ul class="pager__items js-pager__items">
-    <li class="pager__item pager__item--first">
-      <a href="?page=0" title="Go to first page" rel="prev">First<span class="sr-only">page</span></a>
-    </li>
-    <li class="pager__item pager__item--previous">
-      <a href="?page=4" title="Go to previous page" rel="prev"><span class="icon icon-fancy-link-arrow" aria-hidden="true"></span>Previous<span class="sr-only">page</span></a>
-    </li>
-    <li class="pager__item pager__item--ellipsis" role="presentation">…</li>
     <li class="pager__item">
       <a href="?page=1" title="Go to page 2">
       <span class="sr-only">

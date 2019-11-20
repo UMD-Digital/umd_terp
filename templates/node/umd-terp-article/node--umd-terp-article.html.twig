@@ -4,82 +4,48 @@
  * Theme override to display a UMD Terp Article node.
  */
 #}
-{#
 
-{{ breadcrumbs }}
+<div class="article-byline">
+  {% if content.field_umdt_ct_article_author|field_value %}
+    {{ content.field_umdt_ct_article_author|field_value }}
+  {% endif %}
+  <span>{% if content.field_umdt_ct_article_date|field_value %}{{ content.field_umdt_ct_article_date|field_value }}{% else %}{{ node.createdtime|date('F j, Y') }}{% endif %}</span>
+</div>
 
-<!-- Main Category -->
-{{ categories[0].title }}
-
-
-{{ node.title.value }}
-{{ content.field_umdt_ct_subtitle }}
-{{ content.field_umdt_ct_author }}
-{{ content.field_umdt_ct_article_pub_date }}
-
-{{ content.field_umdt_ct_categories }}
-
-<!-- Categories -->
-{% for category in categories %}
-  {{ category.title }} {{ category.link }}
-{% endfor %}
- #}
-
-
-
-<div class="article-hero">
-  <div class="container article-hero-content">
-    <div class="row justify-content-center">
-      <div class="col-800 col-1000-10">
-        <span class="label">Category Name</span>
-        <h1>{{ node.title.value }}</h1>
-        {% if content.field_umdt_ct_subtitle|field_value %}
-          <p class="article-subhead h4">{{ content.field_umdt_ct_subtitle|field_value }}</p>
+{% if content.field_umdt_ct_article_image|field_value %}
+  <div class="section section-ut_image">
+    <div class="image-bg">
+      <figure>
+        <div class="image-media">
+          <img src="{{ file_url(content.field_umdt_ct_article_image[0]['#media'].field_media_image.entity.uri.value | image_style('optimized')) }}" alt="{{ content.field_umdt_ct_article_image[0]['#media'].field_media_image.alt }}" />
+        </div>
+        {% if content.field_umdt_ct_article_caption|field_value %}
+          <figcaption>{{ content.field_umdt_ct_article_caption|field_value }}</figcaption>
         {% endif %}
-      </div>
+      </figure>
     </div>
   </div>
-</div>
-<div class="container page-content article-content">
-  <div class="row justify-content-center">
-    <div class="col-800 col-1000-10">
-      <div class="article-byline">
-        <a href="" rel="author" class="article-author">John Smith</a>
-        <span>{{ node.createdtime|date('F j, Y') }}</span>
-      </div>
-      <div class="section section-umd_terp_image_with_text">
-        <div class="image-bg">
-          <figure>
-            <div class="image-media">
-              <img src="http://via.placeholder.com/1920x1080" alt="placeholder alt" />
-            </div>
-            <figcaption>Photos by John Smith & Jane Adams</figcaption>
-          </figure>
-        </div>
-      </div>
-      {% if content.body|field_value %}
-        <div class="section">
-          <div class="editor-content">
-            {{ content.body|field_value }}
-          </div>
-        </div>
-      {% endif %}
+{% endif %}
 
-      {{ content.field_umdt_ct_sections }}
-
-      {% if categories %}
-        <div class="article-categories">
-          <ul class="tag-list">
-            <li class="tag-list-item tag-list-heading">Categories</li>
-            {% for category in categories %}
-              <li class="tag-list-item">
-                <a href="{{ category.link }}" class="tag-list-link">{{ category.title }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-      {% endif %}
-
+{% if content.body|field_value %}
+  <div class="section">
+    <div class="editor-content">
+      {{ content.body|field_value }}
     </div>
   </div>
-</div>
+{% endif %}
+
+{{ content.field_umdt_ct_sections }}
+
+{% if categories %}
+  <div class="article-categories">
+    <ul class="tag-list">
+      <li class="tag-list-item tag-list-heading">Categories</li>
+      {% for category in categories %}
+        <li class="tag-list-item">
+          <a href="{{ category.link }}" class="tag-list-link">{{ category.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

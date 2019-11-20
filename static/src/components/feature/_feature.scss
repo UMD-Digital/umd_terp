@@ -1,22 +1,26 @@
 .feature {
-  display: flex;
-  position: relative;
+  @include media-breakpoint-up(1000) {
+    display: flex;
+    position: relative;
+  }
   .page-section .outer-pad & {
-    margin-top: -$outer-pad-y;
-    margin-right: -$outer-pad-x;
-    margin-bottom: -$outer-pad-y;
-    margin-left: -$outer-pad-x;
+    margin: rem(-64) rem(-36);
+    @include media-breakpoint-up(800) {
+      margin: rem(-84) rem(-120);
+    }
   }
   &:before {
     content: "";
-    background-color: inherit;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
-    z-index: 0;
+    @include media-breakpoint-up(1000) {
+      background-color: inherit;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      z-index: 0;
+    }
   }
   &.bg-light-gray {
     color: $black;
@@ -42,13 +46,25 @@
 }
 
 .feature-media {
-  position: absolute;
-  top: 0;
-  bottom: 0;
+  position: relative;
   z-index: 1;
-  @include media-breakpoint-up(800) {
+  @include media-breakpoint-up(1000) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
     left: 0;
-    width: 50%;
+    width: 50vw;
+  }
+  @include media-breakpoint-up(1440) {
+    left: calc((100vw - 1440px) / -2);
+  }
+  &:before {
+    content: "";
+    display: block;
+    padding-bottom: 56.25%;
+    @include media-breakpoint-up(1000) {
+      display: none;
+    }
   }
   img {
     display: block;
@@ -61,9 +77,12 @@
     left: 0;
   }
   .feature-reverse & {
-    @include media-breakpoint-up(800) {
+    @include media-breakpoint-up(1000) {
       right: 0;
       left: auto;
+    }
+    @include media-breakpoint-up(1440) {
+      right: calc((100vw - 1440px) / -2);
     }
   }
   .feature-bg & {
@@ -83,7 +102,7 @@
 }
 
 .feature-content {
-  @include media-breakpoint-up(800) {
+  @include media-breakpoint-up(1000) {
     flex-grow: 0;
     flex-shrink: 0;
     margin-left: auto;
@@ -95,7 +114,7 @@
     margin-left: 0;
   }
   .feature-bg & {
-    @include media-breakpoint-up(800) {
+    @include media-breakpoint-up(1000) {
       max-width: 555px;
     }
     .outer-pad {
@@ -104,7 +123,7 @@
     }
   }
   .page-section .outer-pad & {
-    @include media-breakpoint-up(800) {
+    @include media-breakpoint-up(1000) {
       align-items: center;
       display: flex;
       min-height: 43.75vw; // 630px

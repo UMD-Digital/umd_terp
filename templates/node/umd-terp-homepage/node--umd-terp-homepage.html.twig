@@ -17,7 +17,7 @@
   <div class="max-bound">
     {% if content.field_umdt_ct_hero_image|field_value %}
       <div class="home-hero-media">
-        <img src="{{ file_url(content.field_umdt_ct_hero_image[0]['#media'].field_media_image.entity.uri.value | image_style('optimized')) }}" alt="" />
+        <img src="{{ file_url(content.field_umdt_ct_hero_image[0]['#media'].field_media_image.entity.uri.value | image_style('optimized')) }}" alt="{{ content.field_umdt_ct_hero_image[0]['#media'].field_media_image.alt }}" />
       </div>
     {% endif %}
     <div class="home-hero-content">

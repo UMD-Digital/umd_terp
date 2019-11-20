@@ -6,8 +6,11 @@
   flex-direction: column;
   margin: 0 auto;
   max-width: rem(810);
-  padding: rem(68) rem(72);
+  padding: rem(72) rem(20);
   position: relative;
+  @include media-breakpoint-up(800) {
+    padding: rem(68) rem(72);
+  }
   &.blockquote-dark {
     background-color: $gray-900;
     &:before,
@@ -15,13 +18,12 @@
       color: $yellow;
     }
     p {
-      border-color: $yellow;
       color: $white;
+      &:first-child,
+      &:last-child {
+        border-color: $yellow;
+      }
     }
-  }
-  .section & {
-    margin: 0 auto;
-    width: 83.333%;
   }
   &:before,
   &:after {
@@ -48,19 +50,22 @@
     }
   }
   p {
-    border-top: 5px solid $red;
-    border-bottom: 5px solid $red;
     color: $gray-700;
     font-size: rem(32);
     font-weight: 300;
     line-height: (44 / 32);
     margin: 0;
-    padding: rem(56) 0 rem(72);
+    padding: rem(60) 0 rem(48);
     text-align: center;
-    &:not(:last-child) {
-      @include media-breakpoint-down(799) {
-        border-bottom: 0;
-      }
+    width: 100%;
+    @include media-breakpoint-up(800) {
+      padding: rem(56) 0 rem(72);
+    }
+    &:first-child {
+      border-top: 5px solid $red;
+    }
+    &:last-child {
+      border-bottom: 5px solid $red;
     }
   }
 }

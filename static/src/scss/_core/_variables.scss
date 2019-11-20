@@ -3,13 +3,10 @@
   ========================================================================== */
 
 $body-color: #000000;
-$font-size-base: 1rem; // 17px (this needs to be specified in rem for core bootstrap functions to work)
-$rem-base: 18px;
-$line-height-lg: (30 / 18);
-$line-height-sm: 1.2;
+$rem-base: 16px;
+$font-size-base: 1.125rem; // 18px (this needs to be specified in rem for core bootstrap functions to work)
+$line-height-base: (30 / 18);
 $max-bound-width: 1440px;
-$outer-pad-y: 84px;
-$outer-pad-x: 120px;
 $headings-margin-bottom: 24px;
 
 /* Colors
@@ -192,3 +189,24 @@ $dropdown-link-hover-bg: $gray-900;
 $dropdown-divider-margin-y: 0;
 $dropdown-inner-border-radius: 0;
 $dropdown-spacer: 0;
+
+/* Accordion
+  ========================================================================== */
+
+$accordion-slide-duration: .5s;
+
+$accordion__label-background: $white;
+$accordion__section-border: 1px solid $gray-500;
+$accordion__label-font-family: $font-family-serif;
+$accordion__label-font-size: 1.625rem;
+$accordion__label-padding: 1rem 1.5rem 1.5rem 3.375rem;
+$accordion__label-transition: $accordion-slide-duration box-shadow ease-in-out;
+
+$accordion__label--hover-color: $red;
+
+$accordion__label--active-background: $white;
+$accordion__label--active-color: $red;
+
+$accordion__content-background: $gray-100;
+$accordion__content-color: $gray-700;
+$accordion__content-padding: 1.5rem 1.5rem 2.25rem;

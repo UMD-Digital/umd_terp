@@ -7,8 +7,8 @@
 <header class="{{ header_classes|join(' ') }}">
   <div class="max-bound">
     <nav class="navbar navbar-expand-800" aria-label="Main">
-      <a class="navbar-brand" href="#">
-        <img src="{{ assets_path }}/img/Placeholder_Logo_Light.svg" alt="{{ site_name }} logo">
+      <a class="navbar-brand" href="{{ path('<front>') }}">
+        <img src="{{ logo_path }}" alt="{{ site_name }} logo">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-offcanvas" aria-controls="navbar-offcanvas" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-hamburger-icon" role="presentation">
@@ -20,7 +20,7 @@
         <span class="sr-only"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbar-offcanvas">
-        {{ drupal_menu('header', 1, 2, TRUE) }}
+        {{ drupal_menu('main', 1, 1, TRUE) }}
       </div>
     </nav>
   </div>

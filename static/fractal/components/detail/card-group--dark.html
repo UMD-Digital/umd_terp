@@ -314,7 +314,33 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
-                                <pre><span class="hljs-selector-class">.card-group-bg</span> {
+                                <pre><span class="hljs-selector-class">.section</span><span class="hljs-selector-class">.section-ut_card_group</span>,
+<span class="hljs-selector-class">.section</span><span class="hljs-selector-class">.section-ut_news</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> rem(<span class="hljs-number">20</span>);
+  @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
+    <span class="hljs-attribute">margin</span>: rem(<span class="hljs-number">10</span>) <span class="hljs-number">0</span> rem(<span class="hljs-number">30</span>);
+  }
+  <span class="hljs-selector-class">.page-content</span> &amp; {
+    @<span class="hljs-keyword">include</span> media-breakpoint-down(<span class="hljs-number">799</span>) {
+      <span class="hljs-attribute">margin-right</span>: rem(-<span class="hljs-number">24</span>);
+      <span class="hljs-attribute">margin-left</span>: rem(-<span class="hljs-number">24</span>);
+    }
+  }
+}
+
+<span class="hljs-selector-class">.page-section</span><span class="hljs-selector-class">.page-section-ut_card_group</span>,
+<span class="hljs-selector-class">.page-section</span><span class="hljs-selector-class">.page-section-ut_news</span> {
+  &gt; <span class="hljs-selector-class">.max-bound</span> &gt; <span class="hljs-selector-class">.outer-pad</span> {
+    <span class="hljs-attribute">padding-top</span>: rem(<span class="hljs-number">4</span>);
+    <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">0</span>;
+    @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
+      <span class="hljs-attribute">padding-top</span>: rem(<span class="hljs-number">44</span>);
+      <span class="hljs-attribute">padding-bottom</span>: rem(<span class="hljs-number">54</span>);
+    }
+  }
+}
+
+<span class="hljs-selector-class">.card-group-bg</span> {
   <span class="hljs-attribute">background</span>: <span class="hljs-variable">$white</span>;
   <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">70</span>) rem(<span class="hljs-number">44</span>);
   <span class="hljs-attribute">position</span>: relative;
@@ -405,6 +431,18 @@
 
 <span class="hljs-selector-class">.card-group-nav-button</span> {
   @<span class="hljs-keyword">extend</span> %carousel-nav-button--minimal;
+}
+
+<span class="hljs-selector-class">.card-group-cta</span><span class="hljs-selector-class">.fancy-link</span> {
+  @<span class="hljs-keyword">include</span> media-breakpoint-down(<span class="hljs-number">799</span>) {
+    <span class="hljs-attribute">display</span>: inline-block;
+    <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0</span>;
+  }
+  <span class="hljs-selector-class">.card-group-nav</span> + <span class="hljs-selector-class">.text-center</span> &amp; {
+    @<span class="hljs-keyword">include</span> media-breakpoint-down(<span class="hljs-number">799</span>) {
+      <span class="hljs-attribute">margin-top</span>: rem(<span class="hljs-number">48</span>);
+    }
+  }
 }</pre>
                             </code>
                             
@@ -421,7 +459,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.6 KB</span>
+                    <span class="Meta-value">2.4 KB</span>
                 </li>
             </ul>
         </div>

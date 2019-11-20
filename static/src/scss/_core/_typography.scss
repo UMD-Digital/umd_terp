@@ -22,6 +22,14 @@ p {
       margin-bottom: 0;
     }
   }
+  .section-ut_text_2_columns [class^="col"] &,
+  .section-ut_text_3_columns [class^="col"] & {
+    margin-bottom: rem(24);
+  }
+  .section-ut_text_2_columns [class^="col"]:last-child &:last-child,
+  .section-ut_text_3_columns [class^="col"]:last-child &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 a {
@@ -36,9 +44,6 @@ a {
     &:hover {
       border-bottom-color: $red;
     }
-  }
-  &.btn {
-    margin-right: rem(24);
   }
   &.fancy-link {
     border-bottom: 1px solid transparent;

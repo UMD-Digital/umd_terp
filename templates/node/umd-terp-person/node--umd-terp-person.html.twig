@@ -4,7 +4,8 @@
  * Theme override to display a UMD Terp Person node.
  */
 #}
-
+<h1>{{ node.title.value }}</h1>
+<a href="/directory" class="back-to-link"><span class="icon icon-chevron-right" aria-hidden="true"></span>Back to People</a>
 <div class="container-fluid">
   <div class="row justify-content-center">
     <div class="col-1000-11">
@@ -12,8 +13,8 @@
         <div class="row">
           <div class="col-600-4 col-1000-3">
             {% set photo = assets_path ~ '/img/Profiles_Photo_Placeholder.svg' %}
-            {% if content.fied_umdt_ct_person_photo|field_value %}
-              {% set photo = file_url(content.fied_umdt_ct_person_photo|field_target_entity.uri.value | image_style('optimized')) %}
+            {% if content.field_umdt_ct_person_photo|field_value %}
+              {% set photo = file_url(content.field_umdt_ct_person_photo|field_target_entity.uri.value | image_style('optimized')) %}
             {% endif %}
             <div class="profile-photo">
               <img src="{{ photo }}" alt="{{ node.title.value }}">
@@ -24,7 +25,9 @@
               <div class="col-12">
                 <div class="profile-header">
                   <h2 class="profile-name">{{ node.title.value }}</h2>
-                  <div class="profile-title">[Title] [Affiliation], [Title2] [Affiliation2], [Title3] [Affiliation3]</div>
+                  {% if content.field_umdt_ct_person_title|field_value %}
+                    <div class="profile-title">{{ content.field_umdt_ct_person_title|field_value }}</div>
+                  {% endif %}
                 </div>
               </div>
               {% if content.field_umdt_ct_person_bio|field_value %}
@@ -39,11 +42,13 @@
                 {% if content.field_umdt_ct_person_email|field_value %}
                   <div><a href="mailto:{{ content.field_umdt_ct_person_email|field_value }}">{{ content.field_umdt_ct_person_email|field_value }}</a></div>
                 {% endif %}
-                <div>3100F Atlantic Building</div>
-                {% if content.field_umdt_ct_person_phone|field_value %}
+                {% if content.field_umdt_ct_person_location|field_value %}
+                  <div>{{ content.field_umdt_ct_person_location|field_value }}</div>
+                {% endif %}
+                {% if phone %}
                   <div class="profile-phone">
-                    <a href="tel:+{{ content.field_umdt_ct_person_phone|field_value|preg_replace('/[^0-9]/', '') }}"><span class="font-weight-bold">
-                      {{ content.field_umdt_ct_person_phone|field_value }}</span>{% if content.field_umdt_ct_persone_phone_ex|field_value %} {{ content.field_umdt_ct_persone_phone_ex|field_value }}{% endif %}
+                    <a href="tel:+{{ phone_link }}">
+                      <span class="font-weight-bold">{{ phone }}</span>{% if phone_ext %} {{ phone_ext }}{% endif %}
                     </a>
                   </div>
                 {% endif %}
@@ -63,83 +68,20 @@
                   </ul>
                 {% endif %}
               </div>
-              <div class="col-12">
-                <h3 class="profile-subheading">Area</h3>
-                <ul>
-                  <li><a href="https://google.com">Cybersecurity</a></li>
-                  <li><a href="https://google.com">Networks</a></li>
-                  <li><a href="https://google.com">System Administration</a></li>
-                </ul>
-              </div>
-              <div class="col-12">
-                <h3 class="profile-subheading">Courses</h3>
-                <ul>
-                  <li><a href="https://google.com">Course Name Here lorem ipsum dolor sit amet (Spring 2020)</a></li>
-                  <li><a href="https://google.com">Course Name Here lorem ipsum dolor sit amet (Fall 2019)</a></li>
-                  <li><a href="https://google.com">Course Name Here lorem ipsum dolor sit amet (Spring 2019)</a></li>
-                </ul>
-              </div>
-              <div class="col-12">
-                <h3 class="profile-subheading">Publications</h3>
-                <h4 class="profile-publication-year">2019</h4>
-                <ul class="profile-publications">
-                  <li>
-                    <a href="https://google.com">A. Name</a>,&#32;
-                    <a href="https://google.com">B. Name</a>,&#32;
-                    <a href="https://google.com">C. Name</a>,&#32;
-                    <span class="font-weight-bold">Sed luctus blandit quam, eget accumsan mi.</span>
-                  </li>
-                  <li>
-                    <a href="https://google.com">A. Name</a>,&#32;
-                    <a href="https://google.com">B. Name</a>,&#32;
-                    <a href="https://google.com">C. Name</a>,&#32;
-                    <span class="font-weight-bold">Sed luctus blandit quam, eget accumsan mi.</span>
-                  </li>
-                  <li>
-                    <a href="https://google.com">A. Name</a>,&#32;
-                    <a href="https://google.com">B. Name</a>,&#32;
-                    <a href="https://google.com">C. Name</a>,&#32;
-                    <span class="font-weight-bold">Sed luctus blandit quam, eget accumsan mi.</span>
-                  </li>
-                  <li>
-                    <a href="https://google.com">A. Name</a>,&#32;
-                    <a href="https://google.com">B. Name</a>,&#32;
-                    <a href="https://google.com">C. Name</a>,&#32;
-                    <span class="font-weight-bold">Sed luctus blandit quam, eget accumsan mi.</span>
-                  </li>
-                </ul>
-                <h4 class="profile-publication-year">2018</h4>
-                <ul class="profile-publications">
-                  <li>
-                    <a href="https://google.com">A. Name</a>,&#32;
-                    <a href="https://google.com">B. Name</a>,&#32;
-                    <a href="https://google.com">C. Name</a>,&#32;
-                    <span class="font-weight-bold">Sed luctus blandit quam, eget accumsan mi.</span>
-                  </li>
-                  <li>
-                    <a href="https://google.com">A. Name</a>,&#32;
-                    <a href="https://google.com">B. Name</a>,&#32;
-                    <a href="https://google.com">C. Name</a>,&#32;
-                    <span class="font-weight-bold">Sed luctus blandit quam, eget accumsan mi.</span>
-                  </li>
-                  <li>
-                    <a href="https://google.com">A. Name</a>,&#32;
-                    <a href="https://google.com">B. Name</a>,&#32;
-                    <a href="https://google.com">C. Name</a>,&#32;
-                    <span class="font-weight-bold">Sed luctus blandit quam, eget accumsan mi.</span>
-                  </li>
-                  <li>
-                    <a href="https://google.com">A. Name</a>,&#32;
-                    <a href="https://google.com">B. Name</a>,&#32;
-                    <a href="https://google.com">C. Name</a>,&#32;
-                    <span class="font-weight-bold">Sed luctus blandit quam, eget accumsan mi.</span>
-                  </li>
-                </ul>
-              </div>
+              {% if content.body|field_value %}
+                <div class="col-12">
+                  <div class="editor-content">
+                    {{ content.body|field_value }}
+                  </div>
+                </div>
+              {% endif %}
             </div>
           </div>
         </div>
       </div>
+
+      {{ content.field_umdt_ct_sections }}
+
     </div>
   </div>
 </div>

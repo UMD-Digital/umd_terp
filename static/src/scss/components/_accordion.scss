@@ -7,7 +7,6 @@
         z-index: 1;
         &:hover,
         &:focus {
-          font-weight: 400;
           &:before,
           &:after {
             background-color: $red;

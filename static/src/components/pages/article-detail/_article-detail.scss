@@ -9,25 +9,32 @@
   }
 }
 
-.article-content {
-  p {
-    margin: rem(30) 0;
-  }
-  .section {
-    margin: 0;
-  }
-}
-
 .article-byline {
   color: $gray-700;
   font-size: rem(16);
-  margin: 0 0 rem(36);
   > *:not(:last-child) {
     &:after {
       content: "•";
       color: $red;
       display: inline-block;
       margin: 0 rem(4) 0 rem(6);
+    }
+  }
+  & + .section {
+    margin-top: rem(45);
+    &.section-ut_image {
+      margin-top: rem(30);
+      @include media-breakpoint-up(800) {
+        margin-top: rem(5);
+      }
+    }
+  }
+  a {
+    color: inherit;
+    font-weight: 700;
+    &:hover {
+      color: inherit;
+      text-decoration: underline;
     }
   }
 }
