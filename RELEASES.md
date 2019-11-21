@@ -1,5 +1,7 @@
 8.1.2
 =====
+- Adding RELEASES.md
+- Moving styles from scss/components into respective component directory stylesheets to simplify component styling
 - Updating mobile styles for tabs (http://bugify.idfive.com/issues/23046)
 
 8.1.1
