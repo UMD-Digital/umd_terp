@@ -14,13 +14,16 @@
   }
   &:before {
     content: "";
-    background-color: $nav-tabs-border-color;
+    background-color: transparent;
     display: block;
     height: $nav-tabs-border-width;
     width: 100%;
     position: absolute;
     bottom: 0;
     z-index: 0;
+    @include media-breakpoint-up(800) {
+      background-color: $nav-tabs-border-color;
+    }
   }
   .nav-item {
     margin-bottom: 0;
@@ -31,10 +34,10 @@
     border-color: $nav-tabs-border-color;
     border-width: 0 0 $nav-tabs-border-width;
     color: #ACACAC;
-    font-size: rem(19);
+    font-size: rem(16);
     letter-spacing: rem(-0.3);
     line-height: 1;
-    padding: rem(7) rem(13) rem(12);
+    padding: rem(14) rem(13) rem(8);
     text-align: center;
     transition: .25s border-color ease-in-out,
       .25s color ease-in-out;

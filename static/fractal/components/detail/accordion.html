@@ -240,15 +240,15 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-fe79ab32af225f2088b4d1304d9c6689">_accordion.scss</option>
+                <option value="file-7511e7ebf34612e54d8f4752b75ecbcd">_accordion.scss</option>
                 
-                <option value="file-f857152e053a844996dc690e8adb7a87">_variables.scss</option>
+                <option value="file-e81fc4c9babc28bbec88873aebbf4aad">_variables.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-fe79ab32af225f2088b4d1304d9c6689" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-7511e7ebf34612e54d8f4752b75ecbcd" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -275,6 +275,7 @@
       <span class="hljs-selector-class">.btn</span> {
         <span class="hljs-attribute">background</span>: <span class="hljs-variable">$accordion__label-background</span>;
         <span class="hljs-attribute">border</span>: <span class="hljs-variable">$accordion__label-border</span>;
+        <span class="hljs-attribute">box-shadow</span>: none;
         <span class="hljs-attribute">color</span>: <span class="hljs-variable">$accordion__label-color</span>;
         <span class="hljs-attribute">display</span>: <span class="hljs-variable">$accordion__label-display</span>;
         <span class="hljs-attribute">font-family</span>: <span class="hljs-variable">$accordion__label-font-family</span>;
@@ -282,27 +283,61 @@
         <span class="hljs-attribute">font-weight</span>: <span class="hljs-variable">$accordion__label-font-weight</span>;
         <span class="hljs-attribute">margin</span>: <span class="hljs-variable">$accordion__label-margin</span>;
         <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$accordion__label-padding</span>;
+        <span class="hljs-attribute">position</span>: relative;
         <span class="hljs-attribute">text-align</span>: <span class="hljs-variable">$accordion__label-text-align</span>;
         <span class="hljs-attribute">text-decoration</span>: <span class="hljs-variable">$accordion__label-text-decoration</span>;
         <span class="hljs-attribute">text-transform</span>: <span class="hljs-variable">$accordion__label-text-transform</span>;
         <span class="hljs-attribute">transform</span>: <span class="hljs-variable">$accordion__label-transform</span>;
         <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+        <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
         &amp;:hover,
         &amp;:focus {
           <span class="hljs-attribute">background</span>: <span class="hljs-variable">$accordion__label--hover-background</span>;
           <span class="hljs-attribute">color</span>: <span class="hljs-variable">$accordion__label--hover-color</span>;
           <span class="hljs-attribute">font-weight</span>: <span class="hljs-variable">$accordion__label-font-weight</span>;
+          &amp;:before,
+          &amp;:after {
+            <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$red</span>;
+          }
         }
         &amp;<span class="hljs-selector-attr">[aria-expanded="true"]</span> {
           <span class="hljs-attribute">background</span>: <span class="hljs-variable">$accordion__label--active-background</span>;
+          <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">4px</span> <span class="hljs-number">9px</span> rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">14</span>);
           <span class="hljs-attribute">color</span>: <span class="hljs-variable">$accordion__label--active-color</span>;
+          &amp;:before {
+            <span class="hljs-attribute">transform</span>: translate(-<span class="hljs-number">50%</span>, -<span class="hljs-number">50%</span>) scaleY(<span class="hljs-number">0</span>);
+          }
+        }
+        &amp;:before,
+        &amp;:after {
+          <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
+          <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#666</span>;
+          <span class="hljs-attribute">display</span>: block;
+          <span class="hljs-attribute">position</span>: absolute;
+          <span class="hljs-attribute">top</span>: <span class="hljs-number">50%</span>;
+          <span class="hljs-attribute">left</span>: rem(<span class="hljs-number">27</span>);
+          <span class="hljs-attribute">transform</span>: translate(-<span class="hljs-number">50%</span>, -<span class="hljs-number">50%</span>);
+          <span class="hljs-attribute">transition</span>:
+            .<span class="hljs-number">3s</span> color ease-in-out,
+            <span class="hljs-variable">$accordion-slide-duration</span> transform ease-in-out;
+        }
+        &amp;:before {
+          <span class="hljs-attribute">height</span>: rem(<span class="hljs-number">11</span>);
+          <span class="hljs-attribute">width</span>: rem(<span class="hljs-number">3</span>);
+        }
+        &amp;:after {
+          <span class="hljs-attribute">height</span>: rem(<span class="hljs-number">3</span>);
+          <span class="hljs-attribute">width</span>: rem(<span class="hljs-number">11</span>);
         }
       }
     }
     <span class="hljs-selector-class">.card-body</span> {
       <span class="hljs-attribute">background</span>: <span class="hljs-variable">$accordion__content-background</span>;
       <span class="hljs-attribute">border</span>: <span class="hljs-variable">$accordion__content-border</span>;
+      <span class="hljs-attribute">border-left</span>: <span class="hljs-number">5px</span> solid <span class="hljs-variable">$red</span>;
       <span class="hljs-attribute">color</span>: <span class="hljs-variable">$accordion__content-color</span>;
+      <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">17</span>);
+      <span class="hljs-attribute">line-height</span>: (<span class="hljs-number">26</span> / <span class="hljs-number">17</span>);
       <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$accordion__content-padding</span>;
     }
   }
@@ -322,12 +357,12 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.7 KB</span>
+                    <span class="Meta-value">2.7 KB</span>
                 </li>
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-f857152e053a844996dc690e8adb7a87" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-e81fc4c9babc28bbec88873aebbf4aad" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
