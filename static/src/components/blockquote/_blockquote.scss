@@ -1,16 +1,154 @@
 @import "variables";
 
 .blockquote {
-  margin: $blockquote-margin;
+  align-items: center;
+  background-color: $gray-100;
+  border-radius: rem(8);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
   max-width: $blockquote-max-width;
-  padding: $blockquote-padding;
+  padding: rem(72) rem(20);
   position: relative;
+  @include media-breakpoint-up(800) {
+    padding: rem(68) rem(72);
+  }
   &:before,
   &:after {
+    background-color: inherit;
+    color: $red;
     display: block;
     height: $blockquote_icon-height;
     font-size: $blockquote_icon-font-size;
     font-weight: $blockquote_icon-font-weight;
     line-height: $blockquote_icon-line-height;
+    padding: 0 rem(18);
+    position: absolute;
+    left: 50%;
+    text-align: center;
   }
+  &:before {
+    content: "“";
+    top: rem(68);
+    transform: translate(-50%, -50%);
+  }
+  &:after {
+    content: "”";
+    bottom: rem(68);
+    transform: translate(-50%, 50%);
+    @include media-breakpoint-down(799) {
+      display: none;
+    }
+  }
+  p {
+    color: $gray-700;
+    font-size: rem(32);
+    font-weight: 300;
+    line-height: (44 / 32);
+    margin: 0;
+    padding: rem(60) 0 rem(48);
+    text-align: center;
+    width: 100%;
+    @include media-breakpoint-up(800) {
+      padding: rem(56) 0 rem(72);
+    }
+    &:first-child {
+      border-top: 5px solid $red;
+    }
+    &:last-child {
+      border-bottom: 5px solid $red;
+    }
+  }
+  &.blockquote-dark {
+    background-color: $gray-900;
+    &:before,
+    &:after {
+      color: $yellow;
+    }
+    p {
+      color: $white;
+      &:first-child,
+      &:last-child {
+        border-color: $yellow;
+      }
+    }
+  }
+}
+
+.blockquote-footer {
+  align-items: center;
+  background-color: inherit;
+  color: $black;
+  display: flex;
+  flex-direction: column;
+  padding: 0 rem(24) rem(36);
+  @include media-breakpoint-down(799) {
+    border-bottom: 5px solid $red;
+    text-align: center;
+    width: 100%;
+  }
+  @include media-breakpoint-up(800) {
+    align-items: flex-start;
+    flex-direction: row;
+    margin-top: rem(-42);
+    margin-bottom: rem(-56);
+    min-height: rem(90);
+    padding: rem(12) rem(24);
+    position: relative;
+    z-index: 1;
+  }
+  .blockquote.blockquote-dark & {
+    border-color: $yellow;
+    color: $white;
+  }
+  &:before {
+    content: "";
+  }
+  span {
+    display: block;
+  }
+}
+
+.blockquote-portrait {
+  background-position: center center;
+  background-size: cover;
+  border-radius: 50%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-bottom: rem(2);
+  overflow: hidden;
+  position: relative;
+  width: rem(60);
+  @include media-breakpoint-up(800) {
+    margin-right: rem(18);
+  }
+  &:before {
+    content: "";
+    display: block;
+    padding-bottom: (68 / 61 * 100%);
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.blockquote-attribution {
+  flex: 1;
+}
+
+.blockquote-author {
+  font-family: $font-family-serif;
+  font-size: rem(26);
+  line-height: (40 / 26);
+}
+
+.blockquote-title {
+  font-family: $font-family-sans-serif;
+  font-size: rem(18);
 }
