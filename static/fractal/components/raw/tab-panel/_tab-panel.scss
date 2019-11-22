@@ -1,0 +1,65 @@
+.section.section-ut_tabs {
+  margin-bottom: rem(20);
+  @include media-breakpoint-up(800) {
+    margin-bottom: rem(30);
+  }
+}
+
+.nav-tabs {
+  border: none;
+  position: relative;
+  @include media-breakpoint-down(799) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &:before {
+    content: "";
+    background-color: transparent;
+    display: block;
+    height: $nav-tabs-border-width;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    @include media-breakpoint-up(800) {
+      background-color: $nav-tabs-border-color;
+    }
+  }
+  .nav-item {
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+  }
+  .nav-link {
+    border-color: $nav-tabs-border-color;
+    border-width: 0 0 $nav-tabs-border-width;
+    color: #ACACAC;
+    font-size: rem(16);
+    letter-spacing: rem(-0.3);
+    line-height: 1;
+    padding: rem(14) rem(13) rem(8);
+    text-align: center;
+    transition: .25s border-color ease-in-out,
+      .25s color ease-in-out;
+    @include media-breakpoint-up(800) {
+      font-size: rem(25);
+      letter-spacing: rem(-.4);
+      padding: 0 rem(27) rem(29);
+    }
+    &:hover {
+      color: $gray-500;
+    }
+    &.active {
+      border-color: $nav-tabs-link-active-border-color;
+      font-weight: 700;
+      &:hover {
+        color: $nav-tabs-link-active-color;
+        cursor: default;
+      }
+    }
+  }
+}
+
+.tab-pane {
+  padding: rem(36) rem(30) rem(30);
+}

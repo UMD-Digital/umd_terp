@@ -17,6 +17,7 @@
       .btn {
         background: $accordion__label-background;
         border: $accordion__label-border;
+        box-shadow: none;
         color: $accordion__label-color;
         display: $accordion__label-display;
         font-family: $accordion__label-font-family;
@@ -24,27 +25,61 @@
         font-weight: $accordion__label-font-weight;
         margin: $accordion__label-margin;
         padding: $accordion__label-padding;
+        position: relative;
         text-align: $accordion__label-text-align;
         text-decoration: $accordion__label-text-decoration;
         text-transform: $accordion__label-text-transform;
         transform: $accordion__label-transform;
         width: 100%;
+        z-index: 1;
         &:hover,
         &:focus {
           background: $accordion__label--hover-background;
           color: $accordion__label--hover-color;
           font-weight: $accordion__label-font-weight;
+          &:before,
+          &:after {
+            background-color: $red;
+          }
         }
         &[aria-expanded="true"] {
           background: $accordion__label--active-background;
+          box-shadow: 0 4px 9px rgba(0, 0, 0, .14);
           color: $accordion__label--active-color;
+          &:before {
+            transform: translate(-50%, -50%) scaleY(0);
+          }
+        }
+        &:before,
+        &:after {
+          content: "";
+          background-color: #666;
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: rem(27);
+          transform: translate(-50%, -50%);
+          transition:
+            .3s color ease-in-out,
+            $accordion-slide-duration transform ease-in-out;
+        }
+        &:before {
+          height: rem(11);
+          width: rem(3);
+        }
+        &:after {
+          height: rem(3);
+          width: rem(11);
         }
       }
     }
     .card-body {
       background: $accordion__content-background;
       border: $accordion__content-border;
+      border-left: 5px solid $red;
       color: $accordion__content-color;
+      font-size: rem(17);
+      line-height: (26 / 17);
       padding: $accordion__content-padding;
     }
   }

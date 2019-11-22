@@ -129,6 +129,10 @@
         
         
         
+        <li class="Browser-tab Browser-tab--resources" data-role="tab">
+            <a href="#browser-bed4a2dfa36805ed9fc5e35e87b831de-panel-assets">Assets</a>
+        </li>
+        
         
         
         
@@ -245,6 +249,115 @@
     
     
 
+
+<div class="Browser-panel Browser-resources" data-role="tab-panel" id="browser-bed4a2dfa36805ed9fc5e35e87b831de-panel-assets">
+    <div class="FileBrowser">
+
+        <div class="FileBrowser-selectWrapper">
+            <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
+            <select class="FileBrowser-select" id="filebrowser-select">
+                
+                <option value="file-795f16206f7f8b9368c476360444af3b">_tab-panel.scss</option>
+                
+            </select>
+        </div>
+
+        
+        <div class="FileBrowser-item is-active" id="file-795f16206f7f8b9368c476360444af3b" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-SCSS FileBrowser-code">
+                                <pre><span class="hljs-selector-class">.section</span><span class="hljs-selector-class">.section-ut_tabs</span> {
+  <span class="hljs-attribute">margin-bottom</span>: rem(<span class="hljs-number">20</span>);
+  @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
+    <span class="hljs-attribute">margin-bottom</span>: rem(<span class="hljs-number">30</span>);
+  }
+}
+
+<span class="hljs-selector-class">.nav-tabs</span> {
+  <span class="hljs-attribute">border</span>: none;
+  <span class="hljs-attribute">position</span>: relative;
+  @<span class="hljs-keyword">include</span> media-breakpoint-down(<span class="hljs-number">799</span>) {
+    <span class="hljs-attribute">display</span>: flex;
+    <span class="hljs-attribute">flex-wrap</span>: wrap;
+  }
+  &amp;:before {
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
+    <span class="hljs-attribute">background-color</span>: transparent;
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">height</span>: <span class="hljs-variable">$nav-tabs-border-width</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">0</span>;
+    @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
+      <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$nav-tabs-border-color</span>;
+    }
+  }
+  <span class="hljs-selector-class">.nav-item</span> {
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
+  }
+  <span class="hljs-selector-class">.nav-link</span> {
+    <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$nav-tabs-border-color</span>;
+    <span class="hljs-attribute">border-width</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$nav-tabs-border-width</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#ACACAC</span>;
+    <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">16</span>);
+    <span class="hljs-attribute">letter-spacing</span>: rem(-<span class="hljs-number">0.3</span>);
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1</span>;
+    <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">14</span>) rem(<span class="hljs-number">13</span>) rem(<span class="hljs-number">8</span>);
+    <span class="hljs-attribute">text-align</span>: center;
+    <span class="hljs-attribute">transition</span>: .<span class="hljs-number">25s</span> border-color ease-in-out,
+      .<span class="hljs-number">25s</span> color ease-in-out;
+    @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
+      <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">25</span>);
+      <span class="hljs-attribute">letter-spacing</span>: rem(-.<span class="hljs-number">4</span>);
+      <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> rem(<span class="hljs-number">27</span>) rem(<span class="hljs-number">29</span>);
+    }
+    &amp;:hover {
+      <span class="hljs-attribute">color</span>: <span class="hljs-variable">$gray-500</span>;
+    }
+    &amp;<span class="hljs-selector-class">.active</span> {
+      <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$nav-tabs-link-active-border-color</span>;
+      <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">700</span>;
+      &amp;:hover {
+        <span class="hljs-attribute">color</span>: <span class="hljs-variable">$nav-tabs-link-active-color</span>;
+        <span class="hljs-attribute">cursor</span>: default;
+      }
+    }
+  }
+}
+
+<span class="hljs-selector-class">.tab-pane</span> {
+  <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">36</span>) rem(<span class="hljs-number">30</span>) rem(<span class="hljs-number">30</span>);
+}</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/tab-panel/_tab-panel.scss"><span>/components/raw/tab-panel/_tab-panel.scss</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/tab-panel/_tab-panel.scss</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">1.4 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
 
 
 
