@@ -2,6 +2,7 @@
 
 /**
  * @file
+ * Hook alters for umd_terp theme.
  */
 
 /**
@@ -27,7 +28,8 @@ function umd_terp_theme_suggestions_page_alter(array &$suggestions, array $varia
         // Break up the alias "/about/us"  => "", "about", "" ,"us".
         $parts = explode('/', $alias);
 
-        // We only start suggestion with one "-" because first "/" will become extra "-".
+        // We only start suggestion with one "-"
+        // because first "/" will become extra "-".
         $suggestion = 'page__alias';
 
         foreach ($parts as $part) {
@@ -63,7 +65,8 @@ function umd_terp_theme_suggestions_node_alter(array &$suggestions, array $varia
 
       // Break up the alias "/about/us"  => "", "about", "" ,"us".
       $parts = explode('/', $alias);
-      // We only start suggestion with one "-" because first "/" will become extra "-".
+      // We only start suggestion with one "-"
+      // because first "/" will become extra "-".
       $suggestion = 'node__alias';
       foreach ($parts as $part) {
         // Subsequent suggestions get appended.

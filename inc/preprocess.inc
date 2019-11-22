@@ -2,6 +2,7 @@
 
 /**
  * @file
+ * Hook preproccesses for umd_terp theme.
  */
 
 use Drupal\Component\Utility\Html;
@@ -47,7 +48,7 @@ function umd_terp_preprocess_page(&$variables) {
         break;
     }
   }
-  // Make any custom theme settings available in the page tpl for header/footer/etc.
+  // Make any custom theme settings available in the page tpl.
   _umd_terp_extend_theme_variables($variables);
 }
 

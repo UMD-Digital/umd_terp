@@ -2,6 +2,7 @@
 
 /**
  * @file
+ * Functions for umd_terp theme.
  */
 
 use Drupal\node\Entity\Node;
@@ -9,13 +10,6 @@ use Drupal\Core\Cache\CacheableMetadata;
 
 /**
  * Allows regions to be added to nodes/other entities, not just pages.
- *
- * @param $allowed_regions
- *   The region/s you wish to be available. We do this in order to not have it run for all, every time.
- * @param $variables
- *   The variables for node/etc, lets us set custom vars.
- *
- * @return array
  */
 function _umd_terp_add_regions_to_entity($allowed_regions, &$variables) {
   $theme = \Drupal::theme()->getActiveTheme()->getName();
@@ -34,7 +28,10 @@ function _umd_terp_add_regions_to_entity($allowed_regions, &$variables) {
 
 /**
  * Make all theme settings available to insert in pages/nodes/etc.
- * Added to pages by default in hook_preproccess_node above, can extent in subtheme to nodes/etc if needed.
+ *
+ * Added to pages by default in hook_preproccess_node above.
+ * Can extent in subtheme to nodes/etc if needed.
+ *
  * Use in theme by var name, as {{twitter_link}} /etc.
  */
 function _umd_terp_extend_theme_variables(&$variables) {
