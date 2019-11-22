@@ -8,7 +8,6 @@ libraries:
   - umd_terp/global
 regions:
    main_menu: 'Main Menu'
-   admin_tabs: 'Admin Tabs'
    help: 'Help'
    breadcrumbs: 'Breadcrumbs'
    sidebar: 'Sidebar'
