@@ -1,3 +1,7 @@
+8.1.3
+=====
+- Removing admin tabs from page templates
+
 8.1.2
 =====
 - Adding RELEASES.md
