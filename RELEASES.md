@@ -1,3 +1,11 @@
+8.1.4
+=====
+- Fixing contrast issue with yellow secondary button style (http://bugify.idfive.com/issues/23112)
+
+8.1.3
+=====
+- Removing admin tabs from page templates
+
 8.1.2
 =====
 - Adding RELEASES.md
