@@ -24,9 +24,6 @@
 				{% endif %}
 				<div class="col-800-9 col-1000-10">
 					{{ page.breadcrumbs }}
-					{% if logged_in and page.admin_tabs  %}
-						<div class="compartment admin--tabs">{{ page.admin_tabs }}</div>
-					{% endif %}
 					{{ page.content }}
 				</div>
 			</div>

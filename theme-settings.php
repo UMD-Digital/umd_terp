@@ -2,13 +2,13 @@
 
 /**
  * @file
- * UMD Term (umd_terp), add custom theme settings options here.
+ * UMD Terp (umd_terp), add custom theme settings options here.
  */
 
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- *
+ * Implements hook_form_system_theme_settings_alter().
  */
 function umd_terp_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
 
