@@ -1,3 +1,7 @@
+8.1.5
+=====
+- Updating default font-weight of button text to be bold (http://bugify.idfive.com/issues/23112)
+
 8.1.4
 =====
 - Fixing contrast issue with yellow secondary button style (http://bugify.idfive.com/issues/23112)
