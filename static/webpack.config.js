@@ -116,7 +116,7 @@ const config = {
         ]
       },
       {
-        test: /\.(woff|woff2|eot|ttf|svg)$/,
+        test: /\.(woff|woff2|eot|ttf)$/,
         loader: "url-loader",
         options: {
           limit: 1000,
@@ -126,7 +126,16 @@ const config = {
         exclude: [path.resolve(__dirname, "img")]
       },
       {
-        test: /\.(jpg|jpeg|gif|png|svg)$/,
+        test: /\.svg$/,
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]",
+          outputPath: "fonts/"
+        },
+        exclude: [path.resolve(__dirname, "src", "img")]
+      },
+      {
+        test: /\.(jpg|jpeg|gif|png)$/,
         loader: "url-loader",
         options: {
           limit: 1000,
@@ -134,6 +143,15 @@ const config = {
           outputPath: "img/"
         },
         exclude: [path.resolve(__dirname, "fonts")]
+      },
+      {
+        test: /\.svg$/,
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]",
+          outputPath: "img/"
+        },
+        exclude: [path.resolve(__dirname, "src", "fonts")]
       },
       {
         test: /\.(hbs|handlebars)$/,

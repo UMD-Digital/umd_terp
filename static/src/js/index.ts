@@ -14,6 +14,7 @@ import initCards from "../components/card/card";
 import initCardGroups from "../components/card-group/card-group";
 import initCarousels from "../components/carousel/carousel";
 import initStatGroups from "../components/stat-group/stat-group";
+import initSubnav from "../components/subnav/subnav";
 import Tablesaw from "../components/table/table";
 
 /**
@@ -25,4 +26,5 @@ initCards();
 initCardGroups();
 initCarousels();
 initStatGroups();
+initSubnav();
 Tablesaw.init();
