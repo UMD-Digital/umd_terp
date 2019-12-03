@@ -2,10 +2,10 @@
 {# {{ "now"|date("Y") }} #}
 {# {{ page.footer_menu }} #}
 
-<footer class="site-footer" aria-label="Footer">
+<footer class="site-footer" aria-label="Main">
   <div class="site-footer-main">
     <div class="max-bound">
-      <nav class="site-footer-nav">
+      <nav class="site-footer-nav" aria-label="Footer">
         {{ drupal_menu('footer') }}
       </nav>
       <div class="site-footer-about">
