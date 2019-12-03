@@ -1,4 +1,9 @@
 .subnav {
+  ul {
+    @include media-breakpoint-down(799) {
+      display: none;
+    }
+  }
   li {
     line-height: rem(26);
     a {
@@ -75,5 +80,13 @@
         transition: .25s transform ease-in-out;
       }
     }
+  }
+}
+
+.subnav__dropdown {
+  @extend %form-text-input;
+  @extend %form-select;
+  @include media-breakpoint-up(800) {
+    display: none;
   }
 }
