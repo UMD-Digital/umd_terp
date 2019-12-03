@@ -251,6 +251,8 @@
                 
                 <option value="file-bab3f85b01f2d3385ef83b5d090fbf6d">_subnav.scss</option>
                 
+                <option value="file-984cef979e4bad518ae93069eb7cd1e2">subnav.ts</option>
+                
             </select>
         </div>
 
@@ -264,6 +266,11 @@
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
                                 <pre><span class="hljs-selector-class">.subnav</span> {
+  <span class="hljs-selector-tag">ul</span> {
+    @<span class="hljs-keyword">include</span> media-breakpoint-down(<span class="hljs-number">799</span>) {
+      <span class="hljs-attribute">display</span>: none;
+    }
+  }
   <span class="hljs-selector-tag">li</span> {
     <span class="hljs-attribute">line-height</span>: rem(<span class="hljs-number">26</span>);
     <span class="hljs-selector-tag">a</span> {
@@ -341,6 +348,14 @@
       }
     }
   }
+}
+
+<span class="hljs-selector-class">.subnav__dropdown</span> {
+  @<span class="hljs-keyword">extend</span> %form-text-input;
+  @<span class="hljs-keyword">extend</span> %form-select;
+  @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
+    <span class="hljs-attribute">display</span>: none;
+  }
 }</pre>
                             </code>
                             
@@ -357,7 +372,90 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.8 KB</span>
+                    <span class="Meta-value">2 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-984cef979e4bad518ae93069eb7cd1e2" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-XML FileBrowser-code">
+                                <pre>export class Subnav {
+  protected element: HTMLElement;
+  protected links: NodeListOf<span class="hljs-tag">&lt;<span class="hljs-name">HTMLAnchorElement</span>&gt;</span>;
+  protected dropdown: HTMLSelectElement;
+
+  constructor(element: HTMLElement) {
+    if (element) {
+      this.element = element;
+      this.links = element.querySelectorAll("a");
+      this.init();
+    }
+  }
+
+  protected init() {
+    this.createDropdown();
+  }
+
+  protected createDropdown() {
+    const dropdown = document.createElement("SELECT") as HTMLSelectElement;
+    const placeholderOption = document.createElement("option") as HTMLOptionElement;
+
+    dropdown.className = "subnav__dropdown";
+    dropdown.setAttribute("aria-label", "Navigate to a page in this section");
+
+    placeholderOption.textContent = "In This Section";
+
+    dropdown.appendChild(placeholderOption);
+
+    for (let i = 0; i <span class="hljs-tag">&lt; <span class="hljs-attr">this.links.length</span>; <span class="hljs-attr">i</span>++) {
+      <span class="hljs-attr">const</span> <span class="hljs-attr">option</span> = <span class="hljs-string">document.createElement(</span>"<span class="hljs-attr">OPTION</span>") <span class="hljs-attr">as</span> <span class="hljs-attr">HTMLOptionElement</span>;
+      <span class="hljs-attr">option.setAttribute</span>("<span class="hljs-attr">value</span>", <span class="hljs-attr">this.links</span>[<span class="hljs-attr">i</span>]<span class="hljs-attr">.href</span>);
+      <span class="hljs-attr">option.textContent</span> = <span class="hljs-string">this.links[i].textContent;</span>
+      <span class="hljs-attr">dropdown.appendChild</span>(<span class="hljs-attr">option</span>);
+    }
+
+    <span class="hljs-attr">dropdown.addEventListener</span>("<span class="hljs-attr">change</span>", (<span class="hljs-attr">event</span>) =&gt;</span> {
+      const target = event.target as HTMLSelectElement;
+      if (target.value) {
+        window.location.href = target.value;
+      }
+    });
+
+    this.element.appendChild(dropdown);
+
+    this.dropdown = dropdown;
+  }
+}
+
+export default function initSubnav() {
+  const subnav = document.querySelectorAll(".subnav") as NodeListOf<span class="hljs-tag">&lt;<span class="hljs-name">HTMLElement</span>&gt;</span>;
+
+  for (let i = 0; i <span class="hljs-tag">&lt; <span class="hljs-attr">subnav.length</span>; <span class="hljs-attr">i</span>++) {
+    <span class="hljs-attr">new</span> <span class="hljs-attr">Subnav</span>(<span class="hljs-attr">subnav</span>[<span class="hljs-attr">i</span>]);
+  }
+}</span></pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/subnav/subnav.ts"><span>/components/raw/subnav/subnav.ts</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/subnav/subnav.ts</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">1.5 KB</span>
                 </li>
             </ul>
         </div>

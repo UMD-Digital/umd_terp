@@ -1,3 +1,10 @@
+8.1.6
+=====
+- Fixing AA contrast bug with bullets in footer (http://bugify.idfive.com/issues/23164)
+- Adding aria label to site footer to fix non-distinguishable landmarks issue (http://bugify.idfive.com/issues/23167)
+- Fixing bug where flickity draggable element didn't have visible focus state (http://bugify.idfive.com/issues/23168)
+- Adding updated mobile style of sidebar nav (http://bugify.idfive.com/issues/23007)
+
 8.1.5
 =====
 - Updating default font-weight of button text to be bold (http://bugify.idfive.com/issues/23112)

@@ -1,5 +1,12 @@
 /* Flickity */
 
+.flickity-enabled.flickity-enabled {
+  &:focus {
+    outline: 1px dotted #212121; // Default focus state for accessibility
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+}
+
 .flickity-page-dots {
   display: flex;
   justify-content: center;

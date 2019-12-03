@@ -264,3 +264,11 @@
     opacity: 1;
   }
 }
+
+%form-select {
+  background-image: url("../../img/Dropdown_Chevron.svg");
+  background-position: right rem(16) center;
+  background-repeat: no-repeat;
+  background-size: rem(19) rem(10);
+  padding-right: rem(56);
+}
