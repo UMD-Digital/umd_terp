@@ -5,19 +5,6 @@
  * Umd_terp Theme.
  */
 
-require "vendor/autoload.php";
-
-use Drupal\taxonomy\Entity\Term;
-use Drupal\media\Entity\Media;
-use Drupal\image\Entity\ImageStyle;
-use Drupal\Core\Url;
-use Drupal\node\Entity\Node;
-use Drupal\views\Views;
-use Drupal\Core\Datetime\DrupalDateTime;
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Template\Attribute;
-use Drupal\Core\Render\Element;
-
 require_once 'inc/functions.inc';
 require_once 'inc/preprocess.inc';
 require_once 'inc/alter.inc';
