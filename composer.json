@@ -6,6 +6,9 @@
     "license": "GPL-2.0+",
     "homepage": "https://github.com/UMD-Digital/umd_terp",
     "minimum-stability": "dev",
+    "require": {
+      "drupal/twig_tweak": "*"
+    },
     "authors": [
       {
         "name": "Anthony Neumann",
