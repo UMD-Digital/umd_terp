@@ -1,3 +1,9 @@
+8.1.8
+=====
+- Increasing contrast of table headers (https://bugify.idfive.com/issues/23374)
+- Increasing contrast of event block time/location strings (https://bugify.idfive.com/issues/23373)
+- Increasing contrast of inactive tabs in tab panel component (https://bugify.idfive.com/issues/23375)
+
 8.1.7
 =====
 - Remove un-needed string concat in alter.inc
