@@ -33,7 +33,7 @@
   .nav-link {
     border-color: $nav-tabs-border-color;
     border-width: 0 0 $nav-tabs-border-width;
-    color: #ACACAC;
+    color: #949494;
     font-size: rem(16);
     letter-spacing: rem(-0.3);
     line-height: 1;
@@ -47,7 +47,7 @@
       padding: 0 rem(27) rem(29);
     }
     &:hover {
-      color: $gray-500;
+      color: $gray-600;
     }
     &.active {
       border-color: $nav-tabs-link-active-border-color;

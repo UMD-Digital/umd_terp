@@ -34,7 +34,7 @@ function umd_terp_theme_suggestions_page_alter(array &$suggestions, array $varia
 
         foreach ($parts as $part) {
           // Subsequent suggestions get appended.
-          $suggestion .= "_" . "$part";
+          $suggestion .= "_$part";
         }
 
         // Turn "-" in "_".
@@ -70,7 +70,7 @@ function umd_terp_theme_suggestions_node_alter(array &$suggestions, array $varia
       $suggestion = 'node__alias';
       foreach ($parts as $part) {
         // Subsequent suggestions get appended.
-        $suggestion .= "_" . "$part";
+        $suggestion .= "_$part";
       }
       // Turn "-" in "_".
       $suggestion = str_replace("-", "_", $suggestion);

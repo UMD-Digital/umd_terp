@@ -8,9 +8,14 @@ This theme can be used on its own, or as a base theme for further customizations
 - [UMD Terp Base Module](https://github.com/UMD-Digital/umd_terp_base)
 - [UMD Schoolwide Header](https://github.com/UMD-Digital/umd_schoolwide_header)
 
+## Requirements
+
+- [Twig Tweak Module](https://www.drupal.org/project/twig_tweak)
+
 ## Installation
 
-Install as you normally would any drupal 8 theme.
+- Ensure [Twig Tweak Module](https://www.drupal.org/project/twig_tweak) is enabled.
+- Install as you normally would any drupal 8 theme.
 
 ### Via Composer
 
@@ -88,3 +93,7 @@ Notes on customization:
 
 - Several widgets include "dark mode". You should account for that if restyling kitchen sink widgets.
 - Don't forget to account for the [UMD Schoolwide Header](https://github.com/UMD-Digital/umd_schoolwide_header).
+
+## Troubleshooting
+
+- Ensure [Twig Tweak Module](https://www.drupal.org/project/twig_tweak) is present, and enabled.

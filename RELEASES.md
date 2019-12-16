@@ -1,3 +1,15 @@
+8.1.8
+=====
+- Increasing contrast of table headers (https://bugify.idfive.com/issues/23374)
+- Increasing contrast of event block time/location strings (https://bugify.idfive.com/issues/23373)
+- Increasing contrast of inactive tabs in tab panel component (https://bugify.idfive.com/issues/23375)
+
+8.1.7
+=====
+- Remove un-needed string concat in alter.inc
+- Update composer.json and documentation to confirm twig_tweak is required (https://github.com/UMD-Digital/umd_terp/issues/1)
+- Remove un-needed require/use from umd_terp.theme (https://github.com/UMD-Digital/umd_terp/issues/2)
+
 8.1.6
 =====
 - Fixing AA contrast bug with bullets in footer (http://bugify.idfive.com/issues/23164)
