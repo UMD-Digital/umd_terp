@@ -5,17 +5,17 @@
   max-width: 100%;
   empty-cells: show;
   thead {
-    background-color: #8D8D8D;
+    background-color: #767676;
     color: $white;
     text-align: center;
   }
   th {
     font-size: rem(18);
     &:first-child {
-      border-left: 1px solid #8D8D8D;
+      border-left: 1px solid #767676;
     }
     &:last-child {
-      border-right: 1px solid #8D8D8D;
+      border-right: 1px solid #767676;
     }
     &:not(:last-child) {
       border-right: 1px solid $gray-300;
