@@ -6,9 +6,6 @@
     "license": "GPL-2.0+",
     "homepage": "https://github.com/UMD-Digital/umd_terp",
     "minimum-stability": "dev",
-    "require": {
-      "drupal/twig_tweak": "*"
-    },
     "authors": [
       {
         "name": "Anthony Neumann",
@@ -21,6 +18,11 @@
         "role": "Maintainer"
       }
     ],
+    "require": {
+      "drupal/twig_tweak": "*",
+      "umd_digital/umd_terp_base": "*",
+      "umd_digital/umd_schoolwide_header": "*"
+    },
     "support": {
       "issues": "https://github.com/UMD-Digital/umd_terp/issues",
       "source": "https://github.com/UMD-Digital/umd_terp/"
