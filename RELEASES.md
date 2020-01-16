@@ -1,3 +1,7 @@
+8.1.10
+======
+- Adding object-fit/object-position polyfill.
+
 8.1.9
 =====
 - Add default social share image.
