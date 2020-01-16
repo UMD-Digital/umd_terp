@@ -11,6 +11,7 @@ This theme can be used on its own, or as a base theme for further customizations
 ## Requirements
 
 - [Twig Tweak Module](https://www.drupal.org/project/twig_tweak)
+- [UMD Terp Base Module](https://github.com/UMD-Digital/umd_terp_base)
 
 ## Installation
 

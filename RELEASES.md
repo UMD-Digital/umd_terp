@@ -1,3 +1,11 @@
+8.1.10
+======
+- Adding object-fit/object-position polyfill.
+
+8.1.9
+=====
+- Add default social share image.
+
 8.1.8
 =====
 - Increasing contrast of table headers (https://bugify.idfive.com/issues/23374)
