@@ -35,13 +35,17 @@ hr {
 
 .align {
   &-right,
-  &-left {
+  &-left,
+  &-center {
     margin-bottom: rem(24);
     @include media-breakpoint-down(799) {
       margin-top: rem(24);
       margin-right: auto;
       margin-left: auto;
     }
+  }
+  &-right,
+  &-left {
     @include media-breakpoint-up(800) {
       max-width: 50%;
     }
@@ -67,13 +71,15 @@ hr {
 }
 
 img.align-left,
-img.align-right {
+img.align-right,
+img.align-center {
   display: block;
   height: auto;
 }
 
 figure.align-left,
-figure.align-right {
+figure.align-right,
+figure.align-center {
   @include media-breakpoint-down(799) {
     display: table;
     max-width: 100%;
