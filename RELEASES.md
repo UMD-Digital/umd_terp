@@ -1,3 +1,11 @@
+8.1.11
+======
+- Adding styles for center-aligned images in the WYSIWYG.
+
+8.1.10
+======
+- Adding object-fit/object-position polyfill.
+
 8.1.9
 =====
 - Add default social share image.
