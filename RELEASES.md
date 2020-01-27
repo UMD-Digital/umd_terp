@@ -1,3 +1,7 @@
+8.1.13
+======
+- Adding `height: auto` to general img element to prevent distortion of images in WYSIWYG.
+
 8.1.11
 ======
 - Adding styles for center-aligned images in the WYSIWYG.
