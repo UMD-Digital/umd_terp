@@ -1,3 +1,7 @@
+8.1.14
+======
+- Adding google fonts
+
 8.1.13
 ======
 - Adding `height: auto` to general img element to prevent distortion of images in WYSIWYG.
