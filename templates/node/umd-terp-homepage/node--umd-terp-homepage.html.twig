@@ -32,8 +32,8 @@
           {% if content.field_umdt_ct_hero_text|field_value %}
             <p>{{ content.field_umdt_ct_hero_text|field_value }}</p>
           {% endif %}
-          {% if content.field_umdt_ct_hero_link.0 %}
-            <p>{% include directory ~ '/templates/helpers/link.html.twig' with {'link': content.field_umdt_ct_hero_link.0, 'classes': 'btn btn-primary' } %}</p>
+          {% if content.field_umdt_ct_hero_cta.0 %}
+            <p>{% include directory ~ '/templates/helpers/link.html.twig' with {'link': content.field_umdt_ct_hero_cta.0, 'classes': 'btn btn-primary' } %}</p>
           {% endif %}
         </div>
       </div>

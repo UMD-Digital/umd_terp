@@ -40,6 +40,14 @@ function _umd_terp_extend_theme_variables(&$variables) {
   $variables['site_slogan'] = \Drupal::config('system.site')->get('slogan');
   $variables['theme_path'] = file_url_transform_relative(file_create_url(drupal_get_path('theme', $variables['theme_name'])));
   $variables['logo_path'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
+
+  $footer_logo = theme_get_setting('umd_terp_footer_logo');
+  if (!empty($footer_logo)) {
+    $fid = reset($footer_logo);
+    $file = File::load($fid);
+    $variables['footer_logo_path'] = file_url_transform_relative(file_create_url($file->getFileUri()));
+  }
+
   $theme_settings = \Drupal::config($variables['theme_name'] . '.settings');
   CacheableMetadata::createFromRenderArray($variables)
     ->addCacheableDependency($theme_settings)

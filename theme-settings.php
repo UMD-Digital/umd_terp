@@ -29,6 +29,16 @@ function umd_terp_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#type' => 'details',
     '#title' => t('UMD Terp Footer Settings'),
   ];
+  $form['umd_terp_footer_settings']['umd_terp_footer_logo'] = [
+    '#type' => 'managed_file',
+    '#title' => t('Logo'),
+    '#default_value' => theme_get_setting('umd_terp_footer_logo'),
+    '#description' => t('Please upload the footer-specific logo. This should be a "dark" version of the logo that features black typography.'),
+    '#upload_location' => 'public://',
+    '#upload_validators' => [
+      'file_validate_extensions' => ['gif jpg jpeg png svg']
+    ],
+  ];
   $form['umd_terp_footer_settings']['umd_terp_address'] = [
     '#type' => 'textfield',
     '#title' => t('Address'),
