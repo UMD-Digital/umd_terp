@@ -1,3 +1,7 @@
+8.1.16
+======
+- Fixing bug where numbers in ol's were displaying above text when a paragraph is a direct child of ol li's
+
 8.1.15
 ======
 - Updating home hero image variant to stack at 1200 instead of 800, fixing color of button in dark or bg variants

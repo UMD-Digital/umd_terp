@@ -181,6 +181,14 @@ ol {
         color: $red;
         font-weight: 700;
       }
+      > p {
+        &:first-child {
+          display: inline; // Prevents number from displaying above text
+        }
+        &:not(:first-child) {
+          margin-top: rem(24);
+        }
+      }
     }
     ol {
       li {
