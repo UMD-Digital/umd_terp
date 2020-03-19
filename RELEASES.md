@@ -1,3 +1,14 @@
+8.1.15
+======
+- Updating home hero image variant to stack at 1200 instead of 800, fixing color of button in dark or bg variants
+- Adding height to header logo under 800px to prevent distortion on mobile
+- Adding footer logo theme setting
+- Fixing bug where incorrect field name was being used in homepage hero for CTA field
+
+8.1.14
+======
+- Adding google fonts
+
 8.1.13
 ======
 - Adding `height: auto` to general img element to prevent distortion of images in WYSIWYG.

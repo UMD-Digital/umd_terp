@@ -12,6 +12,10 @@
     }
     .btn {
       @extend %btn-yellow;
+      color: $white;
+      &:hover {
+        color: $black;
+      }
     }
   }
   &.home-hero-dark {
@@ -26,7 +30,7 @@
   position: relative;
   z-index: 10;
   &:not(:only-child) {
-    @include media-breakpoint-up(800) {
+    @include media-breakpoint-up(1200) {
       width: 50%;
     }
   }
@@ -40,7 +44,7 @@
 .home-hero-media {
   position: relative;
   z-index: 0;
-  @include media-breakpoint-up(800) {
+  @include media-breakpoint-up(1200) {
     position: absolute;
     top: 0;
     right: 0;
@@ -52,6 +56,9 @@
     display: block;
     padding-bottom: 56.25%;
     @include media-breakpoint-up(800) {
+      padding-bottom: 33.333%;
+    }
+    @include media-breakpoint-up(1200) {
       display: none;
     }
   }
