@@ -27,6 +27,7 @@
     }
   }
   .navbar-brand {
+    height: rem(40);
     @include media-breakpoint-up(800) {
       height: rem(58);
     }
