@@ -351,7 +351,7 @@
   @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
     <span class="hljs-attribute">display</span>: flex;
     <span class="hljs-attribute">flex-wrap</span>: wrap;
-    <span class="hljs-attribute">justify-content</span>: center;
+    <span class="hljs-attribute">justify-content</span>: flex-start;
     <span class="hljs-attribute">margin-left</span>: rem(-<span class="hljs-number">25</span>);
   }
   &amp;:after {
@@ -390,8 +390,8 @@
     <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">33.333%</span>;
     <span class="hljs-attribute">max-width</span>: <span class="hljs-number">33.333%</span>;
   }
-  &amp;:first-child:nth-last-child(2),
-  &amp;:last-child:nth-child(2) {
+  &amp;:nth-child(3n+1):nth-last-child(2),
+  &amp;:nth-child(3n+2):last-child {
     @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
       <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">50%</span>;
       <span class="hljs-attribute">max-width</span>: <span class="hljs-number">50%</span>;
