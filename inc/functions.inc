@@ -7,6 +7,7 @@
 
 use Drupal\node\Entity\Node;
 use Drupal\Core\Cache\CacheableMetadata;
+use Drupal\file\Entity\File;
 
 /**
  * Allows regions to be added to nodes/other entities, not just pages.
