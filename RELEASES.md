@@ -1,3 +1,7 @@
+8.1.18
+======
+- Include File class for footer logo.
+
 8.1.17
 ======
 - Updating card group component to be left-aligned, allow last two cards to be 50% width on desktop if they're the only cards in their row
