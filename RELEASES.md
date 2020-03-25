@@ -1,3 +1,7 @@
+8.1.21
+======
+- Fixing bug with vertical alignment of unordered list item bullets
+
 8.1.20
 ======
 - Updating button set styles to keep button text vertically aligned inside buttons when sibling buttons are different heights, allowing buttons to fill entire width when less than the number of columns at each breakpoint

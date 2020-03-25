@@ -123,7 +123,7 @@ ul {
         width: 0;
         margin-right: rem(6);
         position: absolute;
-        top: 50%;
+        top: rem(15);
         left: 0;
         transform: translateY(-50%);
       }
@@ -161,7 +161,7 @@ ul {
             height: 0;
             width: 0;
             position: absolute;
-            top: rem(12);
+            top: rem(15);
             left: rem(1.25);
             transform: translateY(-50%);
           }
