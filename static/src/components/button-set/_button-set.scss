@@ -2,8 +2,10 @@
     display: flex;
     flex-wrap: wrap;
     .btn {
-        display: block;
+        align-items: center;
+        display: flex;
         flex: 0 1 auto;
+        justify-content: center;
         margin: 0 0 rem(24) 0;
         width: 100%;
         @include media-breakpoint-up(600) {
@@ -29,6 +31,35 @@
             }
         }
         &:nth-child(4n) {
+            @include media-breakpoint-up(1200) {
+                margin-right: 0;
+            }
+        }
+        &:only-child {
+            @include media-breakpoint-up(600) {
+                margin-right: 0;
+                width: 100%;
+            }
+        }
+        &:first-child:nth-last-child(2),
+        &:last-child:nth-child(2) {
+            @include media-breakpoint-up(900) {
+                width: calc(50% - #{rem(24 / 2)});
+            }
+        }
+        &:last-child:nth-child(2) {
+            @include media-breakpoint-up(900) {
+                margin-right: 0;
+            }
+        }
+        &:first-child:nth-last-child(3),
+        &:nth-child(2):nth-last-child(2),
+        &:last-child:nth-child(3) {
+            @include media-breakpoint-up(1200) {
+                width: calc(33.333% - #{rem((24 * 2) / 3)});
+            }
+        }
+        &:last-child:nth-child(3) {
             @include media-breakpoint-up(1200) {
                 margin-right: 0;
             }
