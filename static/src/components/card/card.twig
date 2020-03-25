@@ -1,10 +1,12 @@
 <div class="card">
-  <div class="card-img card-img-top">
-    <img src="{{image.src|path}}" alt="{{image.alt}}">
-    {% if imageText %}
-      <div class="card-img-text">{{imageText}}</div>
-    {% endif %}
-  </div>
+  {% if image %}
+    <div class="card-img card-img-top">
+      <img src="{{image.src|path}}" alt="{{image.alt}}">
+      {% if imageText %}
+        <div class="card-img-text">{{imageText}}</div>
+      {% endif %}
+    </div>
+  {% endif %}
   <div class="card-body">
     {% if title %}
       <div class="card-title">{{title}}</div>

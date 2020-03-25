@@ -157,7 +157,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-d9c95ca057ef35add11bdef7e0c19a4e-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blockquote"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blockquote"</span> <span class="hljs-attr">cite</span>=<span class="hljs-string">"https://idfive.com"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem Ipsum Dolor Sit Amet duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blockquote-footer"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blockquote-portrait"</span>&gt;</span>
@@ -166,6 +166,9 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blockquote-attribution"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blockquote-author"</span>&gt;</span>Firstname Lastname ’19<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blockquote-title"</span>&gt;</span>Title goes here<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">cite</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blockquote-source"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://idfive.com"</span>&gt;</span>Lorem Publication Name Ipsum<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span></pre>
@@ -176,7 +179,7 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-d9c95ca057ef35add11bdef7e0c19a4e-panel-view">
     <code class="Code Code--lang-twig">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blockquote"</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blockquote"</span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> <span class="hljs-name">source</span> %}</span><span class="xml"><span class="hljs-tag"> <span class="hljs-attr">cite</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{<span class="hljs-name">source</span>.url}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml"><span class="hljs-tag">&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{quote}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> author %}</span><span class="xml">
     <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blockquote-footer"</span>&gt;</span>
@@ -189,6 +192,11 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blockquote-author"</span>&gt;</span></span><span class="hljs-template-variable">{{author}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
         </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> title %}</span><span class="xml">
           <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blockquote-title"</span>&gt;</span></span><span class="hljs-template-variable">{{title}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> <span class="hljs-name">source</span> %}</span><span class="xml">
+          <span class="hljs-tag">&lt;<span class="hljs-name">cite</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blockquote-source"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{<span class="hljs-name">source</span>.url}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{<span class="hljs-name">source</span>.name}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
         </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
@@ -209,7 +217,11 @@
     <span class="hljs-attr">"alt"</span>: <span class="hljs-string">"Portrait of Firstname Lastname ’19"</span>
   },
   <span class="hljs-attr">"author"</span>: <span class="hljs-string">"Firstname Lastname ’19"</span>,
-  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Title goes here"</span>
+  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Title goes here"</span>,
+  <span class="hljs-attr">"source"</span>: {
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Lorem Publication Name Ipsum"</span>,
+    <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://idfive.com"</span>
+  }
 }</pre>
             
         
@@ -396,6 +408,14 @@
 <span class="hljs-selector-class">.blockquote-title</span> {
   <span class="hljs-attribute">font-family</span>: <span class="hljs-variable">$font-family-sans-serif</span>;
   <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">18</span>);
+}
+
+<span class="hljs-selector-class">.blockquote-source</span> {
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-selector-tag">a</span> {
+    <span class="hljs-attribute">text-decoration</span>: underline;
+  }
 }</pre>
                             </code>
                             
@@ -412,7 +432,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">3 KB</span>
+                    <span class="Meta-value">3.1 KB</span>
                 </li>
             </ul>
         </div>
@@ -780,6 +800,30 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button-set.html" data-pjax>
+                <span>Button Set</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     

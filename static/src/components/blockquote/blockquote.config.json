@@ -6,7 +6,11 @@
       "alt": "Portrait of Firstname Lastname ’19"
     },
     "author": "Firstname Lastname ’19",
-    "title": "Title goes here"
+    "title": "Title goes here",
+    "source": {
+      "name": "Lorem Publication Name Ipsum",
+      "url": "https://idfive.com"
+    }
   },
   "variants": [
     {
