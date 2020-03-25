@@ -40,6 +40,7 @@ This theme can be used on its own, or as a base theme for further customizations
 
 #### UMD Terp Footer Settings
 
+- Logo: The logo of the department/institution/etc.
 - Address: The address of the department/institution/etc.
 - Phone Number: The phone number of the department/institution/etc.
 - Email: The email address of the department/institution/etc.

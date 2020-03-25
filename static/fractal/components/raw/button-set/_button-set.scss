@@ -1,0 +1,37 @@
+.btn-set {
+    display: flex;
+    flex-wrap: wrap;
+    .btn {
+        display: block;
+        flex: 0 1 auto;
+        margin: 0 0 rem(24) 0;
+        width: 100%;
+        @include media-breakpoint-up(600) {
+            margin-right: rem(24);
+        }
+        @include media-breakpoint-between(600, 899) {
+            width: calc(50% - #{rem(24 / 2)});
+        }
+        @include media-breakpoint-between(900, 1199) {
+            width: calc(33.333% - #{rem((24 * 2) / 3)});
+        }
+        @include media-breakpoint-up(1200) {
+            width: calc(25% - #{rem((24 * 3) / 4)});
+        }
+        &:nth-child(2n) {
+            @include media-breakpoint-between(600, 899) {
+                margin-right: 0;
+            }
+        }
+        &:nth-child(3n) {
+            @include media-breakpoint-between(900, 1199) {
+                margin-right: 0;
+            }
+        }
+        &:nth-child(4n) {
+            @include media-breakpoint-up(1200) {
+                margin-right: 0;
+            }
+        }
+    }
+}

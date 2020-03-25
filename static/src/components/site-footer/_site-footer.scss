@@ -44,16 +44,22 @@
     }
   }
   li {
-    display: inline-block;
+    display: block;
     font-size: rem(14);
     letter-spacing: rem(.5);
     text-transform: lowercase;
+    @include media-breakpoint-up(600) {
+      display: inline-block;
+    }
     &:not(:last-child) {
+      margin-bottom: rem(18);
       &:after {
-        content: "|";
-        color: $red;
-        display: inline-block;
-        margin: 0 rem(28);
+        @include media-breakpoint-up(600) {
+          content: "|";
+          color: $red;
+          display: inline-block;
+          margin: 0 rem(28);
+        }
       }
     }
   }

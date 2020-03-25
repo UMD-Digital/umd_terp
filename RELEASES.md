@@ -1,3 +1,12 @@
+8.1.19
+======
+- Updating btn-set styles to use a column-based layout (https://trello.com/c/FQrHJPWE/1-set-button-width-to-100)
+- Vertically centering unordered list item bullet icons (https://trello.com/c/NamGfzdK/2-vertically-center-bullet-points-for-unordered-lists)
+- Adding border-top on hover to cards with no image (https://trello.com/c/DER4cUcW/3-add-border-top-for-hover-on-cards-that-dont-have-images)
+- Updating textarea styles (https://trello.com/c/DwR7nJIz/7-evaluate-padding-at-the-bottom-of-html-text-areas)
+- Updating mobile footer nav link styles (https://trello.com/c/4Qxfh0Xx/9-remove-red-borders-and-center-links-in-mobile-footer-view)
+- Adding source parameter to blockquote component (https://trello.com/c/l87JI6oY/8-update-testimonial-widget-to-include-a-url-associated-with-source)
+
 8.1.18
 ======
 - Include File class for footer logo.

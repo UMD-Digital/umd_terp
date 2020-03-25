@@ -46,7 +46,9 @@ function _umd_terp_extend_theme_variables(&$variables) {
   if (!empty($footer_logo)) {
     $fid = reset($footer_logo);
     $file = File::load($fid);
-    $variables['footer_logo_path'] = file_url_transform_relative(file_create_url($file->getFileUri()));
+    if (!empty($file)) {
+      $variables['footer_logo_path'] = file_url_transform_relative(file_create_url($file->getFileUri()));
+    }
   }
 
   $theme_settings = \Drupal::config($variables['theme_name'] . '.settings');
