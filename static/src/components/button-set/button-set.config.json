@@ -1,0 +1,18 @@
+{
+    "context": {
+        "buttons": [
+            {
+                "text": "COVID-19 Updates & Resources"
+            },
+            {
+                "text": "Remote Learning resources"
+            },
+            {
+                "text": "Student Services"
+            },
+            {
+                "text": "Another Button Lorem"
+            }
+        ]
+    }
+}
