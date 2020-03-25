@@ -1,3 +1,7 @@
+8.1.20
+======
+- Updating button set styles to keep button text vertically aligned inside buttons when sibling buttons are different heights, allowing buttons to fill entire width when less than the number of columns at each breakpoint
+
 8.1.19
 ======
 - Updating btn-set styles to use a column-based layout (https://trello.com/c/FQrHJPWE/1-set-button-width-to-100)
