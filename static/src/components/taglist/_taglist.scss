@@ -1,3 +1,7 @@
+.tag-list {
+  margin-bottom: rem(-11);
+}
+
 .tag-list-heading {
   @extend %label;
 }
@@ -6,6 +10,7 @@
   display: inline-block;
   &:not(:last-child) {
     margin-right: rem(11);
+    margin-bottom: rem(11);
     &.tag-list-heading {
       margin-right: rem(16);
     }
