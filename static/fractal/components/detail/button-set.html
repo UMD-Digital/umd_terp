@@ -231,6 +231,9 @@
                                 <pre><span class="hljs-selector-class">.btn-set</span> {
     <span class="hljs-attribute">display</span>: flex;
     <span class="hljs-attribute">flex-wrap</span>: wrap;
+    @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">600</span>) {
+        <span class="hljs-attribute">display</span>: block;
+    }
     <span class="hljs-selector-class">.btn</span> {
         <span class="hljs-attribute">align-items</span>: center;
         <span class="hljs-attribute">display</span>: flex;
@@ -239,60 +242,9 @@
         <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> rem(<span class="hljs-number">24</span>) <span class="hljs-number">0</span>;
         <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
         @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">600</span>) {
+            <span class="hljs-attribute">display</span>: inline-block;
             <span class="hljs-attribute">margin-right</span>: rem(<span class="hljs-number">24</span>);
-        }
-        @<span class="hljs-keyword">include</span> media-breakpoint-between(<span class="hljs-number">600</span>, 899) {
-            <span class="hljs-attribute">width</span>: calc(<span class="hljs-number">50%</span> - #{rem(<span class="hljs-number">24</span> / <span class="hljs-number">2</span>)});
-        }
-        @<span class="hljs-keyword">include</span> media-breakpoint-between(<span class="hljs-number">900</span>, 1199) {
-            <span class="hljs-attribute">width</span>: calc(<span class="hljs-number">33.333%</span> - #{rem((<span class="hljs-number">24</span> * <span class="hljs-number">2</span>) / <span class="hljs-number">3</span>)});
-        }
-        @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">1200</span>) {
-            <span class="hljs-attribute">width</span>: calc(<span class="hljs-number">25%</span> - #{rem((<span class="hljs-number">24</span> * <span class="hljs-number">3</span>) / <span class="hljs-number">4</span>)});
-        }
-        &amp;:nth-child(2n) {
-            @<span class="hljs-keyword">include</span> media-breakpoint-between(<span class="hljs-number">600</span>, 899) {
-                <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0</span>;
-            }
-        }
-        &amp;:nth-child(3n) {
-            @<span class="hljs-keyword">include</span> media-breakpoint-between(<span class="hljs-number">900</span>, 1199) {
-                <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0</span>;
-            }
-        }
-        &amp;:nth-child(4n) {
-            @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">1200</span>) {
-                <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0</span>;
-            }
-        }
-        &amp;:only-child {
-            @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">600</span>) {
-                <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0</span>;
-                <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-            }
-        }
-        &amp;:first-child:nth-last-child(2),
-        &amp;:last-child:nth-child(2) {
-            @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">900</span>) {
-                <span class="hljs-attribute">width</span>: calc(<span class="hljs-number">50%</span> - #{rem(<span class="hljs-number">24</span> / <span class="hljs-number">2</span>)});
-            }
-        }
-        &amp;:last-child:nth-child(2) {
-            @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">900</span>) {
-                <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0</span>;
-            }
-        }
-        &amp;:first-child:nth-last-child(3),
-        &amp;:nth-child(2):nth-last-child(2),
-        &amp;:last-child:nth-child(3) {
-            @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">1200</span>) {
-                <span class="hljs-attribute">width</span>: calc(<span class="hljs-number">33.333%</span> - #{rem((<span class="hljs-number">24</span> * <span class="hljs-number">2</span>) / <span class="hljs-number">3</span>)});
-            }
-        }
-        &amp;:last-child:nth-child(3) {
-            @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">1200</span>) {
-                <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0</span>;
-            }
+            <span class="hljs-attribute">width</span>: auto;
         }
     }
 }</pre>
@@ -311,7 +263,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2 KB</span>
+                    <span class="Meta-value">449 Bytes</span>
                 </li>
             </ul>
         </div>
