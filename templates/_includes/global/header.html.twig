@@ -8,7 +8,13 @@
   <div class="max-bound">
     <nav class="navbar navbar-expand-800" aria-label="Main">
       <a class="navbar-brand" href="{{ path('<front>') }}">
-        <img src="{{ logo_path }}" alt="{{ site_name }} logo">
+        {% if logo_path %}
+          <img src="{{ logo_path }}" alt="{{ site_name }} logo">
+        {% else %}
+          <div role="img" aria-label="{{ site_name }} logo" class="navbar-brand-text">
+            <span aria-hidden="true">{{ site_name }}</span>
+          </div>
+        {% endif %}
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-offcanvas" aria-controls="navbar-offcanvas" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-hamburger-icon" role="presentation">
