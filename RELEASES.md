@@ -1,3 +1,8 @@
+8.1.22
+======
+- Reverting button set styles to be full width under 600px and then sized by content width on wider viewports (https://trello.com/c/FQrHJPWE/1-set-button-width-to-100)
+- Fixing bug with no padding at the bottom of the page content area on mobile (https://trello.com/c/DwR7nJIz/7-evaluate-padding-at-the-bottom-of-html-text-areas)
+
 8.1.21
 ======
 - Fixing bug with vertical alignment of unordered list item bullets
