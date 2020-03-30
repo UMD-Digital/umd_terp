@@ -13,7 +13,7 @@
         width: 100%;
         @include media-breakpoint-up(600) {
             display: inline-block;
-            margin-left: rem(24);
+            margin-right: rem(24);
             width: auto;
         }
         &:first-child {

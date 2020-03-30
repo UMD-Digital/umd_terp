@@ -16,5 +16,10 @@
             margin-right: rem(24);
             width: auto;
         }
+        &:first-child {
+            @include media-breakpoint-up(600) {
+                margin-left: 0;
+            }
+        }
     }
 }
