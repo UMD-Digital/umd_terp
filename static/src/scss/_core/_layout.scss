@@ -17,10 +17,10 @@
   @include media-breakpoint-up(800) {
     margin: rem(60) 0;
   }
-  &:first-child {
+  &.section:first-child {
     margin-top: 0;
   }
-  &:last-child {
+  &.section:last-child {
     margin-bottom: 0;
   }
 }
@@ -33,7 +33,7 @@
 }
 
 .page-content {
-  padding: rem(20) rem(24) 0;
+  padding: rem(20) rem(24) rem(64);
   @include media-breakpoint-up(800) {
     padding: rem(45) rem(36) rem(80);
   }
