@@ -1,3 +1,7 @@
+8.1.23
+======
+- Updating column widths of sidebar and content area, adding hyphenation to sidebar nav links to prevent lengthy words from extending out past the boundaries of the nav itself (https://trello.com/c/knle7DCl/4-estimate-time-requirements-for-transitioning-sidebar-navigation-from-bootstrap-grid-to-flexbox)
+
 8.1.22
 ======
 - Reverting button set styles to be full width under 600px and then sized by content width on wider viewports (https://trello.com/c/FQrHJPWE/1-set-button-width-to-100)
