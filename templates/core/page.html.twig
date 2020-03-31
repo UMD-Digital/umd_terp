@@ -17,12 +17,12 @@
 			<div class="row justify-content-center">
 				{% if page.sidebar|render|striptags|trim is not empty and not hide_sidebar %}
 					{% block sidebar %}
-						<div class="col-800-3 col-1000-2">
+						<div class="col-800-3">
 							{{ page.sidebar }}
 						</div>
 					{% endblock %}
 				{% endif %}
-				<div class="col-800-9 col-1000-10">
+				<div class="col-800-9">
 					{{ page.breadcrumbs }}
 					{{ page.content }}
 				</div>
