@@ -22,7 +22,7 @@ export class Subnav {
     dropdown.className = "subnav__dropdown";
     dropdown.setAttribute("aria-label", "Navigate to a page in this section");
 
-    placeholderOption.textContent = "In This Section";
+    placeholderOption.textContent = "Navigation";
 
     dropdown.appendChild(placeholderOption);
 
