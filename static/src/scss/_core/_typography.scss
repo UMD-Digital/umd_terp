@@ -109,8 +109,8 @@ ul, ol {
 }
 
 ul {
-  li {
-    .editor-content & {
+  .editor-content & {
+    > li {
       &:before {
         content: "";
         display: inline-block;
@@ -123,30 +123,26 @@ ul {
         margin-left: rem(-12);
         transform: translateY(-50%);
       }
-    }
-  }
-  ul {
-    li {
-      .editor-content & {
-        &:before {
-          background-color: $red;
-          border: none;
-          height: rem(3);
-          width: rem(7);
-        }
-      }
-    }
-    ul {
-      li {
-        .editor-content & {
+      > ul {
+        > li {
           &:before {
-            content: "";
-            background-color: transparent;
-            background-image: url("../../img/li-level-3-icon.svg");
-            display: inline-block;
-            height: rem(9);
-            width: rem(9);
-            transform: translateY(-25%);
+            background-color: $red;
+            border: none;
+            height: rem(3);
+            width: rem(7);
+          }
+          > ul {
+            >li {
+              &:before {
+                content: "";
+                background-color: transparent;
+                background-image: url("../../img/li-level-3-icon.svg");
+                display: inline-block;
+                height: rem(9);
+                width: rem(9);
+                transform: translateY(-25%);
+              }
+            }
           }
         }
       }
@@ -157,7 +153,7 @@ ul {
 ol {
   .editor-content & {
     counter-reset: list;
-    li {
+    > li {
       counter-increment: list;
       &:before {
         content: counter(list, decimal) ".\00a0\00a0";
@@ -172,17 +168,17 @@ ol {
           margin-top: rem(24);
         }
       }
-    }
-    ol {
-      li {
-        &:before {
-          content: counter(list, lower-alpha) ".\00a0\00a0";
-        }
-      }
-      ol {
-        li {
+      > ol {
+        > li {
           &:before {
-            content: counter(list, lower-roman) ".\00a0\00a0";
+            content: counter(list, lower-alpha) ".\00a0\00a0";
+          }
+          > ol {
+            >li {
+              &:before {
+                content: counter(list, lower-roman) ".\00a0\00a0";
+              }
+            }
           }
         }
       }
