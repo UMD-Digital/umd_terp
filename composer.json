@@ -20,6 +20,7 @@
     ],
     "require": {
       "drupal/twig_tweak": "*",
+      "drupal/twig_field_value": "*",
       "umd_digital/umd_terp_base": "*",
       "umd_digital/umd_schoolwide_header": "*"
     },
