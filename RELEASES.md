@@ -1,3 +1,7 @@
+8.1.25
+======
+- Adjust subnav mobile text from "In this section" to "Navigation" at client request
+
 8.1.24
 ======
 - Updating column widths of sidebar and content area, adding hyphenation to sidebar nav links to prevent lengthy words from extending out past the boundaries of the nav itself (https://trello.com/c/knle7DCl/4-estimate-time-requirements-for-transitioning-sidebar-navigation-from-bootstrap-grid-to-flexbox)
