@@ -7,7 +7,7 @@
 
 8.1.25
 ======
-- Adjust text on sub navigation
+- Adjust subnav mobile text from "In this section" to "Navigation" at client request
 
 8.1.24
 ======

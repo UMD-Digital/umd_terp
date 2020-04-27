@@ -16,6 +16,7 @@ This theme can be used on its own, or as a base theme for further customizations
 ## Installation
 
 - Ensure [Twig Tweak Module](https://www.drupal.org/project/twig_tweak) is enabled.
+- Ensure [Twig Field Value Module](https://www.drupal.org/project/twig_field_value) is enabled.
 - Install as you normally would any drupal 8 theme.
 
 ### Via Composer
