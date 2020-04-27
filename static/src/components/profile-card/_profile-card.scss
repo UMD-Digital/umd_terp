@@ -10,7 +10,7 @@
       transform: scale(1.05);
     }
     .card-body {
-      box-shadow: none;
+      box-shadow: none !important;
     }
     .card-title {
       color: inherit;
@@ -24,7 +24,7 @@
   }
   .card-body {
     background-color: transparent;
-    box-shadow: none;
+    box-shadow: none !important;
     padding: 0;
   }
   .card-title {

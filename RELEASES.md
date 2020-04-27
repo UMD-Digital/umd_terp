@@ -1,3 +1,14 @@
+8.1.26
+======
+- Updating UL styles to position bullet icons inline instead of absolutely to avoid issue when floating an image next to a list (https://trello.com/b/ODpjs7Dr/umd-d8-template)
+- Updating UL and OL styles to increase specificity of LI styling to prevent collisions when nesting OL's inside UL's and vice versa (https://trello.com/c/MgwCxfxE/18-adjust-styles-with-mixed-ordered-and-unordered-lists)
+- Fixing styling bug with tab panel tabs
+- Fixing bug where default card hover state was cascading into profile cards (https://trello.com/c/HNNT4cDx/15-remove-border-on-hover-of-person-cards)
+
+8.1.25
+======
+- Adjust text on sub navigation
+
 8.1.24
 ======
 - Updating column widths of sidebar and content area, adding hyphenation to sidebar nav links to prevent lengthy words from extending out past the boundaries of the nav itself (https://trello.com/c/knle7DCl/4-estimate-time-requirements-for-transitioning-sidebar-navigation-from-bootstrap-grid-to-flexbox)
