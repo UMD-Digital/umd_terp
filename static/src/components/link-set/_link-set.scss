@@ -1,0 +1,8 @@
+.link-set {
+    a {
+        display: table;
+        &:not(:last-child) {
+            margin-bottom: rem(12);
+        }
+    }
+}
