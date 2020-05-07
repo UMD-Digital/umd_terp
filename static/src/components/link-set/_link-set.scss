@@ -1,8 +1,9 @@
 .link-set {
     a {
         display: table;
+        line-height: (24 / 18);
         &:not(:last-child) {
-            margin-bottom: rem(12);
+            margin-bottom: rem(18);
         }
     }
 }
