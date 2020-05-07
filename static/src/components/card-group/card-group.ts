@@ -2,6 +2,8 @@ import * as Flickity from "flickity";
 
 export class CardGroup {
   protected element: HTMLElement;
+  protected cardGroup: HTMLElement;
+  protected cardGroupNav: HTMLElement;
   protected elementNavNext: HTMLElement;
   protected elementNavPrevious: HTMLElement;
   protected carousel: Flickity;
@@ -9,17 +11,23 @@ export class CardGroup {
   constructor(element: HTMLElement) {
     if (element) {
       this.element = element;
+      this.cardGroup = this.element.querySelector(".card-group");
+      this.cardGroupNav = this.element.querySelector(".card-group-nav");
       this.elementNavNext = this.element.querySelector(".card-group-nav-next");
       this.elementNavPrevious = this.element.querySelector(".card-group-nav-prev");
-      this.carousel = new Flickity(this.element.querySelector(".card-group"), {
-        contain: true,
-        wrapAround: true,
-        adaptiveHeight: true,
-        prevNextButtons: false,
-        watchCSS: true
-      });
-
-      this.addCarouselEventListeners();
+      if (this.cardGroup.childElementCount > 1) {
+        this.carousel = new Flickity(this.cardGroup, {
+          contain: true,
+          wrapAround: true,
+          adaptiveHeight: true,
+          prevNextButtons: false,
+          watchCSS: true
+        });
+        this.addCarouselEventListeners();
+      } else {
+        // Remove nav from card groups with only a single card
+        this.element.removeChild(this.cardGroupNav);
+      }
     }
   }
 
