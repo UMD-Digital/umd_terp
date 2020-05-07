@@ -1,3 +1,8 @@
+8.1.27
+======
+- Updating link set component's styles to have links stack to avoid word cloud (https://trello.com/c/bXJV7F3N/22-links-group-becomes-word-cloud-when-link-titles-are-long)
+- Updating card group component to only become a carousel on mobile when more than one card is in the group (https://trello.com/c/dQRemDWl/21-consider-removing-carousel-effect-on-card-group-section)
+
 8.1.26
 ======
 - Updating UL styles to position bullet icons inline instead of absolutely to avoid issue when floating an image next to a list (https://trello.com/b/ODpjs7Dr/umd-d8-template)
