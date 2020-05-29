@@ -1,32 +1,39 @@
-{# {{ site_slogan }} #}
-{# {{ "now"|date("Y") }} #}
-{# {{ page.footer_menu }} #}
+{#
+/**
+ * @file
+ * Displays global footer.
+ *
+ */
+#}
 
 <footer class="site-footer" aria-label="Main">
-  <div class="site-footer-main">
-    <div class="max-bound">
-      <nav class="site-footer-nav" aria-label="Footer">
-        {{ drupal_menu('footer') }}
-      </nav>
-      <div class="site-footer-about">
-        <div class="site-footer-logo">
-          <img src="{{ footer_logo_path }}" alt="{{ site_name }} logo">
-        </div>
-        <div class="site-footer-address">
-          <strong>{{ site_name }}</strong><br>
-          <span>{{ umd_terp_address }} </span><br>
-          <span aria-hidden="true">&nbsp;·&nbsp;</span><a href="tel:+{{ umd_terp_phone|preg_replace('/[^0-9]/', '') }}">{{ umd_terp_phone }}</a>
-          <span aria-hidden="true">&nbsp;·&nbsp;</span><a href="mailto:{{ umd_terp_email }}">{{ umd_terp_email }}</a>
-        </div>
-        <div class="site-footer-social">
-          {% include directory ~ '/templates/partials/social-links.html.twig' %}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="site-footer-legal">
-    <div class="max-bound">
-      {{ drupal_menu('global') }}
-    </div>
-  </div>
+	<div class="site-footer-main">
+		<div class="max-bound">
+			<nav class="site-footer-nav" aria-label="Footer">
+				{{ drupal_menu('footer') }}
+			</nav>
+			<div class="site-footer-about">
+				<div class="site-footer-logo">
+					<img src="{{ footer_logo_path }}" alt="{{ site_name }} logo">
+				</div>
+				<div class="site-footer-address">
+					<strong>{{ site_name }}</strong><br>
+					<span>{{ umd_terp_address }}
+					</span><br>
+					<span aria-hidden="true">&nbsp;·&nbsp;</span>
+					<a href="tel:+{{ umd_terp_phone|preg_replace('/[^0-9]/', '') }}">{{ umd_terp_phone }}</a>
+					<span aria-hidden="true">&nbsp;·&nbsp;</span>
+					<a href="mailto:{{ umd_terp_email }}">{{ umd_terp_email }}</a>
+				</div>
+				<div class="site-footer-social">
+					{% include directory ~ '/templates/partials/social-links.html.twig' %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="site-footer-legal">
+		<div class="max-bound">
+			{{ drupal_menu('global') }}
+		</div>
+	</div>
 </footer>
