@@ -102,6 +102,13 @@ function umd_terp_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#markup' => $help_markup,
   ];
 
+  $form['directory']['umd_terp_directory_back_text'] = [
+    '#type' => 'textfield',
+    '#title' => t('Directory path'),
+    '#description' => t('Provides a site wide {{ umd_terp_directory_back_text }} variable for profile templates. Ex: "Back to Faculty". Defaults to "Back to People".'),
+    '#default_value' => theme_get_setting('umd_terp_directory_back_text'),
+  ];
+
   $form['directory']['umd_terp_directory_path'] = [
     '#type' => 'textfield',
     '#title' => t('Directory path'),
