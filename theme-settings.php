@@ -89,6 +89,26 @@ function umd_terp_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#description' => t('Add the URL to your instagram profile.'),
   ];
 
+  // Directory.
+  $form['directory'] = [
+    '#type' => 'details',
+    '#title' => t('Directory Settings'),
+    '#collapsible' => TRUE,
+  ];
+
+  $help_markup = "<p>These settings are for if you wish to change the default directory URL from '/directory' to something else. Be sure you also change the corresponding pathauto pattern for People.</p>";
+  $form['directory']['directory_help'] = [
+    '#type' => 'markup',
+    '#markup' => $help_markup,
+  ];
+
+  $form['directory']['umd_terp_directory_path'] = [
+    '#type' => 'textfield',
+    '#title' => t('Directory path'),
+    '#description' => t('Provides a site wide {{ umd_terp_directory_path }} variable for profile templates. Ex: /directory. Defaults to "/directory".'),
+    '#default_value' => theme_get_setting('umd_terp_directory_path'),
+  ];
+
   // Other.
   $form['other'] = [
     '#type' => 'details',
