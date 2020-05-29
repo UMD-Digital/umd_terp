@@ -44,13 +44,9 @@ function _umd_terp_extend_theme_variables(&$variables) {
   if (!empty($logo_path)) {
     $variables['logo_path'] = file_url_transform_relative(file_create_url($logo_path));
   }
-  $footer_logo = theme_get_setting('umd_terp_footer_logo');
+  $footer_logo = theme_get_setting('umd_terp_footer_logo_path');
   if (!empty($footer_logo)) {
-    $fid = reset($footer_logo);
-    $file = File::load($fid);
-    if (!empty($file)) {
-      $variables['footer_logo_path'] = file_url_transform_relative(file_create_url($file->getFileUri()));
-    }
+    $variables['footer_logo_path'] = file_url_transform_relative(file_create_url($footer_logo));
   }
 
   $theme_settings = \Drupal::config($variables['theme_name'] . '.settings');

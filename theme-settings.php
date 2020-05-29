@@ -29,16 +29,17 @@ function umd_terp_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#type' => 'details',
     '#title' => t('UMD Terp Footer Settings'),
   ];
-  $form['umd_terp_footer_settings']['umd_terp_footer_logo'] = [
-    '#type' => 'managed_file',
-    '#title' => t('Logo'),
-    '#default_value' => theme_get_setting('umd_terp_footer_logo'),
+  $form['umd_terp_footer_settings']['umd_terp_footer_logo_path'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Path to custom footer logo'),
+    '#default_value' => theme_get_setting('umd_terp_footer_logo_path'),
+  );
+  $form['umd_terp_footer_settings']['umd_terp_footer_logo_upload'] = array(
+    '#type' => 'file',
+    '#title' => t('Upload footer logo image'),
+    '#maxlength' => 40,
     '#description' => t('Please upload the footer-specific logo. This should be a "dark" version of the logo that features black typography.'),
-    '#upload_location' => 'public://',
-    '#upload_validators' => [
-      'file_validate_extensions' => ['gif jpg jpeg png svg']
-    ],
-  ];
+  );
   $form['umd_terp_footer_settings']['umd_terp_address'] = [
     '#type' => 'textfield',
     '#title' => t('Address'),
@@ -87,12 +88,6 @@ function umd_terp_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#default_value' => theme_get_setting('umd_terp_instagram_link'),
     '#description' => t('Add the URL to your instagram profile.'),
   ];
-  $form['umd_terp_social_settings']['umd_terp_linkedin_link'] = [
-    '#type' => 'textfield',
-    '#title' => t('Linkedin Link'),
-    '#default_value' => theme_get_setting('umd_terp_linkedin_link'),
-    '#description' => t('Add the URL to your linkedin profile.'),
-  ];
 
   // Other.
   $form['other'] = [
@@ -107,4 +102,38 @@ function umd_terp_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#description' => t('Provides a site wide {{ assets_path }} variable for the builds assets path relative to the theme root. Usable in twig templates. Ex: /static/build'),
     '#default_value' => theme_get_setting('umd_terp_assets_path'),
   ];
+  $form['#validate'][] = 'umd_terp_form_system_theme_settings_validate_test';
+  $form['#submit'][] = 'umd_terp_form_system_theme_settings_submit';
+}
+
+function umd_terp_form_system_theme_settings_validate_test($form, FormStateInterface &$form_state) {
+  // Handle file uploads.
+  $validators = array(
+    'file_validate_is_image' => array(),
+  );
+  // Check for a new uploaded logo.
+  $file = file_save_upload('umd_terp_footer_logo_upload', $validators, FALSE, 0);
+  if (isset($file)) {
+
+    // File upload was attempted.
+    if ($file) {
+      // Put the temporary file in form_values so we can save it on submit.
+      $form_state->setValue('umd_terp_footer_logo_upload', $file);
+    }
+    else {
+      // File upload failed.
+      $form_state->setErrorByName('umd_terp_footer_logo_upload', t('The footer logo could not be uploaded.'));
+    }
+  }
+}
+
+function umd_terp_form_system_theme_settings_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+    $values = $form_state->getValues();
+    if (!empty($values['umd_terp_footer_logo_upload'])) {
+      $filename = file_unmanaged_copy($values['umd_terp_footer_logo_upload']->getFileUri());
+      $values['umd_terp_footer_logo_path'] = $filename;
+      $form_state->setValue(['umd_terp_footer_logo_path'], $filename);
+      // kint($values);
+      $form_state->unsetValue('umd_terp_footer_logo_upload');
+    }
 }
