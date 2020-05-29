@@ -1,11 +1,13 @@
 {#
 /**
- * @file
- * Theme override to display a UMD Terp Person node.
- */
+* @file
+* Theme override to display a UMD Terp Person node.
+*/
 #}
+
 <h1>{{ node.title.value }}</h1>
-<a href="/directory" class="back-to-link"><span class="icon icon-chevron-right" aria-hidden="true"></span>Back to People</a>
+<a href="{{ umd_terp_directory_path|default('/directory') }}" class="back-to-link">
+  <span class="icon icon-chevron-right" aria-hidden="true"></span>Back to People</a>
 <div class="container-fluid">
   <div class="row justify-content-center">
     <div class="col-1000-11">
@@ -40,7 +42,9 @@
               <div class="col-1000-6">
                 <h3 class="profile-subheading">Contact</h3>
                 {% if content.field_umdt_ct_person_email|field_value %}
-                  <div><a href="mailto:{{ content.field_umdt_ct_person_email|field_value }}">{{ content.field_umdt_ct_person_email|field_value }}</a></div>
+                  <div>
+                    <a href="mailto:{{ content.field_umdt_ct_person_email|field_value }}">{{ content.field_umdt_ct_person_email|field_value }}</a>
+                  </div>
                 {% endif %}
                 {% if content.field_umdt_ct_person_location|field_value %}
                   <div>{{ content.field_umdt_ct_person_location|field_value }}</div>
@@ -48,7 +52,10 @@
                 {% if phone %}
                   <div class="profile-phone">
                     <a href="tel:+{{ phone_link }}">
-                      <span class="font-weight-bold">{{ phone }}</span>{% if phone_ext %} {{ phone_ext }}{% endif %}
+                      <span class="font-weight-bold">{{ phone }}</span>
+                      {% if phone_ext %}
+                        {{ phone_ext }}
+                      {% endif %}
                     </a>
                   </div>
                 {% endif %}
@@ -63,7 +70,9 @@
                   <h3 class="profile-subheading">Department Information</h3>
                   <ul>
                     {% for department in departments %}
-                      <li><a href="{{ department.link }}">{{ department.title }}</a></li>
+                      <li>
+                        <a href="{{ department.link }}">{{ department.title }}</a>
+                      </li>
                     {% endfor %}
                   </ul>
                 {% endif %}
