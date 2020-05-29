@@ -43,20 +43,25 @@ This theme can be used on its own, or as a base theme for further customizations
 
 - Logo: The logo of the department/institution/etc.
 - Address: The address of the department/institution/etc.
-- Phone Number: The phone number of the department/institution/etc.
+- Phone number: The phone number of the department/institution/etc.
 - Email: The email address of the department/institution/etc.
 
 #### UMD Terp Social Media Accounts
 
-- Twitter Link: The twitter link of the department/institution/etc.
-- Facebook Link: The facebook link of the department/institution/etc.
-- Youtube Link: The youtube link of the department/institution/etc.
-- Instagram Link: The instagram link of the department/institution/etc.
-- LinkedIn Link: The linkedin link of the department/institution/etc.
+- Twitter link: The twitter link of the department/institution/etc.
+- Facebook link: The facebook link of the department/institution/etc.
+- Youtube link: The youtube link of the department/institution/etc.
+- Instagram link: The instagram link of the department/institution/etc.
+- LinkedIn link: The linkedin link of the department/institution/etc.
+
+#### UMD Terp Directory Settings
+
+- Back to directory text: Provides the text for the back to directory link on profile pages.
+- Back to directory path: Provides the path for the back to directory link on profile pages.
 
 #### UMD Terp Admin Settings
 
-- Assets Path: Dev use only. The assets path for any static images/etc in the theme, to be used in twig theming.
+- Assets path: Dev use only. The assets path for any static images/etc in the theme, to be used in twig theme.
 
 ## Development
 
