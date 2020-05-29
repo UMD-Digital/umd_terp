@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Hook preproccesses for umd_terp theme.
+ * Hook reprocesses for umd_terp theme.
  */
 
 use Drupal\Component\Utility\Html;
@@ -83,11 +83,6 @@ function umd_terp_preprocess_node(&$variables) {
   if (!$variables['teaser']) {
     $variables['content_attributes']['class'][] = 'view-mode-' . $variables['view_mode'];
   }
-
-  // Note: Is this needed if we handle breadcrumb and sidebar on page level?
-  // // Allow breadcrumbs/sidebar to be available in the node template.
-  // $allowed_regions = ['breadcrumbs', 'sidebar'];.
-  // _umd_terp_add_regions_to_entity($allowed_regions, $variables);
   // Allow use of theme varables in node templates.
   _umd_terp_extend_theme_variables($variables);
 
