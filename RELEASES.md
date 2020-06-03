@@ -1,3 +1,20 @@
+8.1.31
+======
+- Removing carousel functionality on mobile for card group component
+- Adding styles to table section wrapper to prevent x-overflow on smaller screens
+
+8.1.30
+======
+- Minor adjustments to readme and theme settings
+
+8.1.29
+======
+- Add ability to adjust back to people text
+
+8.1.28
+======
+- Fix footer logo uploading
+
 8.1.27
 ======
 - Updating link set component's styles to have links stack to avoid word cloud (https://trello.com/c/bXJV7F3N/22-links-group-becomes-word-cloud-when-link-titles-are-long)

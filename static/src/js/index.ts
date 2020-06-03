@@ -12,7 +12,6 @@ import * as objectFitImages from 'object-fit-images';
 
 import initSlideshows from "../components/slideshow/slideshow";
 import initCards from "../components/card/card";
-import initCardGroups from "../components/card-group/card-group";
 import initCarousels from "../components/carousel/carousel";
 import initStatGroups from "../components/stat-group/stat-group";
 import initSubnav from "../components/subnav/subnav";
@@ -25,7 +24,6 @@ focusWithin(document);
 objectFitImages();
 initSlideshows();
 initCards();
-initCardGroups();
 initCarousels();
 initStatGroups();
 initSubnav();
