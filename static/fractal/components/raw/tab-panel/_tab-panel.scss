@@ -37,6 +37,7 @@
     font-size: rem(16);
     letter-spacing: rem(-0.3);
     line-height: 1;
+    margin-bottom: 0;
     padding: rem(14) rem(13) rem(8);
     text-align: center;
     transition: .25s border-color ease-in-out,
@@ -44,7 +45,7 @@
     @include media-breakpoint-up(800) {
       font-size: rem(25);
       letter-spacing: rem(-.4);
-      padding: 0 rem(27) rem(29);
+      padding: rem(14) rem(24) rem(29);
     }
     &:hover {
       color: $gray-600;
