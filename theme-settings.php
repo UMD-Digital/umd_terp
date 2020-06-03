@@ -48,7 +48,7 @@ function umd_terp_form_system_theme_settings_alter(&$form, FormStateInterface $f
   ];
   $form['umd_terp_footer_settings']['umd_terp_phone'] = [
     '#type' => 'textfield',
-    '#title' => t('Phone Number'),
+    '#title' => t('Phone number'),
     '#default_value' => theme_get_setting('umd_terp_phone'),
     '#description' => t('Please add the phone number you wish to display.'),
   ];
@@ -66,25 +66,25 @@ function umd_terp_form_system_theme_settings_alter(&$form, FormStateInterface $f
   ];
   $form['umd_terp_social_settings']['umd_terp_twitter_link'] = [
     '#type' => 'textfield',
-    '#title' => t('Twitter Link'),
+    '#title' => t('Twitter link'),
     '#default_value' => theme_get_setting('umd_terp_twitter_link'),
     '#description' => t('Add the URL to your twitter profile.'),
   ];
   $form['umd_terp_social_settings']['umd_terp_facebook_link'] = [
     '#type' => 'textfield',
-    '#title' => t('Facebook Link'),
+    '#title' => t('Facebook link'),
     '#default_value' => theme_get_setting('umd_terp_facebook_link'),
     '#description' => t('Add the URL to your facebook profile.'),
   ];
   $form['umd_terp_social_settings']['umd_terp_youtube_link'] = [
     '#type' => 'textfield',
-    '#title' => t('Youtube Link'),
+    '#title' => t('Youtube link'),
     '#default_value' => theme_get_setting('umd_terp_youtube_link'),
     '#description' => t('Add the URL to your youtube profile.'),
   ];
   $form['umd_terp_social_settings']['umd_terp_instagram_link'] = [
     '#type' => 'textfield',
-    '#title' => t('Instagram Link'),
+    '#title' => t('Instagram link'),
     '#default_value' => theme_get_setting('umd_terp_instagram_link'),
     '#description' => t('Add the URL to your instagram profile.'),
   ];
@@ -102,9 +102,16 @@ function umd_terp_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#markup' => $help_markup,
   ];
 
+  $form['directory']['umd_terp_directory_back_text'] = [
+    '#type' => 'textfield',
+    '#title' => t('Back to directory text'),
+    '#description' => t('Provides a site wide {{ umd_terp_directory_back_text }} variable for profile templates. Ex: "Back to Faculty". Defaults to "Back to People".'),
+    '#default_value' => theme_get_setting('umd_terp_directory_back_text'),
+  ];
+
   $form['directory']['umd_terp_directory_path'] = [
     '#type' => 'textfield',
-    '#title' => t('Directory path'),
+    '#title' => t('Back to directory path'),
     '#description' => t('Provides a site wide {{ umd_terp_directory_path }} variable for profile templates. Ex: /directory. Defaults to "/directory".'),
     '#default_value' => theme_get_setting('umd_terp_directory_path'),
   ];
