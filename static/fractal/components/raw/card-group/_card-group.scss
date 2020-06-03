@@ -45,10 +45,6 @@
       }
     }
   }
-  .flickity-page-dots {
-    bottom: rem(-18);
-    transform: translateY(100%);
-  }
 }
 
 .card-group {
@@ -58,18 +54,6 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-left: rem(-25);
-  }
-  &:after {
-    content: "flickity";
-    display: none;
-    @include media-breakpoint-up(800) {
-      content: "";
-    }
-  }
-  .flickity-slider {
-    .card-wrap {
-      margin-bottom: 0;
-    }
   }
   .card {
     &[role="link"] {
@@ -107,22 +91,12 @@
   }
 }
 
-.card-group-nav {
-  @include media-breakpoint-up(800) {
-    display: none;
-  }
-}
-
-.card-group-nav-button {
-  @extend %carousel-nav-button--minimal;
-}
-
 .card-group-cta.fancy-link {
   @include media-breakpoint-down(799) {
     display: inline-block;
     margin-right: 0;
   }
-  .card-group-nav + .text-center & {
+  .card-group + .text-center & {
     @include media-breakpoint-down(799) {
       margin-top: rem(48);
     }
