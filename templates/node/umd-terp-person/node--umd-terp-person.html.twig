@@ -7,91 +7,96 @@
 
 <h1>{{ node.title.value }}</h1>
 <a href="{{ umd_terp_directory_path|default('/directory') }}" class="back-to-link">
-  <span class="icon icon-chevron-right" aria-hidden="true"></span>{{ umd_terp_directory_back_text|default('Back to People') }}
+	<span class="icon icon-chevron-right" aria-hidden="true"></span>
+	{{ umd_terp_directory_back_text|default('Back to People') }}
 </a>
 <div class="container-fluid">
-  <div class="row justify-content-center">
-    <div class="col-1000-11">
-      <div class="profile">
-        <div class="row">
-          <div class="col-600-4 col-1000-3">
-            {% set photo = assets_path ~ '/img/Profiles_Photo_Placeholder.svg' %}
-            {% if content.field_umdt_ct_person_photo|field_value %}
-              {% set photo = file_url(content.field_umdt_ct_person_photo|field_target_entity.uri.value | image_style('optimized')) %}
-            {% endif %}
-            <div class="profile-photo">
-              <img src="{{ photo }}" alt="{{ node.title.value }}">
-            </div>
-          </div>
-          <div class="col-600-8 col-1000-9">
-            <div class="row">
-              <div class="col-12">
-                <div class="profile-header">
-                  <h2 class="profile-name">{{ node.title.value }}</h2>
-                  {% if content.field_umdt_ct_person_title|field_value %}
-                    <div class="profile-title">{{ content.field_umdt_ct_person_title|field_value }}</div>
-                  {% endif %}
-                </div>
-              </div>
-              {% if content.field_umdt_ct_person_bio|field_value %}
-                <div class="col-12">
-                  <div class="profile-bio editor-content">
-                    {{ content.field_umdt_ct_person_bio|field_value }}
-                  </div>
-                </div>
-              {% endif %}
-              <div class="col-1000-6">
-                <h3 class="profile-subheading">Contact</h3>
-                {% if content.field_umdt_ct_person_email|field_value %}
-                  <div>
-                    <a href="mailto:{{ content.field_umdt_ct_person_email|field_value }}">{{ content.field_umdt_ct_person_email|field_value }}</a>
-                  </div>
-                {% endif %}
-                {% if content.field_umdt_ct_person_location|field_value %}
-                  <div>{{ content.field_umdt_ct_person_location|field_value }}</div>
-                {% endif %}
-                {% if phone %}
-                  <div class="profile-phone">
-                    <a href="tel:+{{ phone_link }}">
-                      <span class="font-weight-bold">{{ phone }}</span>
-                      {% if phone_ext %}
-                        {{ phone_ext }}
-                      {% endif %}
-                    </a>
-                  </div>
-                {% endif %}
-                {% if content.field_umdt_ct_person_website|field_value %}
-                  <div>
-                    {% include directory ~ '/templates/helpers/link.html.twig' with {'link': content.field_umdt_ct_person_website.0 } %}
-                  </div>
-                {% endif %}
-              </div>
-              <div class="col-1000-6">
-                {% if departments %}
-                  <h3 class="profile-subheading">Department Information</h3>
-                  <ul>
-                    {% for department in departments %}
-                      <li>
-                        <a href="{{ department.link }}">{{ department.title }}</a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                {% endif %}
-              </div>
-              {% if content.body|field_value %}
-                <div class="col-12">
-                  <div class="editor-content">
-                    {{ content.body|field_value }}
-                  </div>
-                </div>
-              {% endif %}
-            </div>
-          </div>
-        </div>
-      </div>
+	<div class="row justify-content-center">
+		<div class="col-1000-11">
+			<div class="profile">
+				<div class="row">
+					<div class="col-600-4 col-1000-3">
+						{% set photo = assets_path ~ '/img/Profiles_Photo_Placeholder.svg' %}
+						{% if content.field_umdt_ct_person_photo|field_value %}
+							{% set photo = file_url(content.field_umdt_ct_person_photo|field_target_entity.uri.value | image_style('optimized')) %}
+						{% endif %}
+						<div class="profile-photo">
+							<img src="{{ photo }}" alt="{{ node.title.value }}">
+						</div>
+					</div>
+					<div class="col-600-8 col-1000-9">
+						<div class="row">
+							<div class="col-12">
+								<div class="profile-header">
+									<h2 class="profile-name">{{ node.title.value }}</h2>
+									{% if content.field_umdt_ct_person_title|field_value %}
+										<div class="profile-title">{{ content.field_umdt_ct_person_title|field_value }}</div>
+									{% endif %}
+								</div>
+							</div>
+							{% if content.field_umdt_ct_person_bio|field_value %}
+								<div class="col-12">
+									<div class="profile-bio editor-content">
+										{{ content.field_umdt_ct_person_bio|field_value }}
+									</div>
+								</div>
+							{% endif %}
+							<div class="col-1000-6">
+								<h3 class="profile-subheading">Contact</h3>
+								{% if content.field_umdt_ct_person_email|field_value %}
+									<div>
+										<a href="mailto:{{ content.field_umdt_ct_person_email|field_value }}">{{ content.field_umdt_ct_person_email|field_value }}</a>
+									</div>
+								{% endif %}
+								{% if content.field_umdt_ct_person_location|field_value %}
+									<div>{{ content.field_umdt_ct_person_location|field_value }}</div>
+								{% endif %}
+								{% if phone %}
+									<div class="profile-phone">
+										<a href="tel:+{{ phone_link }}">
+											<span class="font-weight-bold">{{ phone }}</span>
+											{% if phone_ext %}
+												{{ phone_ext }}
+											{% endif %}
+										</a>
+									</div>
+								{% endif %}
+								{% if content.field_umdt_ct_person_website|field_value %}
+									<div>
+										{% include directory ~ '/templates/helpers/link.html.twig' with {'link': content.field_umdt_ct_person_website.0 } %}
+									</div>
+								{% endif %}
+							</div>
+							<div class="col-1000-6">
+								{% if departments %}
+									<h3 class="profile-subheading">Department Information</h3>
+									<ul>
+										{% for department in departments %}
+											<li>
+												{% if department.link %}
+													<a href="{{ department.link }}">{{ department.title }}</a>
+												{% else %}
+													{{ department.title }}
+												{% endif %}
+											</li>
+										{% endfor %}
+									</ul>
+								{% endif %}
+							</div>
+							{% if content.body|field_value %}
+								<div class="col-12">
+									<div class="editor-content">
+										{{ content.body|field_value }}
+									</div>
+								</div>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
 
-      {{ content.field_umdt_ct_sections }}
+			{{ content.field_umdt_ct_sections }}
 
-    </div>
-  </div>
+		</div>
+	</div>
 </div>

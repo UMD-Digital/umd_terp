@@ -29,17 +29,17 @@ function umd_terp_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#type' => 'details',
     '#title' => t('UMD Terp Footer Settings'),
   ];
-  $form['umd_terp_footer_settings']['umd_terp_footer_logo_path'] = array(
+  $form['umd_terp_footer_settings']['umd_terp_footer_logo_path'] = [
     '#type' => 'textfield',
     '#title' => t('Path to custom footer logo'),
     '#default_value' => theme_get_setting('umd_terp_footer_logo_path'),
-  );
-  $form['umd_terp_footer_settings']['umd_terp_footer_logo_upload'] = array(
+  ];
+  $form['umd_terp_footer_settings']['umd_terp_footer_logo_upload'] = [
     '#type' => 'file',
     '#title' => t('Upload footer logo image'),
     '#maxlength' => 40,
     '#description' => t('Please upload the footer-specific logo. This should be a "dark" version of the logo that features black typography.'),
-  );
+  ];
   $form['umd_terp_footer_settings']['umd_terp_address'] = [
     '#type' => 'textfield',
     '#title' => t('Address'),
@@ -116,6 +116,26 @@ function umd_terp_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#default_value' => theme_get_setting('umd_terp_directory_path'),
   ];
 
+  // Articles.
+  $form['articles'] = [
+    '#type' => 'details',
+    '#title' => t('Local Articles Settings'),
+    '#collapsible' => TRUE,
+  ];
+
+  $help_markup = "<p>These settings are for if you wish to change the default articles URL from '/articles' to something else. Be sure you also change the corresponding pathauto pattern for Articles.</p>";
+  $form['articles']['articles_help'] = [
+    '#type' => 'markup',
+    '#markup' => $help_markup,
+  ];
+
+  $form['articles']['umd_terp_articles_path'] = [
+    '#type' => 'textfield',
+    '#title' => t('Back to directory path'),
+    '#description' => t('Provides a site wide {{ umd_terp_articles_path }} variable for profile templates. Specifically, it is used for categorizing articles, and linking back to a pre-filtered page. Ex: /news. Defaults to "/articles".'),
+    '#default_value' => theme_get_setting('umd_terp_articles_path'),
+  ];
+
   // Other.
   $form['other'] = [
     '#type' => 'details',
@@ -133,34 +153,35 @@ function umd_terp_form_system_theme_settings_alter(&$form, FormStateInterface $f
   $form['#submit'][] = 'umd_terp_form_system_theme_settings_submit';
 }
 
+/**
+ * Custom file upload validator.
+ */
 function umd_terp_form_system_theme_settings_validate_test($form, FormStateInterface &$form_state) {
   // Handle file uploads.
-  $validators = array(
-    'file_validate_is_image' => array(),
-  );
+  $validators = [
+    'file_validate_is_image' => [],
+  ];
   // Check for a new uploaded logo.
   $file = file_save_upload('umd_terp_footer_logo_upload', $validators, FALSE, 0);
   if (isset($file)) {
-
-    // File upload was attempted.
     if ($file) {
-      // Put the temporary file in form_values so we can save it on submit.
       $form_state->setValue('umd_terp_footer_logo_upload', $file);
     }
     else {
-      // File upload failed.
       $form_state->setErrorByName('umd_terp_footer_logo_upload', t('The footer logo could not be uploaded.'));
     }
   }
 }
 
-function umd_terp_form_system_theme_settings_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-    $values = $form_state->getValues();
-    if (!empty($values['umd_terp_footer_logo_upload'])) {
-      $filename = file_unmanaged_copy($values['umd_terp_footer_logo_upload']->getFileUri());
-      $values['umd_terp_footer_logo_path'] = $filename;
-      $form_state->setValue(['umd_terp_footer_logo_path'], $filename);
-      // kint($values);
-      $form_state->unsetValue('umd_terp_footer_logo_upload');
-    }
+/**
+ * Custom submit handler.
+ */
+function umd_terp_form_system_theme_settings_submit(&$form, FormStateInterface $form_state) {
+  $values = $form_state->getValues();
+  if (!empty($values['umd_terp_footer_logo_upload'])) {
+    $filename = file_unmanaged_copy($values['umd_terp_footer_logo_upload']->getFileUri());
+    $values['umd_terp_footer_logo_path'] = $filename;
+    $form_state->setValue(['umd_terp_footer_logo_path'], $filename);
+    $form_state->unsetValue('umd_terp_footer_logo_upload');
+  }
 }
