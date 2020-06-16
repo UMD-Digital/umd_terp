@@ -18,8 +18,8 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@frctl/fractal": "git+https://github.com/frctl/fractal.git",
-    "@frctl/twig": "git+https://github.com/frctl/twig.git",
+    "@frctl/fractal": "^1.2.1",
+    "@frctl/twig": "^1.1.0",
     "@types/node": "^10.10.1",
     "ajv": "^6.5.2",
     "autoprefixer": "^7.1.1",
