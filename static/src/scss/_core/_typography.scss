@@ -46,33 +46,7 @@ a {
     }
   }
   &.fancy-link {
-    border-bottom: 1px solid transparent;
-    color: $red;
-    font-weight: 700;
-    margin-right: rem(36);
-    position: relative;
-    transition: .25s border-color ease-in-out,
-      .25s color ease-in-out;
-    &:hover {
-      border-bottom: 1px solid $dark-red;
-      color: $dark-red;
-      &:after {
-        opacity: 1;
-        transform: translate(#{rem(4)}, -50%);
-      }
-    }
-    &:after {
-      @extend %icomoon;
-      content: "\e901";
-      display: inline-block;
-      font-size: rem(4);
-      opacity: 0;
-      bottom: rem(6);
-      position: absolute;
-      transform: translate(0, -50%);
-      transition: .25s opacity ease-in-out,
-        .25s transform ease-in-out;
-    }
+    @extend %fancy-link;
   }
 }
 
