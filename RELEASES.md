@@ -1,3 +1,8 @@
+8.1.32
+======
+- Adding indentation to subnav child pages (https://trello.com/c/gLfDpwcg)
+- Adding link button styles (https://trello.com/c/8vdrXiu0)
+
 8.1.31
 ======
 - Removing carousel functionality on mobile for card group component
