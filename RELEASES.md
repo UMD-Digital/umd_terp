@@ -1,6 +1,7 @@
 8.1.34
 ======
-- Adjusting font-size and weight of h1's (https://trello.com/c/kSnCLerF_
+- Adjusting font-size and weight of h1's (https://trello.com/c/kSnCLerF)
+- Adjusting vertical spacing between widgets (https://trello.com/c/68NctW1L)
 
 8.1.33
 ======
