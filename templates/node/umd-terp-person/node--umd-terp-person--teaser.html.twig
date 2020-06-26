@@ -4,9 +4,9 @@
  * Theme override to display a UMD Terp Person node Teaser.
  */
 #}
+
 <div class="profile-card card">
   <div class="card-img card-img-top">
-
     {% set photo = assets_path ~ '/img/Profiles_Photo_Placeholder.svg' %}
     {% if content.field_umdt_ct_person_photo|field_value %}
       {% set photo = file_url(content.field_umdt_ct_person_photo|field_target_entity.uri.value | image_style('optimized')) %}
@@ -17,13 +17,6 @@
     <h3 class="card-title">{{ node.title.value }}</h3>
     {% if content.field_umdt_ct_person_title|field_value %}
       <div class="profile-card-title">{{ content.field_umdt_ct_person_title|field_value }}</div>
-    {% endif %}
-    {% if phone %}
-      <div class="mb-2">
-        <a href="tel:+{{ phone_link }}" class="profile-card-phone">
-          {{ phone }}</span>{% if phone_ext %} {{ phone_ext }}{% endif %}
-        </a>
-      </div>
     {% endif %}
     <div>
       <a href="{{ link }}" class="card-cta">View Profile<span class="sr-only"> for {{ node.title.value }}</span></a>
