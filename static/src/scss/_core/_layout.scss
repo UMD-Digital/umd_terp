@@ -7,9 +7,16 @@
 .page-section {
   background-color: $white;
   color: $black;
-
   &.bg-red {
     color: $white;
+  }
+  & > .max-bound > .outer-pad {
+    padding-top: rem(32);
+    padding-bottom: rem(32);
+    @include media-breakpoint-up(800) {
+      padding-top: rem(42);
+      padding-bottom: rem(42);
+    }
   }
 }
 
