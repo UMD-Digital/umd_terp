@@ -5,6 +5,7 @@
 - Adjusting sizing of text version of site header logo (https://trello.com/c/8shFo8JG)
 - Adjusting aspect ratio of blockquote portrait (https://trello.com/c/2ssh1Cft)
 - Removing horizontal padding from card group and news cards page-sections on mobile (https://trello.com/c/FbkqxXM6)
+- Updating font case in footer, removing bullet in front of phone (https://trello.com/c/ObfV2eRV)
 
 8.1.33
 ======
