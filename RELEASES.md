@@ -2,6 +2,7 @@
 ======
 - Adjusting font-size and weight of h1's (https://trello.com/c/kSnCLerF)
 - Adjusting vertical spacing between widgets (https://trello.com/c/68NctW1L)
+- Adjusting sizing of text version of site header logo (https://trello.com/c/8shFo8JG)
 
 8.1.33
 ======
