@@ -7,6 +7,7 @@
 .page-section {
   background-color: $white;
   color: $black;
+
   &.bg-red {
     color: $white;
   }
@@ -14,12 +15,15 @@
 
 .section {
   margin: rem(48) 0;
+
   @include media-breakpoint-up(800) {
     margin: rem(60) 0;
   }
+
   &.section:first-child {
     margin-top: 0;
   }
+
   &.section:last-child {
     margin-bottom: 0;
   }
@@ -27,6 +31,7 @@
 
 .outer-pad {
   padding: rem(64) rem(36);
+
   @include media-breakpoint-up(800) {
     padding: rem(84) rem(120);
   }
@@ -34,6 +39,7 @@
 
 .page-content {
   padding: rem(20) rem(24) rem(64);
+
   @include media-breakpoint-up(800) {
     padding: rem(45) rem(36) rem(80);
   }
