@@ -1,3 +1,7 @@
+8.1.33
+======
+- Adjust person template and functions to remove department links
+
 8.1.32
 ======
 - Adding indentation to subnav child pages (https://trello.com/c/gLfDpwcg)
