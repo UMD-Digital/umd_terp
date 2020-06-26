@@ -15,8 +15,9 @@
 .page-section.page-section-ut_card_group,
 .page-section.page-section-ut_news {
   > .max-bound > .outer-pad {
-    padding-top: rem(4);
-    padding-bottom: 0;
+    @include media-breakpoint-down(799) {
+      padding: rem(4) 0 0;
+    }
     @include media-breakpoint-up(800) {
       padding-top: rem(44);
       padding-bottom: rem(54);

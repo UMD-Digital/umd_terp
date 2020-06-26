@@ -4,6 +4,7 @@
 - Adjusting vertical spacing between widgets (https://trello.com/c/68NctW1L)
 - Adjusting sizing of text version of site header logo (https://trello.com/c/8shFo8JG)
 - Adjusting aspect ratio of blockquote portrait (https://trello.com/c/2ssh1Cft)
+- Removing horizontal padding from card group and news cards page-sections on mobile (https://trello.com/c/FbkqxXM6)
 
 8.1.33
 ======
