@@ -107,6 +107,11 @@
   span {
     display: block;
   }
+  .blockquote>&:last-child {
+    @include media-breakpoint-up(800) {
+      margin-bottom: rem(-56);
+    }
+  }
 }
 
 .blockquote-portrait {
@@ -125,7 +130,7 @@
   &:before {
     content: "";
     display: block;
-    padding-bottom: (68 / 61 * 100%);
+    padding-bottom: 100%;
   }
   img {
     height: 100%;
