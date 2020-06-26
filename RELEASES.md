@@ -1,3 +1,7 @@
+8.1.34
+======
+- Adjusting font-size and weight of h1's (https://trello.com/c/kSnCLerF_
+
 8.1.33
 ======
 - Adjust person template and functions to remove department links

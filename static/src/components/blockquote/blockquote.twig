@@ -1,23 +1,23 @@
-<blockquote class="blockquote"{% if source %} cite="{{source.url}}"{% endif %}>
-  <p>{{quote}}</p>
-  {% if author %}
-    <footer class="blockquote-footer">
-      {% if photo %}
-        <div class="blockquote-portrait">
-          <img src="{{photo.src|path}}" alt="{{photo.alt}}">
-        </div>
-      {% endif %}
-      <div class="blockquote-attribution">
-        <span class="blockquote-author">{{author}}</span>
-        {% if title %}
-          <span class="blockquote-title">{{title}}</span>
-        {% endif %}
-        {% if source %}
-          <cite class="blockquote-source">
-            <a href="{{source.url}}">{{source.name}}</a>
-          </cite>
-        {% endif %}
-      </div>
-    </footer>
-  {% endif %}
+<blockquote class="blockquote{% if author %} blockquote-has-footer{% endif %}" {% if source %} cite="{{source.url}}" {% endif %}>
+	<p>{{quote}}</p>
+	{% if author %}
+		<footer class="blockquote-footer">
+			{% if photo %}
+				<div class="blockquote-portrait">
+					<img src="{{photo.src|path}}" alt="{{photo.alt}}">
+				</div>
+			{% endif %}
+			<div class="blockquote-attribution">
+				<span class="blockquote-author">{{author}}</span>
+				{% if title %}
+					<span class="blockquote-title">{{title}}</span>
+				{% endif %}
+				{% if source %}
+					<cite class="blockquote-source">
+						<a href="{{source.url}}">{{source.name}}</a>
+					</cite>
+				{% endif %}
+			</div>
+		</footer>
+	{% endif %}
 </blockquote>
