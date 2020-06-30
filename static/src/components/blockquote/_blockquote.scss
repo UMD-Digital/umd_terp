@@ -165,3 +165,12 @@
     text-decoration: underline;
   }
 }
+
+/* 
+ * Bad Overwrite
+ * Should only be used as a temporary stopgap until a better solution is implemented
+*/
+
+.page-section-ut_button_set + .page-section-ut_blockquote .outer-pad {
+  padding-top: 0 !important;
+}

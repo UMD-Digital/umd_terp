@@ -103,3 +103,16 @@
     }
   }
 }
+
+/* 
+ * Bad Overwrite
+ * Should only be used as a temporary stopgap until a better solution is implemented
+*/
+
+.page-section-ut_stat_group + .page-section-ut_news .outer-pad {
+  padding-top: 0 !important;
+}
+
+.page-section-ut_stat_group + .page-section-ut_news .outer-pad > .card-group-bg {
+  padding-top: 0 !important;
+}

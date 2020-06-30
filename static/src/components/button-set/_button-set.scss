@@ -23,3 +23,23 @@
         }
     }
 }
+
+/* 
+ * Bad Overwrite
+ * Should only be used as a temporary stopgap until a better solution is implemented
+*/
+
+@media (min-width: 600px) {
+    .page-section-umd_terp_homepage .btn-set {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 600px) {
+    .page-section-umd_terp_homepage .btn {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
