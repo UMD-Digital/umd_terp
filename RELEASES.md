@@ -1,3 +1,7 @@
+8.1.35
+======
+- Updating mobile sizing of h1 and h2 elements (https://trello.com/c/0mux8ApZ/48-update-page-titles-in-responsive-view)
+
 8.1.34
 ======
 - Adjusting font-size and weight of h1's (https://trello.com/c/kSnCLerF)
