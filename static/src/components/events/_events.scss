@@ -20,6 +20,12 @@
       padding-bottom: rem(34);
     }
   }
+  &.page-section-umd_terp_homepage {
+    > .max-bound > .outer-pad {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
 }
 
 .events-bg {

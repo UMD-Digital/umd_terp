@@ -1,3 +1,16 @@
+8.1.35
+======
+- Updating mobile sizing of h1 and h2 elements (https://trello.com/c/0mux8ApZ/48-update-page-titles-in-responsive-view)
+
+8.1.34
+======
+- Adjusting font-size and weight of h1's (https://trello.com/c/kSnCLerF)
+- Adjusting vertical spacing between widgets (https://trello.com/c/68NctW1L)
+- Adjusting sizing of text version of site header logo (https://trello.com/c/8shFo8JG)
+- Adjusting aspect ratio of blockquote portrait (https://trello.com/c/2ssh1Cft)
+- Removing horizontal padding from card group and news cards page-sections on mobile (https://trello.com/c/FbkqxXM6)
+- Updating font case in footer, removing bullet in front of phone (https://trello.com/c/ObfV2eRV)
+
 8.1.33
 ======
 - Adjust person template and functions to remove department links

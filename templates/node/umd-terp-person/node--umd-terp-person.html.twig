@@ -5,11 +5,7 @@
 */
 #}
 
-<h1>{{ node.title.value }}</h1>
-<a href="{{ umd_terp_directory_path|default('/directory') }}" class="back-to-link">
-	<span class="icon icon-chevron-right" aria-hidden="true"></span>
-	{{ umd_terp_directory_back_text|default('Back to People') }}
-</a>
+<h1 class="sr-only">{{ node.title.value }}</h1>
 <div class="container-fluid">
 	<div class="row justify-content-center">
 		<div class="col-1000-11">
@@ -43,14 +39,6 @@
 							{% endif %}
 							<div class="col-1000-6">
 								<h3 class="profile-subheading">Contact</h3>
-								{% if content.field_umdt_ct_person_email|field_value %}
-									<div>
-										<a href="mailto:{{ content.field_umdt_ct_person_email|field_value }}">{{ content.field_umdt_ct_person_email|field_value }}</a>
-									</div>
-								{% endif %}
-								{% if content.field_umdt_ct_person_location|field_value %}
-									<div>{{ content.field_umdt_ct_person_location|field_value }}</div>
-								{% endif %}
 								{% if phone %}
 									<div class="profile-phone">
 										<a href="tel:+{{ phone_link }}">
@@ -61,10 +49,18 @@
 										</a>
 									</div>
 								{% endif %}
+								{% if content.field_umdt_ct_person_email|field_value %}
+									<div>
+										<a href="mailto:{{ content.field_umdt_ct_person_email|field_value }}">{{ content.field_umdt_ct_person_email|field_value }}</a>
+									</div>
+								{% endif %}
 								{% if content.field_umdt_ct_person_website|field_value %}
 									<div>
-										{% include directory ~ '/templates/helpers/link.html.twig' with {'link': content.field_umdt_ct_person_website.0 } %}
+										<a href="{{ content.field_umdt_ct_person_website }}" target="_blank">Personal Website</a>
 									</div>
+								{% endif %}
+								{% if content.field_umdt_ct_person_location|field_value %}
+									<div>{{ content.field_umdt_ct_person_location|field_value }}</div>
 								{% endif %}
 							</div>
 							<div class="col-1000-6">

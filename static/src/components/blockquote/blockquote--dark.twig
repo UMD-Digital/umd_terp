@@ -1,18 +1,18 @@
 <blockquote class="blockquote blockquote-dark">
-  <p>{{quote}}</p>
-  {% if author %}
-    <footer class="blockquote-footer">
-      {% if photo %}
-        <div class="blockquote-portrait">
-          <img src="{{photo.src|path}}" alt="{{photo.alt}}">
-        </div>
-      {% endif %}
-      <div class="blockquote-attribution">
-        <span class="blockquote-author">{{author}}</span>
-        {% if title %}
-          <span class="blockquote-title">{{title}}</span>
-        {% endif %}
-      </div>
-    </footer>
-  {% endif %}
+	<p>{{quote}}</p>
+	{% if author %}
+		<footer class="blockquote-footer">
+			{% if photo %}
+				<div class="blockquote-portrait">
+					<img src="{{photo.src|path}}" alt="{{photo.alt}}">
+				</div>
+			{% endif %}
+			<div class="blockquote-attribution">
+				<span class="blockquote-author">{{author}}</span>
+				{% if title %}
+					<span class="blockquote-title">{{title}}</span>
+				{% endif %}
+			</div>
+		</footer>
+	{% endif %}
 </blockquote>
