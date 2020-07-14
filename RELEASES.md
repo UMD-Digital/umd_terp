@@ -1,3 +1,7 @@
+8.1.36
+======
+- Adjust node templates to use attributes and render all so quickedit/etc works.
+
 8.1.35
 ======
 - Updating mobile sizing of h1 and h2 elements (https://trello.com/c/0mux8ApZ/48-update-page-titles-in-responsive-view)
