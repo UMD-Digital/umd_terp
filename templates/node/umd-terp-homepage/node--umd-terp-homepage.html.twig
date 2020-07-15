@@ -13,32 +13,32 @@
   ]
 %}
 
-<div class="{{ hero_classes|join(' ') }}">
-  <div class="max-bound">
-    {% if content.field_umdt_ct_hero_image|field_value %}
-      <div class="home-hero-media">
-        <img src="{{ file_url(content.field_umdt_ct_hero_image[0]['#media'].field_media_image.entity.uri.value | image_style('optimized')) }}" alt="{{ content.field_umdt_ct_hero_image[0]['#media'].field_media_image.alt }}" />
-      </div>
-    {% endif %}
-    <div class="home-hero-content">
-      <div class="outer-pad">
-        <div class="editor-content">
-          {% if content.field_umdt_ct_hero_title|field_value %}
-            <h1>{{ content.field_umdt_ct_hero_title|field_value }}</h1>
-          {% endif %}
-          {% if content.field_umdt_ct_hero_subtitle|field_value %}
-            <h2>{{ content.field_umdt_ct_hero_subtitle|field_value }}</h2>
-          {% endif %}
-          {% if content.field_umdt_ct_hero_text|field_value %}
-            <p>{{ content.field_umdt_ct_hero_text|field_value }}</p>
-          {% endif %}
-          {% if content.field_umdt_ct_hero_cta.0 %}
-            <p>{% include directory ~ '/templates/helpers/link.html.twig' with {'link': content.field_umdt_ct_hero_cta.0, 'classes': 'btn btn-primary' } %}</p>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-  </div>
+<div {{attributes.addClass(hero_classes)}}>
+	{{ title_suffix }}
+	<div class="max-bound">
+		{% if content.field_umdt_ct_hero_image|field_value %}
+			<div class="home-hero-media">
+				<img src="{{ file_url(content.field_umdt_ct_hero_image[0]['#media'].field_media_image.entity.uri.value | image_style('optimized')) }}" alt="{{ content.field_umdt_ct_hero_image[0]['#media'].field_media_image.alt }}"/>
+			</div>
+		{% endif %}
+		<div class="home-hero-content">
+			<div class="outer-pad">
+				<div class="editor-content">
+					{% if content.field_umdt_ct_hero_title|field_value %}
+						<h1>{{ content.field_umdt_ct_hero_title|field_value }}</h1>
+					{% endif %}
+					{% if content.field_umdt_ct_hero_subtitle|field_value %}
+						<h2>{{ content.field_umdt_ct_hero_subtitle|field_value }}</h2>
+					{% endif %}
+					{% if content.field_umdt_ct_hero_text|field_value %}
+						<p>{{ content.field_umdt_ct_hero_text|field_value }}</p>
+					{% endif %}
+					{% if content.field_umdt_ct_hero_cta.0 %}
+						<p>{% include directory ~ '/templates/helpers/link.html.twig' with {'link': content.field_umdt_ct_hero_cta.0, 'classes': 'btn btn-primary' } %}</p>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-
-{{ content.field_umdt_ct_sections }}
+{{ content|without('field_umdt_ct_hero_dark', 'field_umdt_ct_hero_style', 'field_umdt_ct_hero_image', 'field_umdt_ct_hero_title', 'field_umdt_ct_hero_subtitle', 'field_umdt_ct_hero_text', 'field_umdt_ct_hero_cta') }}
