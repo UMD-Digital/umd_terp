@@ -1,3 +1,8 @@
+8.1.37
+======
+- Global spacing adjustments (https://trello.com/c/zIpw2RwL/50-global-spacing-adjustments).
+- npm switch to use npm version of bootstrap, and minor css edits to enable.
+
 8.1.36
 ======
 - Adjust node templates to use attributes and render all so quickedit/etc works.

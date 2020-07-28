@@ -8,9 +8,6 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/utilities";
-@import "~bootstrap/scss/helpers";
-
-@import "~bootstrap/scss/utilities/api";
 
 // Layout
 @import "~bootstrap/scss/root";
@@ -56,6 +53,7 @@
 @import "../components/card-group/card-group";
 @import "../components/carousel/carousel";
 @import "../components/carousel-item/carousel-item";
+@import "../components/divider/divider";
 @import "../components/embed/embed";
 @import "../components/events/events";
 @import "../components/event/event";

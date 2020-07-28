@@ -58,7 +58,7 @@
     "url": "https://bitbucket.org/idfivellc/fractal-bootstrap"
   },
   "dependencies": {
-    "bootstrap": "git+https://github.com/twbs/bootstrap",
+    "bootstrap": "^4.5.0",
     "flickity": "^2.2.1",
     "flickity-fullscreen": "^1.1.1",
     "flickity-imagesloaded": "^2.0.0",
