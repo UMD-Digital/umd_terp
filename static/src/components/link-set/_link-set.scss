@@ -1,9 +1,27 @@
 .link-set {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+
     a {
         display: table;
         line-height: (24 / 18);
+        margin-right: 0;
+
         &:not(:last-child) {
             margin-bottom: rem(18);
         }
+    }
+
+    &.link-set-align-left {
+        align-items: flex-start;
+    }
+
+    &.link-set-align-center {
+        align-items: center;
+    }
+
+    &.link-set-align-right {
+        align-items: flex-end;
     }
 }
