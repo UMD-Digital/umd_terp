@@ -1,7 +1,12 @@
+8.1.38
+======
+- button/link centered adjustments.
+
 8.1.37
 ======
 - Global spacing adjustments (https://trello.com/c/zIpw2RwL/50-global-spacing-adjustments).
 - npm switch to use npm version of bootstrap, and minor css edits to enable.
+- Adjust link set to be able to inherit parent text align classes.
 
 8.1.36
 ======

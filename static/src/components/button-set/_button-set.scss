@@ -1,9 +1,7 @@
 .btn-set {
     display: flex;
     flex-wrap: wrap;
-    @include media-breakpoint-up(600) {
-        display: block;
-    }
+
     .btn {
         align-items: center;
         display: flex;
@@ -11,35 +9,21 @@
         justify-content: center;
         margin: 0 0 rem(24) 0;
         width: 100%;
+
         @include media-breakpoint-up(600) {
             display: inline-block;
             margin-right: rem(24);
             width: auto;
         }
+
         &:first-child {
             @include media-breakpoint-up(600) {
                 margin-left: 0;
             }
         }
     }
-}
 
-/* 
- * Bad Overwrite
- * Should only be used as a temporary stopgap until a better solution is implemented
-*/
-
-@media (min-width: 600px) {
-    .page-section-umd_terp_homepage .btn-set {
-        display: flex;
-        flex-wrap: nowrap;
+    &.btn-set-centered {
         justify-content: center;
-    }
-}
-
-@media (min-width: 600px) {
-    .page-section-umd_terp_homepage .btn {
-        padding-left: 15px;
-        padding-right: 15px;
     }
 }

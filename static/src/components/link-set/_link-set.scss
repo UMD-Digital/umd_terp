@@ -13,15 +13,7 @@
         }
     }
 
-    &.link-set-align-left {
-        align-items: flex-start;
-    }
-
-    &.link-set-align-center {
+    &.link-set-centered {
         align-items: center;
-    }
-
-    &.link-set-align-right {
-        align-items: flex-end;
     }
 }
