@@ -1,3 +1,8 @@
+8.1.40
+======
+- Strip tags on teaser (https://trello.com/c/52JR1klb/70-check-link-style-on-site).
+- Add dependencies to .info, per https://www.drupal.org/node/2937955 (https://trello.com/c/p8ErUtaj/73-update-theme-dependency-modules)
+
 8.1.39
 ======
 - build css.
