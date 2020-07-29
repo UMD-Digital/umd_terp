@@ -13,7 +13,7 @@
           <a href="{{ link }}">{{ node.title.value }}</a>
         </h2>
         <div class="feed-item-description">
-          {{ content.body }}
+          <p>{{ content.body|render|striptags }}</p>
         </div>
       </div>
     </div>
