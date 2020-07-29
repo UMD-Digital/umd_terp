@@ -2,6 +2,7 @@
 ======
 - Strip tags on teaser (https://trello.com/c/52JR1klb/70-check-link-style-on-site).
 - Add dependencies to .info, per https://www.drupal.org/node/2937955 (https://trello.com/c/p8ErUtaj/73-update-theme-dependency-modules)
+- Add aria label to phone number in footer (https://github.com/UMD-Digital/umd_terp/issues/6)
 
 8.1.39
 ======
