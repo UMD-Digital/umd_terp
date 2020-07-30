@@ -1,3 +1,8 @@
+8.1.41
+======
+- https://github.com/UMD-Digital/umd_terp/issues/7
+- https://trello.com/c/6Y4OEJcT/62-d8-template-stat-cards-bug
+
 8.1.40
 ======
 - Strip tags on teaser (https://trello.com/c/52JR1klb/70-check-link-style-on-site).

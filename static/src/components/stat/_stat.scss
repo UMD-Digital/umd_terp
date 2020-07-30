@@ -7,12 +7,20 @@
 
 .stat-number {
   color: $red;
-  font-size: rem(80);
+  font-size: rem(48);
   font-weight: 900;
   line-height: 1;
-  margin-bottom: rem(27);
-  padding-bottom: rem(27);
+  margin-bottom: rem(18);
+  padding-bottom: rem(18);
   position: relative;
+  @include media-breakpoint-up(500) {
+    font-size: rem(64);
+  }
+  @include media-breakpoint-up(800) {
+    font-size: rem(80);
+    margin-bottom: rem(27);
+    padding-bottom: rem(27);
+  }
   &:after {
     content: "";
     background-color: $gray-300;
