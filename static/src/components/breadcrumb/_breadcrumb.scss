@@ -28,23 +28,21 @@
     }
   }
   + .breadcrumb-item {
-    &:not(:nth-child(2)) {
-      padding-left: rem(32);
-      position: relative;
-      &:before {
-        content: "";
-        border-right: rem(2) solid $gray-500;
-        border-bottom: rem(2) solid $gray-500;
-        display: block;
-        height: rem(7);
-        width: rem(7);
-        margin: 0;
-        padding: 0;
-        position: absolute;
-        top: 47.5%;
-        left: rem(14);
-        transform: translate(-50%, -50%) scaleY(.667) rotate(-45deg);
-      }
+    padding-left: rem(32);
+    position: relative;
+    &:before {
+      content: "";
+      border-right: rem(2) solid $gray-500;
+      border-bottom: rem(2) solid $gray-500;
+      display: block;
+      height: rem(7);
+      width: rem(7);
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 47.5%;
+      left: rem(14);
+      transform: translate(-50%, -50%) scaleY(.667) rotate(-45deg);
     }
   }
 }
