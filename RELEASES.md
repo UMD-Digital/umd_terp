@@ -1,3 +1,28 @@
+8.1.41
+======
+- https://github.com/UMD-Digital/umd_terp/issues/7
+- https://trello.com/c/6Y4OEJcT/62-d8-template-stat-cards-bug
+
+8.1.40
+======
+- Strip tags on teaser (https://trello.com/c/52JR1klb/70-check-link-style-on-site).
+- Add dependencies to .info, per https://www.drupal.org/node/2937955 (https://trello.com/c/p8ErUtaj/73-update-theme-dependency-modules)
+- Add aria label to phone number in footer (https://github.com/UMD-Digital/umd_terp/issues/6)
+
+8.1.39
+======
+- build css.
+
+8.1.38
+======
+- button/link centered adjustments.
+
+8.1.37
+======
+- Global spacing adjustments (https://trello.com/c/zIpw2RwL/50-global-spacing-adjustments).
+- npm switch to use npm version of bootstrap, and minor css edits to enable.
+- Adjust link set to be able to inherit parent text align classes.
+
 8.1.36
 ======
 - Adjust node templates to use attributes and render all so quickedit/etc works.

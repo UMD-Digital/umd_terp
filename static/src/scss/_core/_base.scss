@@ -23,15 +23,6 @@ hr {
   border-bottom: 1px solid #EDEDED;
   border-top: 0;
   margin: rem(16) 0 rem(8);
-  &.medium {
-    border-width: 3px;
-  }
-  &.large {
-    border-width: 5px;
-  }
-  &.xlarge {
-    border-width: 8px;
-  }
 }
 
 .align {

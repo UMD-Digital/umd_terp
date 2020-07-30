@@ -1,4 +1,3 @@
-
 /* Base
   ========================================================================== */
 
@@ -28,33 +27,29 @@ $gray-1000: #181818;
 $white: #FFFFFF;
 $black: #000000;
 
-$grays: (
-  "1000": $gray-1000
-);
+$grays: ("1000": $gray-1000);
 
-$colors: (
-  "gray-light": $gray-100,
+$colors: ("gray-light": $gray-100,
   "gray-dark": $gray-900,
   "red": $red,
   "dark-red": $dark-red,
-  "yellow": $yellow
-);
+  "yellow": $yellow);
 
-$theme-colors: (
-  "light-gray": $gray-100,
+$theme-colors: ("light-gray": $gray-100,
   "dark-gray": $gray-900,
   "red": $red,
   "dark-red": $dark-red,
   "yellow": $yellow,
   "white": $white,
-  "black": $black
-);
+  "black": $black);
 
 /* Typography
   ========================================================================== */
 
-$font-family-sans-serif: 'Source Sans Pro', sans-serif;
-$font-family-serif: 'Crimson Text', serif;
+$font-family-sans-serif: 'Source Sans Pro',
+sans-serif;
+$font-family-serif: 'Crimson Text',
+serif;
 
 $link-color: $red;
 $link-hover-color: $dark-red;
@@ -70,12 +65,13 @@ $list-padding: 0 0 0 2rem;
 /* Layout
   ========================================================================== */
 
-$grid-breakpoints: (
-  0: 0,
+$grid-breakpoints: (0: 0,
   399: 399px,
   400: 400px,
   449: 449px,
   450: 450px,
+  499: 499px,
+  500: 500px,
   599: 599px,
   600: 600px,
   799: 799px,
@@ -87,12 +83,9 @@ $grid-breakpoints: (
   1199: 1199px,
   1200: 1200px,
   1439: 1439px,
-  1440: 1440px
-);
+  1440: 1440px);
 
-$container-max-widths: (
-  400: 1240px
-);
+$container-max-widths: (400: 1240px);
 
 /* Breadcrumbs
   ========================================================================== */
@@ -115,11 +108,10 @@ $btn-font-size: .889rem;
 $btn-line-height: (20 / 16);
 $btn-padding-x: 3.1rem;
 $btn-padding-y: .889rem;
-$btn-transition:
-  .3s background-color ease-in-out,
-  .3s border-color ease-in-out,
-  .3s box-shadow ease-in-out,
-  .3s color ease-in-out;
+$btn-transition: .3s background-color ease-in-out,
+.3s border-color ease-in-out,
+.3s box-shadow ease-in-out,
+.3s color ease-in-out;
 
 
 /* Table
@@ -153,12 +145,8 @@ $card__image-ar: 66.667%;
 
 /* Embed
   ========================================================================== */
-$embed-responsive-aspect-ratios: (
-  "2by1": (
-    x: 2,
-    y: 1
-  )
-);
+$embed-responsive-aspect-ratios: (((2 1),
+  ));
 
 /* Tab Panel
   ========================================================================== */
@@ -216,7 +204,7 @@ $accordion__content-padding: 1.5rem 1.5rem 2.25rem;
 
 /* Blockquote
   ========================================================================== */
-  
+
 $blockquote-max-width: 50.625rem; // 810px
 $blockquote_icon-height: 5.625rem; // 90px
 $blockquote_icon-font-size: 8.875rem; // 142px
