@@ -1,3 +1,7 @@
+8.1.42
+======
+- Add version to theme .info file
+
 8.1.41
 ======
 - https://github.com/UMD-Digital/umd_terp/issues/7
