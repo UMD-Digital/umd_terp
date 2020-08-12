@@ -11,7 +11,9 @@
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.2.1" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.4.0" type="text/css">
+
+<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.4.0" type="text/css">
 
 
 <title>Article Detail | Component Library</title>
@@ -26,16 +28,20 @@
     <div class="Frame-header">
         <div class="Header">
     <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
-        <svg class="Header-navToggleIcon Header-navToggleIcon--open" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <div class="Header-navToggleIcon Header-navToggleIcon--open">
+            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
 </svg>
 
-        <svg class="Header-navToggleIcon Header-navToggleIcon--closed" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        </div>
+        <div class="Header-navToggleIcon Header-navToggleIcon--closed">
+            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
 </svg>
 
+        </div>
     </button>
     <a href="../../index.html" class="Header-title" data-pjax>Component Library</a>
 </div>
@@ -87,7 +93,6 @@
                 class="Preview-iframe"
                 data-role="window"
                 src="../preview/article-detail.html"
-                sandbox="allow-same-origin allow-scripts allow-forms allow-modals"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
             </iframe>
@@ -155,7 +160,7 @@
     
     
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-0ad481f06b0e2b67012eaa2aa3af19d5-panel-html">
-    <code class="Code Code--lang-html">
+    <code class="Code Code--lang-html hljs">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"article-hero"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container article-hero-content"</span>&gt;</span>
@@ -187,12 +192,8 @@
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"editor-content"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla,
-                        ac imperdiet lectus. Vestibulum auctor varius tortor, sit amet rutrum mauris cursus vel. Quisque ac dapibus nunc. Fusce vel congue turpis. Suspendisse vel purus ac velit euismod consequat nec quis arcu. Ut at ipsum sapien. Sed
-                        arcu sapien, malesuada ut lorem id, imperdiet dignissim ex. Vivamus quam arcu, auctor sit amet nulla quis, auctor pharetra erat. Integer eu tempus turpis, et ultrices.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla,
-                        ac imperdiet lectus. Vestibulum auctor varius tortor, sit amet rutrum mauris cursus vel. Quisque ac dapibus nunc. Fusce vel congue turpis. Suspendisse vel purus ac velit euismod consequat nec quis arcu. Ut at ipsum sapien. Sed
-                        arcu sapien, malesuada ut lorem id, imperdiet dignissim ex. Vivamus quam arcu, auctor sit amet nulla quis, auctor pharetra erat. Integer eu tempus turpis, et ultrices.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet lectus. Vestibulum auctor varius tortor, sit amet rutrum mauris cursus vel. Quisque ac dapibus nunc. Fusce vel congue turpis. Suspendisse vel purus ac velit euismod consequat nec quis arcu. Ut at ipsum sapien. Sed arcu sapien, malesuada ut lorem id, imperdiet dignissim ex. Vivamus quam arcu, auctor sit amet nulla quis, auctor pharetra erat. Integer eu tempus turpis, et ultrices.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet lectus. Vestibulum auctor varius tortor, sit amet rutrum mauris cursus vel. Quisque ac dapibus nunc. Fusce vel congue turpis. Suspendisse vel purus ac velit euismod consequat nec quis arcu. Ut at ipsum sapien. Sed arcu sapien, malesuada ut lorem id, imperdiet dignissim ex. Vivamus quam arcu, auctor sit amet nulla quis, auctor pharetra erat. Integer eu tempus turpis, et ultrices.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section section-umd_terp_card_group"</span>&gt;</span>
@@ -240,25 +241,23 @@
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"editor-content"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor
-                        eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Heading 4 - Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante.<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor
-                        eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section section-umd_terp_slideshow"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-bg"</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-nav"</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-nav-control slideshow-control-prev"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Previous slide"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-chevron-right"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Previous slide<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-chevron-right"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Previous slide<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-nav-current-index"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> of 3<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-nav-control slideshow-control-next"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Next slide"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-chevron-right"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Next slide<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-chevron-right"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Next slide<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow"</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-item"</span>&gt;</span>
@@ -302,12 +301,8 @@
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"editor-content"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla,
-                        ac imperdiet lectus. Vestibulum auctor varius tortor, sit amet rutrum mauris cursus vel. Quisque ac dapibus nunc. Fusce vel congue turpis. Suspendisse vel purus ac velit euismod consequat nec quis arcu. Ut at ipsum sapien. Sed
-                        arcu sapien, malesuada ut lorem id, imperdiet dignissim ex. Vivamus quam arcu, auctor sit amet nulla quis, auctor pharetra erat. Integer eu tempus turpis, et ultrices.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla,
-                        ac imperdiet lectus. Vestibulum auctor varius tortor, sit amet rutrum mauris cursus vel. Quisque ac dapibus nunc. Fusce vel congue turpis. Suspendisse vel purus ac velit euismod consequat nec quis arcu. Ut at ipsum sapien. Sed
-                        arcu sapien, malesuada ut lorem id, imperdiet dignissim ex. Vivamus quam arcu, auctor sit amet nulla quis, auctor pharetra erat. Integer eu tempus turpis, et ultrices.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet lectus. Vestibulum auctor varius tortor, sit amet rutrum mauris cursus vel. Quisque ac dapibus nunc. Fusce vel congue turpis. Suspendisse vel purus ac velit euismod consequat nec quis arcu. Ut at ipsum sapien. Sed arcu sapien, malesuada ut lorem id, imperdiet dignissim ex. Vivamus quam arcu, auctor sit amet nulla quis, auctor pharetra erat. Integer eu tempus turpis, et ultrices.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet lectus. Vestibulum auctor varius tortor, sit amet rutrum mauris cursus vel. Quisque ac dapibus nunc. Fusce vel congue turpis. Suspendisse vel purus ac velit euismod consequat nec quis arcu. Ut at ipsum sapien. Sed arcu sapien, malesuada ut lorem id, imperdiet dignissim ex. Vivamus quam arcu, auctor sit amet nulla quis, auctor pharetra erat. Integer eu tempus turpis, et ultrices.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section section-umd_terp_video"</span>&gt;</span>
@@ -316,8 +311,7 @@
                         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"embed-responsive embed-responsive-2by1"</span>&gt;</span>
                             <span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"embed-responsive-item"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Rick Astley - Never Gonna Give You Up (Video)"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://www.youtube.com/embed/dQw4w9WgXcQ"</span> <span class="hljs-attr">allowfullscreen</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque. Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel rhoncus
-                            nibh, ut tincidunt turpis.<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque. Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel rhoncus nibh, ut tincidunt turpis.<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -393,16 +387,16 @@
 
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-0ad481f06b0e2b67012eaa2aa3af19d5-panel-view">
-    <code class="Code Code--lang-twig">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"article-hero"</span>&gt;</span>
+    <code class="Code Code--lang-twig hljs">
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"article-hero"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container article-hero-content"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row justify-content-center"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-800 col-1000-10"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label"</span>&gt;</span></span><span class="hljs-template-variable">{{category}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span></span><span class="hljs-template-variable">{{title}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> subhead %}</span><span class="xml">
-          <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"article-subhead h4"</span>&gt;</span></span><span class="hljs-template-variable">{{subhead}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label"</span>&gt;</span>{{category}}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>{{title}}<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        {% if subhead %}
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"article-subhead h4"</span>&gt;</span>{{subhead}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        {% endif %}
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -411,11 +405,11 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row justify-content-center"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-800 col-1000-10"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"article-byline"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"author"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"article-author"</span>&gt;</span></span><span class="hljs-template-variable">{{author}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span></span><span class="hljs-template-variable">{{publishDate}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"author"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"article-author"</span>&gt;</span>{{author}}<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{{publishDate}}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section section-umd_terp_image_with_text"</span>&gt;</span>
-        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> "<a href="image.html">@image</a>" with featuredImage %}</span><span class="xml">
+        {% include "<a href="image.html">@image</a>" with featuredImage %}
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"editor-content"</span>&gt;</span>
@@ -424,7 +418,7 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section section-umd_terp_card_group"</span>&gt;</span>
-        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> "<a href="card-group.html">@card-group</a>" with cardGroup %}</span><span class="xml">
+        {% include "<a href="card-group.html">@card-group</a>" with cardGroup %}
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"editor-content"</span>&gt;</span>
@@ -434,7 +428,7 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section section-umd_terp_slideshow"</span>&gt;</span>
-        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> "<a href="slideshow.html">@slideshow</a>" with slideshow %}</span><span class="xml">
+        {% include "<a href="slideshow.html">@slideshow</a>" with slideshow %}
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"editor-content"</span>&gt;</span>
@@ -443,23 +437,23 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section section-umd_terp_video"</span>&gt;</span>
-        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> "<a href="embed.html">@embed</a>" with videoEmbed %}</span><span class="xml">
+        {% include "<a href="embed.html">@embed</a>" with videoEmbed %}
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section section-umd_terp_related_stories"</span>&gt;</span>
-        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> "<a href="card-group.html">@card-group</a>" with relatedStories %}</span><span class="xml">
+        {% include "<a href="card-group.html">@card-group</a>" with relatedStories %}
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"article-categories"</span>&gt;</span>
-        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> "<a href="taglist.html">@taglist</a>" with taglist %}</span><span class="xml">
+        {% include "<a href="taglist.html">@taglist</a>" with taglist %}
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
     </code>
 </div>
 
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-0ad481f06b0e2b67012eaa2aa3af19d5-panel-context">
-    <code class="Code Code--lang-json">
+    <code class="Code Code--lang-json hljs">
         
             
             <pre>{
@@ -643,14 +637,14 @@
                     <span class="Meta-value">
                         <div class="FileBrowser-itemPreview">
                             
-                            <code class="Code Code--lang-SCSS FileBrowser-code">
+                            <code class="Code Code--lang-SCSS FileBrowser-code hljs">
                                 <pre><span class="hljs-selector-class">.article-hero</span> {
   <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$gray-100</span>;
   <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">42</span>) <span class="hljs-number">0</span>;
-  @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
+  <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
     <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">64</span>) <span class="hljs-number">0</span>;
   }
-  @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">1200</span>) {
+  <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">1200</span>) {
     <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">100</span>) <span class="hljs-number">0</span> rem(<span class="hljs-number">72</span>);
   }
 }
@@ -658,8 +652,8 @@
 <span class="hljs-selector-class">.article-byline</span> {
   <span class="hljs-attribute">color</span>: <span class="hljs-variable">$gray-700</span>;
   <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">16</span>);
-  &gt; *:not(:last-child) {
-    &amp;:after {
+  &gt; *<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:last-child</span>) {
+    &amp;<span class="hljs-selector-pseudo">:after</span> {
       <span class="hljs-attribute">content</span>: <span class="hljs-string">"•"</span>;
       <span class="hljs-attribute">color</span>: <span class="hljs-variable">$red</span>;
       <span class="hljs-attribute">display</span>: inline-block;
@@ -670,7 +664,7 @@
     <span class="hljs-attribute">margin-top</span>: rem(<span class="hljs-number">45</span>);
     &amp;<span class="hljs-selector-class">.section-ut_image</span> {
       <span class="hljs-attribute">margin-top</span>: rem(<span class="hljs-number">30</span>);
-      @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
+      <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
         <span class="hljs-attribute">margin-top</span>: rem(<span class="hljs-number">5</span>);
       }
     }
@@ -678,7 +672,7 @@
   <span class="hljs-selector-tag">a</span> {
     <span class="hljs-attribute">color</span>: inherit;
     <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">700</span>;
-    &amp;:hover {
+    &amp;<span class="hljs-selector-pseudo">:hover</span> {
       <span class="hljs-attribute">color</span>: inherit;
       <span class="hljs-attribute">text-decoration</span>: underline;
     }
@@ -688,7 +682,7 @@
 <span class="hljs-selector-class">.article-author</span> {
   <span class="hljs-attribute">color</span>: inherit;
   <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">700</span>;
-  &amp;:hover {
+  &amp;<span class="hljs-selector-pseudo">:hover</span> {
     <span class="hljs-attribute">color</span>: inherit;
     <span class="hljs-attribute">text-decoration</span>: underline;
   }
@@ -803,15 +797,37 @@
         </div>
 
         <div class="Frame-handle" data-role="frame-resize-handle"></div>
-        
+
         <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
             <nav class="Navigation">
+    
+        <div class="Navigation-group Navigation-search">
+    <form action="" class="Search" data-behaviour="search">
+        <label class="Search-label" for="search-input">Search</label>
+        <input class="Search-input" id="search-input" type="search" placeholder="Search…" data-role="input">
+        <button type="button" data-behaviour="clear-search" class="Search-clearButton" aria-label="Clear search" hidden>
+            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
+</svg>
+
+        </button>
+    </form>
+</div>
 
     
+        
 <div class="Navigation-group">
 
 <div class="Tree" data-behaviour="tree" id="tree-components">
-    <h3 class="Tree-title">components</h3>
+    <div class="Tree-header">
+        <h3 class="Tree-title">components</h3>
+
+        <button type="button" data-behaviour="collapse-tree" class="Tree-collapse" title="Collapse tree" aria-label="Collapse tree" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9 11c-.6 0-1 .4-1 1s.4 1 1 1h6c.6 0 1-.4 1-1s-.4-1-1-1z"/><path d="m19 21h-14c-1.1 0-2-.9-2-2v-14c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zm-14-16v14h14v-14z"/></svg>
+
+        </button>
+    </div>
     <ul class="Tree-items Tree-depth-1">
         
     
@@ -864,11 +880,35 @@
         
     
         
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="alerts.html" data-pjax>
+                <span>Alerts</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-blockquote">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Blockquote</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-blockquote-items">
+                Blockquote
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-blockquote-items">
             
             
             
@@ -953,10 +993,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-button">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Button</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-button-items">
+                Button
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-button-items">
             
             
             
@@ -1065,10 +1105,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-card">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Card</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-card-items">
+                Card
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-card-items">
             
             
             
@@ -1129,10 +1169,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-card-group">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Card Group</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-card-group-items">
+                Card Group
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-card-group-items">
             
             
             
@@ -1193,10 +1233,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-carousel">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Carousel</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-carousel-items">
+                Carousel
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-carousel-items">
             
             
             
@@ -1280,11 +1320,35 @@
         
     
         
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="divider.html" data-pjax>
+                <span>Divider</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-embed">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Embed</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-embed-items">
+                Embed
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-embed-items">
             
             
             
@@ -1369,10 +1433,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-events">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Events</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-events-items">
+                Events
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-events-items">
             
             
             
@@ -1433,10 +1497,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-feature">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Feature</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-feature-items">
+                Feature
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-feature-items">
             
             
             
@@ -1545,10 +1609,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-home-hero">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Home Hero</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-home-hero-items">
+                Home Hero
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-home-hero-items">
             
             
             
@@ -1657,10 +1721,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-image">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Image</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-image-items">
+                Image
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-image-items">
             
             
             
@@ -1793,10 +1857,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-pages">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Pages</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-pages-items">
+                Pages
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-pages-items">
             
             
             
@@ -2049,10 +2113,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-site-header">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Site Header</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-site-header-items">
+                Site Header
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-site-header-items">
             
             
             
@@ -2113,10 +2177,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-slideshow">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Slideshow</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-slideshow-items">
+                Slideshow
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-slideshow-items">
             
             
             
@@ -2225,10 +2289,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-stat-group">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Stat Group</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-stat-group-items">
+                Stat Group
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-stat-group-items">
             
             
             
@@ -2337,10 +2401,10 @@
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-table">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Table</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-table-items">
+                Table
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-table-items">
             
             
             
@@ -2430,12 +2494,19 @@
 </div>
 
 
-
     
+        
 <div class="Navigation-group">
 
 <div class="Tree" data-behaviour="tree" id="tree-docs">
-    <h3 class="Tree-title">documentation</h3>
+    <div class="Tree-header">
+        <h3 class="Tree-title">documentation</h3>
+
+        <button type="button" data-behaviour="collapse-tree" class="Tree-collapse" title="Collapse tree" aria-label="Collapse tree" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9 11c-.6 0-1 .4-1 1s.4 1 1 1h6c.6 0 1-.4 1-1s-.4-1-1-1z"/><path d="m19 21h-14c-1.1 0-2-.9-2-2v-14c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zm-14-16v14h14v-14z"/></svg>
+
+        </button>
+    </div>
     <ul class="Tree-items Tree-depth-1">
         
     
@@ -2456,10 +2527,27 @@
 </div>
 
 
+    
+        
 
     
+        <div class="Navigation-group">
+    <div class="Tree">
+        <div class="Tree-header">
+            <div class="Tree-title">
+                Information
+            </div>
+        </div>
+        <div class="Tree-aside">
+            Built on:
+            <time datetime="2020-08-12T17:16:00.405Z">
+                8/12/2020
+            </time>
+        </div>
+    </div>
+</div>
 
-
+    
 </nav>
 
         </div>
@@ -2469,7 +2557,7 @@
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.1"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.4.0"></script>
 
 
 
