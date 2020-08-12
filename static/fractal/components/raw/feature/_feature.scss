@@ -4,9 +4,9 @@
     position: relative;
   }
   .page-section .outer-pad & {
-    margin: rem(-64) rem(-36);
+    margin: rem(-32) rem(-36);
     @include media-breakpoint-up(800) {
-      margin: rem(-84) rem(-120);
+      margin: rem(-42) rem(-120);
     }
   }
   &:before {

@@ -1,0 +1,14 @@
+<div class="alerts">
+    {% if title %}
+        <h2 class="alerts-heading">{{ title }}</h2>
+    {% endif %}
+    {% for alert in alerts %}
+        <div class="alert" role="alert">
+            <h3 class="alert-heading">{{ alert.title }}</h3>
+            <div class="alert-content">
+                {{ alert.body|raw }}
+            </div>
+            <a href="{{ alert.cta.url }}" class="btn alert-cta">{{ alert.cta.text }}</a>
+        </div>
+    {% endfor %}
+</div>

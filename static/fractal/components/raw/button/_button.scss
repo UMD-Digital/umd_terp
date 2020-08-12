@@ -20,4 +20,18 @@
   &.btn-secondary {
     @extend %btn-yellow;
   }
+  &.btn-link {
+    @extend %fancy-link;
+    background: none;
+    border: none;
+    font-size: inherit;
+    letter-spacing: normal;
+    padding: 0;
+    text-transform: none;
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      text-decoration: none;
+    }
+  }
 }

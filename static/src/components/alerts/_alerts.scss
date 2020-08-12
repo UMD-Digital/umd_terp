@@ -1,0 +1,37 @@
+.alerts {
+    background-color: $yellow;
+    color: $black;
+    padding: rem(20) rem(30);
+    @include media-breakpoint-up(800) {
+        padding: rem(30) rem(50);
+    }
+}
+
+.alert {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    a:not(.btn) {
+        color: inherit;
+        text-decoration: underline;
+    }
+    &:not(:first-of-type) {
+        border-top: rem(1) solid $black;
+        margin-top: rem(25);
+        padding-top: rem(25);
+        @include media-breakpoint-up(800) {
+            margin-top: rem(40);
+            padding-top: rem(40);
+        }
+    }
+}
+
+.btn.alert-cta {
+    border-color: $black;
+    color: inherit;
+    margin-top: rem(24);
+    &:hover,
+    &:focus {
+        border-color: $black;
+    }
+}

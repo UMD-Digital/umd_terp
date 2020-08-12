@@ -1,0 +1,23 @@
+{
+    "context": {
+        "title": "Static Alerts",
+        "alerts": [
+            {
+                "title": "Alert One",
+                "body": "<p>Cras id mauris <a href=\"\">sed massa ornare porttitor.</a> Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet lectus.</p>",
+                "cta": {
+                    "text": "Alert One Link",
+                    "url": "https://idfive.com"
+                }
+            },
+            {
+                "title": "Alert Two",
+                "body": "<p>Cras id mauris sed massa ornare porttitor. Sed luctus blandit quam, eget accumsan mi. Ut placerat convallis tellus, vitae egestas eros gravida iaculis. Praesent vehicula pharetra lorem eget porttitor. Curabitur ac condimentum nulla, ac imperdiet lectus.</p>",
+                "cta": {
+                    "text": "Alert Two Link",
+                    "url": "https://idfive.com"
+                }
+            }
+        ]
+    }
+}

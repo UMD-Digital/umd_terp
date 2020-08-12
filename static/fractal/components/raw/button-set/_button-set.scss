@@ -1,9 +1,7 @@
 .btn-set {
     display: flex;
     flex-wrap: wrap;
-    @include media-breakpoint-up(600) {
-        display: block;
-    }
+
     .btn {
         align-items: center;
         display: flex;
@@ -11,15 +9,21 @@
         justify-content: center;
         margin: 0 0 rem(24) 0;
         width: 100%;
+
         @include media-breakpoint-up(600) {
             display: inline-block;
             margin-right: rem(24);
             width: auto;
         }
+
         &:first-child {
             @include media-breakpoint-up(600) {
                 margin-left: 0;
             }
         }
+    }
+
+    &.btn-set-centered {
+        justify-content: center;
     }
 }
