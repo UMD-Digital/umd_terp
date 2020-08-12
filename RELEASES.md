@@ -1,3 +1,7 @@
+8.1.43
+======
+- Adding alerts component styles (https://trello.com/c/ynlUU9hf/29-add-an-alert-module-to-the-available-sections-list)
+
 8.1.42
 ======
 - Add version to theme .info file
