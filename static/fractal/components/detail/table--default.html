@@ -11,7 +11,9 @@
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.2.1" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.4.0" type="text/css">
+
+<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.4.0" type="text/css">
 
 
 <title>Table: Default | Component Library</title>
@@ -26,16 +28,20 @@
     <div class="Frame-header">
         <div class="Header">
     <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
-        <svg class="Header-navToggleIcon Header-navToggleIcon--open" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <div class="Header-navToggleIcon Header-navToggleIcon--open">
+            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
 </svg>
 
-        <svg class="Header-navToggleIcon Header-navToggleIcon--closed" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        </div>
+        <div class="Header-navToggleIcon Header-navToggleIcon--closed">
+            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
 </svg>
 
+        </div>
     </button>
     <a href="../../index.html" class="Header-title" data-pjax>Component Library</a>
 </div>
@@ -87,7 +93,6 @@
                 class="Preview-iframe"
                 data-role="window"
                 src="../preview/table--default.html"
-                sandbox="allow-same-origin allow-scripts allow-forms allow-modals"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
             </iframe>
@@ -155,7 +160,7 @@
     
     
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-09b2f6d5f205184301c7cdd8f4822161-panel-html">
-    <code class="Code Code--lang-html">
+    <code class="Code Code--lang-html hljs">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"table table-stacked table-striped"</span> <span class="hljs-attr">data-tablesaw-mode</span>=<span class="hljs-string">"stack"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
@@ -193,31 +198,31 @@
 
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-09b2f6d5f205184301c7cdd8f4822161-panel-view">
-    <code class="Code Code--lang-twig">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"table table-stacked table-striped"</span> <span class="hljs-attr">data-tablesaw-mode</span>=<span class="hljs-string">"stack"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
+    <code class="Code Code--lang-twig hljs">
+        <pre>&lt;table <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"table table-stacked table-striped"</span> data-tablesaw-mode=<span class="hljs-string">"stack"</span>&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-      </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> header in rows[0] %}</span><span class="xml">
-        <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span></span><span class="hljs-template-variable">{{header}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-      </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
+      {% for header in rows[0] %}
+        <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>{{header}}<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+      {% endfor %}
     <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> i in 1..(rows.length - 1) %}</span><span class="xml">
+  <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span></span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+    {% for i in 1..(rows.length - 1) %}
       <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> column in rows[i] %}</span><span class="xml">
-          <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span></span><span class="hljs-template-variable">{{column}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
+        {% for column in rows[i] %}
+          <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>{{column}}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        {% endfor %}
       <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
-  <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></span></pre>
+    {% endfor %}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span></span>
+&lt;<span class="hljs-regexp">/table&gt;</span></pre>
     </code>
 </div>
 
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-09b2f6d5f205184301c7cdd8f4822161-panel-context">
-    <code class="Code Code--lang-json">
+    <code class="Code Code--lang-json hljs">
         
             
             <pre>{
@@ -281,8 +286,8 @@
                     <span class="Meta-value">
                         <div class="FileBrowser-itemPreview">
                             
-                            <code class="Code Code--lang-SCSS FileBrowser-code">
-                                <pre>@<span class="hljs-keyword">import</span> <span class="hljs-string">"variables"</span>;
+                            <code class="Code Code--lang-SCSS FileBrowser-code hljs">
+                                <pre><span class="hljs-keyword">@import</span> <span class="hljs-string">"variables"</span>;
 
 <span class="hljs-selector-class">.section-ut_table</span> {
   <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
@@ -299,32 +304,32 @@
   }
   <span class="hljs-selector-tag">th</span> {
     <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">18</span>);
-    &amp;:first-child {
+    &amp;<span class="hljs-selector-pseudo">:first-child</span> {
       <span class="hljs-attribute">border-left</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#767676</span>;
     }
-    &amp;:last-child {
+    &amp;<span class="hljs-selector-pseudo">:last-child</span> {
       <span class="hljs-attribute">border-right</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#767676</span>;
     }
-    &amp;:not(:last-child) {
+    &amp;<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:last-child</span>) {
       <span class="hljs-attribute">border-right</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$gray-300</span>;
     }
   }
   <span class="hljs-selector-tag">td</span> {
     <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">17</span>);
-    @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
+    <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
       <span class="hljs-attribute">border-right</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$gray-300</span>;
     }
-    &amp;:first-child {
-      @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
+    &amp;<span class="hljs-selector-pseudo">:first-child</span> {
+      <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
         <span class="hljs-attribute">border-left</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$gray-300</span>;
       }
     }
   }
   <span class="hljs-selector-tag">tbody</span> {
     <span class="hljs-selector-tag">tr</span> {
-      &amp;:last-child {
+      &amp;<span class="hljs-selector-pseudo">:last-child</span> {
         <span class="hljs-selector-tag">td</span> {
-          @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
+          <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
             <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$gray-300</span>;
           }
         }
@@ -341,36 +346,36 @@
     }
     <span class="hljs-selector-tag">th</span> {
       <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">18</span>);
-      &amp;:first-child {
-        @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
+      &amp;<span class="hljs-selector-pseudo">:first-child</span> {
+        <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
           <span class="hljs-attribute">border-left</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$yellow</span>;
         }
       }
-      &amp;:last-child {
-        @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
+      &amp;<span class="hljs-selector-pseudo">:last-child</span> {
+        <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
           <span class="hljs-attribute">border-right</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$yellow</span>;
         }
       }
-      &amp;:not(:last-child) {
-        @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
+      &amp;<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:last-child</span>) {
+        <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
           <span class="hljs-attribute">border-right</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$black</span>;
         }
       }
     }
     <span class="hljs-selector-tag">td</span> {
       <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">17</span>);
-      @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
+      <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
         <span class="hljs-attribute">border-right</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$gray-500</span>;
       }
-      &amp;:first-child {
-        @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
+      &amp;<span class="hljs-selector-pseudo">:first-child</span> {
+        <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
           <span class="hljs-attribute">border-left</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$gray-500</span>;
         }
       }
     }
     <span class="hljs-selector-tag">tbody</span> {
       <span class="hljs-selector-tag">tr</span> {
-        &amp;:last-child {
+        &amp;<span class="hljs-selector-pseudo">:last-child</span> {
           <span class="hljs-selector-tag">td</span> {
             <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$black</span>;
           }
@@ -379,12 +384,12 @@
     }
   }
   &amp;<span class="hljs-selector-class">.table-stacked</span> {
-    @<span class="hljs-keyword">include</span> media-breakpoint-down(<span class="hljs-variable">$table-media-query-down</span>) {
+    <span class="hljs-keyword">@include</span> media-breakpoint-down(<span class="hljs-variable">$table-media-query-down</span>) {
       <span class="hljs-attribute">background-color</span>: transparent <span class="hljs-meta">!important</span>;
     }
     <span class="hljs-selector-tag">thead</span> {
       <span class="hljs-attribute">display</span>: none;
-      @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
+      <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
         <span class="hljs-attribute">display</span>: table-header-group;
       }
     }
@@ -393,11 +398,11 @@
         <span class="hljs-attribute">display</span>: table;
         <span class="hljs-attribute">margin-bottom</span>: rem(<span class="hljs-number">30</span>);
         <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-        @<span class="hljs-keyword">include</span> media-breakpoint-down(<span class="hljs-variable">$table-media-query-down</span>) {
+        <span class="hljs-keyword">@include</span> media-breakpoint-down(<span class="hljs-variable">$table-media-query-down</span>) {
           <span class="hljs-attribute">background-color</span>: transparent <span class="hljs-meta">!important</span>;
           <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$gray-300</span>;
         }
-        @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
+        <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
           <span class="hljs-attribute">display</span>: table-row;
           <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
           <span class="hljs-attribute">width</span>: auto;
@@ -406,11 +411,11 @@
     }
     <span class="hljs-selector-tag">td</span> {
       <span class="hljs-attribute">display</span>: table-row;
-      @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
+      <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
         <span class="hljs-attribute">display</span>: table-cell;
       }
-      &amp;:not(:last-child) {
-        @<span class="hljs-keyword">include</span> media-breakpoint-down(<span class="hljs-variable">$table-media-query-down</span>) {
+      &amp;<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:last-child</span>) {
+        <span class="hljs-keyword">@include</span> media-breakpoint-down(<span class="hljs-variable">$table-media-query-down</span>) {
           <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$gray-300</span>;
         }
       }
@@ -427,7 +432,7 @@
       <span class="hljs-attribute">border-right</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$gray-300</span>;
       <span class="hljs-attribute">color</span>: <span class="hljs-variable">$white</span>;
       <span class="hljs-attribute">text-align</span>: center;
-      @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
+      <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-variable">$table-media-query-up</span>) {
         <span class="hljs-attribute">display</span>: none;
       }
     }
@@ -438,21 +443,21 @@
         <span class="hljs-attribute">color</span>: <span class="hljs-variable">$black</span>;
       }
       <span class="hljs-selector-class">.tablesaw-cell-content</span> {
-        @<span class="hljs-keyword">include</span> media-breakpoint-down(<span class="hljs-variable">$table-media-query-down</span>) {
+        <span class="hljs-keyword">@include</span> media-breakpoint-down(<span class="hljs-variable">$table-media-query-down</span>) {
           <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$gray-800</span>;
           <span class="hljs-attribute">color</span>: <span class="hljs-variable">$white</span>;
         }
       }
       <span class="hljs-selector-tag">td</span> {
-        &amp;:not(:last-child) {
-          @<span class="hljs-keyword">include</span> media-breakpoint-down(<span class="hljs-variable">$table-media-query-down</span>) {
+        &amp;<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:last-child</span>) {
+          <span class="hljs-keyword">@include</span> media-breakpoint-down(<span class="hljs-variable">$table-media-query-down</span>) {
             <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$gray-500</span>;
           }
         }
       }
       <span class="hljs-selector-tag">tbody</span> {
         <span class="hljs-selector-tag">tr</span> {
-          @<span class="hljs-keyword">include</span> media-breakpoint-down(<span class="hljs-variable">$table-media-query-down</span>) {
+          <span class="hljs-keyword">@include</span> media-breakpoint-down(<span class="hljs-variable">$table-media-query-down</span>) {
             <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$gray-500</span>;
           }
         }
@@ -487,7 +492,7 @@
                     <span class="Meta-value">
                         <div class="FileBrowser-itemPreview">
                             
-                            <code class="Code Code--lang-SCSS FileBrowser-code">
+                            <code class="Code Code--lang-SCSS FileBrowser-code hljs">
                                 <pre><span class="hljs-variable">$table-media-query-down</span>: <span class="hljs-number">799</span> !default;
 <span class="hljs-variable">$table-media-query-up</span>: <span class="hljs-number">800</span> !default;</pre>
                             </code>
@@ -517,7 +522,7 @@
                     <span class="Meta-value">
                         <div class="FileBrowser-itemPreview">
                             
-                            <code class="Code Code--lang-XML FileBrowser-code">
+                            <code class="Code Code--lang-XML FileBrowser-code hljs">
                                 <pre>import * as Tablesaw from "tablesaw";
 
 export default Tablesaw;</pre>
@@ -633,15 +638,37 @@ export default Tablesaw;</pre>
         </div>
 
         <div class="Frame-handle" data-role="frame-resize-handle"></div>
-        
+
         <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
             <nav class="Navigation">
+    
+        <div class="Navigation-group Navigation-search">
+    <form action="" class="Search" data-behaviour="search">
+        <label class="Search-label" for="search-input">Search</label>
+        <input class="Search-input" id="search-input" type="search" placeholder="Search…" data-role="input">
+        <button type="button" data-behaviour="clear-search" class="Search-clearButton" aria-label="Clear search" hidden>
+            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
+</svg>
+
+        </button>
+    </form>
+</div>
 
     
+        
 <div class="Navigation-group">
 
 <div class="Tree" data-behaviour="tree" id="tree-components">
-    <h3 class="Tree-title">components</h3>
+    <div class="Tree-header">
+        <h3 class="Tree-title">components</h3>
+
+        <button type="button" data-behaviour="collapse-tree" class="Tree-collapse" title="Collapse tree" aria-label="Collapse tree" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9 11c-.6 0-1 .4-1 1s.4 1 1 1h6c.6 0 1-.4 1-1s-.4-1-1-1z"/><path d="m19 21h-14c-1.1 0-2-.9-2-2v-14c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zm-14-16v14h14v-14z"/></svg>
+
+        </button>
+    </div>
     <ul class="Tree-items Tree-depth-1">
         
     
@@ -694,11 +721,35 @@ export default Tablesaw;</pre>
         
     
         
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="alerts.html" data-pjax>
+                <span>Alerts</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-blockquote">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Blockquote</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-blockquote-items">
+                Blockquote
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-blockquote-items">
             
             
             
@@ -783,10 +834,10 @@ export default Tablesaw;</pre>
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-button">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Button</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-button-items">
+                Button
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-button-items">
             
             
             
@@ -895,10 +946,10 @@ export default Tablesaw;</pre>
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-card">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Card</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-card-items">
+                Card
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-card-items">
             
             
             
@@ -959,10 +1010,10 @@ export default Tablesaw;</pre>
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-card-group">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Card Group</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-card-group-items">
+                Card Group
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-card-group-items">
             
             
             
@@ -1023,10 +1074,10 @@ export default Tablesaw;</pre>
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-carousel">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Carousel</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-carousel-items">
+                Carousel
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-carousel-items">
             
             
             
@@ -1110,11 +1161,35 @@ export default Tablesaw;</pre>
         
     
         
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="divider.html" data-pjax>
+                <span>Divider</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-embed">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Embed</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-embed-items">
+                Embed
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-embed-items">
             
             
             
@@ -1199,10 +1274,10 @@ export default Tablesaw;</pre>
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-events">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Events</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-events-items">
+                Events
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-events-items">
             
             
             
@@ -1263,10 +1338,10 @@ export default Tablesaw;</pre>
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-feature">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Feature</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-feature-items">
+                Feature
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-feature-items">
             
             
             
@@ -1375,10 +1450,10 @@ export default Tablesaw;</pre>
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-home-hero">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Home Hero</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-home-hero-items">
+                Home Hero
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-home-hero-items">
             
             
             
@@ -1487,10 +1562,10 @@ export default Tablesaw;</pre>
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-image">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Image</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-image-items">
+                Image
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-image-items">
             
             
             
@@ -1623,10 +1698,10 @@ export default Tablesaw;</pre>
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-pages">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Pages</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-pages-items">
+                Pages
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-pages-items">
             
             
             
@@ -1879,10 +1954,10 @@ export default Tablesaw;</pre>
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-site-header">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Site Header</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-site-header-items">
+                Site Header
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-site-header-items">
             
             
             
@@ -1943,10 +2018,10 @@ export default Tablesaw;</pre>
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-slideshow">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Slideshow</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-slideshow-items">
+                Slideshow
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-slideshow-items">
             
             
             
@@ -2055,10 +2130,10 @@ export default Tablesaw;</pre>
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-stat-group">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Stat Group</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-stat-group-items">
+                Stat Group
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-stat-group-items">
             
             
             
@@ -2167,10 +2242,10 @@ export default Tablesaw;</pre>
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-table">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Table</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-table-items">
+                Table
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-table-items">
             
             
             
@@ -2260,12 +2335,19 @@ export default Tablesaw;</pre>
 </div>
 
 
-
     
+        
 <div class="Navigation-group">
 
 <div class="Tree" data-behaviour="tree" id="tree-docs">
-    <h3 class="Tree-title">documentation</h3>
+    <div class="Tree-header">
+        <h3 class="Tree-title">documentation</h3>
+
+        <button type="button" data-behaviour="collapse-tree" class="Tree-collapse" title="Collapse tree" aria-label="Collapse tree" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9 11c-.6 0-1 .4-1 1s.4 1 1 1h6c.6 0 1-.4 1-1s-.4-1-1-1z"/><path d="m19 21h-14c-1.1 0-2-.9-2-2v-14c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zm-14-16v14h14v-14z"/></svg>
+
+        </button>
+    </div>
     <ul class="Tree-items Tree-depth-1">
         
     
@@ -2286,10 +2368,27 @@ export default Tablesaw;</pre>
 </div>
 
 
+    
+        
 
     
+        <div class="Navigation-group">
+    <div class="Tree">
+        <div class="Tree-header">
+            <div class="Tree-title">
+                Information
+            </div>
+        </div>
+        <div class="Tree-aside">
+            Built on:
+            <time datetime="2020-08-12T17:16:00.405Z">
+                8/12/2020
+            </time>
+        </div>
+    </div>
+</div>
 
-
+    
 </nav>
 
         </div>
@@ -2299,7 +2398,7 @@ export default Tablesaw;</pre>
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.1"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.4.0"></script>
 
 
 

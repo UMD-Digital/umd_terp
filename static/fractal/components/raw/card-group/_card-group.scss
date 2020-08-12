@@ -15,8 +15,9 @@
 .page-section.page-section-ut_card_group,
 .page-section.page-section-ut_news {
   > .max-bound > .outer-pad {
-    padding-top: rem(4);
-    padding-bottom: 0;
+    @include media-breakpoint-down(799) {
+      padding: rem(4) 0 0;
+    }
     @include media-breakpoint-up(800) {
       padding-top: rem(44);
       padding-bottom: rem(54);
@@ -101,4 +102,17 @@
       margin-top: rem(48);
     }
   }
+}
+
+/* 
+ * Bad Overwrite
+ * Should only be used as a temporary stopgap until a better solution is implemented
+*/
+
+.page-section-ut_stat_group + .page-section-ut_news .outer-pad {
+  padding-top: 0 !important;
+}
+
+.page-section-ut_stat_group + .page-section-ut_news .outer-pad > .card-group-bg {
+  padding-top: 0 !important;
 }

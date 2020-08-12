@@ -11,7 +11,9 @@
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.2.1" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.4.0" type="text/css">
+
+<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.4.0" type="text/css">
 
 
 <title>Carousel: Dark | Component Library</title>
@@ -26,16 +28,20 @@
     <div class="Frame-header">
         <div class="Header">
     <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
-        <svg class="Header-navToggleIcon Header-navToggleIcon--open" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <div class="Header-navToggleIcon Header-navToggleIcon--open">
+            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
 </svg>
 
-        <svg class="Header-navToggleIcon Header-navToggleIcon--closed" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        </div>
+        <div class="Header-navToggleIcon Header-navToggleIcon--closed">
+            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
 </svg>
 
+        </div>
     </button>
     <a href="../../index.html" class="Header-title" data-pjax>Component Library</a>
 </div>
@@ -87,7 +93,6 @@
                 class="Preview-iframe"
                 data-role="window"
                 src="../preview/carousel--dark.html"
-                sandbox="allow-same-origin allow-scripts allow-forms allow-modals"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
             </iframe>
@@ -155,18 +160,20 @@
     
     
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-735688a427ce7d91a358db336dbb9ee7-panel-html">
-    <code class="Code Code--lang-html">
+    <code class="Code Code--lang-html hljs">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel-bg carousel-bg-dark"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel-nav"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel-nav-button carousel-nav-prev"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Previous slide"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 12 23"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M11.738 2.104a.909.909 0 000-1.277.887.887 0 00-1.263 0L.262 11.143a.909.909 0 000 1.277l10.213 10.315a.886.886 0 001.263 0 .909.909 0 000-1.276L2.424 11.78l9.314-9.677z"</span> <span class="hljs-attr">fill-rule</span>=<span class="hljs-string">"evenodd"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Previous slide<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 12 23"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M11.738 2.104a.909.909 0 000-1.277.887.887 0 00-1.263 0L.262 11.143a.909.909 0 000 1.277l10.213 10.315a.886.886 0 001.263 0 .909.909 0 000-1.276L2.424 11.78l9.314-9.677z"</span> <span class="hljs-attr">fill-rule</span>=<span class="hljs-string">"evenodd"</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Previous slide<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel-nav-button carousel-nav-next"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Next slide"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 12 23"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M.262 20.899a.91.91 0 000 1.277.887.887 0 001.263 0L11.74 11.859a.91.91 0 000-1.277L1.525.265a.886.886 0 00-1.263 0 .91.91 0 000 1.277l9.315 9.679-9.315 9.678z"</span> <span class="hljs-attr">fill-rule</span>=<span class="hljs-string">"evenodd"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Next slide<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 12 23"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M.262 20.899a.91.91 0 000 1.277.887.887 0 001.263 0L11.74 11.859a.91.91 0 000-1.277L1.525.265a.886.886 0 00-1.263 0 .91.91 0 000 1.277l9.315 9.679-9.315 9.678z"</span> <span class="hljs-attr">fill-rule</span>=<span class="hljs-string">"evenodd"</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Next slide<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel-item"</span>&gt;</span>
@@ -249,34 +256,34 @@
 
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-735688a427ce7d91a358db336dbb9ee7-panel-view">
-    <code class="Code Code--lang-twig">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel-bg carousel-bg-dark"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel-nav"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel-nav-button carousel-nav-prev"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Previous slide"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 12 23"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M11.738 2.104a.909.909 0 000-1.277.887.887 0 00-1.263 0L.262 11.143a.909.909 0 000 1.277l10.213 10.315a.886.886 0 001.263 0 .909.909 0 000-1.276L2.424 11.78l9.314-9.677z"</span> <span class="hljs-attr">fill-rule</span>=<span class="hljs-string">"evenodd"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Previous slide<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel-nav-button carousel-nav-next"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Next slide"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 12 23"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M.262 20.899a.91.91 0 000 1.277.887.887 0 001.263 0L11.74 11.859a.91.91 0 000-1.277L1.525.265a.886.886 0 00-1.263 0 .91.91 0 000 1.277l9.315 9.679-9.315 9.678z"</span> <span class="hljs-attr">fill-rule</span>=<span class="hljs-string">"evenodd"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Next slide<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel"</span>&gt;</span>
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> item in items %}</span><span class="xml">
-      </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> "<a href="carousel-item.html">@carousel-item</a>" with {
-        "image": item.image,
-        "title": item.title,
-        "content": item.content
-      } %}</span><span class="xml">
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
+    <code class="Code Code--lang-twig hljs">
+        <pre><span class="hljs-string">&lt;div</span> <span class="hljs-string">class="carousel-bg</span> <span class="hljs-string">carousel-bg-dark"&gt;</span>
+  <span class="hljs-string">&lt;div</span> <span class="hljs-string">class="carousel-nav"&gt;</span>
+    <span class="hljs-string">&lt;button</span> <span class="hljs-string">class="carousel-nav-button</span> <span class="hljs-string">carousel-nav-prev"</span> <span class="hljs-string">aria-label="Previous</span> <span class="hljs-string">slide"&gt;</span>
+      <span class="hljs-string">&lt;svg</span> <span class="hljs-string">class="icon"</span> <span class="hljs-string">xmlns="http://www.w3.org/2000/svg"</span> <span class="hljs-string">viewBox="0</span> <span class="hljs-number">0</span> <span class="hljs-number">12</span> <span class="hljs-number">23</span><span class="hljs-string">"&gt;&lt;path d="</span><span class="hljs-string">M11.738</span> <span class="hljs-number">2.</span><span class="hljs-string">104a.909.909</span> <span class="hljs-number">0</span> <span class="hljs-number">000</span><span class="hljs-number">-1.277</span><span class="hljs-number">.887</span><span class="hljs-number">.887</span> <span class="hljs-number">0</span> <span class="hljs-number">00</span><span class="hljs-number">-1.263</span> <span class="hljs-string">0L.262</span> <span class="hljs-number">11.</span><span class="hljs-string">143a.909.909</span> <span class="hljs-number">0</span> <span class="hljs-number">000</span> <span class="hljs-number">1.</span><span class="hljs-string">277l10.213</span> <span class="hljs-number">10.</span><span class="hljs-string">315a.886.886</span> <span class="hljs-number">0</span> <span class="hljs-number">001.263</span> <span class="hljs-number">0</span> <span class="hljs-number">.909</span><span class="hljs-number">.909</span> <span class="hljs-number">0</span> <span class="hljs-number">000</span><span class="hljs-number">-1.</span><span class="hljs-string">276L2.424</span> <span class="hljs-number">11.</span><span class="hljs-string">78l9.314-9.677z"</span> <span class="hljs-string">fill-rule="evenodd"/&gt;&lt;/svg&gt;</span>
+      <span class="hljs-string">&lt;span</span> <span class="hljs-string">class="sr-only"&gt;Previous</span> <span class="hljs-string">slide&lt;/span&gt;</span>
+    <span class="hljs-string">&lt;/button&gt;</span>
+    <span class="hljs-string">&lt;button</span> <span class="hljs-string">class="carousel-nav-button</span> <span class="hljs-string">carousel-nav-next"</span> <span class="hljs-string">aria-label="Next</span> <span class="hljs-string">slide"&gt;</span>
+      <span class="hljs-string">&lt;svg</span> <span class="hljs-string">class="icon"</span> <span class="hljs-string">xmlns="http://www.w3.org/2000/svg"</span> <span class="hljs-string">viewBox="0</span> <span class="hljs-number">0</span> <span class="hljs-number">12</span> <span class="hljs-number">23</span><span class="hljs-string">"&gt;&lt;path d="</span><span class="hljs-string">M.262</span> <span class="hljs-number">20.</span><span class="hljs-string">899a.91.91</span> <span class="hljs-number">0</span> <span class="hljs-number">000</span> <span class="hljs-number">1.277</span><span class="hljs-number">.887</span><span class="hljs-number">.887</span> <span class="hljs-number">0</span> <span class="hljs-number">001.263</span> <span class="hljs-string">0L11.74</span> <span class="hljs-number">11.</span><span class="hljs-string">859a.91.91</span> <span class="hljs-number">0</span> <span class="hljs-number">000</span><span class="hljs-number">-1.</span><span class="hljs-string">277L1.525.265a.886.886</span> <span class="hljs-number">0</span> <span class="hljs-number">00</span><span class="hljs-number">-1.263</span> <span class="hljs-number">0</span> <span class="hljs-number">.91</span><span class="hljs-number">.91</span> <span class="hljs-number">0</span> <span class="hljs-number">000</span> <span class="hljs-number">1.</span><span class="hljs-string">277l9.315</span> <span class="hljs-number">9.679</span><span class="hljs-number">-9.315</span> <span class="hljs-number">9.</span><span class="hljs-string">678z"</span> <span class="hljs-string">fill-rule="evenodd"/&gt;&lt;/svg&gt;</span>
+      <span class="hljs-string">&lt;span</span> <span class="hljs-string">class="sr-only"&gt;Next</span> <span class="hljs-string">slide&lt;/span&gt;</span>
+    <span class="hljs-string">&lt;/button&gt;</span>
+  <span class="hljs-string">&lt;/div&gt;</span>
+  <span class="hljs-string">&lt;div</span> <span class="hljs-string">class="carousel"&gt;</span>
+    <span class="hljs-string">{%</span> <span class="hljs-string">for</span> <span class="hljs-string">item</span> <span class="hljs-string">in</span> <span class="hljs-string">items</span> <span class="hljs-string">%}</span>
+      <span class="hljs-string">{%</span> <span class="hljs-string">include</span> <span class="hljs-string">"<a href="carousel-item.html">@carousel-item</a>"</span> <span class="hljs-string">with</span> <span class="hljs-string">{</span>
+        <span class="hljs-attr">"image":</span> <span class="hljs-string">item.image,</span>
+        <span class="hljs-attr">"title":</span> <span class="hljs-string">item.title,</span>
+        <span class="hljs-attr">"content":</span> <span class="hljs-string">item.content</span>
+      <span class="hljs-string">}</span> <span class="hljs-string">%}</span>
+    <span class="hljs-string">{%</span> <span class="hljs-string">endfor</span> <span class="hljs-string">%}</span>
+  <span class="hljs-string">&lt;/div&gt;</span>
+<span class="hljs-string">&lt;/div&gt;</span></pre>
     </code>
 </div>
 
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-735688a427ce7d91a358db336dbb9ee7-panel-context">
-    <code class="Code Code--lang-json">
+    <code class="Code Code--lang-json hljs">
         
             
             <pre>{
@@ -368,14 +375,14 @@
                     <span class="Meta-value">
                         <div class="FileBrowser-itemPreview">
                             
-                            <code class="Code Code--lang-SCSS FileBrowser-code">
+                            <code class="Code Code--lang-SCSS FileBrowser-code hljs">
                                 <pre><span class="hljs-selector-class">.section</span><span class="hljs-selector-class">.section-ut_carousel</span> {
   <span class="hljs-attribute">margin</span>: rem(<span class="hljs-number">14</span>) <span class="hljs-number">0</span>;
-  @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
+  <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
     <span class="hljs-attribute">margin</span>: rem(<span class="hljs-number">24</span>) <span class="hljs-number">0</span>;
   }
   <span class="hljs-selector-class">.page-content</span> &amp; {
-    @<span class="hljs-keyword">include</span> media-breakpoint-down(<span class="hljs-number">799</span>) {
+    <span class="hljs-keyword">@include</span> media-breakpoint-down(<span class="hljs-number">799</span>) {
       <span class="hljs-attribute">margin-right</span>: rem(-<span class="hljs-number">24</span>);
       <span class="hljs-attribute">margin-left</span>: rem(-<span class="hljs-number">24</span>);
     }
@@ -386,7 +393,7 @@
   &gt; <span class="hljs-selector-class">.max-bound</span> &gt; <span class="hljs-selector-class">.outer-pad</span> {
     <span class="hljs-attribute">padding-top</span>: rem(<span class="hljs-number">28</span>);
     <span class="hljs-attribute">padding-bottom</span>: rem(<span class="hljs-number">28</span>);
-    @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
+    <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
       <span class="hljs-attribute">padding-top</span>: rem(<span class="hljs-number">48</span>);
       <span class="hljs-attribute">padding-bottom</span>: rem(<span class="hljs-number">48</span>);
     }
@@ -408,7 +415,7 @@
 
 <span class="hljs-selector-class">.carousel-nav</span> {
   <span class="hljs-selector-class">.lightbox-carousel</span> &amp; {
-    @<span class="hljs-keyword">include</span> media-breakpoint-down(<span class="hljs-number">799</span>) {
+    <span class="hljs-keyword">@include</span> media-breakpoint-down(<span class="hljs-number">799</span>) {
       <span class="hljs-attribute">display</span>: flex;
       <span class="hljs-attribute">justify-content</span>: center;
       <span class="hljs-attribute">position</span>: absolute;
@@ -440,11 +447,11 @@
     <span class="hljs-attribute">transform</span>: translateY(-<span class="hljs-number">50%</span>);
   }
   <span class="hljs-selector-class">.lightbox-carousel</span> &amp; {
-    @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
+    <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
       <span class="hljs-attribute">position</span>: absolute;
       <span class="hljs-attribute">top</span>: calc(<span class="hljs-number">25vw</span> - #{rem(<span class="hljs-number">45</span>)});
     }
-    @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">1440</span>) {
+    <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">1440</span>) {
       <span class="hljs-attribute">top</span>: calc(#{rem(<span class="hljs-number">315</span>)});
     }
   }
@@ -457,13 +464,13 @@
     <span class="hljs-attribute">left</span>: <span class="hljs-number">50%</span>;
     <span class="hljs-attribute">transform</span>: translate(-<span class="hljs-number">50%</span>, -<span class="hljs-number">50%</span>);
   }
-  &amp;:hover {
+  &amp;<span class="hljs-selector-pseudo">:hover</span> {
     <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$black</span>;
   }
   <span class="hljs-selector-class">.carousel-bg-dark</span> &amp; {
     <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$yellow</span>;
     <span class="hljs-attribute">color</span>: <span class="hljs-variable">$black</span>;
-    &amp;:hover {
+    &amp;<span class="hljs-selector-pseudo">:hover</span> {
       <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$white</span>;
     }
     <span class="hljs-selector-class">.icon</span> {
@@ -478,7 +485,7 @@
   }
   <span class="hljs-selector-class">.lightbox-carousel</span> &amp; {
     <span class="hljs-attribute">margin-right</span>: rem(<span class="hljs-number">3.5</span>);
-    @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
+    <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
       <span class="hljs-attribute">left</span>: rem(-<span class="hljs-number">17</span>);
       <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
       <span class="hljs-attribute">transform</span>: translate(-<span class="hljs-number">100%</span>, -<span class="hljs-number">50%</span>);
@@ -492,7 +499,7 @@
   }
   <span class="hljs-selector-class">.lightbox-carousel</span> &amp; {
     <span class="hljs-attribute">margin-left</span>: rem(<span class="hljs-number">3.5</span>);
-    @<span class="hljs-keyword">include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
+    <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
       <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
       <span class="hljs-attribute">right</span>: rem(-<span class="hljs-number">17</span>);
       <span class="hljs-attribute">transform</span>: translate(<span class="hljs-number">100%</span>, -<span class="hljs-number">50%</span>);
@@ -526,7 +533,7 @@
                     <span class="Meta-value">
                         <div class="FileBrowser-itemPreview">
                             
-                            <code class="Code Code--lang-XML FileBrowser-code">
+                            <code class="Code Code--lang-XML FileBrowser-code hljs">
                                 <pre>import * as Flickity from "flickity";
 import "flickity-imagesloaded";
 import Lightbox from "../lightbox/lightbox";
@@ -740,15 +747,37 @@ export default function initCarousels() {
         </div>
 
         <div class="Frame-handle" data-role="frame-resize-handle"></div>
-        
+
         <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
             <nav class="Navigation">
+    
+        <div class="Navigation-group Navigation-search">
+    <form action="" class="Search" data-behaviour="search">
+        <label class="Search-label" for="search-input">Search</label>
+        <input class="Search-input" id="search-input" type="search" placeholder="Search…" data-role="input">
+        <button type="button" data-behaviour="clear-search" class="Search-clearButton" aria-label="Clear search" hidden>
+            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
+</svg>
+
+        </button>
+    </form>
+</div>
 
     
+        
 <div class="Navigation-group">
 
 <div class="Tree" data-behaviour="tree" id="tree-components">
-    <h3 class="Tree-title">components</h3>
+    <div class="Tree-header">
+        <h3 class="Tree-title">components</h3>
+
+        <button type="button" data-behaviour="collapse-tree" class="Tree-collapse" title="Collapse tree" aria-label="Collapse tree" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9 11c-.6 0-1 .4-1 1s.4 1 1 1h6c.6 0 1-.4 1-1s-.4-1-1-1z"/><path d="m19 21h-14c-1.1 0-2-.9-2-2v-14c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zm-14-16v14h14v-14z"/></svg>
+
+        </button>
+    </div>
     <ul class="Tree-items Tree-depth-1">
         
     
@@ -801,11 +830,35 @@ export default function initCarousels() {
         
     
         
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="alerts.html" data-pjax>
+                <span>Alerts</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-blockquote">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Blockquote</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-blockquote-items">
+                Blockquote
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-blockquote-items">
             
             
             
@@ -890,10 +943,10 @@ export default function initCarousels() {
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-button">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Button</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-button-items">
+                Button
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-button-items">
             
             
             
@@ -1002,10 +1055,10 @@ export default function initCarousels() {
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-card">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Card</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-card-items">
+                Card
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-card-items">
             
             
             
@@ -1066,10 +1119,10 @@ export default function initCarousels() {
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-card-group">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Card Group</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-card-group-items">
+                Card Group
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-card-group-items">
             
             
             
@@ -1130,10 +1183,10 @@ export default function initCarousels() {
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-carousel">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Carousel</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-carousel-items">
+                Carousel
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-carousel-items">
             
             
             
@@ -1217,11 +1270,35 @@ export default function initCarousels() {
         
     
         
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="divider.html" data-pjax>
+                <span>Divider</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-embed">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Embed</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-embed-items">
+                Embed
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-embed-items">
             
             
             
@@ -1306,10 +1383,10 @@ export default function initCarousels() {
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-events">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Events</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-events-items">
+                Events
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-events-items">
             
             
             
@@ -1370,10 +1447,10 @@ export default function initCarousels() {
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-feature">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Feature</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-feature-items">
+                Feature
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-feature-items">
             
             
             
@@ -1482,10 +1559,10 @@ export default function initCarousels() {
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-home-hero">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Home Hero</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-home-hero-items">
+                Home Hero
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-home-hero-items">
             
             
             
@@ -1594,10 +1671,10 @@ export default function initCarousels() {
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-image">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Image</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-image-items">
+                Image
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-image-items">
             
             
             
@@ -1730,10 +1807,10 @@ export default function initCarousels() {
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-pages">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Pages</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-pages-items">
+                Pages
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-pages-items">
             
             
             
@@ -1986,10 +2063,10 @@ export default function initCarousels() {
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-site-header">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Site Header</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-site-header-items">
+                Site Header
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-site-header-items">
             
             
             
@@ -2050,10 +2127,10 @@ export default function initCarousels() {
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-slideshow">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Slideshow</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-slideshow-items">
+                Slideshow
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-slideshow-items">
             
             
             
@@ -2162,10 +2239,10 @@ export default function initCarousels() {
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-stat-group">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Stat Group</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-stat-group-items">
+                Stat Group
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-stat-group-items">
             
             
             
@@ -2274,10 +2351,10 @@ export default function initCarousels() {
     
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-table">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Table</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-table-items">
+                Table
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-table-items">
             
             
             
@@ -2367,12 +2444,19 @@ export default function initCarousels() {
 </div>
 
 
-
     
+        
 <div class="Navigation-group">
 
 <div class="Tree" data-behaviour="tree" id="tree-docs">
-    <h3 class="Tree-title">documentation</h3>
+    <div class="Tree-header">
+        <h3 class="Tree-title">documentation</h3>
+
+        <button type="button" data-behaviour="collapse-tree" class="Tree-collapse" title="Collapse tree" aria-label="Collapse tree" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9 11c-.6 0-1 .4-1 1s.4 1 1 1h6c.6 0 1-.4 1-1s-.4-1-1-1z"/><path d="m19 21h-14c-1.1 0-2-.9-2-2v-14c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zm-14-16v14h14v-14z"/></svg>
+
+        </button>
+    </div>
     <ul class="Tree-items Tree-depth-1">
         
     
@@ -2393,10 +2477,27 @@ export default function initCarousels() {
 </div>
 
 
+    
+        
 
     
+        <div class="Navigation-group">
+    <div class="Tree">
+        <div class="Tree-header">
+            <div class="Tree-title">
+                Information
+            </div>
+        </div>
+        <div class="Tree-aside">
+            Built on:
+            <time datetime="2020-08-12T17:16:00.405Z">
+                8/12/2020
+            </time>
+        </div>
+    </div>
+</div>
 
-
+    
 </nav>
 
         </div>
@@ -2406,7 +2507,7 @@ export default function initCarousels() {
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.1"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.4.0"></script>
 
 
 
