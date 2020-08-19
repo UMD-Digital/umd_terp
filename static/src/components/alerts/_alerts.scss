@@ -5,6 +5,19 @@
     @include media-breakpoint-up(800) {
         padding: rem(30) rem(50);
     }
+    &.bg-red {
+        color: $white;
+        .alert-cta {
+            border-color: $white;
+            color: $white;
+            &:hover,
+            &:focus {
+                background-color: $white;
+                border-color: $white;
+                color: $black;
+            }
+        }
+    }
 }
 
 .alert {
@@ -24,14 +37,21 @@
             padding-top: rem(40);
         }
     }
+    .bg-red & {
+        &:not(:first-of-type) {
+            border-top-color: $white;
+        }
+    }
 }
 
-.btn.alert-cta {
+.alert-cta.btn {
     border-color: $black;
-    color: inherit;
+    color: $black;
     margin-top: rem(24);
     &:hover,
     &:focus {
+        background-color: $black;
         border-color: $black;
+        color: $white;
     }
 }
