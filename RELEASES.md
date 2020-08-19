@@ -1,3 +1,8 @@
+8.1.44
+======
+- Updating button styles in feature component (https://trello.com/c/AUofi1dE/26-add-option-to-include-additional-text-in-features)
+- Adding styles for red and light gray variants of alerts component (https://trello.com/c/ynlUU9hf/29-add-an-alert-module-to-the-available-sections-list)
+
 8.1.43
 ======
 - Adding alerts component styles (https://trello.com/c/ynlUU9hf/29-add-an-alert-module-to-the-available-sections-list)
