@@ -1,3 +1,7 @@
+8.1.46
+======
+- Issues for features (https://trello.com/c/AUofi1dE/26-add-option-to-include-additional-text-in-features)
+
 8.1.45
 ======
 - Padding for alerts on mobile (https://trello.com/c/ynlUU9hf/29-add-an-alert-module-to-the-available-sections-list)

@@ -3,6 +3,11 @@
   margin-bottom: 0;
 }
 
+.page-section-ut_feature > .max-bound > .outer-pad {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .feature {
   @include media-breakpoint-up(1000) {
     display: flex;
@@ -29,7 +34,7 @@
   }
   &.bg-yellow,
   &.bg-white,
-  &.light-gray {
+  &.bg-light-gray {
     color: $black;
     .btn {
       border-color: $black;
