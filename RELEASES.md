@@ -1,3 +1,7 @@
+8.1.49
+======
+- Set version number
+
 8.1.48
 ======
 - Add dark mode theme options (https://trello.com/c/Iaha9lUh/1-set-up-theme)
