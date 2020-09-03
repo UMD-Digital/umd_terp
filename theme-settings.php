@@ -122,6 +122,14 @@ function umd_terp_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#description' => t('Provides a site wide {{ assets_path }} variable for the builds assets path relative to the theme root. Usable in twig templates. Ex: /static/build'),
     '#default_value' => theme_get_setting('umd_terp_assets_path'),
   ];
+
+  $form['other']['umd_terp_disable_dark_mode_options'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Disable dark mode options'),
+    '#description' => t('Remove dark mode related options.'),
+    '#default_value' => theme_get_setting('umd_terp_disable_dark_mode_options'),
+  ];
+
   $form['#validate'][] = 'umd_terp_form_system_theme_settings_validate_test';
   $form['#submit'][] = 'umd_terp_form_system_theme_settings_submit';
 }
