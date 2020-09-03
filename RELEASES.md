@@ -1,3 +1,7 @@
+8.1.48
+======
+- Add dark mode theme options (https://trello.com/c/Iaha9lUh/1-set-up-theme)
+
 8.1.47
 ======
 - Features Colors (https://trello.com/c/AUofi1dE/26-add-option-to-include-additional-text-in-features)
