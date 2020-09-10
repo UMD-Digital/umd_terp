@@ -1,16 +1,30 @@
+.page-section.page-section-ut_feature {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.page-section-ut_feature>.max-bound>.outer-pad {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .feature {
   @include media-breakpoint-up(1000) {
     display: flex;
     position: relative;
   }
+
   .page-section .outer-pad & {
-    margin: rem(-32) rem(-36);
+    margin: 0 rem(-36);
+
     @include media-breakpoint-up(800) {
-      margin: rem(-42) rem(-120);
+      margin: 0 rem(-120);
     }
   }
+
   &:before {
     content: "";
+
     @include media-breakpoint-up(1000) {
       background-color: inherit;
       position: absolute;
@@ -22,32 +36,132 @@
       z-index: 0;
     }
   }
-  &.bg-light-gray {
-    color: $black;
-  }
-  &.bg-dark-gray {
-    color: $white;
-  }
-  &.bg-red {
-    color: $white;
-  }
-  &.bg-dark-red {
-    color: $white;
-  }
-  &.bg-yellow {
-    color: $black;
-  }
-  &.bg-white {
-    color: $black;
-  }
-  &.bg-black {
-    color: $white;
+
+  &.feature-default {
+    &.bg-yellow {
+      color: $black;
+
+      .btn {
+        border-color: $black;
+        color: $black;
+
+        &:hover,
+        &:focus {
+          background-color: $black;
+          color: $white;
+        }
+      }
+    }
+
+    &.bg-white {
+      color: $black;
+
+      h2 {
+        color: $red;
+      }
+
+      .btn {
+        border-color: $red;
+        color: $red;
+
+        &:hover,
+        &:focus {
+          background-color: $red;
+          color: $white;
+        }
+      }
+    }
+
+    &.bg-light-gray {
+      color: $black;
+
+      h2 {
+        color: $red;
+      }
+
+      .btn {
+        border-color: $red;
+        background-color: $white;
+        color: $red;
+
+        &:hover,
+        &:focus {
+          background-color: $red;
+          color: $white;
+        }
+      }
+    }
+
+    &.bg-dark-gray {
+      color: $white;
+
+      .btn {
+        border-color: $white;
+        color: $white;
+
+        &:hover,
+        &:focus {
+          background-color: $white;
+          color: $black;
+        }
+      }
+    }
+
+    &.bg-dark-red {
+      color: $white;
+
+      .btn {
+        border-color: $white;
+        color: $white;
+
+        &:hover,
+        &:focus {
+          background-color: $white;
+          color: $black;
+        }
+      }
+    }
+
+    &.bg-red {
+      color: $white;
+
+      .btn {
+        border-color: $white;
+        color: $white;
+
+        &:hover,
+        &:focus {
+          background-color: $white;
+          color: $black;
+        }
+      }
+    }
+
+    &.bg-black {
+      color: $white;
+
+      h2 {
+        color: $yellow;
+      }
+
+      .btn {
+        border-color: $yellow;
+        color: $yellow;
+
+        &:hover,
+        &:focus {
+          background-color: $yellow;
+          color: $black;
+        }
+      }
+    }
   }
 }
 
 .feature-media {
   position: relative;
   z-index: 1;
+
   @include media-breakpoint-up(1000) {
     position: absolute;
     top: 0;
@@ -55,17 +169,21 @@
     left: 0;
     width: 50vw;
   }
+
   @include media-breakpoint-up(1440) {
     left: calc((100vw - 1440px) / -2);
   }
+
   &:before {
     content: "";
     display: block;
     padding-bottom: 56.25%;
+
     @include media-breakpoint-up(1000) {
       display: none;
     }
   }
+
   img {
     display: block;
     height: 100%;
@@ -76,15 +194,18 @@
     top: 0;
     left: 0;
   }
+
   .feature-reverse & {
     @include media-breakpoint-up(1000) {
       right: 0;
       left: auto;
     }
+
     @include media-breakpoint-up(1440) {
       right: calc((100vw - 1440px) / -2);
     }
   }
+
   .feature-bg & {
     top: 0;
     right: 0;
@@ -92,6 +213,7 @@
     left: 0;
     width: 100%;
   }
+
   .page-section .feature-bg & {
     @include media-breakpoint-up(1440) {
       right: calc((100vw - 1440px) / -2);
@@ -110,24 +232,29 @@
     width: 50%;
     z-index: 2;
   }
+
   .feature-reverse & {
     margin-left: 0;
   }
+
   .feature-bg & {
     @include media-breakpoint-up(1000) {
       max-width: 555px;
     }
+
     .outer-pad {
       background-color: $white;
       color: $black;
     }
   }
+
   .page-section .outer-pad & {
     @include media-breakpoint-up(1000) {
       align-items: center;
       display: flex;
       min-height: 43.75vw; // 630px
     }
+
     @include media-breakpoint-up(1440) {
       min-height: 630px;
     }

@@ -1,3 +1,7 @@
+8.1.50
+======
+- Fixing divider component SCSS file extension
+
 8.1.49
 ======
 - Set version number
