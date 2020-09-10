@@ -54,7 +54,9 @@ function _umd_terp_extend_theme_variables(&$variables) {
     ->applyTo($variables);
   $variables += $theme_settings->getOriginal();
   // Add full assets_path.
-  $variables['assets_path'] = $variables['theme_path'] . $variables['umd_terp_assets_path'];
+  if (!empty($variables['umd_terp_assets_path'])) {
+    $variables['assets_path'] = $variables['theme_path'] . $variables['umd_terp_assets_path'];  
+  }
 }
 
 /**
