@@ -224,18 +224,14 @@ h6, .h6 {
 }
 
 blockquote {
-  .editor-content & {
+  .editor-content &:not(.blockquote) {
     border-left: rem(5) solid $gray-200;
     color: $gray-800;
     padding: rem(10) rem(20);
-  }
-  p {
-    .editor-content & {
+    p {
       font-size: rem(16);
     }
-  }
-  cite {
-    .editor-content & {
+    cite {
       color: $gray-600;
       display: block;
       font-size: rem(14);
