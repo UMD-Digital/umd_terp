@@ -1,6 +1,16 @@
+8.1.52
+======
+- https://trello.com/c/JnQa0K4Z/93-menu-issues
+- https://trello.com/c/QhjBTOT0/87-link-style-buttons-are-aligned-top-and-double-underlined
+- https://trello.com/c/ugHI4JqD/99-logo-in-header-proportions
+- https://trello.com/c/f5hfzsxK/98-inline-links-in-some-widgets-break-contrast-and-lose-interactive-effects
+- https://trello.com/c/HrHc6ly8/96-inline-images-do-not-align-center-if-a-caption-is-included
+- https://trello.com/c/PELk7BW1/95-text-field-blockquote-has-no-styles
+- https://trello.com/c/1ykgYPrw/101-update-profile-card-styles
+
 8.1.51
 ======
-- Update contact information template
+- Update contact information template (https://trello.com/c/NhP8SnvK/57-hide-contact-label-when-value-is-null)
 
 8.1.50
 ======
