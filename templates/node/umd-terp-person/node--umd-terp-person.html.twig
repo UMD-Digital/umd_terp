@@ -40,29 +40,34 @@
 									</div>
 								{% endif %}
 								<div class="col-1000-6">
-									<h3 class="profile-subheading">Contact</h3>
-									{% if phone %}
-										<div class="profile-phone">
-											<a href="tel:+{{ phone_link }}">
-												<span class="font-weight-bold">{{ phone }}</span>
-												{% if phone_ext %}
-													{{ phone_ext }}
-												{% endif %}
-											</a>
-										</div>
-									{% endif %}
-									{% if content.field_umdt_ct_person_email|field_value %}
-										<div>
-											<a href="mailto:{{ content.field_umdt_ct_person_email|field_value }}">{{ content.field_umdt_ct_person_email|field_value }}</a>
-										</div>
-									{% endif %}
-									{% if content.field_umdt_ct_person_website|field_value %}
-										<div>
-											<a href="{{ content.field_umdt_ct_person_website }}" target="_blank">Personal Website</a>
-										</div>
-									{% endif %}
-									{% if content.field_umdt_ct_person_location|field_value %}
-										<div>{{ content.field_umdt_ct_person_location|field_value }}</div>
+									{% set contact_information %}
+										{% if phone %}
+											<div class="profile-phone">
+												<a href="tel:+{{ phone_link }}">
+													<span class="font-weight-bold">{{ phone }}</span>
+													{% if phone_ext %}
+														{{ phone_ext }}
+													{% endif %}
+												</a>
+											</div>
+										{% endif %}
+										{% if content.field_umdt_ct_person_email|field_value %}
+											<div>
+												<a href="mailto:{{ content.field_umdt_ct_person_email|field_value }}">{{ content.field_umdt_ct_person_email|field_value }}</a>
+											</div>
+										{% endif %}
+										{% if content.field_umdt_ct_person_website|field_value %}
+											<div>
+												<a href="{{ content.field_umdt_ct_person_website }}" target="_blank">Personal Website</a>
+											</div>
+										{% endif %}
+										{% if content.field_umdt_ct_person_location|field_value %}
+											<div>{{ content.field_umdt_ct_person_location|field_value }}</div>
+										{% endif %}
+									{% endset %}
+									{% if contact_information|trim is not empty %}
+										<h3 class="profile-subheading">Contact</h3>
+										{{ contact_information }}
 									{% endif %}
 								</div>
 								<div class="col-1000-6">

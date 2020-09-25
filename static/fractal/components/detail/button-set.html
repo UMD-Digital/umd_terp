@@ -231,9 +231,11 @@
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code hljs">
                                 <pre><span class="hljs-selector-class">.btn-set</span> {
-    <span class="hljs-attribute">display</span>: flex;
-    <span class="hljs-attribute">flex-wrap</span>: wrap;
-
+    <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">600</span>) {
+        <span class="hljs-attribute">align-items</span>: center;
+        <span class="hljs-attribute">display</span>: flex;
+        <span class="hljs-attribute">flex-wrap</span>: wrap;
+    }
     <span class="hljs-selector-class">.btn</span> {
         <span class="hljs-attribute">align-items</span>: center;
         <span class="hljs-attribute">display</span>: flex;
@@ -241,20 +243,21 @@
         <span class="hljs-attribute">justify-content</span>: center;
         <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> rem(<span class="hljs-number">24</span>) <span class="hljs-number">0</span>;
         <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-
         <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">600</span>) {
             <span class="hljs-attribute">display</span>: inline-block;
             <span class="hljs-attribute">margin-right</span>: rem(<span class="hljs-number">24</span>);
             <span class="hljs-attribute">width</span>: auto;
         }
-
         &amp;<span class="hljs-selector-pseudo">:first-child</span> {
             <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">600</span>) {
                 <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0</span>;
             }
         }
+        &amp;<span class="hljs-selector-class">.btn-link</span> {
+            <span class="hljs-attribute">display</span>: table;
+            <span class="hljs-attribute">width</span>: auto;
+        }
     }
-
     &amp;<span class="hljs-selector-class">.btn-set-centered</span> {
         <span class="hljs-attribute">justify-content</span>: center;
     }
@@ -275,7 +278,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">576 Bytes</span>
+                    <span class="Meta-value">739 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -2100,8 +2103,8 @@
         </div>
         <div class="Tree-aside">
             Built on:
-            <time datetime="2020-09-10T22:16:50.227Z">
-                9/10/2020
+            <time datetime="2020-09-25T18:47:27.534Z">
+                9/25/2020
             </time>
         </div>
     </div>

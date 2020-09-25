@@ -83,6 +83,12 @@ figure.align-center {
   }
 }
 
+figure.align-center {
+  img {
+    margin: 0 auto;
+  }
+}
+
 figcaption {
   color: #404245;
   font-size: rem(14);

@@ -12,6 +12,7 @@ $headings-margin-bottom: 24px;
   ==========================================================================*/
 
 $red: #E21833;
+$red-2: #D91731; // Slightly darker shade of normal red to pass AA contrast requirements when used on gray backgrounds
 $dark-red: #9F001C;
 $yellow: #FFD520;
 $gray-100: #F7F7F7;
@@ -80,6 +81,8 @@ $grid-breakpoints: (0: 0,
   900: 900px,
   999: 999px,
   1000: 1000px,
+  1023: 1023px,
+  1024: 1024px,
   1199: 1199px,
   1200: 1200px,
   1439: 1439px,
