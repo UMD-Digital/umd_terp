@@ -13,6 +13,13 @@
       }
       .card-text {
         color: $gray-700;
+        a {
+          color: $red;
+          &:hover,
+          &:focus {
+            border-bottom-color: $red;
+          }
+        }
       }
       .card-cta {
         color: $red;
@@ -31,6 +38,13 @@
   }
   .card-text {
     color: $white;
+    a {
+      color: $yellow;
+      &:hover,
+      &:focus {
+        border-bottom-color: $yellow;
+      }
+    }
   }
   .card-cta {
     color: $yellow;
@@ -271,6 +285,15 @@
   background-repeat: no-repeat;
   background-size: rem(19) rem(10);
   padding-right: rem(56);
+}
+
+%link {
+  border-bottom: 1px solid transparent;
+  color: $red;
+  transition: .25s border-color ease-in-out;
+  &:hover {
+    border-bottom-color: $red;
+  }
 }
 
 %fancy-link {

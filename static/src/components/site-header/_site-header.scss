@@ -6,7 +6,7 @@
 }
 
 .navbar {
-  @include media-breakpoint-up(800) {
+  @include media-breakpoint-up(1024) {
     padding: 0 rem(24);
   }
   @include media-breakpoint-up(1200) {
@@ -16,12 +16,14 @@
     color: $white;
     display: block;
     transition: .25s color ease-in-out;
-    &:hover {
+    &:hover,
+    &:focus {
       color: $yellow;
     }
     .site-header-light & {
       color: $gray-900;
-      &:hover {
+      &:hover,
+      &:focus {
         color: $red;
       }
     }
@@ -31,12 +33,13 @@
     display: flex;
     height: rem(40);
     justify-content: flex-start;
-    @include media-breakpoint-up(800) {
+    @include media-breakpoint-up(1024) {
       height: rem(58);
     }
     img {
       display: block;
       height: 100%;
+      max-width: none;
       width: auto;
     }
   }
@@ -48,32 +51,32 @@
     }
   }
   .navbar-collapse {
-    @include media-breakpoint-down(799) {
+    @include media-breakpoint-down(1023) {
       margin-top: $navbar-padding-y;
       margin-right: -$navbar-padding-x;
       margin-bottom: -$navbar-padding-y;
       margin-left: -$navbar-padding-x;
     }
-    @include media-breakpoint-up(800) {
+    @include media-breakpoint-up(1024) {
       display: flex;
       flex-direction: column-reverse;
     }
   }
   .navbar-nav {
-    @include media-breakpoint-up(800) {
+    @include media-breakpoint-up(1024) {
       margin-left: auto;
     }
     > li {
       font-size: rem(19);
       > a {
         padding: rem(24) rem(32);
-        @include media-breakpoint-down(799) {
+        @include media-breakpoint-down(1023) {
           background-color: $gray-700;
           border-bottom: 1px solid $gray-600;
         }
         padding: rem(28) rem(18) rem(30);
         .site-header-light & {
-          @include media-breakpoint-down(799) {
+          @include media-breakpoint-down(1023) {
             background-color: $gray-100;
             border-bottom: 1px solid $gray-300;
           }
@@ -92,7 +95,7 @@
       a {
         background-color: $gray-900;
         padding: rem(14) rem(50);
-        @include media-breakpoint-up(800) {
+        @include media-breakpoint-up(1024) {
           padding: rem(14) rem(16);
         }
         .site-header-light & {
@@ -112,7 +115,7 @@
       top: 50%;
       right: rem(20);
       transform: translate3d(0, -50%, 0);
-      @include media-breakpoint-up(800) {
+      @include media-breakpoint-up(1024) {
         display: none;
       }
     }
@@ -125,7 +128,7 @@
   .navbar-secondary {
     background-color: $red;
     padding: rem(30) rem(30) rem(18);
-    @include media-breakpoint-up(800) {
+    @include media-breakpoint-up(1024) {
       padding: rem(10) rem(24);
     }
     .max-bound {
@@ -134,7 +137,7 @@
     ul {
       margin-right: auto;
       margin-left: auto;
-      @include media-breakpoint-up(800) {
+      @include media-breakpoint-up(1024) {
         margin-right: 0;
       }
     }
@@ -144,7 +147,7 @@
       font-weight: 700;
       line-height: (26 / 13);
       text-transform: uppercase;
-      @include media-breakpoint-down(799) {
+      @include media-breakpoint-down(1023) {
         margin-bottom: rem(12);
       }
       &:not(:first-child) {

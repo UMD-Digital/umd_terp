@@ -86,14 +86,13 @@
 }
 
 .card-title {
-  font-size: rem(22);
+  font-size: rem(16);
   font-weight: 700;
   letter-spacing: rem(.02);
-  line-height: (32 / 22);
+  line-height: (18.4 / 16);
   margin-bottom: rem(20);
   padding-bottom: rem(12);
   position: relative;
-  text-transform: uppercase;
   transition: .25s color ease-in-out;
   &:after {
     content: "";
