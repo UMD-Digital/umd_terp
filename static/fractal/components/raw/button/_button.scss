@@ -24,6 +24,7 @@
     @extend %fancy-link;
     background: none;
     border: none;
+    border-bottom: 1px solid transparent;
     font-size: inherit;
     letter-spacing: normal;
     padding: 0;
@@ -31,6 +32,7 @@
     &:hover,
     &:focus {
       box-shadow: none;
+      text-decoration: none;
     }
   }
 }

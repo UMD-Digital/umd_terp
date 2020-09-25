@@ -1,3 +1,7 @@
+8.1.51
+======
+- Update contact information template
+
 8.1.50
 ======
 - Fixing divider component SCSS file extension
