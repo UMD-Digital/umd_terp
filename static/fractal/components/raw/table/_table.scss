@@ -6,6 +6,7 @@
 }
 
 .table {
+  margin-bottom: 0;
   width: 100%;
   empty-cells: show;
   thead {
@@ -83,6 +84,13 @@
           border-left: 1px solid $gray-500;
         }
       }
+      a {
+        color: $yellow;
+        &:hover,
+        &:focus {
+          border-bottom-color: $yellow;
+        }
+      }
     }
     tbody {
       tr {
@@ -117,6 +125,9 @@
           display: table-row;
           margin-bottom: 0;
           width: auto;
+        }
+        &:last-child {
+          margin-bottom: 0;
         }
       }
     }
@@ -170,6 +181,24 @@
         tr {
           @include media-breakpoint-down($table-media-query-down) {
             border: 1px solid $gray-500;
+          }
+        }
+      }
+    }
+  }
+  &.table-striped {
+    &:not(.table-dark) {
+      tbody {
+        tr {
+          &:nth-child(even) {
+            a {
+              color: $red-2;
+              &:hover,
+              &:focus {
+                border-bottom-color: $red-2;
+                color: $red-2;
+              }
+            }
           }
         }
       }

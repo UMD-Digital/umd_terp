@@ -37,13 +37,11 @@ a {
   &:hover {
     text-decoration: none;
   }
-  .editor-content &:not([class]) {
-    border-bottom: 1px solid transparent;
-    color: $red;
-    transition: .25s border-color ease-in-out;
-    &:hover {
-      border-bottom-color: $red;
-    }
+  .editor-content &:not([class]),
+  .card-text &:not([class]),
+  .blockquote &:not([class]),
+  .table td &:not([class]) {
+    @extend %link;
   }
   &.fancy-link {
     @extend %fancy-link;
