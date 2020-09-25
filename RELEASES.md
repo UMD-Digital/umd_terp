@@ -1,3 +1,7 @@
+8.1.53
+======
+- Fixing bug where styled blockquote components were inheriting WYSIWYG blockquote styles inside of tab panels
+
 8.1.52
 ======
 - https://trello.com/c/JnQa0K4Z/93-menu-issues
