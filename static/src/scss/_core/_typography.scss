@@ -223,6 +223,29 @@ h6, .h6 {
   text-transform: uppercase;
 }
 
+blockquote {
+  .editor-content & {
+    border-left: rem(5) solid $gray-200;
+    color: $gray-800;
+    padding: rem(10) rem(20);
+  }
+  p {
+    .editor-content & {
+      font-size: rem(16);
+    }
+  }
+  cite {
+    .editor-content & {
+      color: $gray-600;
+      display: block;
+      font-size: rem(14);
+      &:before {
+        content: "\2014 \00A0";
+      }
+    }
+  }
+}
+
 .widget-heading {
   color: inherit;
 }
