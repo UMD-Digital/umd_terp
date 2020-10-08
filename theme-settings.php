@@ -109,6 +109,20 @@ function umd_terp_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#default_value' => theme_get_setting('umd_terp_articles_path'),
   ];
 
+  // People.
+  $form['people'] = [
+    '#type' => 'details',
+    '#title' => t('Local People Settings'),
+    '#collapsible' => TRUE,
+  ];
+
+  $form['people']['umd_terp_people_department_label'] = [
+    '#type' => 'textfield',
+    '#title' => t('Department Label'),
+    '#description' => t('Provides a method for changing the default \'Department Information\' label to another value'),
+    '#default_value' => theme_get_setting('umd_terp_people_department_label', 'Department Information'),
+  ];
+
   // Other.
   $form['other'] = [
     '#type' => 'details',
