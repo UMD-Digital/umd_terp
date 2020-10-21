@@ -69,12 +69,15 @@
     > li {
       font-size: rem(19);
       > a {
-        padding: rem(24) rem(32);
+        line-height: (25 / 19);
+        padding: rem(32) rem(18) rem(34);
         @include media-breakpoint-down(1023) {
           background-color: $gray-700;
           border-bottom: 1px solid $gray-600;
         }
-        padding: rem(28) rem(18) rem(30);
+        @include media-breakpoint-up(1024) {
+          text-align: center;
+        }
         .site-header-light & {
           @include media-breakpoint-down(1023) {
             background-color: $gray-100;

@@ -72,7 +72,7 @@
 								</div>
 								<div class="col-1000-6">
 									{% if departments %}
-										<h3 class="profile-subheading">Department Information</h3>
+										<h3 class="profile-subheading">{{ umd_terp_people_department_label|default('Department Information') }}</h3>
 										<ul>
 											{% for department in departments %}
 												<li>
