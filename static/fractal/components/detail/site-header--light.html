@@ -392,12 +392,15 @@
     &gt; <span class="hljs-selector-tag">li</span> {
       <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">19</span>);
       &gt; <span class="hljs-selector-tag">a</span> {
-        <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">24</span>) rem(<span class="hljs-number">32</span>);
+        <span class="hljs-attribute">line-height</span>: (<span class="hljs-number">25</span> / <span class="hljs-number">19</span>);
+        <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">32</span>) rem(<span class="hljs-number">18</span>) rem(<span class="hljs-number">34</span>);
         <span class="hljs-keyword">@include</span> media-breakpoint-down(<span class="hljs-number">1023</span>) {
           <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$gray-700</span>;
           <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$gray-600</span>;
         }
-        <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">28</span>) rem(<span class="hljs-number">18</span>) rem(<span class="hljs-number">30</span>);
+        <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">1024</span>) {
+          <span class="hljs-attribute">text-align</span>: center;
+        }
         <span class="hljs-selector-class">.site-header-light</span> &amp; {
           <span class="hljs-keyword">@include</span> media-breakpoint-down(<span class="hljs-number">1023</span>) {
             <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$gray-100</span>;
@@ -554,7 +557,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">4.7 KB</span>
+                    <span class="Meta-value">4.8 KB</span>
                 </li>
             </ul>
         </div>
@@ -2385,8 +2388,8 @@
         </div>
         <div class="Tree-aside">
             Built on:
-            <time datetime="2020-09-25T19:09:11.709Z">
-                9/25/2020
+            <time datetime="2020-10-21T14:51:05.005Z">
+                10/21/2020
             </time>
         </div>
     </div>
