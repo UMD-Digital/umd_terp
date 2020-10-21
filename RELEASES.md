@@ -1,3 +1,11 @@
+8.1.55
+======
+- Updating line-height, alignment of primary nav links on desktop (https://trello.com/c/JnQa0K4Z/93-menu-issues)
+
+8.1.54
+======
+- Add configurable department information label
+
 8.1.53
 ======
 - Fixing bug where styled blockquote components were inheriting WYSIWYG blockquote styles inside of tab panels
