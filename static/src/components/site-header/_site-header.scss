@@ -76,6 +76,9 @@
           border-bottom: 1px solid $gray-600;
         }
         @include media-breakpoint-up(1024) {
+          align-items: center;
+          display: flex;
+          height: 100%;
           text-align: center;
         }
         .site-header-light & {
