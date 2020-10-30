@@ -1,3 +1,8 @@
+8.1.57
+======
+- https://trello.com/c/HrHc6ly8/96-inline-images-do-not-align-center-if-a-caption-is-included
+- https://trello.com/c/y5FyiPNT/120-logo-in-main-menu-loses-padding-if-there-are-no-menu-items
+
 8.1.56
 ======
 - Updating line-height, alignment of primary nav links on desktop (https://trello.com/c/JnQa0K4Z/93-menu-issues), add .nvmrc to root.

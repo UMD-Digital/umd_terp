@@ -8,7 +8,10 @@
 		<link media="screen" rel="stylesheet" href="{{ '/css/index.css'|path }}">
 		<title>UMD Drupal 8</title>
 		<script>
-			document.documentElement.class += ' js';
+			document.documentElement.classList.add('js');
+			if (!!window.MSInputMethodContext && !!document.documentMode) {
+                document.documentElement.classList.add('is-ie11');
+            }
 		</script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>

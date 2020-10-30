@@ -6,7 +6,9 @@
 }
 
 .navbar {
+  min-height: rem(60);
   @include media-breakpoint-up(1024) {
+    min-height: rem(90);
     padding: 0 rem(24);
   }
   @include media-breakpoint-up(1200) {
@@ -58,19 +60,24 @@
       margin-left: -$navbar-padding-x;
     }
     @include media-breakpoint-up(1024) {
+      align-self: stretch;
       display: flex;
       flex-direction: column-reverse;
     }
   }
   .navbar-nav {
     @include media-breakpoint-up(1024) {
+      height: 100%;
       margin-left: auto;
     }
     > li {
       font-size: rem(19);
+      @include media-breakpoint-up(1024) {
+        display: flex;
+      }
       > a {
         line-height: (25 / 19);
-        padding: rem(32) rem(18) rem(34);
+        padding: rem(28) rem(18) rem(30);
         @include media-breakpoint-down(1023) {
           background-color: $gray-700;
           border-bottom: 1px solid $gray-600;
@@ -79,6 +86,8 @@
           align-items: center;
           display: flex;
           height: 100%;
+          padding-top: 0;
+          padding-bottom: rem(2);
           text-align: center;
         }
         .site-header-light & {
