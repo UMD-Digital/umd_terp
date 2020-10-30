@@ -169,7 +169,10 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"screen"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../css/index.css"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>UMD Drupal 8<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-        <span class="hljs-built_in">document</span>.documentElement.class += <span class="hljs-string">' js'</span>;
+        <span class="hljs-built_in">document</span>.documentElement.classList.add(<span class="hljs-string">'js'</span>);
+        <span class="hljs-keyword">if</span> (!!<span class="hljs-built_in">window</span>.MSInputMethodContext &amp;&amp; !!<span class="hljs-built_in">document</span>.documentMode) {
+            <span class="hljs-built_in">document</span>.documentElement.classList.add(<span class="hljs-string">'is-ie11'</span>);
+        }
     </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1"</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
@@ -198,7 +201,10 @@
 		<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"screen"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ '/css/index.css'|path }}"</span>&gt;</span>
 		<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>UMD Drupal 8<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
 		<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-			<span class="hljs-built_in">document</span>.documentElement.class += <span class="hljs-string">' js'</span>;
+			<span class="hljs-built_in">document</span>.documentElement.classList.add(<span class="hljs-string">'js'</span>);
+			<span class="hljs-keyword">if</span> (!!<span class="hljs-built_in">window</span>.MSInputMethodContext &amp;&amp; !!<span class="hljs-built_in">document</span>.documentMode) {
+                <span class="hljs-built_in">document</span>.documentElement.classList.add(<span class="hljs-string">'is-ie11'</span>);
+            }
 		</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 		<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1"</span>&gt;</span>
 	<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
@@ -2034,8 +2040,8 @@
         </div>
         <div class="Tree-aside">
             Built on:
-            <time datetime="2020-10-21T14:51:05.005Z">
-                10/21/2020
+            <time datetime="2020-10-30T14:34:39.964Z">
+                10/30/2020
             </time>
         </div>
     </div>

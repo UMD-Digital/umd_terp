@@ -329,7 +329,9 @@
 }
 
 <span class="hljs-selector-class">.navbar</span> {
+  <span class="hljs-attribute">min-height</span>: rem(<span class="hljs-number">60</span>);
   <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">1024</span>) {
+    <span class="hljs-attribute">min-height</span>: rem(<span class="hljs-number">90</span>);
     <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> rem(<span class="hljs-number">24</span>);
   }
   <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">1200</span>) {
@@ -381,24 +383,34 @@
       <span class="hljs-attribute">margin-left</span>: -<span class="hljs-variable">$navbar-padding-x</span>;
     }
     <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">1024</span>) {
+      <span class="hljs-attribute">align-self</span>: stretch;
       <span class="hljs-attribute">display</span>: flex;
       <span class="hljs-attribute">flex-direction</span>: column-reverse;
     }
   }
   <span class="hljs-selector-class">.navbar-nav</span> {
     <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">1024</span>) {
+      <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
       <span class="hljs-attribute">margin-left</span>: auto;
     }
     &gt; <span class="hljs-selector-tag">li</span> {
       <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">19</span>);
+      <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">1024</span>) {
+        <span class="hljs-attribute">display</span>: flex;
+      }
       &gt; <span class="hljs-selector-tag">a</span> {
         <span class="hljs-attribute">line-height</span>: (<span class="hljs-number">25</span> / <span class="hljs-number">19</span>);
-        <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">32</span>) rem(<span class="hljs-number">18</span>) rem(<span class="hljs-number">34</span>);
+        <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">28</span>) rem(<span class="hljs-number">18</span>) rem(<span class="hljs-number">30</span>);
         <span class="hljs-keyword">@include</span> media-breakpoint-down(<span class="hljs-number">1023</span>) {
           <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$gray-700</span>;
           <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$gray-600</span>;
         }
         <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">1024</span>) {
+          <span class="hljs-attribute">align-items</span>: center;
+          <span class="hljs-attribute">display</span>: flex;
+          <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+          <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">0</span>;
+          <span class="hljs-attribute">padding-bottom</span>: rem(<span class="hljs-number">2</span>);
           <span class="hljs-attribute">text-align</span>: center;
         }
         <span class="hljs-selector-class">.site-header-light</span> &amp; {
@@ -541,7 +553,8 @@
       }
     }
   }
-}</pre>
+}
+</pre>
                             </code>
                             
                         </div>
@@ -557,7 +570,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">4.8 KB</span>
+                    <span class="Meta-value">5.1 KB</span>
                 </li>
             </ul>
         </div>
@@ -2397,8 +2410,8 @@
         </div>
         <div class="Tree-aside">
             Built on:
-            <time datetime="2020-10-21T14:51:05.005Z">
-                10/21/2020
+            <time datetime="2020-10-30T14:34:39.964Z">
+                10/30/2020
             </time>
         </div>
     </div>

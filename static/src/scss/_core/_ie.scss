@@ -1,0 +1,16 @@
+.is-ie11 {
+    .navbar {
+        height: rem(60);
+        @include media-breakpoint-up(1024) {
+            height: rem(90);
+        }
+    }
+    figure.align-left,
+    figure.align-right,
+    figure.align-center {
+        display: block;
+        figcaption {
+            display: block;
+        }
+    }
+}
