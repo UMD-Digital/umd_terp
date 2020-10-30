@@ -37,6 +37,9 @@
     <js-placeholder token="{{ placeholder_token }}">
     <script>
       document.documentElement.classList.add('js');
+      if (!!window.MSInputMethodContext && !!document.documentMode) {
+        document.documentElement.classList.add('is-ie11');
+      }
     </script>
   </head>
   <body{{ attributes }}>

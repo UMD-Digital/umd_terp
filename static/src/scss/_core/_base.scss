@@ -69,11 +69,12 @@ img.align-center {
   height: auto;
 }
 
+.editor-content figure,
 figure.align-left,
 figure.align-right,
 figure.align-center {
+  display: table;
   @include media-breakpoint-down(799) {
-    display: table;
     max-width: 100%;
   }
   img {
@@ -84,13 +85,18 @@ figure.align-center {
 }
 
 figure.align-center {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
   img {
     margin: 0 auto;
   }
 }
 
 figcaption {
+  caption-side: bottom;
   color: #404245;
+  display: table-caption;
   font-size: rem(14);
   line-height: (23 / 14);
   margin-top: rem(8);
