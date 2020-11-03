@@ -1,4 +1,4 @@
-8.1.61 (Pending)
+8.1.61
 ======
 - Add additional email and phone number fields to footer (https://trello.com/c/dD7L9Lq0/126-footer-fields)
 - Adjust skip link position (https://trello.com/c/yXqnagkf/125-skip-to-main-content-link-position)
