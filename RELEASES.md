@@ -2,6 +2,7 @@
 ======
 - Add additional email and phone number fields to footer (https://trello.com/c/dD7L9Lq0/126-footer-fields)
 - Adjust skip link position (https://trello.com/c/yXqnagkf/125-skip-to-main-content-link-position)
+- Adjust ol/ul in card text area (https://trello.com/c/oFxgfP3x/131-template-card-bullets)
 
 8.1.60
 ======
