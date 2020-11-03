@@ -1,3 +1,7 @@
+8.1.60
+======
+- Bump .yml release number
+
 8.1.59
 ======
 - Fixing scoping of `display: table-caption;` style applied to inline image captions (https://trello.com/c/KaLIPkxa/129-template-image-captions)
