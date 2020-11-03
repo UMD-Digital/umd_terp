@@ -158,8 +158,11 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-4c7d50fa96514bf8600dfe9ce99f6caa-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"home-hero"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"home-hero home-hero-dark home-hero-bg"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"max-bound"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"home-hero-media"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../img/Home_Hero.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"home-hero-content"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"outer-pad"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"editor-content"</span>&gt;</span>
@@ -481,7 +484,7 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-4c7d50fa96514bf8600dfe9ce99f6caa-panel-view">
     <code class="Code Code--lang-twig hljs">
-        <pre>{% include <span class="hljs-string">"<a href="home-hero.html">@home-hero</a>"</span> <span class="hljs-keyword">with</span> hero %}
+        <pre>{% include <span class="hljs-string">"<a href="home-hero--bg.html">@home-hero--bg</a>"</span> <span class="hljs-keyword">with</span> hero %}
 &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"page-section page-section-ut_image_with_text"</span>&gt;
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"max-bound"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"outer-pad"</span>&gt;</span>
@@ -584,7 +587,11 @@
             
             <pre>{
   <span class="hljs-attr">"hero"</span>: {
-    <span class="hljs-attr">"content"</span>: <span class="hljs-string">"&lt;h1&gt;Heading 1 lorem ipsum dolor sit &lt;/h1&gt;&lt;h2&gt;Subhead style&lt;/h2&gt;&lt;p&gt;In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Link text integer.&lt;/p&gt;&lt;p&gt;&lt;a href=\"\" class=\"btn btn-primary\"&gt;Button&lt;/a&gt;&lt;/p&gt;"</span>
+    <span class="hljs-attr">"content"</span>: <span class="hljs-string">"&lt;h1&gt;Heading 1 lorem ipsum dolor sit &lt;/h1&gt;&lt;h2&gt;Subhead style&lt;/h2&gt;&lt;p&gt;In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Link text integer.&lt;/p&gt;&lt;p&gt;&lt;a href=\"\" class=\"btn btn-primary\"&gt;Button&lt;/a&gt;&lt;/p&gt;"</span>,
+    <span class="hljs-attr">"image"</span>: {
+      <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/img/Home_Hero.jpg"</span>,
+      <span class="hljs-attr">"alt"</span>: <span class="hljs-string">""</span>
+    }
   },
   <span class="hljs-attr">"feature1"</span>: {
     <span class="hljs-attr">"reverse"</span>: <span class="hljs-literal">true</span>,
@@ -788,7 +795,7 @@
             <strong class="Meta-key">References <em class="Meta-count">(8)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
-                <a href="home-hero.html">@<span>home-hero</span></a>, 
+                <a href="home-hero--bg.html">@<span>home-hero--bg</span></a>, 
             
                 <a href="feature.html">@<span>feature</span></a>, 
             
@@ -2579,8 +2586,8 @@
         </div>
         <div class="Tree-aside">
             Built on:
-            <time datetime="2020-10-30T14:34:39.964Z">
-                10/30/2020
+            <time datetime="2020-11-03T15:44:52.356Z">
+                11/3/2020
             </time>
         </div>
     </div>

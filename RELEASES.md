@@ -1,3 +1,7 @@
+8.1.58
+======
+- https://trello.com/c/CL6u1iEj/28-make-hero-images-100-on-home-page
+
 8.1.57
 ======
 - https://trello.com/c/HrHc6ly8/96-inline-images-do-not-align-center-if-a-caption-is-included
