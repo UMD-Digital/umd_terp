@@ -23,6 +23,10 @@
   }
   &.home-hero-bg {
     background-color: $black;
+    position: relative;
+    > .max-bound {
+      position: static;
+    }
   }
 }
 
