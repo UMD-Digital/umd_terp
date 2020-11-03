@@ -1,3 +1,7 @@
+8.1.61 (Pending)
+======
+- Add additional email and phone number fields to footer (https://trello.com/c/dD7L9Lq0/126-footer-fields)
+
 8.1.60
 ======
 - Bump .yml release number

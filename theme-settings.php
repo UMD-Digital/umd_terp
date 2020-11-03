@@ -52,11 +52,23 @@ function umd_terp_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#default_value' => theme_get_setting('umd_terp_phone'),
     '#description' => t('Please add the phone number you wish to display.'),
   ];
+  $form['umd_terp_footer_settings']['umd_terp_phone_secondary'] = [
+    '#type' => 'textfield',
+    '#title' => t('Phone number (Secondary)'),
+    '#default_value' => theme_get_setting('umd_terp_phone_secondary'),
+    '#description' => t('Please add the secondary phone number you wish to display, if you require one.'),
+  ];
   $form['umd_terp_footer_settings']['umd_terp_email'] = [
     '#type' => 'textfield',
     '#title' => t('Email'),
     '#default_value' => theme_get_setting('umd_terp_email'),
     '#description' => t('Please add the email address you wish to display.'),
+  ];
+  $form['umd_terp_footer_settings']['umd_terp_email_secondary'] = [
+    '#type' => 'textfield',
+    '#title' => t('Email (Secondary)'),
+    '#default_value' => theme_get_setting('umd_terp_email_secondary'),
+    '#description' => t('Please add the secondary email address you wish to display, if you require one.'),
   ];
 
   // Social media.
