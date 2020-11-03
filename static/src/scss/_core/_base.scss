@@ -82,6 +82,10 @@ figure.align-center {
     height: auto;
     max-width: 100%;
   }
+  figcaption {
+    caption-side: bottom;
+    display: table-caption;
+  }
 }
 
 figure.align-center {
@@ -94,9 +98,7 @@ figure.align-center {
 }
 
 figcaption {
-  caption-side: bottom;
   color: #404245;
-  display: table-caption;
   font-size: rem(14);
   line-height: (23 / 14);
   margin-top: rem(8);
