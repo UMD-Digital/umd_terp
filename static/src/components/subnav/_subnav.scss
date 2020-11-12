@@ -103,6 +103,12 @@
   }
 }
 
+.hide-subnav-icon {
+  .icon {
+    display: none !important;
+  }
+}
+
 .subnav__dropdown {
   @extend %form-text-input;
   @extend %form-select;

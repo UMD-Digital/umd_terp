@@ -156,6 +156,13 @@ function umd_terp_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#default_value' => theme_get_setting('umd_terp_disable_dark_mode_options'),
   ];
 
+  $form['other']['umd_terp_sidebar_right'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Right hand sidebar'),
+    '#description' => t('Display the sidebar on the right hand side of basic pages.'),
+    '#default_value' => theme_get_setting('umd_terp_sidebar_right'),
+  ];
+
   $form['#validate'][] = 'umd_terp_form_system_theme_settings_validate_test';
   $form['#submit'][] = 'umd_terp_form_system_theme_settings_submit';
 }

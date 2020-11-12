@@ -1,20 +1,31 @@
+{% set sidebar_attribute = create_attribute() %}
+
+{%
+  set sidebar_classes = [
+    'row',
+		'justify-content-center',
+    right_sidebar ? 'flex-row-reverse',
+		right_sidebar ? 'hide-subnav-icon',
+  ]
+%}
+
 {% include directory ~ '/templates/_includes/global/header.html.twig' %}
 
 <main id="main-content">
-  	{% block hero %}
+	{% block hero %}
 		{% if hero_image %}
-				<div class="hero">
-					<div class="hero-media">
-						<img src="{{ hero_image }}" alt="">
-					</div>
+			<div class="hero">
+				<div class="hero-media">
+					<img src="{{ hero_image }}" alt="">
 				</div>
+			</div>
 		{% endif %}
-  	{% endblock %}
+	{% endblock %}
 	{% block main %}
 		<div class="container page-content">
 			{{ page.help }}
 			{{ page.highlighted }}
-			<div class="row justify-content-center">
+			<div {{sidebar_attribute.addClass(sidebar_classes)}}>
 				{% if page.sidebar|render|striptags|trim is not empty and not hide_sidebar %}
 					{% block sidebar %}
 						<div class="col-800-3">
