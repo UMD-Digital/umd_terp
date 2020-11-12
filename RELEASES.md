@@ -1,3 +1,13 @@
+8.1.61
+======
+- Add additional email and phone number fields to footer (https://trello.com/c/dD7L9Lq0/126-footer-fields)
+- Adjust skip link position (https://trello.com/c/yXqnagkf/125-skip-to-main-content-link-position)
+- Adjust ol/ul in card text area (https://trello.com/c/oFxgfP3x/131-template-card-bullets)
+
+8.1.60
+======
+- Bump .yml release number
+
 8.1.59
 ======
 - Fixing scoping of `display: table-caption;` style applied to inline image captions (https://trello.com/c/KaLIPkxa/129-template-image-captions)
