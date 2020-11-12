@@ -1,3 +1,7 @@
+8.1.62 (pending)
+======
+- Indent child subnav (https://trello.com/c/3XeYW7Wo/133-sub-menu-items-are-not-indenting-if-show-as-expanded-is-selected-on-the-parent-menu-item)
+
 8.1.61
 ======
 - Add additional email and phone number fields to footer (https://trello.com/c/dD7L9Lq0/126-footer-fields)

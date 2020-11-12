@@ -4,8 +4,14 @@
       display: none;
     }
   }
+
   li {
     line-height: rem(26);
+
+    ul li ul li a {
+      padding-left: rem(40);
+    }
+
     a {
       border-bottom: 1px solid $gray-300;
       color: $black;
@@ -17,14 +23,17 @@
       transition: .25s background-color ease-in-out,
         .25s font-weight ease-in-out;
       word-wrap: break-word;
+
       &:hover {
         background-color: $gray-100;
         color: $black;
         font-weight: 700;
+
         &:before {
           opacity: 1;
         }
       }
+
       &:before {
         content: "";
         background-color: $red;
@@ -37,42 +46,50 @@
         transform: translateX(-100%);
         transition: .25s opacity ease-in-out;
       }
+
       &[aria-current="page"] {
         background-color: $gray-100;
         box-shadow: 0 4px 5px 0 rgba($black, .1);
         font-weight: 700;
         pointer-events: none;
+
         &:hover {
           cursor: default;
         }
+
         &:before {
           opacity: 1;
         }
-        + ul {
+
+        +ul {
           a {
             background-color: $gray-100;
-            padding-left: rem(40);
           }
         }
       }
     }
+
     &.subnav-parent {
-      > a {
+      >a {
         color: $red;
         font-size: rem(15);
         font-weight: 700;
         padding: rem(8.5) rem(20);
+
         &:hover {
           background-color: transparent;
           color: $dark-red;
+
           .icon {
             transform: translate3d(-50%, -50%, 0) scale(-1);
           }
         }
+
         &:before {
           display: none;
         }
       }
+
       .icon {
         font-size: rem(14);
         display: inline-block;
@@ -89,6 +106,7 @@
 .subnav__dropdown {
   @extend %form-text-input;
   @extend %form-select;
+
   @include media-breakpoint-up(800) {
     display: none;
   }
