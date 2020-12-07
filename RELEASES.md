@@ -1,3 +1,11 @@
+8.1.63 (pending)
+======
+- Add alt to hero images (https://trello.com/c/aLUxhur0/142-add-alt-tag-to-hero-images)
+
+8.1.62
+======
+- update release text.
+
 8.1.61
 ======
 - Add additional email and phone number fields to footer (https://trello.com/c/dD7L9Lq0/126-footer-fields)
