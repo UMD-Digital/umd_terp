@@ -30,15 +30,13 @@
   {% if title %}
     <h2 class="h3">{{ title }}</h2>
   {% endif %}
-  <div class="container">
-    {% for row in items %}
-      <div class="row">
-        {% for column in row.content %}
-          <div class="col-600-6 col-1000-4">
-            {{- column.content -}}
-          </div>
-        {% endfor %}
-      </div>
-    {% endfor %}
-  </div>
+  {% for row in items %}
+    <div class="row">
+      {% for column in row.content %}
+        <div class="col-600-6 col-1000-4">
+          {{- column.content -}}
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
 </div>

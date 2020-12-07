@@ -27,14 +27,18 @@
 
 .card-group-bg {
   background: $white;
-  padding: rem(70) rem(44);
+  padding: 0 rem(44);
   position: relative;
   @include media-breakpoint-up(800) {
-    padding: rem(50) rem(30) rem(30);
+    padding: 0 rem(30);
   }
   &-dark {
     background-color: $gray-900;
     color: $white;
+    padding: rem(70) rem(44);
+    @include media-breakpoint-up(800) {
+      padding: rem(50) rem(30) rem(30);
+    }
     .card {
       @extend %card-dark;
     }
@@ -50,6 +54,7 @@
 
 .card-group {
   display: block;
+  margin-bottom: rem(-25);
   @include media-breakpoint-up(800) {
     display: flex;
     flex-wrap: wrap;
@@ -93,15 +98,9 @@
 }
 
 .card-group-cta.fancy-link {
-  @include media-breakpoint-down(799) {
-    display: inline-block;
-    margin-right: 0;
-  }
-  .card-group + .text-center & {
-    @include media-breakpoint-down(799) {
-      margin-top: rem(48);
-    }
-  }
+  display: inline-block;
+  margin-top: rem(24);
+  margin-right: 0;
 }
 
 /* 

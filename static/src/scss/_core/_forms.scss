@@ -8,7 +8,7 @@
     flex-wrap: wrap;
   }
   @include media-breakpoint-up(1000) {
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
     margin-bottom: rem(50);
     padding-bottom: rem(18);
   }
@@ -31,6 +31,11 @@
         margin-right: rem(35);
       }
     }
+  }
+  .form-text,
+  .form-select,
+  .button {
+    height: rem(57);
   }
   .form-actions {
     flex: 0;
