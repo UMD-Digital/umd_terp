@@ -388,9 +388,11 @@
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code hljs">
                                 <pre><span class="hljs-selector-class">.feed</span> {
-  <span class="hljs-attribute">margin-bottom</span>: rem(<span class="hljs-number">48</span>);
-  <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">1200</span>) {
-    <span class="hljs-attribute">margin-bottom</span>: rem(<span class="hljs-number">72</span>);
+  &amp;<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:last-child</span>) {
+    <span class="hljs-attribute">margin-bottom</span>: rem(<span class="hljs-number">48</span>);
+    <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">1200</span>) {
+      <span class="hljs-attribute">margin-bottom</span>: rem(<span class="hljs-number">72</span>);
+    }
   }
   &gt; <span class="hljs-selector-tag">li</span> {
     &amp;<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:last-child</span>) {
@@ -2309,8 +2311,8 @@
         </div>
         <div class="Tree-aside">
             Built on:
-            <time datetime="2020-11-03T17:56:30.960Z">
-                11/3/2020
+            <time datetime="2020-12-08T18:03:27.276Z">
+                12/8/2020
             </time>
         </div>
     </div>
