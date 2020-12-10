@@ -18,17 +18,23 @@
 				</div>
 				<div class="site-footer-address">
 					<strong>{{ site_name }}</strong><br>
-					<span>{{ umd_terp_address }}</span><br>
-					<a aria-label="{{ umd_terp_phone|preg_replace('/[^0-9]/', '') }}" href="tel:+{{ umd_terp_phone|preg_replace('/[^0-9]/', '') }}">{{ umd_terp_phone }}</a>
-					{% if umd_terp_phone_secondary %}
-						<span aria-hidden="true">&nbsp;/&nbsp;</span>
-						<a aria-label="{{ umd_terp_phone_secondary|preg_replace('/[^0-9]/', '') }}" href="tel:+{{ umd_terp_phone_secondary|preg_replace('/[^0-9]/', '') }}">{{ umd_terp_phone_secondary }}</a>
+					{% if umd_terp_address %}
+						<span>{{ umd_terp_address }}</span><br>
 					{% endif %}
-					<span aria-hidden="true">&nbsp;·&nbsp;</span>
-					<a href="mailto:{{ umd_terp_email }}">{{ umd_terp_email }}</a>
-					{% if umd_terp_email_secondary %}
-						<span aria-hidden="true">&nbsp;/&nbsp;</span>
-						<a href="mailto:{{ umd_terp_email_secondary }}">{{ umd_terp_email_secondary }}</a>
+					{% if umd_terp_phone %}
+						<a aria-label="{{ umd_terp_phone|preg_replace('/[^0-9]/', '') }}" href="tel:+{{ umd_terp_phone|preg_replace('/[^0-9]/', '') }}">{{ umd_terp_phone }}</a>
+						{% if umd_terp_phone_secondary %}
+							<span aria-hidden="true">&nbsp;/&nbsp;</span>
+							<a aria-label="{{ umd_terp_phone_secondary|preg_replace('/[^0-9]/', '') }}" href="tel:+{{ umd_terp_phone_secondary|preg_replace('/[^0-9]/', '') }}">{{ umd_terp_phone_secondary }}</a>
+						{% endif %}
+					{% endif %}
+					{% if umd_terp_email %}
+						<span aria-hidden="true">&nbsp;·&nbsp;</span>
+						<a href="mailto:{{ umd_terp_email }}">{{ umd_terp_email }}</a>
+						{% if umd_terp_email_secondary %}
+							<span aria-hidden="true">&nbsp;/&nbsp;</span>
+							<a href="mailto:{{ umd_terp_email_secondary }}">{{ umd_terp_email_secondary }}</a>
+						{% endif %}
 					{% endif %}
 				</div>
 				<div class="site-footer-social">

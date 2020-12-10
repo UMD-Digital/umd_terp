@@ -1,3 +1,7 @@
+8.1.64
+======
+- Add conditionals around footer content (https://trello.com/c/VsrDCJ4J/157-footer-fields-display)
+
 8.1.63
 ======
 - Wrap cards fully with border (https://trello.com/c/7X6aUN4a/155-template-gray-border-extend-around-the-image-for-cards)
