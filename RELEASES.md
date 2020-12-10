@@ -1,3 +1,7 @@
+8.1.63
+======
+- Wrap cards fully with border (https://trello.com/c/7X6aUN4a/155-template-gray-border-extend-around-the-image-for-cards)
+
 8.1.62
 ======
 - Indent child subnav (https://trello.com/c/3XeYW7Wo/133-sub-menu-items-are-not-indenting-if-show-as-expanded-is-selected-on-the-parent-menu-item)

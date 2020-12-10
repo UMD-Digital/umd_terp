@@ -2,13 +2,13 @@
   {% if image.caption %}
     <figure>
       <div class="carousel-image">
-        <img src="{{image.src|path}}" alt="{{image.alt}}">
+        <img src="{{image.src|path}}" alt="{{image.alt}}" tabindex="0">
       </div>
       <figcaption class="carousel-image-caption">{{image.caption}}</figcaption>
     </figure>
   {% else %}
     <div class="carousel-image">
-      <img src="{{image.src|path}}" alt="{{image.alt}}">
+      <img src="{{image.src|path}}" alt="{{image.alt}}" tabindex="0">
     </div>
   {% endif %}
   <div class="carousel-caption">
