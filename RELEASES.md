@@ -1,3 +1,7 @@
+8.1.66
+======
+- Account for instance where phone is empty and email exists (https://trello.com/c/VsrDCJ4J/157-footer-fields-display)
+
 8.1.65
 ======
 - Add alt to hero images (https://trello.com/c/aLUxhur0/142-add-alt-tag-to-hero-images)
