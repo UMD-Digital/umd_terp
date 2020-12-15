@@ -1,3 +1,31 @@
+8.1.67
+======
+- Updating global section/widget spacing (https://trello.com/c/elERoa43/149-update-template-spacing)
+- Updating hover state for social icons in footer (https://trello.com/c/Ur9yDNNl/152-update-hover-for-social-media-icons)
+
+8.1.66
+======
+- Account for instance where phone is empty and email exists (https://trello.com/c/VsrDCJ4J/157-footer-fields-display)
+
+8.1.65
+======
+- Add alt to hero images (https://trello.com/c/aLUxhur0/142-add-alt-tag-to-hero-images)
+- Remove bold from phone (https://trello.com/c/e06aHytB/143-remove-bold-style-from-phone-link)
+
+8.1.64
+======
+- Add conditionals around footer content (https://trello.com/c/VsrDCJ4J/157-footer-fields-display)
+
+8.1.63
+======
+- Wrap cards fully with border (https://trello.com/c/7X6aUN4a/155-template-gray-border-extend-around-the-image-for-cards)
+
+8.1.62
+======
+- Indent child subnav (https://trello.com/c/3XeYW7Wo/133-sub-menu-items-are-not-indenting-if-show-as-expanded-is-selected-on-the-parent-menu-item)
+- Right hand side menu (https://trello.com/c/76fLGAKS/135-d8-templates-right-side-menu-for-child-pages)
+- Override system alert padding.
+
 8.1.61
 ======
 - Add additional email and phone number fields to footer (https://trello.com/c/dD7L9Lq0/126-footer-fields)
