@@ -12,17 +12,21 @@
 }
 
 .embed-bg {
-  padding: rem(15) rem(24);
+  padding: 0 rem(24);
   @include media-breakpoint-up(800) {
-    padding: rem(40) rem(36);
+    padding: 0 rem(36);
   }
   figure {
     margin-bottom: 0;
   }
   &-dark {
     background-color: $gray-900;
+    padding: rem(15) rem(24);
+    @include media-breakpoint-up(800) {
+      padding: rem(40) rem(36);
+    }
     figcaption {
-      color: #fff;
+      color: $white;
     }
   }
 }

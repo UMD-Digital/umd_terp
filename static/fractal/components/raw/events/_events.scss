@@ -11,33 +11,20 @@
   }
 }
 
-.page-section.page-section-ut_events {
-  > .max-bound > .outer-pad {
-    padding-top: rem(4);
-    padding-bottom: 0;
-    @include media-breakpoint-up(800) {
-      padding-top: rem(44);
-      padding-bottom: rem(34);
-    }
-  }
-  &.page-section-umd_terp_homepage {
-    > .max-bound > .outer-pad {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-  }
-}
-
 .events-bg {
-  padding: rem(60) rem(24) rem(72);
+  padding: 0 rem(24);
   @include media-breakpoint-up(800) {
     margin: 0 auto;
     max-width: rem(1010);
-    padding: rem(40) rem(32) rem(50);
+    padding: 0 rem(32);
   }
   &-dark {
     background-color: $gray-900;
     color: $white;
+    padding: rem(60) rem(24) rem(72);
+    @include media-breakpoint-up(800) {
+      padding: rem(40) rem(32) rem(50);
+    }
     .event.card {
       @extend %event-dark;
     }
@@ -56,6 +43,7 @@
 }
 
 .events {
+  margin-bottom: rem(-25);
   @include media-breakpoint-up(800) {
     display: flex;
     flex-wrap: wrap;
@@ -86,7 +74,8 @@
   }
 }
 
-.events-calendar-cta {
+.events-calendar-cta.fancy-link {
   display: inline-block;
-  margin-top: rem(15);
+  margin-top: rem(24);
+  margin-right: 0;
 }

@@ -10,14 +10,12 @@
       {% for department in departments %}
         <div class="mb-5">
           <h2 class="h3">{{department.name}}</h2>
-          <div class="container">
-            <div class="row">
-              {% for profile in department.profiles %}
-                <div class="col-600-6 col-1000-4">
-                  {% include "@profile-card" with profile %}
-                </div>
-              {% endfor %}
-            </div>
+          <div class="row">
+            {% for profile in department.profiles %}
+              <div class="col-600-6 col-1000-4">
+                {% include "@profile-card" with profile %}
+              </div>
+            {% endfor %}
           </div>
         </div>
       {% endfor %}

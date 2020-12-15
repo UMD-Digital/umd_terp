@@ -9,6 +9,7 @@
 }
 
 .feature {
+  overflow: hidden;
   @include media-breakpoint-up(1000) {
     display: flex;
     position: relative;

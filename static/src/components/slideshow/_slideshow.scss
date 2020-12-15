@@ -13,25 +13,20 @@
   }
 }
 
-.page-section.page-section-ut_slideshow {
-  > .max-bound > .outer-pad {
-    padding-bottom: rem(30);
-    @include media-breakpoint-up(800) {
-      padding-bottom: rem(50);
-    }
-  }
-}
-
 .slideshow-bg {
   background-color: $white;
   color: $gray-700;
-  padding: 0 rem(24) rem(35);
+  padding: 0 rem(24);
   @include media-breakpoint-up(800) {
-    padding: 0 rem(35) rem(35);
+    padding: 0 rem(35);
   }
   &-dark {
     background-color: $gray-900;
     color: $white;
+    padding: 0 rem(24) rem(35);
+    @include media-breakpoint-up(800) {
+      padding: 0 rem(35) rem(35);
+    }
   }
 }
 

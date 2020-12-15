@@ -11,23 +11,13 @@
   }
 }
 
-.page-section.page-section-ut_carousel {
-  > .max-bound > .outer-pad {
-    padding-top: rem(28);
-    padding-bottom: rem(28);
-    @include media-breakpoint-up(800) {
-      padding-top: rem(48);
-      padding-bottom: rem(48);
-    }
-  }
-}
-
 .carousel-bg {
   background-color: $white;
-  padding: rem(36) rem(52);
+  padding: 0 rem(52);
   position: relative;
   &-dark {
     background-color: $gray-900;
+    padding: rem(36) rem(52);
   }
 }
 
