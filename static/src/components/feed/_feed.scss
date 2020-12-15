@@ -1,16 +1,18 @@
 .feed {
-  margin-bottom: rem(48);
-  @include media-breakpoint-up(1200) {
-    margin-bottom: rem(72);
+  &:not(:last-child) {
+    margin-bottom: rem(48);
+    @include media-breakpoint-up(1200) {
+      margin-bottom: rem(72);
+    }
   }
   > li {
     &:not(:last-child) {
-      margin-bottom: rem(36);
+      margin-bottom: rem(32);
       @include media-breakpoint-up(800) {
-        margin-bottom: rem(48);
+        margin-bottom: rem(42);
       }
       @include media-breakpoint-up(1200) {
-        margin-bottom: rem(72);
+        margin-bottom: rem(56);
       }
     }
   }

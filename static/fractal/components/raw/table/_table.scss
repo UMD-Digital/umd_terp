@@ -148,6 +148,9 @@
       padding: rem(20);
       vertical-align: middle;
       width: 50%;
+      @include media-breakpoint-up($table-media-query-up) {
+        padding: 0;
+      }
     }
     .tablesaw-cell-label {
       background-color: #8D8D8D;

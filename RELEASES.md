@@ -1,3 +1,8 @@
+8.1.67
+======
+- Updating global section/widget spacing (https://trello.com/c/elERoa43/149-update-template-spacing)
+- Updating hover state for social icons in footer (https://trello.com/c/Ur9yDNNl/152-update-hover-for-social-media-icons)
+
 8.1.66
 ======
 - Account for instance where phone is empty and email exists (https://trello.com/c/VsrDCJ4J/157-footer-fields-display)

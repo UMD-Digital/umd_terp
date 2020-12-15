@@ -8,7 +8,7 @@
         line-height: (24 / 18);
         margin-right: 0;
 
-        &:not(:last-child) {
+        &:not(:last-of-type) {
             margin-bottom: rem(18);
         }
     }

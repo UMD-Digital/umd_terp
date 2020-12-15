@@ -11,14 +11,17 @@
   a {
     color: $gray-600;
     transition: .25s color ease-in-out;
-    &:hover {
+    &:hover,
+    &:focus {
       color: $gray-900;
       text-decoration: underline;
     }
   }
   .site-footer-social {
     a {
-      &:hover {
+      &:hover,
+      &:focus {
+        color: $red;
         text-decoration: none;
       }
     }

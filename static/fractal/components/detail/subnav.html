@@ -276,8 +276,14 @@
       <span class="hljs-attribute">display</span>: none;
     }
   }
+
   <span class="hljs-selector-tag">li</span> {
     <span class="hljs-attribute">line-height</span>: rem(<span class="hljs-number">26</span>);
+
+    <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-tag">a</span> {
+      <span class="hljs-attribute">padding-left</span>: rem(<span class="hljs-number">40</span>);
+    }
+
     <span class="hljs-selector-tag">a</span> {
       <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$gray-300</span>;
       <span class="hljs-attribute">color</span>: <span class="hljs-variable">$black</span>;
@@ -289,14 +295,17 @@
       <span class="hljs-attribute">transition</span>: .<span class="hljs-number">25s</span> background-color ease-in-out,
         .<span class="hljs-number">25s</span> font-weight ease-in-out;
       <span class="hljs-attribute">word-wrap</span>: break-word;
+
       &amp;<span class="hljs-selector-pseudo">:hover</span> {
         <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$gray-100</span>;
         <span class="hljs-attribute">color</span>: <span class="hljs-variable">$black</span>;
         <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">700</span>;
+
         &amp;<span class="hljs-selector-pseudo">:before</span> {
           <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
         }
       }
+
       &amp;<span class="hljs-selector-pseudo">:before</span> {
         <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
         <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$red</span>;
@@ -309,42 +318,50 @@
         <span class="hljs-attribute">transform</span>: translateX(-<span class="hljs-number">100%</span>);
         <span class="hljs-attribute">transition</span>: .<span class="hljs-number">25s</span> opacity ease-in-out;
       }
+
       &amp;<span class="hljs-selector-attr">[aria-current="page"]</span> {
         <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$gray-100</span>;
         <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">4px</span> <span class="hljs-number">5px</span> <span class="hljs-number">0</span> rgba(<span class="hljs-variable">$black</span>, .<span class="hljs-number">1</span>);
         <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">700</span>;
         <span class="hljs-attribute">pointer-events</span>: none;
+
         &amp;<span class="hljs-selector-pseudo">:hover</span> {
           <span class="hljs-attribute">cursor</span>: default;
         }
+
         &amp;<span class="hljs-selector-pseudo">:before</span> {
           <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
         }
-        + <span class="hljs-selector-tag">ul</span> {
+
+        +<span class="hljs-selector-tag">ul</span> {
           <span class="hljs-selector-tag">a</span> {
             <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$gray-100</span>;
-            <span class="hljs-attribute">padding-left</span>: rem(<span class="hljs-number">40</span>);
           }
         }
       }
     }
+
     &amp;<span class="hljs-selector-class">.subnav-parent</span> {
-      &gt; <span class="hljs-selector-tag">a</span> {
+      &gt;<span class="hljs-selector-tag">a</span> {
         <span class="hljs-attribute">color</span>: <span class="hljs-variable">$red</span>;
         <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">15</span>);
         <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">700</span>;
         <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">8.5</span>) rem(<span class="hljs-number">20</span>);
+
         &amp;<span class="hljs-selector-pseudo">:hover</span> {
           <span class="hljs-attribute">background-color</span>: transparent;
           <span class="hljs-attribute">color</span>: <span class="hljs-variable">$dark-red</span>;
+
           <span class="hljs-selector-class">.icon</span> {
             <span class="hljs-attribute">transform</span>: translate3d(-<span class="hljs-number">50%</span>, -<span class="hljs-number">50%</span>, <span class="hljs-number">0</span>) scale(-<span class="hljs-number">1</span>);
           }
         }
+
         &amp;<span class="hljs-selector-pseudo">:before</span> {
           <span class="hljs-attribute">display</span>: none;
         }
       }
+
       <span class="hljs-selector-class">.icon</span> {
         <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">14</span>);
         <span class="hljs-attribute">display</span>: inline-block;
@@ -358,13 +375,21 @@
   }
 }
 
+<span class="hljs-selector-class">.hide-subnav-icon</span> {
+  <span class="hljs-selector-class">.icon</span> {
+    <span class="hljs-attribute">display</span>: none <span class="hljs-meta">!important</span>;
+  }
+}
+
 <span class="hljs-selector-class">.subnav__dropdown</span> {
   <span class="hljs-keyword">@extend</span> %form-text-input;
   <span class="hljs-keyword">@extend</span> %form-select;
+
   <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
     <span class="hljs-attribute">display</span>: none;
   }
-}</pre>
+}
+</pre>
                             </code>
                             
                         </div>
@@ -380,7 +405,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.1 KB</span>
+                    <span class="Meta-value">2.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -2293,8 +2318,8 @@ export default function initSubnav() {
         </div>
         <div class="Tree-aside">
             Built on:
-            <time datetime="2020-11-03T17:56:30.960Z">
-                11/3/2020
+            <time datetime="2020-12-15T17:05:47.357Z">
+                12/15/2020
             </time>
         </div>
     </div>

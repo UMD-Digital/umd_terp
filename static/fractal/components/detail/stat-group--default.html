@@ -289,25 +289,19 @@
   }
 }
 
-<span class="hljs-selector-class">.page-section</span><span class="hljs-selector-class">.page-section-ut_stat_group</span> {
-  &gt; <span class="hljs-selector-class">.max-bound</span> &gt; <span class="hljs-selector-class">.outer-pad</span> {
-    <span class="hljs-attribute">padding-top</span>: rem(<span class="hljs-number">40</span>);
-    <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
-      <span class="hljs-attribute">padding-top</span>: rem(<span class="hljs-number">14</span>);
-      <span class="hljs-attribute">padding-bottom</span>: rem(<span class="hljs-number">44</span>);
-    }
-  }
-}
-
 <span class="hljs-selector-class">.stat-group-bg</span> {
   <span class="hljs-attribute">background</span>: <span class="hljs-variable">$white</span>;
-  <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">25</span>) rem(<span class="hljs-number">58</span>) rem(<span class="hljs-number">105</span>);
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> rem(<span class="hljs-number">58</span>);
   <span class="hljs-attribute">position</span>: relative;
   <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
-    <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">70</span>) rem(<span class="hljs-number">30</span>) rem(<span class="hljs-number">40</span>);
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> rem(<span class="hljs-number">30</span>);
   }
   &amp;-dark {
     <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$gray-900</span>;
+    <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">25</span>) rem(<span class="hljs-number">58</span>) rem(<span class="hljs-number">105</span>);
+    <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
+      <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">70</span>) rem(<span class="hljs-number">30</span>) rem(<span class="hljs-number">40</span>);
+    }
     <span class="hljs-selector-class">.stat</span> {
       <span class="hljs-keyword">@extend</span> %stat-dark;
     }
@@ -370,7 +364,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.5 KB</span>
+                    <span class="Meta-value">1.4 KB</span>
                 </li>
             </ul>
         </div>
@@ -2290,8 +2284,8 @@ export default function initStatGroups() {
         </div>
         <div class="Tree-aside">
             Built on:
-            <time datetime="2020-11-03T17:56:30.960Z">
-                11/3/2020
+            <time datetime="2020-12-15T17:05:47.357Z">
+                12/15/2020
             </time>
         </div>
     </div>
