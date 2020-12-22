@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Theme override to display a UMD Terp Event node.
+ */
+#}
+
+<div {{attributes}}>
+	{{ title_suffix }}
+	{% if content.field_umdt_ct_event_image|field_value %}
+		<div class="section section-ut_image">
+			<div class="image">
+				<figure>
+					<div class="image-media">
+						<img src="{{ file_url(content.field_umdt_ct_event_image[0]['#media'].field_media_image.entity.uri.value | image_style('optimized')) }}" alt="{{ content.field_umdt_ct_event_image[0]['#media'].field_media_image.alt }}"/>
+					</div>
+					{% if content.field_umdt_ct_event_caption|field_value %}
+						<figcaption>{{ content.field_umdt_ct_event_caption|field_value }}</figcaption>
+					{% endif %}
+				</figure>
+			</div>
+		</div>
+	{% endif %}
+	{% if content.body|field_value %}
+		<div class="section">
+			<div class="editor-content">
+				{{ content.body|field_value }}
+        {% if content.field_umdt_ct_event_link.0 %}
+          <p>{% include directory ~ '/templates/helpers/link.html.twig' with {'link': content.field_umdt_ct_event_link.0, 'classes': 'btn btn-primary' } %}</p>
+        {% endif %}
+			</div>
+		</div>
+	{% endif %}
+</div>
+{{ content|without('body', 'field_umdt_ct_event_end_date', 'field_umdt_ct_event_start_date', 'field_umdt_ct_event_caption', 'field_umdt_ct_event_image', 'field_umdt_ct_event_link', 'field_umdt_ct_event_time') }}

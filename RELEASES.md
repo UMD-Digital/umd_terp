@@ -1,3 +1,7 @@
+8.1.68
+======
+- Local events content type (https://trello.com/c/J9RLFCO4/147-create-local-events-content-type-and-views)
+
 8.1.67
 ======
 - Updating global section/widget spacing (https://trello.com/c/elERoa43/149-update-template-spacing)
