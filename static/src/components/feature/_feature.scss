@@ -10,6 +10,7 @@
 
 .feature {
   overflow: hidden;
+
   @include media-breakpoint-up(1000) {
     display: flex;
     position: relative;
@@ -41,6 +42,15 @@
   &.feature-default {
     &.bg-yellow {
       color: $black;
+
+      a:not(.btn) {
+        color: $dark-red;
+
+        &:hover,
+        &:focus {
+          color: $dark-red;
+        }
+      }
 
       .btn {
         border-color: $black;
@@ -80,6 +90,15 @@
         color: $red;
       }
 
+      a:not(.btn) {
+        color: $dark-red;
+
+        &:hover,
+        &:focus {
+          color: $dark-red;
+        }
+      }
+
       .btn {
         border-color: $red;
         background-color: $white;
@@ -96,6 +115,15 @@
     &.bg-dark-gray {
       color: $white;
 
+      a:not(.btn) {
+        color: $yellow;
+
+        &:hover,
+        &:focus {
+          color: $yellow;
+        }
+      }
+
       .btn {
         border-color: $white;
         color: $white;
@@ -111,6 +139,16 @@
     &.bg-dark-red {
       color: $white;
 
+      a:not(.btn) {
+        color: $white;
+        border-bottom-color: $white;
+
+        &:hover,
+        &:focus {
+          color: $yellow;
+        }
+      }
+
       .btn {
         border-color: $white;
         color: $white;
@@ -125,6 +163,16 @@
 
     &.bg-red {
       color: $white;
+
+      a:not(.btn) {
+        color: $white;
+        border-bottom-color: $white;
+
+        &:hover,
+        &:focus {
+          color: $yellow;
+        }
+      }
 
       .btn {
         border-color: $white;
@@ -143,6 +191,15 @@
 
       h2 {
         color: $yellow;
+      }
+
+      a:not(.btn) {
+        color: $yellow;
+
+        &:hover,
+        &:focus {
+          color: $yellow;
+        }
       }
 
       .btn {
