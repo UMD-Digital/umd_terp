@@ -33,23 +33,31 @@ function umd_terp_preprocess_page(&$variables) {
   $variables['hero_image'] = '';
   $variables['hero_title'] = $variables['page']['#title'];
 
+  // Make any custom theme settings available in the page tpl.
+  _umd_terp_extend_theme_variables($variables);
+
   if ($node = _umd_terp_get_node_by_route()) {
     // Set hero details.
     if ($node->hasField('field_umdt_ct_hero_image') && $node->get('field_umdt_ct_hero_image')->entity) {
       $hero_uri = $node->get('field_umdt_ct_hero_image')->entity->get('field_media_image')->entity->getFileUri();
+      $hero_alt = $node->get('field_umdt_ct_hero_image')->entity->get('field_media_image')->alt;
     }
     if (!empty($hero_uri)) {
       $variables['hero_image'] = ImageStyle::load('optimized')->buildUrl($hero_uri);
+      $variables['hero_alt'] = $hero_alt;
     }
 
     switch ($node->getType()) {
       case 'umd_terp_basic_page':
         $variables['hide_sidebar'] = $node->get('field_umdt_ct_hide_sidebar')->value;
+        $variables['right_sidebar'] = FALSE;
+        if (isset($variables['umd_terp_sidebar_right']) && $variables['umd_terp_sidebar_right'] == TRUE) {
+          $variables['right_sidebar'] = TRUE;
+        }
         break;
     }
   }
-  // Make any custom theme settings available in the page tpl.
-  _umd_terp_extend_theme_variables($variables);
+
 }
 
 /**

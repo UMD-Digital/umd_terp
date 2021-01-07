@@ -1,3 +1,16 @@
+8.1.70
+======
+- Removing `overflow: hidden` style that was preventing feature widget from being displayed as full-width (https://trello.com/c/7YvQxDnx)
+
+8.1.69
+======
+- Visual cue for dropdowns (https://trello.com/c/yDIQ7iXZ/161-d8-template-visual-cue-on-dropdown-for-news-events)
+- WYSIWYG links for home feature (https://trello.com/c/dY1NHPOX/159-d8-template-link-color-on-features)
+
+8.1.68
+======
+- Local events content type (https://trello.com/c/J9RLFCO4/147-create-local-events-content-type-and-views)
+
 8.1.67
 ======
 - Updating global section/widget spacing (https://trello.com/c/elERoa43/149-update-template-spacing)

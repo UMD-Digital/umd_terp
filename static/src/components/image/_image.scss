@@ -2,9 +2,11 @@
 
 .section.section-ut_image {
   margin: rem(35) 0;
+
   @include media-breakpoint-up(800) {
     margin: rem(20) 0;
   }
+
   .page-content & {
     @include media-breakpoint-down(799) {
       margin-right: rem(-24);
@@ -15,18 +17,23 @@
 
 .image-bg {
   padding: 0 rem(24);
+
   @include media-breakpoint-up(800) {
     padding: 0 rem(36);
   }
+
   figure {
     margin-bottom: 0;
   }
+
   &-dark {
     background-color: $gray-900;
     padding: rem(15) rem(24);
+
     @include media-breakpoint-up(800) {
       padding: rem(40) rem(36);
     }
+
     figcaption {
       color: $white;
     }
@@ -35,11 +42,13 @@
 
 .image-media {
   position: relative;
+
   &:before {
     content: "";
     display: block;
     padding-bottom: $image__aspect-ratio;
   }
+
   img {
     display: block;
     height: 100%;
@@ -49,5 +58,11 @@
     position: absolute;
     top: 0;
     left: 0;
+  }
+}
+
+.image {
+  figcaption {
+    text-align: right;
   }
 }
