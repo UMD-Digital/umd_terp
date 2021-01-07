@@ -641,18 +641,27 @@
                                 <pre><span class="hljs-selector-class">.article-hero</span> {
   <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$gray-100</span>;
   <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">42</span>) <span class="hljs-number">0</span>;
+
   <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
     <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">64</span>) <span class="hljs-number">0</span>;
   }
+
   <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">1200</span>) {
     <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">100</span>) <span class="hljs-number">0</span> rem(<span class="hljs-number">72</span>);
+  }
+
+  &amp;__event {
+    <span class="hljs-selector-tag">h1</span> {
+      <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">8px</span>;
+    }
   }
 }
 
 <span class="hljs-selector-class">.article-byline</span> {
   <span class="hljs-attribute">color</span>: <span class="hljs-variable">$gray-700</span>;
   <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">16</span>);
-  &gt; *<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:last-child</span>) {
+
+  &gt;*<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:last-child</span>) {
     &amp;<span class="hljs-selector-pseudo">:after</span> {
       <span class="hljs-attribute">content</span>: <span class="hljs-string">"•"</span>;
       <span class="hljs-attribute">color</span>: <span class="hljs-variable">$red</span>;
@@ -660,18 +669,23 @@
       <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> rem(<span class="hljs-number">4</span>) <span class="hljs-number">0</span> rem(<span class="hljs-number">6</span>);
     }
   }
-  &amp; + <span class="hljs-selector-class">.section</span> {
+
+  &amp;+<span class="hljs-selector-class">.section</span> {
     <span class="hljs-attribute">margin-top</span>: rem(<span class="hljs-number">45</span>);
+
     &amp;<span class="hljs-selector-class">.section-ut_image</span> {
       <span class="hljs-attribute">margin-top</span>: rem(<span class="hljs-number">30</span>);
+
       <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">800</span>) {
         <span class="hljs-attribute">margin-top</span>: rem(<span class="hljs-number">5</span>);
       }
     }
   }
+
   <span class="hljs-selector-tag">a</span> {
     <span class="hljs-attribute">color</span>: inherit;
     <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">700</span>;
+
     &amp;<span class="hljs-selector-pseudo">:hover</span> {
       <span class="hljs-attribute">color</span>: inherit;
       <span class="hljs-attribute">text-decoration</span>: underline;
@@ -682,6 +696,7 @@
 <span class="hljs-selector-class">.article-author</span> {
   <span class="hljs-attribute">color</span>: inherit;
   <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">700</span>;
+
   &amp;<span class="hljs-selector-pseudo">:hover</span> {
     <span class="hljs-attribute">color</span>: inherit;
     <span class="hljs-attribute">text-decoration</span>: underline;
@@ -691,7 +706,8 @@
 <span class="hljs-selector-class">.article-categories</span> {
   <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#EDEDED</span>;
   <span class="hljs-attribute">padding-top</span>: rem(<span class="hljs-number">42</span>);
-}</pre>
+}
+</pre>
                             </code>
                             
                         </div>
@@ -707,7 +723,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">946 Bytes</span>
+                    <span class="Meta-value">1 KB</span>
                 </li>
             </ul>
         </div>
@@ -2540,8 +2556,8 @@
         </div>
         <div class="Tree-aside">
             Built on:
-            <time datetime="2020-12-15T17:05:47.357Z">
-                12/15/2020
+            <time datetime="2021-01-07T18:00:41.501Z">
+                1/7/2021
             </time>
         </div>
     </div>

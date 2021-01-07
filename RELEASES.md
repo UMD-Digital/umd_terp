@@ -1,3 +1,7 @@
+8.1.70
+======
+- Removing `overflow: hidden` style that was preventing feature widget from being displayed as full-width (https://trello.com/c/7YvQxDnx)
+
 8.1.69
 ======
 - Visual cue for dropdowns (https://trello.com/c/yDIQ7iXZ/161-d8-template-visual-cue-on-dropdown-for-news-events)
