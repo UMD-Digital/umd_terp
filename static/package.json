@@ -64,6 +64,7 @@
     "flickity-imagesloaded": "^2.0.0",
     "focus-within": "^3.0.2",
     "jquery": "^3.4.1",
+    "lodash.debounce": "^4.0.8",
     "object-fit-images": "^3.2.4",
     "popper.js": "^1.15.0",
     "silc-core": "^0.6.0",
