@@ -44,11 +44,13 @@
       color: $black;
 
       a:not(.btn) {
-        color: $dark-red;
+        color: $black;
+        border-bottom-color: $black;
 
         &:hover,
         &:focus {
-          color: $dark-red;
+          color: $black;
+          border-bottom-color: $dark-red;
         }
       }
 
@@ -121,6 +123,7 @@
         &:hover,
         &:focus {
           color: $yellow;
+          border-bottom-color: $yellow;
         }
       }
 
@@ -199,6 +202,7 @@
         &:hover,
         &:focus {
           color: $yellow;
+          border-bottom-color: $yellow;
         }
       }
 

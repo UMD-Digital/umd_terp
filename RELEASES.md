@@ -1,3 +1,7 @@
+8.1.70
+======
+- WYSIWYG links for home feature (https://trello.com/c/dY1NHPOX/159-d8-template-link-color-on-features)
+
 8.1.69
 ======
 - Visual cue for dropdowns (https://trello.com/c/yDIQ7iXZ/161-d8-template-visual-cue-on-dropdown-for-news-events)
