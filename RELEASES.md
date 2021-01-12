@@ -1,3 +1,7 @@
+8.1.72
+======
+- Location field to events (https://trello.com/c/J9RLFCO4/147-create-local-events-content-type-and-views)
+
 8.1.71
 ======
 - WYSIWYG links for home feature (https://trello.com/c/dY1NHPOX/159-d8-template-link-color-on-features)
