@@ -1,6 +1,10 @@
-8.1.70
+8.1.71
 ======
 - WYSIWYG links for home feature (https://trello.com/c/dY1NHPOX/159-d8-template-link-color-on-features)
+
+8.1.70
+======
+- Removing `overflow: hidden` style that was preventing feature widget from being displayed as full-width (https://trello.com/c/7YvQxDnx)
 
 8.1.69
 ======
