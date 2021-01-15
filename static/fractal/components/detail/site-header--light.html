@@ -350,8 +350,7 @@
   <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">1200</span>) {
     <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> rem(<span class="hljs-number">64</span>);
   }
-  <span class="hljs-selector-tag">a</span>,
-  <span class="hljs-selector-class">.site-header__nav-dropdown-toggle</span> {
+  <span class="hljs-selector-tag">a</span> {
     <span class="hljs-attribute">color</span>: <span class="hljs-variable">$white</span>;
     <span class="hljs-attribute">display</span>: block;
     <span class="hljs-attribute">transition</span>: .<span class="hljs-number">25s</span> color ease-in-out;
@@ -511,13 +510,15 @@
       <span class="hljs-attribute">margin-left</span>: auto;
     }
     &gt; <span class="hljs-selector-tag">li</span> {
+      <span class="hljs-attribute">display</span>: flex;
+      <span class="hljs-attribute">flex-wrap</span>: wrap;
       <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">19</span>);
       <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">1024</span>) {
-        <span class="hljs-attribute">display</span>: flex;
+        <span class="hljs-attribute">flex-wrap</span>: nowrap;
         <span class="hljs-attribute">position</span>: relative;
       }
-      &gt; <span class="hljs-selector-tag">a</span>,
-      <span class="hljs-selector-class">.site-header__nav-dropdown-toggle</span> {
+      &gt; <span class="hljs-selector-tag">a</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0px</span>;
         <span class="hljs-attribute">line-height</span>: (<span class="hljs-number">25</span> / <span class="hljs-number">19</span>);
         <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">28</span>) rem(<span class="hljs-number">18</span>) rem(<span class="hljs-number">30</span>);
         <span class="hljs-keyword">@include</span> media-breakpoint-down(<span class="hljs-number">1023</span>) {
@@ -527,10 +528,12 @@
         <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">1024</span>) {
           <span class="hljs-attribute">align-items</span>: center;
           <span class="hljs-attribute">display</span>: flex;
+          <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">1</span> auto;
           <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
           <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">0</span>;
           <span class="hljs-attribute">padding-bottom</span>: rem(<span class="hljs-number">2</span>);
           <span class="hljs-attribute">text-align</span>: center;
+          <span class="hljs-attribute">width</span>: auto;
         }
         <span class="hljs-selector-class">.site-header-light</span> &amp; {
           <span class="hljs-keyword">@include</span> media-breakpoint-down(<span class="hljs-number">1023</span>) {
@@ -538,16 +541,25 @@
             <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$gray-300</span>;
           }
         }
+        &amp;<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:last-child</span>) {
+          <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">1024</span>) {
+            <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0</span>;
+          }
+        }
       }
       <span class="hljs-selector-tag">ul</span> {
         <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$gray-900</span>;
         <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$gray-600</span>;
+        <span class="hljs-attribute">margin-top</span>: -<span class="hljs-number">1px</span>;
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
         <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">1024</span>) {
           <span class="hljs-attribute">border-bottom</span>: none;
           <span class="hljs-attribute">min-width</span>: rem(<span class="hljs-number">160</span>);
+          <span class="hljs-attribute">max-width</span>: rem(<span class="hljs-number">300</span>);
           <span class="hljs-attribute">position</span>: absolute;
           <span class="hljs-attribute">top</span>: <span class="hljs-number">100%</span>;
           <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+          <span class="hljs-attribute">width</span>: auto;
         }
         <span class="hljs-selector-class">.site-header-light</span> &amp; {
           <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$gray-300</span>;
@@ -580,9 +592,19 @@
   appearance: none;
   <span class="hljs-attribute">background-color</span>: transparent;
   <span class="hljs-attribute">border</span>: none;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">position</span>: relative;
-  <span class="hljs-attribute">text-align</span>: left;
-  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">width</span>: rem(<span class="hljs-number">64</span>);
+  <span class="hljs-keyword">@include</span> media-breakpoint-down(<span class="hljs-number">1023</span>) {
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$gray-700</span>;
+    <span class="hljs-attribute">border-left</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$gray-600</span>;
+    <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$gray-600</span>;
+  }
+  <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">1024</span>) {
+    <span class="hljs-attribute">width</span>: rem(<span class="hljs-number">44</span>);
+  }
   &amp;<span class="hljs-selector-pseudo">:after</span> {
     <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
     <span class="hljs-attribute">border-right</span>: <span class="hljs-number">2px</span> solid <span class="hljs-variable">$white</span>;
@@ -592,12 +614,13 @@
     <span class="hljs-attribute">width</span>: rem(<span class="hljs-number">16</span>);
     <span class="hljs-attribute">position</span>: absolute;
     <span class="hljs-attribute">top</span>: <span class="hljs-number">50%</span>;
-    <span class="hljs-attribute">right</span>: rem(<span class="hljs-number">20</span>);
-    <span class="hljs-attribute">transform</span>: translate3d(<span class="hljs-number">0</span>, -<span class="hljs-number">50%</span>, <span class="hljs-number">0</span>) rotate(<span class="hljs-number">45deg</span>);
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">50%</span>;
+    <span class="hljs-attribute">transform</span>: translate3d(-<span class="hljs-number">50%</span>, -<span class="hljs-number">50%</span>, <span class="hljs-number">0</span>) rotate(<span class="hljs-number">45deg</span>);
     <span class="hljs-attribute">transform-origin</span>: center;
     <span class="hljs-attribute">transition</span>: <span class="hljs-number">0.25s</span> border-color ease-in-out, <span class="hljs-number">0.25s</span> transform ease-in-out;
     <span class="hljs-keyword">@include</span> media-breakpoint-up(<span class="hljs-number">1024</span>) {
-      <span class="hljs-attribute">display</span>: none;
+      <span class="hljs-attribute">height</span>: rem(<span class="hljs-number">10</span>);
+      <span class="hljs-attribute">width</span>: rem(<span class="hljs-number">10</span>);
     }
   }
   &amp;<span class="hljs-selector-pseudo">:hover</span>,
@@ -608,7 +631,18 @@
   }
   &amp;<span class="hljs-selector-attr">[aria-expanded="true"]</span> {
     &amp;<span class="hljs-selector-pseudo">:after</span> {
-      <span class="hljs-attribute">transform</span>: translate3d(<span class="hljs-number">0</span>, -<span class="hljs-number">50%</span>, <span class="hljs-number">0</span>) rotate(<span class="hljs-number">225deg</span>);
+      <span class="hljs-attribute">transform</span>: translate3d(-<span class="hljs-number">50%</span>, -<span class="hljs-number">50%</span>, <span class="hljs-number">0</span>) rotate(<span class="hljs-number">225deg</span>);
+    }
+  }
+  <span class="hljs-selector-class">.site-header-light</span> &amp; {
+    &amp;<span class="hljs-selector-pseudo">:after</span> {
+      <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$gray-900</span>;
+    }
+    &amp;<span class="hljs-selector-pseudo">:hover</span>,
+    &amp;<span class="hljs-selector-pseudo">:focus</span> {
+      &amp;<span class="hljs-selector-pseudo">:after</span> {
+        <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$red</span>;
+      }
     }
   }
 }</pre>
@@ -627,7 +661,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">6.2 KB</span>
+                    <span class="Meta-value">6.9 KB</span>
                 </li>
             </ul>
         </div>
@@ -2778,8 +2812,8 @@ export default function initSiteHeader() {
         </div>
         <div class="Tree-aside">
             Built on:
-            <time datetime="2021-01-08T02:46:14.866Z">
-                1/7/2021
+            <time datetime="2021-01-15T18:26:00.040Z">
+                1/15/2021
             </time>
         </div>
     </div>

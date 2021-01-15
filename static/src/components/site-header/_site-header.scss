@@ -25,8 +25,7 @@
   @include media-breakpoint-up(1200) {
     padding: 0 rem(64);
   }
-  a,
-  .site-header__nav-dropdown-toggle {
+  a {
     color: $white;
     display: block;
     transition: .25s color ease-in-out;
@@ -186,13 +185,15 @@
       margin-left: auto;
     }
     > li {
+      display: flex;
+      flex-wrap: wrap;
       font-size: rem(19);
       @include media-breakpoint-up(1024) {
-        display: flex;
+        flex-wrap: nowrap;
         position: relative;
       }
-      > a,
-      .site-header__nav-dropdown-toggle {
+      > a {
+        flex: 1 1 0px;
         line-height: (25 / 19);
         padding: rem(28) rem(18) rem(30);
         @include media-breakpoint-down(1023) {
@@ -202,10 +203,12 @@
         @include media-breakpoint-up(1024) {
           align-items: center;
           display: flex;
+          flex: 0 1 auto;
           height: 100%;
           padding-top: 0;
           padding-bottom: rem(2);
           text-align: center;
+          width: auto;
         }
         .site-header-light & {
           @include media-breakpoint-down(1023) {
@@ -213,16 +216,25 @@
             border-bottom: 1px solid $gray-300;
           }
         }
+        &:not(:last-child) {
+          @include media-breakpoint-up(1024) {
+            padding-right: 0;
+          }
+        }
       }
       ul {
         background-color: $gray-900;
         border-bottom: 1px solid $gray-600;
+        margin-top: -1px;
+        width: 100%;
         @include media-breakpoint-up(1024) {
           border-bottom: none;
           min-width: rem(160);
+          max-width: rem(300);
           position: absolute;
           top: 100%;
           left: 0;
+          width: auto;
         }
         .site-header-light & {
           border-bottom: 1px solid $gray-300;
@@ -255,9 +267,19 @@
   appearance: none;
   background-color: transparent;
   border: none;
+  padding: 0;
   position: relative;
-  text-align: left;
-  width: 100%;
+  top: 0;
+  right: 0;
+  width: rem(64);
+  @include media-breakpoint-down(1023) {
+    background-color: $gray-700;
+    border-left: 1px solid $gray-600;
+    border-bottom: 1px solid $gray-600;
+  }
+  @include media-breakpoint-up(1024) {
+    width: rem(44);
+  }
   &:after {
     content: "";
     border-right: 2px solid $white;
@@ -267,12 +289,13 @@
     width: rem(16);
     position: absolute;
     top: 50%;
-    right: rem(20);
-    transform: translate3d(0, -50%, 0) rotate(45deg);
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0) rotate(45deg);
     transform-origin: center;
     transition: 0.25s border-color ease-in-out, 0.25s transform ease-in-out;
     @include media-breakpoint-up(1024) {
-      display: none;
+      height: rem(10);
+      width: rem(10);
     }
   }
   &:hover,
@@ -283,7 +306,18 @@
   }
   &[aria-expanded="true"] {
     &:after {
-      transform: translate3d(0, -50%, 0) rotate(225deg);
+      transform: translate3d(-50%, -50%, 0) rotate(225deg);
+    }
+  }
+  .site-header-light & {
+    &:after {
+      border-color: $gray-900;
+    }
+    &:hover,
+    &:focus {
+      &:after {
+        border-color: $red;
+      }
     }
   }
 }
