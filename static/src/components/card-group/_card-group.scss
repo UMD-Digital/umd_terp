@@ -1,9 +1,11 @@
 .section.section-ut_card_group,
 .section.section-ut_news {
   margin: 0 0 rem(20);
+
   @include media-breakpoint-up(800) {
     margin: rem(10) 0 rem(30);
   }
+
   .page-content & {
     @include media-breakpoint-down(799) {
       margin-right: rem(-24);
@@ -16,21 +18,35 @@
   background: $white;
   padding: 0 rem(44);
   position: relative;
+
   @include media-breakpoint-up(800) {
     padding: 0 rem(30);
   }
+
   &-dark {
     background-color: $gray-900;
     color: $white;
     padding: rem(70) rem(44);
+
     @include media-breakpoint-up(800) {
       padding: rem(50) rem(30) rem(30);
     }
+
     .card {
       @extend %card-dark;
+
+      &[role="link"] {
+
+        &:hover,
+        &:focus {
+          box-shadow: 0 0 0 3px $yellow !important;
+        }
+      }
     }
+
     .card-group-cta {
       color: $yellow;
+
       &:hover {
         border-color: $yellow;
         color: $yellow;
@@ -42,15 +58,23 @@
 .card-group {
   display: block;
   margin-bottom: rem(-25);
+
   @include media-breakpoint-up(800) {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-left: rem(-25);
   }
+
   .card {
+    box-shadow: 0 0 0 1px $gray-500;
+
     &[role="link"] {
-      &:hover {
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 0 3px $red;
+
         @include media-breakpoint-down(799) {
           transform: scale(1);
         }
@@ -63,15 +87,18 @@
   display: flex;
   margin-bottom: rem(25);
   width: 100%;
+
   @include media-breakpoint-up(800) {
     flex: 0 0 50%;
     max-width: 50%;
     padding-left: rem(25);
   }
+
   @include media-breakpoint-up(1200) {
     flex: 0 0 33.333%;
     max-width: 33.333%;
   }
+
   &:nth-child(3n+1):nth-last-child(2),
   &:nth-child(3n+2):last-child {
     @include media-breakpoint-up(800) {
@@ -79,6 +106,7 @@
       max-width: 50%;
     }
   }
+
   .card {
     flex: 1;
   }
@@ -90,15 +118,15 @@
   margin-right: 0;
 }
 
-/* 
+/*
  * Bad Overwrite
  * Should only be used as a temporary stopgap until a better solution is implemented
 */
 
-.page-section-ut_stat_group + .page-section-ut_news .outer-pad {
+.page-section-ut_stat_group+.page-section-ut_news .outer-pad {
   padding-top: 0 !important;
 }
 
-.page-section-ut_stat_group + .page-section-ut_news .outer-pad > .card-group-bg {
+.page-section-ut_stat_group+.page-section-ut_news .outer-pad>.card-group-bg {
   padding-top: 0 !important;
 }

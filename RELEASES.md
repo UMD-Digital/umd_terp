@@ -1,3 +1,7 @@
+8.1.73
+======
+- Adjust cards hover and border (https://trello.com/c/7X6aUN4a/155-template-gray-border-extend-around-the-image-for-cards)
+
 8.1.72
 ======
 - Location field to events (https://trello.com/c/J9RLFCO4/147-create-local-events-content-type-and-views)
