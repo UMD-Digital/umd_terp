@@ -1,3 +1,7 @@
+8.1.75
+======
+- Fix issue viewing revisiions
+
 8.1.74
 ======
 - Add column choice to cards (https://trello.com/c/aNTHRt7n/158-template-card-widget-display-options)

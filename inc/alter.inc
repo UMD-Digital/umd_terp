@@ -5,6 +5,8 @@
  * Hook alters for umd_terp theme.
  */
 
+use Drupal\node\Entity\Node;
+
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
