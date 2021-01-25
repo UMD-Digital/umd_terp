@@ -1,3 +1,7 @@
+8.1.76
+======
+- Override bootstrap button focus (https://trello.com/c/IzjRm35t/165-css-accessibility-issues)
+
 8.1.75
 ======
 - Fix issue viewing revisiions
