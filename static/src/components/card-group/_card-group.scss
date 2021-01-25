@@ -29,7 +29,7 @@
     padding: rem(70) rem(44);
 
     @include media-breakpoint-up(800) {
-      padding: rem(50) rem(30) rem(30);
+      padding: rem(30) rem(30) rem(30);
     }
 
     .card {
@@ -59,7 +59,7 @@
   display: block;
   margin-bottom: rem(-25);
 
-  @include media-breakpoint-up(800) {
+  @include media-breakpoint-up(480) {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -88,22 +88,30 @@
   margin-bottom: rem(25);
   width: 100%;
 
-  @include media-breakpoint-up(800) {
+  @include media-breakpoint-up(450) {
     flex: 0 0 50%;
     max-width: 50%;
     padding-left: rem(25);
   }
 
-  @include media-breakpoint-up(1200) {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-  }
-
-  &:nth-child(3n+1):nth-last-child(2),
-  &:nth-child(3n+2):last-child {
-    @include media-breakpoint-up(800) {
+  &--2 {
+    @include media-breakpoint-up(1200) {
       flex: 0 0 50%;
       max-width: 50%;
+    }
+  }
+
+  &--3 {
+    @include media-breakpoint-up(800) {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+  }
+
+  &--4 {
+    @include media-breakpoint-up(1200) {
+      flex: 0 0 25%;
+      max-width: 25%;
     }
   }
 

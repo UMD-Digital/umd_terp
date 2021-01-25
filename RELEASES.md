@@ -1,3 +1,7 @@
+8.1.74
+======
+- Add column choice to cards (https://trello.com/c/aNTHRt7n/158-template-card-widget-display-options)
+
 8.1.73
 ======
 - Adjust cards hover and border (https://trello.com/c/7X6aUN4a/155-template-gray-border-extend-around-the-image-for-cards)
