@@ -150,6 +150,7 @@ export class SiteHeaderDropdown {
             this.toggleId = `site-header-nav-dropdown-toggle-${index}`;
             this.parentLink = element.querySelector("a");
             this.list = element.querySelector("ul");
+            this.childLinks = this.list.querySelectorAll("a");
             this.events = {
                 open: [],
                 close: []
@@ -160,8 +161,7 @@ export class SiteHeaderDropdown {
     }
 
     protected init() {
-        this.cloneParentLink();
-        this.convertToggleToButton();
+        this.createToggle();
         this.handleToggleClick();
         this.handleEsc();
         this.handleTabbing();
@@ -169,26 +169,13 @@ export class SiteHeaderDropdown {
         this.toggleVisibility();
     }
 
-    protected cloneParentLink() {
-        const item = document.createElement("LI") as HTMLLIElement;
-        const link = document.createElement("A") as HTMLAnchorElement;
-        const linkText = document.createElement("SPAN") as HTMLSpanElement;
-        link.className = "site-header__nav-parent-link";
-        link.href = this.parentLink.href;
-        linkText.textContent = this.parentLink.textContent;
-        link.appendChild(linkText);
-        item.appendChild(link);
-        this.list.insertBefore(item, this.list.firstElementChild);
-        this.childLinks = this.list.querySelectorAll("a");
-    }
-
-    protected convertToggleToButton() {
+    protected createToggle() {
         const button = document.createElement("BUTTON") as HTMLButtonElement;
         button.className = "site-header__nav-dropdown-toggle";
-        button.textContent = this.parentLink.textContent;
         button.setAttribute("id", this.toggleId);
         button.setAttribute("aria-haspopup", "true");
-        this.element.replaceChild(button, this.parentLink);
+        button.setAttribute("aria-label", `View child menu items for ${this.parentLink.innerText}`);
+        this.element.insertBefore(button, this.list);
         this.toggle = button;
         this.list.setAttribute("aria-labelledby", this.toggleId);
     }
