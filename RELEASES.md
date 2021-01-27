@@ -1,3 +1,6 @@
+8.1.78
+======
+- Reduce card animation (https://trello.com/c/xtxYnS1W/144-reduce-animation-for-cards)
 
 8.1.77
 ======
