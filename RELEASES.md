@@ -1,3 +1,40 @@
+
+8.1.79
+======
+- Add field to person CT to allow authors to be prefiltered (https://trello.com/c/d45iIZQ6/166-local-news-view-search-and-filter-by-author-not-working)
+
+8.1.78
+======
+- Reduce card animation (https://trello.com/c/xtxYnS1W/144-reduce-animation-for-cards)
+
+8.1.77
+======
+- Reduce card animation (https://trello.com/c/xtxYnS1W/144-reduce-animation-for-cards)
+
+8.1.76
+======
+- Override bootstrap button focus (https://trello.com/c/IzjRm35t/165-css-accessibility-issues)
+
+8.1.75
+======
+- Fix issue viewing revisiions
+
+8.1.74
+======
+- Add column choice to cards (https://trello.com/c/aNTHRt7n/158-template-card-widget-display-options)
+
+8.1.73
+======
+- Adjust cards hover and border (https://trello.com/c/7X6aUN4a/155-template-gray-border-extend-around-the-image-for-cards)
+
+8.1.72
+======
+- Location field to events (https://trello.com/c/J9RLFCO4/147-create-local-events-content-type-and-views)
+
+8.1.71
+======
+- WYSIWYG links for home feature (https://trello.com/c/dY1NHPOX/159-d8-template-link-color-on-features)
+
 8.1.70
 ======
 - Removing `overflow: hidden` style that was preventing feature widget from being displayed as full-width (https://trello.com/c/7YvQxDnx)

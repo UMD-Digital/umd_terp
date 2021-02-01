@@ -24,10 +24,16 @@
 	{% if content.body|field_value %}
 		<div class="section">
 			<div class="editor-content">
+				{% if content.field_umdt_ct_event_location|render %}
+					<p class="event__location">
+						<strong>Location</strong>:
+						{{ content.field_umdt_ct_event_location|field_value }}
+					</p>
+				{% endif %}
 				{{ content.body|field_value }}
-        {% if content.field_umdt_ct_event_link.0 %}
-          <p>{% include directory ~ '/templates/helpers/link.html.twig' with {'link': content.field_umdt_ct_event_link.0, 'classes': 'btn btn-primary' } %}</p>
-        {% endif %}
+				{% if content.field_umdt_ct_event_link.0 %}
+					<p>{% include directory ~ '/templates/helpers/link.html.twig' with {'link': content.field_umdt_ct_event_link.0, 'classes': 'btn btn-primary' } %}</p>
+				{% endif %}
 			</div>
 		</div>
 	{% endif %}
