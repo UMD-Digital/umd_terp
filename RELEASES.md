@@ -1,3 +1,8 @@
+
+8.1.79
+======
+- Add field to person CT to allow authors to be prefiltered (https://trello.com/c/d45iIZQ6/166-local-news-view-search-and-filter-by-author-not-working)
+
 8.1.78
 ======
 - Reduce card animation (https://trello.com/c/xtxYnS1W/144-reduce-animation-for-cards)
