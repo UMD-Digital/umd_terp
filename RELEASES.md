@@ -1,4 +1,8 @@
 
+8.1.80
+======
+- Add dropdown navigation (https://trello.com/c/W5Q9UZEq/145-create-main-navigation-dropdown-functionality)
+
 8.1.79
 ======
 - Add field to person CT to allow authors to be prefiltered (https://trello.com/c/d45iIZQ6/166-local-news-view-search-and-filter-by-author-not-working)
