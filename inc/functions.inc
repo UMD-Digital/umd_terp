@@ -9,24 +9,6 @@ use Drupal\node\Entity\Node;
 use Drupal\Core\Cache\CacheableMetadata;
 
 /**
- * Allows regions to be added to nodes/other entities, not just pages.
- */
-function _umd_terp_add_regions_to_entity($allowed_regions, &$variables) {
-  $theme = \Drupal::theme()->getActiveTheme()->getName();
-  $available_regions = system_region_list($theme, 'REGIONS_ALL');
-  $regions = array_intersect(array_keys($available_regions), $allowed_regions);
-  foreach ($regions as $key => $region) {
-    $blocks = entity_load_multiple_by_properties('block', ['theme' => $theme, 'region' => $region]);
-    uasort($blocks, 'Drupal\block\Entity\Block::sort');
-    $build = [];
-    foreach ($blocks as $key => $block) {
-      $build[$key] = entity_view($block, 'block');
-    }
-    $variables[$region] = $build;
-  }
-}
-
-/**
  * Make all theme settings available to insert in pages/nodes/etc.
  *
  * Added to pages by default in hook_preproccess_node above.
@@ -55,7 +37,7 @@ function _umd_terp_extend_theme_variables(&$variables) {
   $variables += $theme_settings->getOriginal();
   // Add full assets_path.
   if (!empty($variables['umd_terp_assets_path'])) {
-    $variables['assets_path'] = $variables['theme_path'] . $variables['umd_terp_assets_path'];  
+    $variables['assets_path'] = $variables['theme_path'] . $variables['umd_terp_assets_path'];
   }
 }
 

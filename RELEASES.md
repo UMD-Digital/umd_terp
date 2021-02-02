@@ -1,3 +1,6 @@
+8.1.81
+======
+- Remove unused _umd_terp_add_regions_to_entity function, as it is unused, and contained  deprecated function entity_load_multiple_by_properties() (https://trello.com/c/6vf7Cw17/168-conversation-move-templates-to-drupal-9)
 
 8.1.80
 ======
