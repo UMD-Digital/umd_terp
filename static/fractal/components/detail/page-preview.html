@@ -305,7 +305,7 @@
                 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"back-to-top"</span>&gt;</span>Back to Top<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../js/index.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"print"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../css/print.css"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://umd-header.umd.edu/build/bundle.js?search=1&amp;search_domain=&amp;events=1&amp;news=1&amp;schools=1&amp;admissions=1&amp;support=1&amp;support_url=&amp;wrapper=1100&amp;sticky=0"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
@@ -342,6 +342,7 @@
       {{ yield }}
     <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
     {% include "<a href="site-footer.html">@site-footer</a>" with footer %}
+    {% include "<a href="back-to-top.html">@back-to-top</a>" %}
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"{{ '/js/index.js'|path }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"print"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ '/css/print.css'|path }}"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://umd-header.umd.edu/build/bundle.js?search=1&amp;search_domain=&amp;events=1&amp;news=1&amp;schools=1&amp;admissions=1&amp;support=1&amp;support_url=&amp;wrapper=1100&amp;sticky=0"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
@@ -411,12 +412,14 @@
         </li>
         
         <li class="Meta-item">
-            <strong class="Meta-key">References <em class="Meta-count">(2)</em>:</strong>
+            <strong class="Meta-key">References <em class="Meta-count">(3)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="site-header.html">@<span>site-header</span></a>, 
             
-                <a href="site-footer.html">@<span>site-footer</span></a>
+                <a href="site-footer.html">@<span>site-footer</span></a>, 
+            
+                <a href="back-to-top.html">@<span>back-to-top</span></a>
             
             </span>
         </li class="Meta-item">
@@ -537,6 +540,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="alerts.html" data-pjax>
                 <span>Alerts</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="back-to-top.html" data-pjax>
+                <span>Back To Top</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2193,8 +2220,8 @@
         </div>
         <div class="Tree-aside">
             Built on:
-            <time datetime="2021-01-07T18:00:41.501Z">
-                1/7/2021
+            <time datetime="2021-02-03T16:55:21.241Z">
+                2/3/2021
             </time>
         </div>
     </div>
