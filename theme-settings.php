@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File;
 
 /**
  * Implements hook_form_system_theme_settings_alter().
@@ -35,9 +36,9 @@ function umd_terp_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#default_value' => theme_get_setting('umd_terp_footer_logo_path'),
   ];
   $form['umd_terp_footer_settings']['umd_terp_footer_logo_upload'] = [
-    '#type' => 'file',
+    '#type' => 'managed_file',
     '#title' => t('Upload footer logo image'),
-    '#maxlength' => 40,
+    '#upload_location' => 'public://',
     '#description' => t('Please upload the footer-specific logo. This should be a "dark" version of the logo that features black typography.'),
   ];
   $form['umd_terp_footer_settings']['umd_terp_address'] = [
@@ -188,12 +189,19 @@ function umd_terp_form_system_theme_settings_validate_test($form, FormStateInter
 }
 
 /**
- * Custom submit handler.
+ * Custom submit handler, to process custom footer logo.
  */
 function umd_terp_form_system_theme_settings_submit(&$form, FormStateInterface $form_state) {
   $values = $form_state->getValues();
   if (!empty($values['umd_terp_footer_logo_upload'])) {
-    $filename = file_unmanaged_copy($values['umd_terp_footer_logo_upload']->getFileUri());
+    $file = File::load($values['umd_terp_footer_logo_upload'][0]);
+    if (!empty($file)) {
+      $file->setPermanent();
+      $file->save();
+      $file_usage = \Drupal::service('file.usage');
+      $file_usage->add($file, 'umd_terp', 'user', \Drupal::currentUser()->id());
+      $filename = $file->getFileUri();
+    }
     $values['umd_terp_footer_logo_path'] = $filename;
     $form_state->setValue(['umd_terp_footer_logo_path'], $filename);
     $form_state->unsetValue('umd_terp_footer_logo_upload');

@@ -16,10 +16,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    {% include "@site-header" with header %}
-    <main id="main-content">
-      {{ yield }}
-    </main>
+    <div class="offcanvas-wrap">
+      {% include "@site-header" with header %}
+      <main id="main-content">
+        {{ yield }}
+      </main>
+    </div>
     {% include "@site-footer" with footer %}
     {% include "@back-to-top" %}
     <script src="{{ '/js/index.js'|path }}"></script>

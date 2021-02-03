@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Displays global header.
+ * Displays the global header.
  *
  */
 #}
@@ -13,32 +13,30 @@
   ]
 %}
 <header class="{{ header_classes|join(' ') }}">
-	<div class="max-bound">
-		<nav class="navbar navbar-expand-1024" aria-label="Main">
-			<a class="navbar-brand" href="{{ path('<front>') }}">
-				{% if logo_path %}
-					<img src="{{ logo_path }}" alt="{{ site_name }} logo">
-				{% else %}
-					<span role="img" aria-label="{{ site_name }} logo" class="navbar-brand-text">
-						<span aria-hidden="true">{{ site_name }}</span>
-					</span>
-				{% endif %}
-			</a>
-			<a href="#main-content" class="visually-hidden focusable">
-				{{ 'Skip to main content'|t }}
-			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-offcanvas" aria-controls="navbar-offcanvas" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-hamburger-icon" role="presentation">
-					<span role="presentation"></span>
-					<span role="presentation"></span>
-					<span role="presentation"></span>
-					<span role="presentation"></span>
+	<div class="site-header__bar max-bound">
+		<a class="site-header__logo" href="{{ path('<front>') }}">
+			{% if logo_path %}
+				<img src="{{ logo_path }}" alt="{{ site_name }} logo">
+			{% else %}
+				<span role="img" aria-label="{{ site_name }} logo" class="navbar-brand-text">
+					<span aria-hidden="true">{{ site_name }}</span>
 				</span>
-				<span class="sr-only"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbar-offcanvas">
-				{{ drupal_menu('main', 1, 1, TRUE) }}
-			</div>
+			{% endif %}
+		</a>
+		<a href="#main-content" class="visually-hidden focusable">
+			{{ 'Skip to main content'|t }}
+		</a>
+		<a href="#site-header-nav" class="site-header__nav-toggle" id="site-header-nav-toggle" tabindex="0" role="button" aria-label="Main Menu" aria-controls="site-header-nav">
+			<span aria-hidden="true" class="site-header__nav-icon">
+				<span role="presentation"></span>
+				<span role="presentation"></span>
+				<span role="presentation"></span>
+				<span role="presentation"></span>
+			</span>
+			<span class="sr-only">Main Menu</span>
+		</a>
+		<nav class="site-header__nav" id="site-header-nav" aria-labelledby="site-header-nav-toggle">
+			{{ drupal_menu('main', 1, 2, TRUE) }}
 		</nav>
 	</div>
 </header>
