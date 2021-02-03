@@ -31,7 +31,6 @@
 
   a {
     color: $white;
-    display: block;
     transition: .25s color ease-in-out;
 
     &:hover,
@@ -53,8 +52,10 @@
 .site-header__logo {
   align-items: center;
   display: flex;
+  flex: 0 0 auto;
   height: rem(40);
   justify-content: flex-start;
+  font-weight: bold;
 
   @include media-breakpoint-up(1024) {
     height: rem(58);
@@ -169,6 +170,10 @@
     opacity: 1;
     transform: none;
     visibility: visible;
+  }
+
+  a {
+    display: block;
   }
 
   html:not(.js) & {
