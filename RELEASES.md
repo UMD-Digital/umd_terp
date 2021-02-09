@@ -1,3 +1,7 @@
+8.1.83
+======
+- Adjust non logo text site title size (https://trello.com/c/G38Q2Zht/173-bold-site-title-on-starter-site)
+
 8.1.82
 ======
 - Adjust non logo text site title (https://trello.com/c/G38Q2Zht/173-bold-site-title-on-starter-site)
