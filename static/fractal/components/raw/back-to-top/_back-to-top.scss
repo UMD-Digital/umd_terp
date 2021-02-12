@@ -1,0 +1,47 @@
+.back-to-top {
+    background-color: $yellow;
+    border: $btn-border-width solid $yellow;
+    color: $black;
+    display: block;
+    font-size: rem(14);
+    font-weight: 700;
+    height: rem(64);
+    width: rem(64);
+    line-height: 1.1;
+    padding: rem(24) rem(10) rem(10);
+    position: fixed;
+    right: 0;
+    bottom: rem(20);
+    text-align: center;
+    transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out, 0.3s opacity ease-in-out;
+    z-index: 100;
+    @include media-breakpoint-up(800) {
+        bottom: rem(40);
+    }
+    &:hover,
+    &:focus {
+        background-color: $white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, .33);
+        color: $black;
+    }
+    &:before {
+        content: "";
+        display: block;
+        border-top: 3px solid $black;
+        border-left: 3px solid $black;
+        height: rem(10);
+        width: rem(10);
+        position: absolute;
+        top: rem(12);
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+    }
+    .js & {
+        opacity: 0;
+        pointer-events: none;
+        &.visible {
+            opacity: 1;
+            pointer-events: initial;
+        }
+    }
+}

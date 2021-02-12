@@ -1,15 +1,18 @@
 .event.card {
   border: 2px solid $gray-300;
   padding: rem(20) rem(20) rem(32);
+
   &[role="link"] {
     transition: .25s background-color ease-in-out,
       .25s border-color ease-in-out,
       .25s box-shadow ease-in-out,
       .25s transform ease-in-out;
+
     &:hover {
       border-color: $red;
     }
   }
+
   &.event-dark {
     @extend %event-dark;
   }
@@ -44,6 +47,7 @@
   line-height: (16 / 13);
   margin-bottom: rem(10);
   text-transform: uppercase;
+
   &:first-child {
     margin-top: rem(36);
   }
@@ -65,7 +69,8 @@
   color: $gray-700;
   font-size: rem(13);
   margin: rem(12) 0 rem(16);
-  > span {
+
+  >span {
     &:not(:last-child) {
       &:after {
         content: "•";
@@ -81,20 +86,36 @@
 .event-cta.card-cta {
   font-size: rem(15);
   letter-spacing: rem(1);
+
   &.fancy-link {
     font-weight: 700;
     margin-top: rem(30);
     text-transform: uppercase;
   }
+
   &.btn {
     background-color: $red;
     border-color: $red;
     color: $white;
     font-weight: 600;
     padding: rem(10) rem(28) rem(12);
+
     &:hover {
       background-color: $dark-red;
       border-color: $dark-red;
     }
+  }
+}
+
+.editor-content p.event__location {
+  margin-bottom: .8rem;
+
+  &:after {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background-color: $gray-500;
+    display: block;
+    margin-top: .8rem;
   }
 }

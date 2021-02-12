@@ -3,39 +3,27 @@
 .card {
   border: none;
   position: relative;
-  box-shadow: 0 0 0 1px $gray-500;
   transition: .25s .25s box-shadow ease-in-out;
+
   &[role="link"] {
     transition: .25s border ease-in-out,
       .25s box-shadow ease-in-out,
       .25s transform ease-in-out;
+
     &:hover,
     &:focus {
       box-shadow: 4px 4px 11px 0 rgba(0, 0, 0, 0.19);
       cursor: pointer;
       z-index: 2;
 
-        box-shadow: 0 -3px 0 $red,
-           -3px 0 0 $red,
-           3px 0 0 $red;
-
-        box-shadow:  0 0 0 3px $red;
       @include media-breakpoint-up(800) {
-        transform: scale(1.04);
+        transform: scale(1.02);
       }
-      .card-body {
-        // &:not(:first-child) {
-        //   box-shadow: inset 0 -3px 0 $red,
-        //     inset -3px 0 0 $red,
-        //     inset 3px 0 0 $red;
-        // }
-        // &:first-child {
-        //   box-shadow: inset 0 0 0 3px $red;
-        // }
-      }
+
       .card-title {
         color: $red;
       }
+
       .card-cta {
         &:after {
           opacity: 1;
@@ -44,9 +32,11 @@
       }
     }
   }
+
   &.card-dark {
     @extend %card-dark;
   }
+
   &.card-hz {
     @extend %card-hz;
   }
@@ -55,11 +45,13 @@
 .card-img {
   position: relative;
   z-index: 1;
+
   &:before {
     content: "";
     display: block;
     padding-bottom: $card__image-ar;
   }
+
   img {
     display: block;
     height: 100%;
@@ -100,6 +92,7 @@
   padding-bottom: rem(12);
   position: relative;
   transition: .25s color ease-in-out;
+
   &:after {
     content: "";
     background-color: $gray-300;
@@ -110,6 +103,7 @@
     bottom: 0;
     left: 0;
   }
+
   .section-umd_terp_related_stories &,
   .page-section-umd_terp_related_stories & {
     color: $red;
@@ -120,6 +114,7 @@
   color: $gray-700;
   font-size: rem(17);
   transition: .25s color ease-in-out;
+
   &:not(:last-child) {
     margin-bottom: rem(20);
   }
@@ -129,6 +124,7 @@
   &.fancy-link {
     font-weight: 400;
     font-size: rem(17);
+
     &:after {
       bottom: rem(4);
     }

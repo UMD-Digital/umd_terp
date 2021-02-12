@@ -15,6 +15,7 @@ import initCards from "../components/card/card";
 import initCarousels from "../components/carousel/carousel";
 import initStatGroups from "../components/stat-group/stat-group";
 import initSubnav from "../components/subnav/subnav";
+import initBackToTop from "../components/back-to-top/back-to-top";
 import Tablesaw from "../components/table/table";
 import initSiteHeader from "../components/site-header/site-header";
 
@@ -29,4 +30,5 @@ initCards();
 initCarousels();
 initStatGroups();
 initSubnav();
+initBackToTop();
 Tablesaw.init();
