@@ -1,3 +1,13 @@
+nav.pager {
+  margin-top: rem(32);
+  @include media-breakpoint-up(800) {
+    margin-top: rem(42);
+  }
+  @include media-breakpoint-up(1200) {
+    margin-top: rem(56);
+  }
+}
+
 .pager__items {
   align-items: center;
   display: flex;

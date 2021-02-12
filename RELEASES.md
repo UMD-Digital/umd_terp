@@ -1,3 +1,7 @@
+8.1.85
+======
+- Adjust pagination styles (https://trello.com/c/H0heP317/174-d8-template-question-article-list-margin)
+
 8.1.83, 8.1.84
 ======
 - Adjust non logo text site title size (https://trello.com/c/G38Q2Zht/173-bold-site-title-on-starter-site)
