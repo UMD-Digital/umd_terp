@@ -59,7 +59,12 @@
 
   @include media-breakpoint-up(1024) {
     height: rem(58);
-    font-size: 1.75rem;
+  }
+  @include media-breakpoint-up(1200) {
+    font-size: 1.5rem;
+  }
+  @include media-breakpoint-up(1440) {
+    font-size: 1.6rem;
   }
 
   img {
