@@ -1,3 +1,7 @@
+8.1.87
+======
+- Rebuild css that got overwritten with 8.1.86 (https://trello.com/c/H0heP317/174-d8-template-question-article-list-margin)
+
 8.1.86
 ======
 - Add back to top button (https://trello.com/c/45jEUPAV/137-d8-templates-scroll-to-top-button)
