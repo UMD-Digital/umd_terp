@@ -1,3 +1,7 @@
+8.1.88
+======
+- Z index for multiple elements (https://trello.com/c/0thxc2VZ/178-mobile-light-header-blocking-search)
+
 8.1.87
 ======
 - Rebuild css that got overwritten with 8.1.86 (https://trello.com/c/H0heP317/174-d8-template-question-article-list-margin)
