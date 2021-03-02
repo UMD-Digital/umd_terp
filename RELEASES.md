@@ -1,3 +1,8 @@
+
+8.1.89
+======
+- Remove duplicate location (https://trello.com/c/3LodAkAk/181-local-events-location-repeating)
+
 8.1.88
 ======
 - Z index for multiple elements (https://trello.com/c/0thxc2VZ/178-mobile-light-header-blocking-search)
