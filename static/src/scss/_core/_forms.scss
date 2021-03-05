@@ -74,3 +74,38 @@
   background-position: right 10px center;
   background-repeat: no-repeat;
 }
+
+.login {
+  &__cas {
+    h2 {
+      color: $red;
+    }
+
+    border: 2px solid $gray-300;
+    padding: 30px;
+  }
+
+  &__drupal {
+    padding-top: 30px;
+
+    @include media-breakpoint-up(800) {
+      padding-left: 30px;
+      padding-top: 0px;
+    }
+
+    .form-item label {
+      color: #000;
+      font-size: .8rem;
+      line-height: 1;
+    }
+
+    .form-actions {
+      margin-bottom: 0px;
+
+      .btn-secondary {
+        border: 1px solid $gray-300
+      }
+    }
+
+  }
+}

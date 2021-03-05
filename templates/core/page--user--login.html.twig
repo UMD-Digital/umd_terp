@@ -1,0 +1,48 @@
+
+{% include directory ~ '/templates/_includes/global/header.html.twig' %}
+
+<main id="main-content">
+	{% block hero %}
+		{% if hero_image %}
+				<div class="hero">
+					<div class="hero-media">
+						<img src="{{ hero_image }}" alt="{{ hero_alt }}">
+					</div>
+				</div>
+			</div>
+		{% endif %}
+	{% endblock %}
+	{% block main %}
+		<div class="container page-content">
+			{{ page.help }}
+			{{ page.highlighted }}
+			<div class="row justify-content-center login">
+				<div class="col-800-5 login__cas">
+					<h2 class="h3">UMD Login</h2>
+					<p>University of Maryland staff and faculty accounts can access site via the Division of IT Central Authentication Service (CAS).</p>
+					<a class="button btn btn-primary" href="/caslogin">Log In</a>
+				</div>
+				<div class="col-800-5 login__drupal">
+					<h3 class="h5">Affiliate Login</h3>
+					<p>Access for UMD students and external vendors with provisioned site accounts.</p>
+					<form class="user-login-form" data-drupal-selector="user-login-form" action="/user/login" method="post" id="user-login-form" accept-charset="UTF-8">
+						<div class="js-form-item form-item js-form-type-textfield form-item-name js-form-item-name">
+							<label for="edit-name" class="js-form-required form-required">Username</label>
+							<input autocorrect="none" autocapitalize="none" spellcheck="false" autofocus="autofocus" data-drupal-selector="edit-name" aria-describedby="edit-name--description" type="text" id="edit-name" name="name" value="" size="60" maxlength="60" class="form-text required" required="required" aria-required="true"/>
+						</div>
+						<div class="js-form-item form-item js-form-type-password form-item-pass js-form-item-pass">
+							<label for="edit-pass" class="js-form-required form-required">Password</label>
+							<input data-drupal-selector="edit-pass" aria-describedby="edit-pass--description" type="password" id="edit-pass" name="pass" size="60" maxlength="128" class="form-text required" required="required" aria-required="true"/>
+						</div>
+						<input data-drupal-selector="edit-user-login-form" type="hidden" name="form_id" value="user_login_form">
+						<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">
+							<input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Log in as Affiliate" class="button js-form-submit form-submit btn btn-secondary"/>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	{% endblock %}
+</main>
+
+{% include directory ~ '/templates/_includes/global/footer.html.twig' %}

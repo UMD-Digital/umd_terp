@@ -1,4 +1,8 @@
 
+8.1.90
+======
+- Update login screen (https://trello.com/c/kLflznP1/180-update-umd-login-screen)
+
 8.1.89
 ======
 - Remove duplicate location (https://trello.com/c/3LodAkAk/181-local-events-location-repeating)
