@@ -2,6 +2,7 @@
 8.1.91
 ======
 - Update login screen for accessibility (https://trello.com/c/l8VldFpD/187-login-page-accessibility-updates)
+- Mobile horizonatal scroll (https://trello.com/c/rrDnqvaP/188-mobile-horizontal-scroll)
 
 8.1.90
 ======
