@@ -1,4 +1,8 @@
 
+8.1.91
+======
+- Update login screen for accessibility (https://trello.com/c/l8VldFpD/187-login-page-accessibility-updates)
+
 8.1.90
 ======
 - Update login screen (https://trello.com/c/kLflznP1/180-update-umd-login-screen)
