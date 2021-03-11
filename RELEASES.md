@@ -1,3 +1,6 @@
+8.1.92
+======
+- Add hero video capability to homepage (https://trello.com/c/PMnfv7T7/134-d8-templates-video-loop-hero)
 
 8.1.91
 ======

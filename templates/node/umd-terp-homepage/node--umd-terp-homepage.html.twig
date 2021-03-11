@@ -9,6 +9,7 @@
   set hero_classes = [
     'home-hero',
     node.field_umdt_ct_hero_dark.value ? 'home-hero-dark',
+		node.field_umdt_ct_hero_video.value ? 'home-hero-video',
     node.field_umdt_ct_hero_style.value ? node.field_umdt_ct_hero_style.value|clean_class,
   ]
 %}
@@ -16,9 +17,16 @@
 <div {{attributes.addClass(hero_classes)}}>
 	{{ title_suffix }}
 	<div class="max-bound">
-		{% if content.field_umdt_ct_hero_image|field_value %}
+		{% if content.field_umdt_ct_hero_image|field_value or content.field_umdt_ct_hero_video|field_value%}
 			<div class="home-hero-media">
-				<img src="{{ file_url(content.field_umdt_ct_hero_image[0]['#media'].field_media_image.entity.uri.value | image_style('optimized')) }}" alt="{{ content.field_umdt_ct_hero_image[0]['#media'].field_media_image.alt }}"/>
+				{% if content.field_umdt_ct_hero_video|field_value %}
+					<video class="lazyload" aria-hidden="true" data-src="{{ file_url(content.field_umdt_ct_hero_video[0]['#media'].field_media_video_file.entity.uri.value) }}" muted loop></video>
+					<noscript>
+						<video aria-hidden="true" src="{{ file_url(content.field_umdt_ct_hero_video[0]['#media'].field_media_video_file.entity.uri.value) }}" autoplay muted loop></video>
+					</noscript>
+				{% elseif content.field_umdt_ct_hero_image|field_value %}
+					<img src="{{ file_url(content.field_umdt_ct_hero_image[0]['#media'].field_media_image.entity.uri.value | image_style('optimized')) }}" alt="{{ content.field_umdt_ct_hero_image[0]['#media'].field_media_image.alt }}"/>
+				{% endif %}
 			</div>
 		{% endif %}
 		<div class="home-hero-content">
@@ -41,4 +49,4 @@
 		</div>
 	</div>
 </div>
-{{ content|without('field_umdt_ct_hero_dark', 'field_umdt_ct_hero_style', 'field_umdt_ct_hero_image', 'field_umdt_ct_hero_title', 'field_umdt_ct_hero_subtitle', 'field_umdt_ct_hero_text', 'field_umdt_ct_hero_cta') }}
+{{ content|without('field_umdt_ct_hero_video', 'field_umdt_ct_hero_dark', 'field_umdt_ct_hero_style', 'field_umdt_ct_hero_image', 'field_umdt_ct_hero_title', 'field_umdt_ct_hero_subtitle', 'field_umdt_ct_hero_text', 'field_umdt_ct_hero_cta') }}

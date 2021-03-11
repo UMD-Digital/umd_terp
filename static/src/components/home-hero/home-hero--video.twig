@@ -1,0 +1,21 @@
+<div class="home-hero home-hero-video home-hero-dark home-hero-bg">
+  <div class="max-bound">
+    {% if video %}
+      <div class="home-hero-media">
+        {% if video.source == "local" %}
+            <video class="lazyload" aria-hidden="true" data-src="{{video.src|path}}" muted loop></video>
+            <noscript>
+              <video aria-hidden="true" src="{{video.src|path}}" autoplay muted loop></video>
+            </noscript>
+        {% else %}
+            <div class="home-hero-media-embed" data-source="{{video.source}}" data-vid="{{video.video_id}}"></div>
+        {% endif %}
+      </div>
+    {% endif %}
+    <div class="home-hero-content">
+      <div class="outer-pad">
+        <div class="editor-content">{{content|raw}}</div>
+      </div>
+    </div>
+  </div>
+</div>

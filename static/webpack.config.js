@@ -168,6 +168,10 @@ const config = {
       {
         from: "src/img",
         to: "img"
+      },
+      {
+        from: "src/video",
+        to: "video"
       }
     ]),
     new VueLoaderPlugin(),
