@@ -1,3 +1,7 @@
+8.1.95
+======
+- Adjust navbar to accomadate two lines (https://trello.com/c/T7efOlKq/192-title-text-not-wrapping-to-2-lines-on-mobile)
+
 8.1.94
 ======
 - Add poster to hero video (https://trello.com/c/PMnfv7T7/134-d8-templates-video-loop-hero)
