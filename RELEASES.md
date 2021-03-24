@@ -1,3 +1,11 @@
+8.1.94
+======
+- Add poster to hero video (https://trello.com/c/PMnfv7T7/134-d8-templates-video-loop-hero)
+
+8.1.93
+======
+- Adjust card titles to use H2's
+
 8.1.92
 ======
 - Add hero video capability to homepage (https://trello.com/c/PMnfv7T7/134-d8-templates-video-loop-hero)
