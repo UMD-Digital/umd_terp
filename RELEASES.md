@@ -1,3 +1,7 @@
+8.1.97
+======
+- Adjust navbar text line height (https://trello.com/c/T7efOlKq/192-title-text-not-wrapping-to-2-lines-on-mobile)
+
 8.1.96
 ======
 - Adjust DOM order of play/pause buttons (https://trello.com/c/PMnfv7T7/134-d8-templates-video-loop-hero)
