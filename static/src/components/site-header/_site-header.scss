@@ -56,9 +56,7 @@
 .site-header__logo {
   align-items: center;
   display: flex;
-  flex: 0 0 auto;
   height: rem(40);
-  justify-content: flex-start;
   font-weight: bold;
 
   @include media-breakpoint-up(1024) {
@@ -81,10 +79,12 @@
 
 .site-header__logo-text {
   font-size: rem(20);
+  line-height: rem(20);
   font-weight: 700;
 
   @include media-breakpoint-up(600) {
     font-size: rem(24);
+    line-height: rem(24);
   }
 }
 

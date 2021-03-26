@@ -14,7 +14,7 @@
     <img src="{{ photo }}" alt="Portrait of {{ node.title.value }}">
   </div>
   <div class="card-body">
-    <h3 class="card-title">{{ node.title.value }}</h3>
+    <h2 class="card-title">{{ node.title.value }}</h2>
     {% if content.field_umdt_ct_person_title|field_value %}
       <div class="profile-card-title">{{ content.field_umdt_ct_person_title|field_value }}</div>
     {% endif %}
