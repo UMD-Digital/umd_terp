@@ -1,3 +1,7 @@
+8.1.98
+======
+- Updating libraries.yml to set index.css's media to screen to prevent screen-specific styles from carrying over to print
+
 8.1.97
 ======
 - Adjust navbar text line height (https://trello.com/c/T7efOlKq/192-title-text-not-wrapping-to-2-lines-on-mobile)
