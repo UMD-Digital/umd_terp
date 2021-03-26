@@ -189,7 +189,7 @@ export class HomeHero {
 
         buttonsWrap.appendChild(pauseButton);
         buttonsWrap.appendChild(playButton);
-        this.element.insertBefore(buttonsWrap, this.element.firstElementChild);
+        this.element.appendChild(buttonsWrap);
 
         this.playButton = playButton;
         this.pauseButton = pauseButton;
