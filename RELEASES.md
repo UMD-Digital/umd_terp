@@ -1,3 +1,7 @@
+8.1.99
+======
+- Add inline svg option to footer logo (https://trello.com/c/G3iamll4/189-footer-logo-image-need-svg-option)
+
 8.1.98
 ======
 - Updating libraries.yml to set index.css's media to screen to prevent screen-specific styles from carrying over to print
