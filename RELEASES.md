@@ -1,3 +1,7 @@
+8.1.100
+======
+- Adjust mobile subnav to only show children nodes, and be hidden if none present (https://trello.com/c/HNTI4Kzc/193-hide-sidebar-if-parent-page-has-no-child-pages-mobile)
+
 8.1.99
 ======
 - Add inline svg option to footer logo (https://trello.com/c/G3iamll4/189-footer-logo-image-need-svg-option)
