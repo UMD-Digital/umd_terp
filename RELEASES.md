@@ -1,3 +1,7 @@
+8.1.101
+======
+- Title line length (https://trello.com/c/T7efOlKq/192-title-text-not-wrapping-to-2-lines-on-mobile)
+
 8.1.100
 ======
 - Adjust mobile subnav to only show children nodes, and be hidden if none present (https://trello.com/c/HNTI4Kzc/193-hide-sidebar-if-parent-page-has-no-child-pages-mobile)
