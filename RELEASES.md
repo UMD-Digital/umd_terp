@@ -1,3 +1,7 @@
+8.1.102
+======
+- Recompile static assets
+
 8.1.101
 ======
 - Title line length (https://trello.com/c/T7efOlKq/192-title-text-not-wrapping-to-2-lines-on-mobile)
