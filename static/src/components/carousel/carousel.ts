@@ -47,6 +47,8 @@ export class Carousel {
     
     for (let i = 0; i < this.items.length; i++) {
       this.items[i].addEventListener("click", () => {
+        this.carousel.select(i);
+        this.lightboxCarousel.select(i);
         this.lightbox.show();
       });
     }

@@ -82,7 +82,7 @@
       "items": [
         {
           "image": {
-            "src": "http://via.placeholder.com/1000x600",
+            "src": "http://via.placeholder.com/1000x667?text=3:2",
             "alt": "placeholder alt text",
             "caption": "Photos by John Smith & Jane Adams"
           },
@@ -91,7 +91,7 @@
         },
         {
           "image": {
-            "src": "http://via.placeholder.com/1000x600",
+            "src": "http://via.placeholder.com/333x1000?text=1:3",
             "alt": "placeholder alt text",
             "caption": "Photos by John Smith & Jane Adams"
           },
@@ -100,7 +100,7 @@
         },
         {
           "image": {
-            "src": "http://via.placeholder.com/1000x600",
+            "src": "http://via.placeholder.com/1000x563?text=16:9",
             "alt": "placeholder alt text",
             "caption": "Photos by John Smith & Jane Adams"
           },
@@ -204,7 +204,7 @@
       "items": [
         {
           "image": {
-            "src": "/img/KS_Carousel_1.jpg",
+            "src": "/img/KS_Carousel_1x3.jpg",
             "alt": "placeholder alt text",
             "caption": "Photos by John Smith & Jane Adams"
           },
@@ -213,7 +213,7 @@
         },
         {
           "image": {
-            "src": "/img/KS_Carousel_2.jpg",
+            "src": "/img/KS_Carousel_3x1.jpg",
             "alt": "placeholder alt text",
             "caption": "Photos by John Smith & Jane Adams"
           },
@@ -222,7 +222,7 @@
         },
         {
           "image": {
-            "src": "/img/KS_Carousel_3.jpg",
+            "src": "/img/KS_Carousel_2x3.jpg",
             "alt": "placeholder alt text",
             "caption": "Photos by John Smith & Jane Adams"
           },
@@ -231,7 +231,7 @@
         },
         {
           "image": {
-            "src": "/img/KS_Carousel_4.jpg",
+            "src": "/img/KS_Carousel_3x2.jpg",
             "alt": "placeholder alt text",
             "caption": "Photos by John Smith & Jane Adams"
           },

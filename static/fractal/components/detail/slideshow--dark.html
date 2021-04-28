@@ -10,10 +10,17 @@
     </script>
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
+<style>
+    :root {
+        
+        
+        
+    }
+</style>
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.4.0" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.7.0" type="text/css">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.4.0" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.7.0" type="text/css">
 
 
 <title>Slideshow: Dark | Component Library</title>
@@ -64,7 +71,7 @@
 
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
-        <a class="Pen-previewLink" href="../preview/slideshow--dark.html" title="Component preview">
+        <a class="Pen-previewLink" href="../preview/slideshow--dark.html" title="Preview">
             Slideshow: Dark
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -73,6 +80,9 @@
 
         </a>
     </h1>
+
+    <span class="Pen-preview-size" data-role="preview-size"></span>
+
     
 
 <div class="Status Status--tag">
@@ -115,19 +125,25 @@
         
         
         <li class="Browser-tab Browser-tab--html is-active " data-role="tab">
-            <a href="#browser-fadace571d3ad61264937ddfc43940a5-panel-html">HTML</a>
+            <a href="#browser-fadace571d3ad61264937ddfc43940a5-panel-html">
+                HTML
+            </a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--view" data-role="tab">
-            <a href="#browser-fadace571d3ad61264937ddfc43940a5-panel-view">View</a>
+            <a href="#browser-fadace571d3ad61264937ddfc43940a5-panel-view">
+                View
+            </a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-fadace571d3ad61264937ddfc43940a5-panel-context">Context</a>
+            <a href="#browser-fadace571d3ad61264937ddfc43940a5-panel-context">
+                Context
+            </a>
         </li>
         
         
@@ -143,13 +159,17 @@
         
         
         <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-fadace571d3ad61264937ddfc43940a5-panel-info">Info</a>
+            <a href="#browser-fadace571d3ad61264937ddfc43940a5-panel-info">
+                Info
+            </a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--notes" data-role="tab">
-            <a href="#browser-fadace571d3ad61264937ddfc43940a5-panel-notes">Notes</a>
+            <a href="#browser-fadace571d3ad61264937ddfc43940a5-panel-notes">
+                Notes
+            </a>
         </li>
         
         
@@ -162,53 +182,53 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-fadace571d3ad61264937ddfc43940a5-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-bg slideshow-bg-dark"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-nav"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-nav-control slideshow-control-prev"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Previous slide"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-chevron-right"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Previous slide<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-bg slideshow-bg-dark&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-nav&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-nav-control slideshow-control-prev&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Previous slide&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;icon icon-chevron-right&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;sr-only&quot;</span>&gt;</span>Previous slide<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-nav-current-index"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> of 3<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-nav-control slideshow-control-next"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Next slide"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-chevron-right"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Next slide<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-nav-current-index&quot;</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> of 3<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-nav-control slideshow-control-next&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Next slide&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;icon icon-chevron-right&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;sr-only&quot;</span>&gt;</span>Next slide<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-item"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-item&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">figure</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-image"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://via.placeholder.com/1000x600"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"placeholder alt text"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-image&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://via.placeholder.com/1000x600&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;placeholder alt text&quot;</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-image-caption"</span>&gt;</span>Photos by John Smith &amp; Jane Adams<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-image-caption&quot;</span>&gt;</span>Photos by John Smith &amp; Jane Adams<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-caption"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-caption-title"</span>&gt;</span>Slide Title Lorem 1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-caption-content"</span>&gt;</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-caption&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-caption-title&quot;</span>&gt;</span>Slide Title Lorem 1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-caption-content&quot;</span>&gt;</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-item&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">figure</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-image"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://via.placeholder.com/1000x600"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"placeholder alt text"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-image&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://via.placeholder.com/1000x600&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;placeholder alt text&quot;</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-image-caption"</span>&gt;</span>Photos by John Smith &amp; Jane Adams<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-image-caption&quot;</span>&gt;</span>Photos by John Smith &amp; Jane Adams<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-caption"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-caption-title"</span>&gt;</span>Slide Title Lorem Ipsum 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-caption-content"</span>&gt;</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-caption&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-caption-title&quot;</span>&gt;</span>Slide Title Lorem Ipsum 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-caption-content&quot;</span>&gt;</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-item&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">figure</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-image"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://via.placeholder.com/1000x600"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"placeholder alt text"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-image&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://via.placeholder.com/1000x600&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;placeholder alt text&quot;</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-image-caption"</span>&gt;</span>Photos by John Smith &amp; Jane Adams<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-image-caption&quot;</span>&gt;</span>Photos by John Smith &amp; Jane Adams<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-caption"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-caption-title"</span>&gt;</span>Slide Title Dolor 3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"slideshow-caption-content"</span>&gt;</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-caption&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-caption-title&quot;</span>&gt;</span>Slide Title Dolor 3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-caption-content&quot;</span>&gt;</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -220,28 +240,28 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-fadace571d3ad61264937ddfc43940a5-panel-view">
     <code class="Code Code--lang-twig hljs">
-        <pre>&lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"slideshow-bg slideshow-bg-dark"</span>&gt;
-  &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"slideshow-nav"</span>&gt;
-    &lt;button <span class="hljs-keyword">class</span>=<span class="hljs-string">"slideshow-nav-control slideshow-control-prev"</span> aria-label=<span class="hljs-string">"Previous slide"</span>&gt;
-      &lt;span <span class="hljs-keyword">class</span>=<span class="hljs-string">"icon icon-chevron-right"</span> aria-hidden=<span class="hljs-string">"true"</span>&gt;&lt;/span&gt;
-      &lt;span <span class="hljs-keyword">class</span>=<span class="hljs-string">"sr-only"</span>&gt;Previous slide&lt;/span&gt;
-    &lt;/button&gt;
-    &lt;span&gt;&lt;span <span class="hljs-keyword">class</span>=<span class="hljs-string">"slideshow-nav-current-index"</span>&gt;<span class="hljs-number">1</span>&lt;/span&gt; of {{items.length}}&lt;/span&gt;
-    &lt;button <span class="hljs-keyword">class</span>=<span class="hljs-string">"slideshow-nav-control slideshow-control-next"</span> aria-label=<span class="hljs-string">"Next slide"</span>&gt;
-      &lt;span <span class="hljs-keyword">class</span>=<span class="hljs-string">"icon icon-chevron-right"</span> aria-hidden=<span class="hljs-string">"true"</span>&gt;&lt;/span&gt;
-      &lt;span <span class="hljs-keyword">class</span>=<span class="hljs-string">"sr-only"</span>&gt;Next slide&lt;/span&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-  &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"slideshow"</span>&gt;
-    {% <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> items %}
-      {% include <span class="hljs-string">"<a href="slideshow-item.html">@slideshow-item</a>"</span> with {
-        <span class="hljs-string">"image"</span>: item.image,
-        <span class="hljs-string">"title"</span>: item.title,
-        <span class="hljs-string">"content"</span>: item.content
-      } %}
-    {% endfor %}
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-bg slideshow-bg-dark&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-nav&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-nav-control slideshow-control-prev&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Previous slide&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;icon icon-chevron-right&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;sr-only&quot;</span>&gt;</span>Previous slide<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-nav-current-index&quot;</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> of </span><span class="hljs-template-variable">{{items.length}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow-nav-control slideshow-control-next&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Next slide&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;icon icon-chevron-right&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;sr-only&quot;</span>&gt;</span>Next slide<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slideshow&quot;</span>&gt;</span>
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> item in items %}</span><span class="xml">
+      </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> &quot;<a href="slideshow-item.html">@slideshow-item</a>&quot; with {
+        &quot;image&quot;: item.image,
+        &quot;title&quot;: item.title,
+        &quot;content&quot;: item.content
+      } %}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
     </code>
 </div>
 
@@ -251,34 +271,34 @@
         
             
             <pre>{
-  <span class="hljs-attr">"pager"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"items"</span>: [
+  <span class="hljs-attr">&quot;pager&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">&quot;items&quot;</span>: [
     {
-      <span class="hljs-attr">"image"</span>: {
-        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"http://via.placeholder.com/1000x600"</span>,
-        <span class="hljs-attr">"alt"</span>: <span class="hljs-string">"placeholder alt text"</span>,
-        <span class="hljs-attr">"caption"</span>: <span class="hljs-string">"Photos by John Smith &amp; Jane Adams"</span>
+      <span class="hljs-attr">&quot;image&quot;</span>: {
+        <span class="hljs-attr">&quot;src&quot;</span>: <span class="hljs-string">&quot;http://via.placeholder.com/1000x600&quot;</span>,
+        <span class="hljs-attr">&quot;alt&quot;</span>: <span class="hljs-string">&quot;placeholder alt text&quot;</span>,
+        <span class="hljs-attr">&quot;caption&quot;</span>: <span class="hljs-string">&quot;Photos by John Smith &amp; Jane Adams&quot;</span>
       },
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Slide Title Lorem 1"</span>,
-      <span class="hljs-attr">"content"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."</span>
+      <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Slide Title Lorem 1&quot;</span>,
+      <span class="hljs-attr">&quot;content&quot;</span>: <span class="hljs-string">&quot;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus.&quot;</span>
     },
     {
-      <span class="hljs-attr">"image"</span>: {
-        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"http://via.placeholder.com/1000x600"</span>,
-        <span class="hljs-attr">"alt"</span>: <span class="hljs-string">"placeholder alt text"</span>,
-        <span class="hljs-attr">"caption"</span>: <span class="hljs-string">"Photos by John Smith &amp; Jane Adams"</span>
+      <span class="hljs-attr">&quot;image&quot;</span>: {
+        <span class="hljs-attr">&quot;src&quot;</span>: <span class="hljs-string">&quot;http://via.placeholder.com/1000x600&quot;</span>,
+        <span class="hljs-attr">&quot;alt&quot;</span>: <span class="hljs-string">&quot;placeholder alt text&quot;</span>,
+        <span class="hljs-attr">&quot;caption&quot;</span>: <span class="hljs-string">&quot;Photos by John Smith &amp; Jane Adams&quot;</span>
       },
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Slide Title Lorem Ipsum 2"</span>,
-      <span class="hljs-attr">"content"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."</span>
+      <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Slide Title Lorem Ipsum 2&quot;</span>,
+      <span class="hljs-attr">&quot;content&quot;</span>: <span class="hljs-string">&quot;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus.&quot;</span>
     },
     {
-      <span class="hljs-attr">"image"</span>: {
-        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"http://via.placeholder.com/1000x600"</span>,
-        <span class="hljs-attr">"alt"</span>: <span class="hljs-string">"placeholder alt text"</span>,
-        <span class="hljs-attr">"caption"</span>: <span class="hljs-string">"Photos by John Smith &amp; Jane Adams"</span>
+      <span class="hljs-attr">&quot;image&quot;</span>: {
+        <span class="hljs-attr">&quot;src&quot;</span>: <span class="hljs-string">&quot;http://via.placeholder.com/1000x600&quot;</span>,
+        <span class="hljs-attr">&quot;alt&quot;</span>: <span class="hljs-string">&quot;placeholder alt text&quot;</span>,
+        <span class="hljs-attr">&quot;caption&quot;</span>: <span class="hljs-string">&quot;Photos by John Smith &amp; Jane Adams&quot;</span>
       },
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Slide Title Dolor 3"</span>,
-      <span class="hljs-attr">"content"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."</span>
+      <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Slide Title Dolor 3&quot;</span>,
+      <span class="hljs-attr">&quot;content&quot;</span>: <span class="hljs-string">&quot;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus.&quot;</span>
     }
   ]
 }</pre>
@@ -316,7 +336,7 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code hljs">
-                                <pre><span class="hljs-keyword">@import</span> <span class="hljs-string">"variables"</span>;
+                                <pre><span class="hljs-keyword">@import</span> <span class="hljs-string">&quot;variables&quot;</span>;
 
 <span class="hljs-selector-class">.section</span><span class="hljs-selector-class">.section-ut_slideshow</span> {
   <span class="hljs-attribute">margin-bottom</span>: rem(<span class="hljs-number">15</span>);
@@ -445,8 +465,8 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-XML FileBrowser-code hljs">
-                                <pre>import * as Flickity from "flickity";
-import "flickity-imagesloaded";
+                                <pre>import * as Flickity from &quot;flickity&quot;;
+import &quot;flickity-imagesloaded&quot;;
 
 export class Slideshow {
   protected element: HTMLElement;
@@ -458,11 +478,11 @@ export class Slideshow {
   constructor(element: HTMLElement) {
     if (element) {
       this.element = element;
-      this.elementNavNext = this.element.querySelector(".slideshow-control-next");
-      this.elementNavPrevious = this.element.querySelector(".slideshow-control-prev");
-      this.slides = this.element.querySelectorAll(".slideshow-item");
+      this.elementNavNext = this.element.querySelector(&quot;.slideshow-control-next&quot;);
+      this.elementNavPrevious = this.element.querySelector(&quot;.slideshow-control-prev&quot;);
+      this.slides = this.element.querySelectorAll(&quot;.slideshow-item&quot;);
       if (this.slides.length &gt; 1) {
-        this.slideshow = new Flickity(this.element.querySelector(".slideshow"), {
+        this.slideshow = new Flickity(this.element.querySelector(&quot;.slideshow&quot;), {
           contain: true,
           imagesLoaded: true,
           wrapAround: true,
@@ -479,30 +499,30 @@ export class Slideshow {
   }
 
   protected addCarouselEventListeners() {
-    this.elementNavNext.addEventListener("click", () =&gt; {
+    this.elementNavNext.addEventListener(&quot;click&quot;, () =&gt; {
       this.slideshow.next();
     });
 
-    this.elementNavPrevious.addEventListener("click", () =&gt; {
+    this.elementNavPrevious.addEventListener(&quot;click&quot;, () =&gt; {
       this.slideshow.previous();
     });
   }
 
   protected handleSlideTransition() {
-    const currentIndexNode = this.element.querySelector(".slideshow-nav-current-index") as HTMLElement;
+    const currentIndexNode = this.element.querySelector(&quot;.slideshow-nav-current-index&quot;) as HTMLElement;
     
-    this.slideshow.on("change", (index) =&gt; {
+    this.slideshow.on(&quot;change&quot;, (index) =&gt; {
       currentIndexNode.textContent = index + 1;
     });
   }
 };
 
 export default function initSlideshow() {
-  const slideshows = document.querySelectorAll(".slideshow-bg") as NodeListOf<span class="hljs-tag">&lt;<span class="hljs-name">HTMLElement</span>&gt;</span>;
-  for (let i = 0; i <span class="hljs-tag">&lt; <span class="hljs-attr">slideshows.length</span>; <span class="hljs-attr">i</span>++) {
-    <span class="hljs-attr">new</span> <span class="hljs-attr">Slideshow</span>(<span class="hljs-attr">slideshows</span>[<span class="hljs-attr">i</span>]);
+  const slideshows = document.querySelectorAll(&quot;.slideshow-bg&quot;) as NodeListOf<span class="hljs-tag">&lt;<span class="hljs-name">HTMLElement</span>&gt;</span>;
+  for (let i = 0; i &lt; slideshows.length; i++) {
+    new Slideshow(slideshows[i]);
   }
-}</span></pre>
+}</pre>
                             </code>
                             
                         </div>
@@ -603,7 +623,7 @@ export default function initSlideshow() {
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-fadace571d3ad61264937ddfc43940a5-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
+        <p class="Browser-isEmptyNote">No notes defined.</p>
         
     </div>
 </div>
@@ -644,8 +664,11 @@ export default function initSlideshow() {
 
     
         
-<div class="Navigation-group">
 
+    
+    
+    <div class="Navigation-group">
+        
 <div class="Tree" data-behaviour="tree" id="tree-components">
     <div class="Tree-header">
         <h3 class="Tree-title">components</h3>
@@ -755,15 +778,17 @@ export default function initSlideshow() {
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-blockquote">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-blockquote-items">
-                Blockquote
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-blockquote-items">
             
             
-            
-            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-blockquote">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-blockquote-items">
+                    Blockquote
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-blockquote-items">
+                
+                
+                
+                
     
         
         
@@ -814,8 +839,9 @@ export default function initSlideshow() {
         
     
 
-            </ul>
-        </li>
+                </ul>
+            </li>
+            
         
     
         
@@ -843,15 +869,17 @@ export default function initSlideshow() {
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-button">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-button-items">
-                Button
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-button-items">
             
             
-            
-            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-button">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-button-items">
+                    Button
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-button-items">
+                
+                
+                
+                
     
         
         
@@ -926,8 +954,9 @@ export default function initSlideshow() {
         
     
 
-            </ul>
-        </li>
+                </ul>
+            </li>
+            
         
     
         
@@ -955,15 +984,17 @@ export default function initSlideshow() {
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-card">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-card-items">
-                Card
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-card-items">
             
             
-            
-            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-card">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-card-items">
+                    Card
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-card-items">
+                
+                
+                
+                
     
         
         
@@ -1014,20 +1045,23 @@ export default function initSlideshow() {
         
     
 
-            </ul>
-        </li>
+                </ul>
+            </li>
+            
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-card-group">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-card-group-items">
-                Card Group
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-card-group-items">
             
             
-            
-            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-card-group">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-card-group-items">
+                    Card Group
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-card-group-items">
+                
+                
+                
+                
     
         
         
@@ -1078,20 +1112,23 @@ export default function initSlideshow() {
         
     
 
-            </ul>
-        </li>
+                </ul>
+            </li>
+            
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-carousel">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-carousel-items">
-                Carousel
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-carousel-items">
             
             
-            
-            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-carousel">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-carousel-items">
+                    Carousel
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-carousel-items">
+                
+                
+                
+                
     
         
         
@@ -1142,8 +1179,9 @@ export default function initSlideshow() {
         
     
 
-            </ul>
-        </li>
+                </ul>
+            </li>
+            
         
     
         
@@ -1195,15 +1233,17 @@ export default function initSlideshow() {
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-embed">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-embed-items">
-                Embed
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-embed-items">
             
             
-            
-            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-embed">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-embed-items">
+                    Embed
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-embed-items">
+                
+                
+                
+                
     
         
         
@@ -1254,8 +1294,9 @@ export default function initSlideshow() {
         
     
 
-            </ul>
-        </li>
+                </ul>
+            </li>
+            
         
     
         
@@ -1283,15 +1324,17 @@ export default function initSlideshow() {
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-events">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-events-items">
-                Events
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-events-items">
             
             
-            
-            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-events">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-events-items">
+                    Events
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-events-items">
+                
+                
+                
+                
     
         
         
@@ -1342,20 +1385,23 @@ export default function initSlideshow() {
         
     
 
-            </ul>
-        </li>
+                </ul>
+            </li>
+            
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-feature">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-feature-items">
-                Feature
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-feature-items">
             
             
-            
-            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-feature">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-feature-items">
+                    Feature
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-feature-items">
+                
+                
+                
+                
     
         
         
@@ -1406,8 +1452,9 @@ export default function initSlideshow() {
         
     
 
-            </ul>
-        </li>
+                </ul>
+            </li>
+            
         
     
         
@@ -1459,15 +1506,17 @@ export default function initSlideshow() {
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-home-hero">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-home-hero-items">
-                Home Hero
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-home-hero-items">
             
             
-            
-            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-home-hero">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-home-hero-items">
+                    Home Hero
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-home-hero-items">
+                
+                
+                
+                
     
         
         
@@ -1565,21 +1614,48 @@ export default function initSlideshow() {
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="home-hero--video.html" data-pjax>
+                <span>Video</span>
+                
 
-            </ul>
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     
+
+                </ul>
+            </li>
+            
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-image">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-image-items">
-                Image
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-image-items">
+    
+        
             
             
-            
-            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-image">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-image-items">
+                    Image
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-image-items">
+                
+                
+                
+                
     
         
         
@@ -1630,8 +1706,76 @@ export default function initSlideshow() {
         
     
 
-            </ul>
+                </ul>
+            </li>
+            
+        
+    
+        
+            
+            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-lazyload">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-lazyload-items">
+                    Lazyload
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-lazyload-items">
+                
+                
+                
+                
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="lazyload--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="lazyload--iframe.html" data-pjax>
+                <span>Iframe</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+                </ul>
+            </li>
+            
         
     
         
@@ -1707,15 +1851,17 @@ export default function initSlideshow() {
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-pages">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-pages-items">
-                Pages
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-pages-items">
             
             
-            
-            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-pages">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-pages-items">
+                    Pages
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-pages-items">
+                
+                
+                
+                
     
         
         
@@ -1862,8 +2008,9 @@ export default function initSlideshow() {
         
     
 
-            </ul>
-        </li>
+                </ul>
+            </li>
+            
         
     
         
@@ -1963,15 +2110,17 @@ export default function initSlideshow() {
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-site-header">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-site-header-items">
-                Site Header
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-site-header-items">
             
             
-            
-            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-site-header">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-site-header-items">
+                    Site Header
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-site-header-items">
+                
+                
+                
+                
     
         
         
@@ -2022,20 +2171,23 @@ export default function initSlideshow() {
         
     
 
-            </ul>
-        </li>
+                </ul>
+            </li>
+            
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-slideshow">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-slideshow-items">
-                Slideshow
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-slideshow-items">
             
             
-            
-            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-slideshow">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-slideshow-items">
+                    Slideshow
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-slideshow-items">
+                
+                
+                
+                
     
         
         
@@ -2086,8 +2238,9 @@ export default function initSlideshow() {
         
     
 
-            </ul>
-        </li>
+                </ul>
+            </li>
+            
         
     
         
@@ -2139,15 +2292,17 @@ export default function initSlideshow() {
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-stat-group">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-stat-group-items">
-                Stat Group
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-stat-group-items">
             
             
-            
-            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-stat-group">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-stat-group-items">
+                    Stat Group
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-stat-group-items">
+                
+                
+                
+                
     
         
         
@@ -2198,8 +2353,9 @@ export default function initSlideshow() {
         
     
 
-            </ul>
-        </li>
+                </ul>
+            </li>
+            
         
     
         
@@ -2251,15 +2407,17 @@ export default function initSlideshow() {
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-table">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-table-items">
-                Table
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-table-items">
             
             
-            
-            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-table">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-table-items">
+                    Table
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-table-items">
+                
+                
+                
+                
     
         
         
@@ -2310,8 +2468,9 @@ export default function initSlideshow() {
         
     
 
-            </ul>
-        </li>
+                </ul>
+            </li>
+            
         
     
         
@@ -2342,7 +2501,8 @@ export default function initSlideshow() {
     </ul>
 </div>
 
-</div>
+    </div>
+    
 
 
     
@@ -2382,21 +2542,31 @@ export default function initSlideshow() {
         
 
     
-        <div class="Navigation-group">
+        
+<div class="Navigation-group">
     <div class="Tree">
         <div class="Tree-header">
-            <div class="Tree-title">
+            <h3 class="Tree-title">
                 Information
-            </div>
+            </h3>
         </div>
-        <div class="Tree-aside">
-            Built on:
-            <time datetime="2021-02-09T14:20:42.797Z">
-                2/9/2021
-            </time>
-        </div>
+        <dl class="Tree-aside">
+            
+                <div>
+                    <dt class="Tree-asideTerm">Built on:</dt>
+                    <dd class="Tree-asideDescription">
+                        
+                            <time datetime="2021-04-28T17:16:27.863Z">
+                                4/28/2021
+                            </time>
+                        
+                    </dd>
+                </div>
+            
+        </dl>
     </div>
 </div>
+
 
     
 </nav>
@@ -2408,7 +2578,7 @@ export default function initSlideshow() {
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.4.0"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.7.0"></script>
 
 
 

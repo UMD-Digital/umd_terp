@@ -46,6 +46,7 @@
 }
 
 .home-hero-media {
+  overflow: hidden;
   position: relative;
   z-index: 0;
   @include media-breakpoint-up(1200) {
@@ -66,6 +67,8 @@
       display: none;
     }
   }
+  video,
+  iframe,
   img {
     display: block;
     height: 100%;
@@ -73,8 +76,13 @@
     object-fit: cover;
     object-position: center;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  iframe {
+    height: 100vw;
+    width: 100vw;
   }
   .home-hero-bg & {
     left: 0;
@@ -90,5 +98,87 @@
       left: 0;
       z-index: 1;
     }
+  }
+  .home-hero-video & {
+    max-height: rem(375);
+    @include media-breakpoint-up(1200) {
+      max-height: none;
+    }
+    &:before {
+      padding-bottom: 56.25%;
+      @include media-breakpoint-up(1200) {
+        display: block;
+      }
+    }
+  }
+}
+
+.home-hero-video-controls {
+  align-items: center;
+  display: flex;
+  height: rem(48);
+  margin-left: rem(-16);
+  padding-top: 0;
+  padding-bottom: 0;
+  top: 56.25vw;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  @media (min-width: #{(375 / 0.5625)}px) {
+    top: rem(375);
+  }
+  @include media-breakpoint-up(1200) {
+    height: rem(100);
+    top: auto;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+  .home-hero.home-hero-video & {
+    min-height: auto;
+    position: absolute;
+    z-index: 11;
+  }
+}
+
+.home-hero-play-button,
+.home-hero-pause-button {
+  align-items: center;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  height: rem(44);
+  width: rem(44);
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  &:before {
+    content: "";
+    display: block;
+  }
+  &[disabled] {
+    cursor: default;
+    opacity: 0.65;
+  }
+  &:not(:last-child) {
+    margin-right: rem(10);
+  }
+}
+
+.home-hero-play-button {
+  &:before {
+    border-top: rem(6) solid transparent;
+    border-bottom: rem(6) solid transparent;
+    border-left: rem(16) solid $white;
+    height: 0;
+    width: 0;
+  }
+}
+
+.home-hero-pause-button {
+  &:before {
+    border-right: rem(3) solid $white;
+    border-left: rem(3) solid $white;
+    height: rem(16);
+    width: rem(12);
   }
 }

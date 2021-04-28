@@ -34,6 +34,9 @@
     &:before {
       padding-bottom: 50%;
     }
+    img {
+      object-fit: contain;
+    }
   }
   &:before {
     content: "";
