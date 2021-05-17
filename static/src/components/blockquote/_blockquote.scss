@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 
 .blockquote {
   align-items: center;
@@ -29,17 +29,20 @@
     text-align: center;
   }
   &:before {
-    content: "“";
+    content: '“';
     top: rem(68);
     transform: translate(-50%, -50%);
   }
   &:after {
-    content: "”";
+    content: '”';
     bottom: rem(68);
     transform: translate(-50%, 50%);
     @include media-breakpoint-down(799) {
       display: none;
     }
+  }
+  a:not([class]) {
+    color: $dark-red;
   }
   p {
     color: $gray-700;
@@ -110,12 +113,12 @@
     color: $white;
   }
   &:before {
-    content: "";
+    content: '';
   }
   span {
     display: block;
   }
-  .blockquote>&:last-child {
+  .blockquote > &:last-child {
     @include media-breakpoint-up(800) {
       margin-bottom: rem(-56);
     }
@@ -136,7 +139,7 @@
     margin-right: rem(18);
   }
   &:before {
-    content: "";
+    content: '';
     display: block;
     padding-bottom: 100%;
   }

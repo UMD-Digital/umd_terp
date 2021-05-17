@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 
 .accordion {
   margin: $accordion-margin;
@@ -42,9 +42,9 @@
             background-color: $red;
           }
         }
-        &[aria-expanded="true"] {
+        &[aria-expanded='true'] {
           background: $accordion__label--active-background;
-          box-shadow: 0 4px 9px rgba(0, 0, 0, .14);
+          box-shadow: 0 4px 9px rgba(0, 0, 0, 0.14);
           color: $accordion__label--active-color;
           &:before {
             transform: translate(-50%, -50%) scaleY(0);
@@ -52,15 +52,14 @@
         }
         &:before,
         &:after {
-          content: "";
+          content: '';
           background-color: #666;
           display: block;
           position: absolute;
           top: 50%;
           left: rem(27);
           transform: translate(-50%, -50%);
-          transition:
-            .3s color ease-in-out,
+          transition: 0.3s color ease-in-out,
             $accordion-slide-duration transform ease-in-out;
         }
         &:before {
@@ -81,6 +80,15 @@
       font-size: rem(17);
       line-height: (26 / 17);
       padding: $accordion__content-padding;
+
+      a {
+        color: $dark-red;
+
+        &:hover,
+        &:focus {
+          border-bottom-color: $dark-red;
+        }
+      }
     }
   }
 }
