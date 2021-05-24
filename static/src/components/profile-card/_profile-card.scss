@@ -11,6 +11,10 @@
     }
     .card-body {
       box-shadow: none !important;
+      a {
+        color: $dark-red;
+        text-decoration: underline;
+      }
     }
     .card-title {
       color: inherit;
@@ -26,6 +30,9 @@
     background-color: transparent;
     box-shadow: none !important;
     padding: 0;
+    a {
+      color: $dark-red;
+    }
   }
   .card-title {
     margin: 0;
