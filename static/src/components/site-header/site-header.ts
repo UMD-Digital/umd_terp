@@ -26,6 +26,8 @@ export class SiteHeader {
         this.handleResize();
         this.handleEsc();
         this.handleTabbing();
+        this.handleArrowDown();
+        this.handleArrowUp();
         this.handleNavToggleClick();
     }
 
@@ -101,6 +103,50 @@ export class SiteHeader {
         });
     }
 
+    protected handleArrowDown() {
+        window.addEventListener("keyup", (event) => {
+            const key = event.key || event.keyCode;
+            if (key === "ArrowDown" || key === 40) {
+                const parent = ( <HTMLElement>event.target ).parentElement;
+                if (parent) {
+                    const nextElement = parent.nextElementSibling;
+                    if (nextElement) {
+                        const innerElement = nextElement.querySelector('.site-header__nav > ul > li ul li > a') as HTMLElement;
+                        if (this.navExpanded && !this.element.contains(innerElement as HTMLElement)) {
+                            this.navExpanded = false;
+                            this.toggleNavVisibility();
+                        }
+                        else {
+                            innerElement.focus();
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    protected handleArrowUp() {
+        window.addEventListener("keyup", (event) => {
+            const key = event.key || event.keyCode;
+            if (key === "ArrowUp" || key === 38) {
+                const parent = ( <HTMLElement>event.target ).parentElement;
+                if (parent) {
+                    const previousElement = parent.previousElementSibling;
+                    if (previousElement) {
+                        const innerElement = previousElement.querySelector('a');
+                        if (this.navExpanded && !this.element.contains(innerElement as HTMLElement)) {
+                            this.navExpanded = false;
+                            this.toggleNavVisibility();
+                        }
+                        else {
+                            innerElement.focus();
+                        }
+                    }
+                }
+            }
+        });
+    }
+
     protected handleNavToggleClick() {
         let clickedViaKeyboard = false;
         const firstFocusableChild = this.nav.querySelector(`a, button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])`) as HTMLElement;
@@ -165,8 +211,11 @@ export class SiteHeaderDropdown {
         this.handleToggleClick();
         this.handleEsc();
         this.handleTabbing();
+        this.handleArrowDown();
+        this.handleArrowUp();
         this.handleClickOutside();
         this.toggleVisibility();
+        this.handleCheckOverlayHeight();
     }
 
     protected createToggle() {
@@ -179,6 +228,7 @@ export class SiteHeaderDropdown {
         this.toggle = button;
         this.list.setAttribute("aria-labelledby", this.toggleId);
     }
+    
 
     protected handleToggleClick() {
         let clickedViaKeyboard = false;
@@ -232,6 +282,54 @@ export class SiteHeaderDropdown {
         });
     }
 
+    protected handleArrowDown() {
+        if (this.expanded && !this.element.contains(event.target as HTMLElement)) {
+            window.addEventListener("keyup", (event) => {
+                const key = event.key || event.keyCode;
+                if (key === "ArrowDown" || key === 40) {
+                    const parent = ( <HTMLElement>event.target ).parentElement;
+                    if (parent) {
+                        const nextElement = parent.nextElementSibling;
+                        if (nextElement) {
+                            const innerElement = nextElement.querySelector('a');
+                            if (this.expanded && !this.element.contains(event.target as HTMLElement)) {
+                                this.expanded = false;
+                                this.toggleVisibility();
+                            }
+                            else {
+                                innerElement.focus();
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    }
+    protected handleArrowUp() {
+        if (this.expanded && !this.element.contains(event.target as HTMLElement)) {
+            window.addEventListener("keyup", (event) => {
+                const key = event.key || event.keyCode;
+                if (key === "ArrowUp" || key === 38) {
+                    const parent = ( <HTMLElement>event.target ).parentElement;
+                    if (parent) {
+                        const previousElement = parent.previousElementSibling;
+                        if (previousElement) {
+                            const innerElement = previousElement.querySelector('a');
+                            if (this.expanded && !this.element.contains(event.target as HTMLElement)) {
+                                this.expanded = false;
+                                this.toggleVisibility();
+                            }
+                            else {
+                                innerElement.focus();
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    }
+
+
     protected handleClickOutside() {
         window.addEventListener("click", (event) => {
             if (this.expanded && !this.element.contains(event.target as HTMLElement)) {
@@ -245,18 +343,38 @@ export class SiteHeaderDropdown {
         this.toggle.setAttribute("aria-expanded", `${this.expanded}`);
         this.list.setAttribute("aria-hidden", `${!this.expanded}`);
         this.list.style.height = this.expanded ? `${this.list.scrollHeight}px` : null;
+        const bodyElement = document.body;
         for (let i = 0; i < this.childLinks.length; i++) {
             this.childLinks[i].setAttribute("tabindex", this.expanded ? "0" : "-1");
         }
         if (this.expanded) {
+            bodyElement.style.overflow = 'hidden';
             this.events.open.forEach(handler => {
                 handler(this);
             });
         } else {
+            bodyElement.style.overflow = 'auto';
             this.events.close.forEach(handler => {
                 handler(this);
             });
         }
+    }
+
+    protected handleCheckOverlayHeight () {
+        const checkOverlayHeight = () => {
+            const nestedUl = this.element.querySelector('.site-header__nav>ul>li ul') as HTMLElement;
+            if (window.innerWidth > 767) {
+                if (
+                    nestedUl.offsetHeight + this.list.offsetHeight >
+                    window.innerHeight - 20
+                ) {
+                    nestedUl.style.overflowY = 'scroll';
+                } else {
+                    nestedUl.style.overflowY = 'auto';
+                }
+            }
+        };
+        checkOverlayHeight();
     }
 
     public resetState() {
