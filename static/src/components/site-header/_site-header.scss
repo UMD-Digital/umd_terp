@@ -292,6 +292,8 @@
           top: 100%;
           left: 0;
           width: auto;
+          overflow-y: scroll;
+          max-height: 75vh;
         }
 
         .js & {
