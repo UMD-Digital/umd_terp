@@ -165,8 +165,11 @@ export class SiteHeaderDropdown {
         this.handleToggleClick();
         this.handleEsc();
         this.handleTabbing();
+        this.handleArrowDown();
+        this.handleArrowUp();
         this.handleClickOutside();
         this.toggleVisibility();
+        this.handleCheckOverlayHeight();
     }
 
     protected createToggle() {
@@ -232,6 +235,42 @@ export class SiteHeaderDropdown {
         });
     }
 
+    protected handleArrowDown() {
+        window.addEventListener("keyup", (event) => {
+            const key = event.key || event.keyCode;
+            if (key === "ArrowDown" || key === 40) {
+                const parent = ( <HTMLElement>event.target ).parentElement;
+                if (parent) {
+                    const nextElement = parent.nextElementSibling;
+                    if (nextElement) {
+                        const innerElement = nextElement.querySelector('a') as HTMLElement;
+                        if (this.expanded && this.element.contains(innerElement)) {
+                            innerElement.focus();
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    protected handleArrowUp() {
+        window.addEventListener("keyup", (event) => {
+            const key = event.key || event.keyCode;
+            if (key === "ArrowUp" || key === 38) {
+                const parent = ( <HTMLElement>event.target ).parentElement;
+                if (parent) {
+                    const previousElement = parent.previousElementSibling;
+                    if (previousElement) {
+                        const innerElement = previousElement.querySelector('a') as HTMLElement;
+                        if (this.expanded && this.element.contains(innerElement)) {
+                            innerElement.focus();
+                        }
+                    }
+                }
+            }
+        });
+    }
+
     protected handleClickOutside() {
         window.addEventListener("click", (event) => {
             if (this.expanded && !this.element.contains(event.target as HTMLElement)) {
@@ -245,17 +284,36 @@ export class SiteHeaderDropdown {
         this.toggle.setAttribute("aria-expanded", `${this.expanded}`);
         this.list.setAttribute("aria-hidden", `${!this.expanded}`);
         this.list.style.height = this.expanded ? `${this.list.scrollHeight}px` : null;
+        const bodyElement = document.body;
         for (let i = 0; i < this.childLinks.length; i++) {
             this.childLinks[i].setAttribute("tabindex", this.expanded ? "0" : "-1");
         }
         if (this.expanded) {
+            bodyElement.style.overflow = 'hidden';
             this.events.open.forEach(handler => {
                 handler(this);
             });
         } else {
+            bodyElement.style.overflow = 'auto';
             this.events.close.forEach(handler => {
                 handler(this);
             });
+        }
+    }
+
+    protected handleCheckOverlayHeight () {
+        const nestedUl = this.element.querySelector('ul') as HTMLElement;
+        const nestedUlToTop = nestedUl.getBoundingClientRect().top;
+
+        if (window.innerWidth > 1023) {
+            if (
+                nestedUl.offsetHeight + nestedUlToTop >
+                window.innerHeight - 20
+            ) {
+                nestedUl.style.overflowY = 'scroll';
+            } else {
+                nestedUl.style.overflowY = 'auto';
+            }
         }
     }
 
