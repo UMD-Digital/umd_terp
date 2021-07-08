@@ -26,8 +26,6 @@ export class SiteHeader {
         this.handleResize();
         this.handleEsc();
         this.handleTabbing();
-        this.handleArrowDown();
-        this.handleArrowUp();
         this.handleNavToggleClick();
     }
 
@@ -103,50 +101,6 @@ export class SiteHeader {
         });
     }
 
-    protected handleArrowDown() {
-        window.addEventListener("keyup", (event) => {
-            const key = event.key || event.keyCode;
-            if (key === "ArrowDown" || key === 40) {
-                const parent = ( <HTMLElement>event.target ).parentElement;
-                if (parent) {
-                    const nextElement = parent.nextElementSibling;
-                    if (nextElement) {
-                        const innerElement = nextElement.querySelector('.site-header__nav > ul > li ul li > a') as HTMLElement;
-                        if (this.navExpanded && !this.element.contains(innerElement as HTMLElement)) {
-                            this.navExpanded = false;
-                            this.toggleNavVisibility();
-                        }
-                        else {
-                            innerElement.focus();
-                        }
-                    }
-                }
-            }
-        });
-    }
-
-    protected handleArrowUp() {
-        window.addEventListener("keyup", (event) => {
-            const key = event.key || event.keyCode;
-            if (key === "ArrowUp" || key === 38) {
-                const parent = ( <HTMLElement>event.target ).parentElement;
-                if (parent) {
-                    const previousElement = parent.previousElementSibling;
-                    if (previousElement) {
-                        const innerElement = previousElement.querySelector('a');
-                        if (this.navExpanded && !this.element.contains(innerElement as HTMLElement)) {
-                            this.navExpanded = false;
-                            this.toggleNavVisibility();
-                        }
-                        else {
-                            innerElement.focus();
-                        }
-                    }
-                }
-            }
-        });
-    }
-
     protected handleNavToggleClick() {
         let clickedViaKeyboard = false;
         const firstFocusableChild = this.nav.querySelector(`a, button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])`) as HTMLElement;
@@ -179,6 +133,8 @@ export class SiteHeader {
         document.body.classList[this.navExpanded ? "add" : "remove"]("offcanvas-open");
     }
 }
+
+
 
 export class SiteHeaderDropdown {
     protected element: HTMLElement;
@@ -228,7 +184,6 @@ export class SiteHeaderDropdown {
         this.toggle = button;
         this.list.setAttribute("aria-labelledby", this.toggleId);
     }
-    
 
     protected handleToggleClick() {
         let clickedViaKeyboard = false;
@@ -283,52 +238,44 @@ export class SiteHeaderDropdown {
     }
 
     protected handleArrowDown() {
-        if (this.expanded && !this.element.contains(event.target as HTMLElement)) {
-            window.addEventListener("keyup", (event) => {
-                const key = event.key || event.keyCode;
-                if (key === "ArrowDown" || key === 40) {
-                    const parent = ( <HTMLElement>event.target ).parentElement;
-                    if (parent) {
-                        const nextElement = parent.nextElementSibling;
-                        if (nextElement) {
-                            const innerElement = nextElement.querySelector('a');
-                            if (this.expanded && !this.element.contains(event.target as HTMLElement)) {
-                                this.expanded = false;
-                                this.toggleVisibility();
-                            }
-                            else {
-                                innerElement.focus();
-                            }
+        window.addEventListener("keyup", (event) => {
+            const key = event.key || event.keyCode;
+            if (key === "ArrowDown" || key === 40) {
+                const parent = ( <HTMLElement>event.target ).parentElement;
+                if (parent) {
+                    const nextElement = parent.nextElementSibling;
+                    if (nextElement) {
+                        const innerElement = nextElement.querySelector('.site-header__nav > ul > li ul li > a') as HTMLElement;
+                        if (this.expanded && !this.element.contains(innerElement as HTMLElement)) {
+                            this.expanded = false;
+                            this.toggleVisibility();
+                        }
+                        else {
+                            innerElement.focus();
                         }
                     }
                 }
-            });
-        }
-    }
-    protected handleArrowUp() {
-        if (this.expanded && !this.element.contains(event.target as HTMLElement)) {
-            window.addEventListener("keyup", (event) => {
-                const key = event.key || event.keyCode;
-                if (key === "ArrowUp" || key === 38) {
-                    const parent = ( <HTMLElement>event.target ).parentElement;
-                    if (parent) {
-                        const previousElement = parent.previousElementSibling;
-                        if (previousElement) {
-                            const innerElement = previousElement.querySelector('a');
-                            if (this.expanded && !this.element.contains(event.target as HTMLElement)) {
-                                this.expanded = false;
-                                this.toggleVisibility();
-                            }
-                            else {
-                                innerElement.focus();
-                            }
-                        }
-                    }
-                }
-            });
-        }
+            }
+        });
     }
 
+    protected handleArrowUp() {
+        window.addEventListener("keyup", (event) => {
+            const key = event.key || event.keyCode;
+            if (key === "ArrowUp" || key === 38) {
+                const parent = ( <HTMLElement>event.target ).parentElement;
+                if (parent) {
+                    const previousElement = parent.previousElementSibling;
+                    if (previousElement) {
+                        const innerElement = previousElement.querySelector('a') as HTMLElement;
+                        if (this.expanded && this.element.contains(innerElement)) {
+                            innerElement.focus();
+                        }
+                    }
+                }
+            }
+        });
+    }
 
     protected handleClickOutside() {
         window.addEventListener("click", (event) => {
@@ -362,10 +309,12 @@ export class SiteHeaderDropdown {
 
     protected handleCheckOverlayHeight () {
         const checkOverlayHeight = () => {
-            const nestedUl = this.element.querySelector('.site-header__nav>ul>li ul') as HTMLElement;
-            if (window.innerWidth > 767) {
+            const nestedUl = document.querySelector('.site-header__nav>ul>li ul') as HTMLElement;
+            const nestedUlToTop = nestedUl.getBoundingClientRect().top +  window.scrollY;
+
+            if (window.innerWidth > 1023) {
                 if (
-                    nestedUl.offsetHeight + this.list.offsetHeight >
+                    nestedUl.offsetHeight + nestedUlToTop >
                     window.innerHeight - 20
                 ) {
                     nestedUl.style.overflowY = 'scroll';

@@ -7,12 +7,12 @@ version: 8.1.102
 libraries:
   - umd_terp/global
 regions:
-   main_menu: 'Main Menu'
-   help: 'Help'
-   breadcrumbs: 'Breadcrumbs'
-   sidebar: 'Sidebar'
-   content: 'Content'
-   footer_menu: 'Footer Menu'
+  main_menu: 'Main Menu'
+  help: 'Help'
+  breadcrumbs: 'Breadcrumbs'
+  sidebar: 'Sidebar'
+  content: 'Content'
+  footer_menu: 'Footer Menu'
 dependencies:
   - twig_tweak
   - umd_terp_base
