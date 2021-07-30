@@ -1,8 +1,9 @@
-core: 8.x
 type: theme
 name: UMD Terp
 description: 'UMD Terp (umd_terp), is a drupal 8 base theme suitable for all UMD projects.'
 package: UMD.EDU
+base theme: stable
+core_version_requirement: ^8.8 || ^9
 version: 8.1.102
 libraries:
   - umd_terp/global
