@@ -26,6 +26,8 @@ export class SiteHeader {
         this.handleResize();
         this.handleEsc();
         this.handleTabbing();
+        this.handleArrowDown();
+        this.handleArrowUp();
         this.handleNavToggleClick();
     }
 
@@ -96,6 +98,50 @@ export class SiteHeader {
                 if (this.navExpanded && !this.element.contains(event.target as HTMLElement)) {
                     this.navExpanded = false;
                     this.toggleNavVisibility();
+                }
+            }
+        });
+    }
+
+    protected handleArrowDown() {
+        window.addEventListener("keyup", (event) => {
+            const key = event.key || event.keyCode;
+            if (key === "ArrowDown" || key === 40) {
+                const parent = ( <HTMLElement>event.target ).parentElement;
+                if (parent) {
+                    const nextElement = parent.nextElementSibling;
+                    if (nextElement) {
+                        const innerElement = nextElement.querySelector('.site-header__nav > ul > li ul li > a') as HTMLElement;
+                        if (this.navExpanded && !this.element.contains(innerElement as HTMLElement)) {
+                            this.navExpanded = false;
+                            this.toggleNavVisibility();
+                        }
+                        else {
+                            innerElement.focus();
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    protected handleArrowUp() {
+        window.addEventListener("keyup", (event) => {
+            const key = event.key || event.keyCode;
+            if (key === "ArrowUp" || key === 38) {
+                const parent = ( <HTMLElement>event.target ).parentElement;
+                if (parent) {
+                    const previousElement = parent.previousElementSibling;
+                    if (previousElement) {
+                        const innerElement = previousElement.querySelector('a');
+                        if (this.navExpanded && !this.element.contains(innerElement as HTMLElement)) {
+                            this.navExpanded = false;
+                            this.toggleNavVisibility();
+                        }
+                        else {
+                            innerElement.focus();
+                        }
+                    }
                 }
             }
         });
@@ -182,6 +228,7 @@ export class SiteHeaderDropdown {
         this.toggle = button;
         this.list.setAttribute("aria-labelledby", this.toggleId);
     }
+    
 
     protected handleToggleClick() {
         let clickedViaKeyboard = false;
@@ -236,40 +283,52 @@ export class SiteHeaderDropdown {
     }
 
     protected handleArrowDown() {
-        window.addEventListener("keyup", (event) => {
-            const key = event.key || event.keyCode;
-            if (key === "ArrowDown" || key === 40) {
-                const parent = ( <HTMLElement>event.target ).parentElement;
-                if (parent) {
-                    const nextElement = parent.nextElementSibling;
-                    if (nextElement) {
-                        const innerElement = nextElement.querySelector('a') as HTMLElement;
-                        if (this.expanded && this.element.contains(innerElement)) {
-                            innerElement.focus();
+        if (this.expanded && !this.element.contains(event.target as HTMLElement)) {
+            window.addEventListener("keyup", (event) => {
+                const key = event.key || event.keyCode;
+                if (key === "ArrowDown" || key === 40) {
+                    const parent = ( <HTMLElement>event.target ).parentElement;
+                    if (parent) {
+                        const nextElement = parent.nextElementSibling;
+                        if (nextElement) {
+                            const innerElement = nextElement.querySelector('a');
+                            if (this.expanded && !this.element.contains(event.target as HTMLElement)) {
+                                this.expanded = false;
+                                this.toggleVisibility();
+                            }
+                            else {
+                                innerElement.focus();
+                            }
                         }
                     }
                 }
-            }
-        });
+            });
+        }
+    }
+    protected handleArrowUp() {
+        if (this.expanded && !this.element.contains(event.target as HTMLElement)) {
+            window.addEventListener("keyup", (event) => {
+                const key = event.key || event.keyCode;
+                if (key === "ArrowUp" || key === 38) {
+                    const parent = ( <HTMLElement>event.target ).parentElement;
+                    if (parent) {
+                        const previousElement = parent.previousElementSibling;
+                        if (previousElement) {
+                            const innerElement = previousElement.querySelector('a');
+                            if (this.expanded && !this.element.contains(event.target as HTMLElement)) {
+                                this.expanded = false;
+                                this.toggleVisibility();
+                            }
+                            else {
+                                innerElement.focus();
+                            }
+                        }
+                    }
+                }
+            });
+        }
     }
 
-    protected handleArrowUp() {
-        window.addEventListener("keyup", (event) => {
-            const key = event.key || event.keyCode;
-            if (key === "ArrowUp" || key === 38) {
-                const parent = ( <HTMLElement>event.target ).parentElement;
-                if (parent) {
-                    const previousElement = parent.previousElementSibling;
-                    if (previousElement) {
-                        const innerElement = previousElement.querySelector('a') as HTMLElement;
-                        if (this.expanded && this.element.contains(innerElement)) {
-                            innerElement.focus();
-                        }
-                    }
-                }
-            }
-        });
-    }
 
     protected handleClickOutside() {
         window.addEventListener("click", (event) => {
@@ -302,19 +361,20 @@ export class SiteHeaderDropdown {
     }
 
     protected handleCheckOverlayHeight () {
-        const nestedUl = this.element.querySelector('ul') as HTMLElement;
-        const nestedUlToTop = nestedUl.getBoundingClientRect().top;
-
-        if (window.innerWidth > 1023) {
-            if (
-                nestedUl.offsetHeight + nestedUlToTop >
-                window.innerHeight - 20
-            ) {
-                nestedUl.style.overflowY = 'scroll';
-            } else {
-                nestedUl.style.overflowY = 'auto';
+        const checkOverlayHeight = () => {
+            const nestedUl = this.element.querySelector('.site-header__nav>ul>li ul') as HTMLElement;
+            if (window.innerWidth > 767) {
+                if (
+                    nestedUl.offsetHeight + this.list.offsetHeight >
+                    window.innerHeight - 20
+                ) {
+                    nestedUl.style.overflowY = 'scroll';
+                } else {
+                    nestedUl.style.overflowY = 'auto';
+                }
             }
-        }
+        };
+        checkOverlayHeight();
     }
 
     public resetState() {
