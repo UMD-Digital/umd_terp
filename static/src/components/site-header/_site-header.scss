@@ -309,10 +309,10 @@
 
         a {
           background-color: $gray-900;
-          padding: rem(14) rem(50);
+          margin: rem(14) rem(50);
 
           @include media-breakpoint-up(1024) {
-            padding: rem(14) rem(16);
+            margin: rem(14) rem(16);
           }
 
           .site-header-light & {
