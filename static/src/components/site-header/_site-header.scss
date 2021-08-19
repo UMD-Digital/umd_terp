@@ -324,6 +324,12 @@
   }
 }
 
+.site-header-light {
+  .site-header__nav>ul>li ul {
+    background-color: $gray-200;
+  }
+}
+
 .site-header__nav-dropdown-toggle {
   appearance: none;
   background-color: transparent;
