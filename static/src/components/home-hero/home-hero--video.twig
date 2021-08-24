@@ -3,7 +3,7 @@
     {% if video %}
       <div class="home-hero-media">
         {% if video.source == "local" %}
-            <video class="lazyload" aria-hidden="true" data-src="{{video.src|path}}" muted loop></video>
+            <video class="lazyload" aria-hidden="true" data-src="{{video.src|path}}" muted loop webkit-playsinline playsinline></video>
             <noscript>
               <video aria-hidden="true" src="{{video.src|path}}" autoplay muted loop></video>
             </noscript>
