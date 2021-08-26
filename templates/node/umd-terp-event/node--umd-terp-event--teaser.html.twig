@@ -12,7 +12,7 @@
         {% if node.field_umdt_ct_event_start_date.value ==  node.field_umdt_ct_event_end_date.value %}
           <div class="feed-item-date">{{ node.field_umdt_ct_event_start_date.value|date('F j, Y') }}</div>
         {% else %}
-          <div class="feed-item-date">{{ node.field_umdt_ct_event_start_date.value|date('F j, Y') }} - {{ node.field_umdt_ct_event_end_date.value|date('F j, Y') }}</div>
+          <div class="feed-item-date">{{ node.field_umdt_ct_event_start_date.value|date('F j, Y') }} - <span class="sr-only">to</span> {{ node.field_umdt_ct_event_end_date.value|date('F j, Y') }}</div>
         {% endif %}
 				<h2 class="feed-item-title">
 					<a href="{{ link }}">{{ node.title.value }}</a>
