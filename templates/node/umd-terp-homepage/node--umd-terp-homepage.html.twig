@@ -20,9 +20,9 @@
 		{% if content.field_umdt_ct_hero_image|field_value or content.field_umdt_ct_hero_video|field_value%}
 			<div class="home-hero-media">
 				{% if content.field_umdt_ct_hero_video|field_value %}
-					<video class="lazyload" aria-hidden="true" data-src="{{ file_url(content.field_umdt_ct_hero_video[0]['#media'].field_media_video_file.entity.uri.value) }}" poster="{{ file_url(content.field_umdt_ct_hero_image[0]['#media'].field_media_image.entity.uri.value | image_style('optimized')) }}" muted loop webkit-playsinline playsinline></video>
+					<video class="lazyload" aria-hidden="true" data-src="{{ file_url(content.field_umdt_ct_hero_video[0]['#media'].field_media_video_file.entity.uri.value) }}" poster="{{ file_url(content.field_umdt_ct_hero_image[0]['#media'].field_media_image.entity.uri.value | image_style('optimized')) }}" autoplay muted loop webkit-playsinline playsinline></video>
 					<noscript>
-						<video aria-hidden="true" src="{{ file_url(content.field_umdt_ct_hero_video[0]['#media'].field_media_video_file.entity.uri.value) }}" poster="{{ file_url(content.field_umdt_ct_hero_image[0]['#media'].field_media_image.entity.uri.value | image_style('optimized')) }}" autoplay muted loop></video>
+						<video aria-hidden="true" src="{{ file_url(content.field_umdt_ct_hero_video[0]['#media'].field_media_video_file.entity.uri.value) }}" poster="{{ file_url(content.field_umdt_ct_hero_image[0]['#media'].field_media_image.entity.uri.value | image_style('optimized')) }}" autoplay muted loop webkit-playsinline playsinline></video>
 					</noscript>
 				{% elseif content.field_umdt_ct_hero_image|field_value %}
 					<img src="{{ file_url(content.field_umdt_ct_hero_image[0]['#media'].field_media_image.entity.uri.value | image_style('optimized')) }}" alt="{{ content.field_umdt_ct_hero_image[0]['#media'].field_media_image.alt }}"/>

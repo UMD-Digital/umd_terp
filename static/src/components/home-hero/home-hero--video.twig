@@ -3,9 +3,9 @@
     {% if video %}
       <div class="home-hero-media">
         {% if video.source == "local" %}
-            <video class="lazyload" aria-hidden="true" data-src="{{video.src|path}}" muted loop webkit-playsinline playsinline></video>
+            <video class="lazyload" aria-hidden="true" data-src="{{video.src|path}}" autoplay muted loop webkit-playsinline playsinline></video>
             <noscript>
-              <video aria-hidden="true" src="{{video.src|path}}" autoplay muted loop></video>
+              <video aria-hidden="true" src="{{video.src|path}}" autoplay muted loop webkit-playsinline playsinline></video>
             </noscript>
         {% else %}
             <div class="home-hero-media-embed" data-source="{{video.source}}" data-vid="{{video.video_id}}"></div>
