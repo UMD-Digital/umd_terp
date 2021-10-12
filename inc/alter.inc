@@ -23,7 +23,7 @@ function umd_terp_theme_suggestions_page_alter(array &$suggestions, array $varia
     if (in_array($content_type, ['webform', 'page'])) {
 
       $current_path = Drupal::service('path.current')->getPath();
-      $alias = Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+      $alias = Drupal::service('path_alias.manager')->getAliasByPath($current_path);
 
       if ($alias != '') {
 
@@ -61,7 +61,7 @@ function umd_terp_theme_suggestions_node_alter(array &$suggestions, array $varia
     }
     $content_type = $node->bundle();
     $current_path = Drupal::service('path.current')->getPath();
-    $alias = Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+    $alias = Drupal::service('path_alias.manager')->getAliasByPath($current_path);
 
     if ($alias != '') {
 

@@ -15,7 +15,7 @@ function umd_terp_preprocess_html(&$variables) {
   $variables['is_front_page'] = \Drupal::service('path.matcher')->isFrontPage();
   // Add body classes based on path.
   $variables['current_path'] = \Drupal::service('path.current')->getPath();
-  $variables['current_path_alias'] = ltrim(\Drupal::service('path.alias_manager')->getAliasByPath($variables['current_path']), '/');
+  $variables['current_path_alias'] = ltrim(\Drupal::service('path_alias.manager')->getAliasByPath($variables['current_path']), '/');
   $variables['attributes']['class'][] = 'path--' . Html::cleanCssIdentifier($variables['current_path_alias'], ['/' => '--']);
 
   if ($variables['is_front_page']) {
