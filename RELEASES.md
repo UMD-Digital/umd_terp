@@ -1,3 +1,7 @@
+8.1.105
+======
+- Fix text color and underline issues for buttons within accordions (https://bugify.idfive.com/issues/26998)
+
 8.1.104
 ======
 - D9 compatability issues (https://trello.com/c/GqPNgmEh/200-d09starter)

@@ -82,7 +82,7 @@
       line-height: (26 / 17);
       padding: $accordion__content-padding;
 
-      a {
+      a:not(.btn) {
         color: $dark-red;
 
         &:hover,
