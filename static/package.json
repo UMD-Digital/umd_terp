@@ -34,7 +34,7 @@
     "handlebars-loader": "^1.6.0",
     "html-loader": "^0.5.1",
     "mini-css-extract-plugin": "^0.4.4",
-    "node-sass": "^4.9.2",
+    "node-sass": "^7.0.0",
     "normalize-scss": "^7.0.1",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "postcss-focus-within": "^3.0.0",
