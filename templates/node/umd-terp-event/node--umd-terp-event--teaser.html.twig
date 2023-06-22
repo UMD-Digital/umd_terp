@@ -19,11 +19,11 @@
 				</h2>
 				<div class="feed-item-description">
 					<p>{{ content.body|render|striptags }}</p>
-          {% spaceless %}
+          {% apply spaceless %}
             <a href="{{ link }}" class="btn btn-primary">
               View Event Details<span class="sr-only"> for {{ node.title.value }}</span>
             </a>
-          {% endspaceless %}
+          {% endapply %}
 				</div>
 			</div>
 		</div>
