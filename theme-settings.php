@@ -34,12 +34,19 @@ function umd_terp_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#type' => 'textfield',
     '#title' => t('Path to custom footer logo'),
     '#default_value' => theme_get_setting('umd_terp_footer_logo_path'),
+    '#description' => t('IF AN INLINE SVG HAS BEEN ADDED BELOW, THIS WILL BE OVERRIDDEN.'),
   ];
   $form['umd_terp_footer_settings']['umd_terp_footer_logo_upload'] = [
     '#type' => 'managed_file',
     '#title' => t('Upload footer logo image'),
     '#upload_location' => 'public://',
     '#description' => t('Please upload the footer-specific logo. This should be a "dark" version of the logo that features black typography.'),
+  ];
+  $form['umd_terp_footer_settings']['umd_terp_footer_logo_svg'] = [
+    '#type' => 'textarea',
+    '#title' => t('Alternative SVG logo'),
+    '#default_value' => theme_get_setting('umd_terp_footer_logo_svg'),
+    '#description' => t('You may alternatively paste inline SVG code here. IF PRESENT, THIS WILL OVERRIDE ANY IMAGES ADDED ABOVE. It is important to be sure you have properly sized and formatted your SVG, as well as tested at multiple screen sizes.'),
   ];
   $form['umd_terp_footer_settings']['umd_terp_address'] = [
     '#type' => 'textfield',

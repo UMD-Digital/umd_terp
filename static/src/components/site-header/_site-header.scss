@@ -20,7 +20,6 @@
 .site-header__bar {
   align-items: center;
   display: flex;
-  justify-content: flex-start;
   min-height: rem(60);
   padding: rem(8) rem(16);
 
@@ -35,7 +34,7 @@
 
   a {
     color: $white;
-    transition: .25s color ease-in-out;
+    transition: 0.25s color ease-in-out;
 
     &:hover,
     &:focus {
@@ -58,6 +57,10 @@
   display: flex;
   height: rem(40);
   font-weight: bold;
+
+  @include media-breakpoint-down(767) {
+    max-width: 450px;
+  }
 
   @include media-breakpoint-up(1024) {
     height: rem(58);
@@ -112,7 +115,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  span[role="presentation"] {
+  span[role='presentation'] {
     background-color: $white;
     display: block;
     height: 2px;
@@ -123,14 +126,14 @@
 
     &:nth-child(1),
     &:nth-child(4) {
-      transition: .25s opacity ease-in-out;
+      transition: 0.25s opacity ease-in-out;
       transform: translate3d(-50%, 0, 0);
     }
 
     &:nth-child(2),
     &:nth-child(3) {
       top: 50%;
-      transition: .25s transform ease-in-out;
+      transition: 0.25s transform ease-in-out;
       transform: translate3d(-50%, -50%, 0);
     }
 
@@ -147,9 +150,8 @@
     }
   }
 
-  .site-header__nav-toggle[aria-expanded="true"] & {
-    span[role="presentation"] {
-
+  .site-header__nav-toggle[aria-expanded='true'] & {
+    span[role='presentation'] {
       &:nth-child(1),
       &:nth-child(4) {
         opacity: 0;
@@ -180,6 +182,8 @@
     opacity: 1;
     transform: none;
     visibility: visible;
+    // added width auto instead of removing width: 100%; above
+    width: auto;
   }
 
   a {
@@ -200,8 +204,7 @@
 
   .js & {
     &[aria-hidden] {
-      transition: 0.5s opacity ease-in-out,
-        0.5s transform ease-in-out,
+      transition: 0.5s opacity ease-in-out, 0.5s transform ease-in-out,
         0.5s visibility ease-in-out;
 
       @include media-breakpoint-up(1024) {
@@ -209,7 +212,7 @@
       }
     }
 
-    &[aria-hidden="false"] {
+    &[aria-hidden='false'] {
       opacity: 1;
       visibility: visible;
       transform: translate3d(0, 0, 0);
@@ -217,19 +220,20 @@
   }
 
   @include media-breakpoint-up(1024) {
-    align-self: stretch;
+    // align-self: stretch;
     display: flex;
-    flex-direction: column-reverse;
+    // flex-direction: column-reverse;
+    margin-left: auto;
   }
 
-  >ul {
+  > ul {
     @include media-breakpoint-up(1024) {
       display: flex;
       height: 100%;
       margin-left: auto;
     }
 
-    >li {
+    > li {
       display: flex;
       flex-wrap: wrap;
       font-size: rem(19);
@@ -239,7 +243,7 @@
         position: relative;
       }
 
-      >a {
+      > a {
         flex: 1 1 0px;
         line-height: (25 / 19);
         padding: rem(28) rem(18) rem(30);
@@ -288,6 +292,8 @@
           top: 100%;
           left: 0;
           width: auto;
+          overflow-y: scroll;
+          max-height: 75vh;
         }
 
         .js & {
@@ -298,15 +304,15 @@
 
         li {
           font-size: rem(17);
-          letter-spacing: rem(-.25);
+          letter-spacing: rem(-0.25);
         }
 
         a {
           background-color: $gray-900;
-          padding: rem(14) rem(50);
+          margin: rem(14) rem(50);
 
           @include media-breakpoint-up(1024) {
-            padding: rem(14) rem(16);
+            margin: rem(14) rem(16);
           }
 
           .site-header-light & {
@@ -315,6 +321,12 @@
         }
       }
     }
+  }
+}
+
+.site-header-light {
+  .site-header__nav>ul>li ul {
+    background-color: $gray-200;
   }
 }
 
@@ -339,7 +351,7 @@
   }
 
   &:after {
-    content: "";
+    content: '';
     border-right: 2px solid $white;
     border-bottom: 2px solid $white;
     display: block;
@@ -365,7 +377,7 @@
     }
   }
 
-  &[aria-expanded="true"] {
+  &[aria-expanded='true'] {
     &:after {
       transform: translate3d(-50%, -50%, 0) rotate(225deg);
     }

@@ -3,7 +3,7 @@
   the link text to allow spaceless to remove whitespace
   before and after the link text.
 #}
-{% spaceless %}
+{% apply spaceless %}
   <a href="{{ link['#url'] }}" class="{{ classes }}" target="{{ link['#options'].attributes.target|default('_self') }}">
     {% if title %}
       {{ title }}
@@ -11,4 +11,4 @@
       {{ link['#title'] }}
     {% endif %}
   </a>
-{% endspaceless %}
+{% endapply %}

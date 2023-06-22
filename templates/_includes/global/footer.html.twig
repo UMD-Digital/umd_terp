@@ -14,7 +14,11 @@
 			</nav>
 			<div class="site-footer-about">
 				<div class="site-footer-logo">
-					<img src="{{ footer_logo_path }}" alt="{{ site_name }} logo">
+					{% if umd_terp_footer_logo_svg %}
+						{{ umd_terp_footer_logo_svg|raw }}
+					{% else %}
+						<img src="{{ footer_logo_path }}" alt="{{ site_name }} footer logo">
+					{% endif %}
 				</div>
 				<div class="site-footer-address">
 					<strong>{{ site_name }}</strong><br>
@@ -29,7 +33,9 @@
 						{% endif %}
 					{% endif %}
 					{% if umd_terp_email %}
-						{% if umd_terp_phone %}<span aria-hidden="true">&nbsp;·&nbsp;</span>{% endif %}
+						{% if umd_terp_phone %}
+							<span aria-hidden="true">&nbsp;·&nbsp;</span>
+						{% endif %}
 						<a href="mailto:{{ umd_terp_email }}">{{ umd_terp_email }}</a>
 						{% if umd_terp_email_secondary %}
 							<span aria-hidden="true">&nbsp;/&nbsp;</span>

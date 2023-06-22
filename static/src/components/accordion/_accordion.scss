@@ -81,6 +81,15 @@
       font-size: rem(17);
       line-height: (26 / 17);
       padding: $accordion__content-padding;
+
+      a:not(.btn) {
+        color: $dark-red;
+
+        &:hover,
+        &:focus {
+          border-bottom-color: $dark-red;
+        }
+      }
     }
   }
 }

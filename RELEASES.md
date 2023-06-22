@@ -1,3 +1,35 @@
+8.1.105
+======
+- Fix text color and underline issues for buttons within accordions (https://bugify.idfive.com/issues/26998)
+
+8.1.104
+======
+- D9 compatability issues (https://trello.com/c/GqPNgmEh/200-d09starter)
+
+8.1.103
+======
+- D9 compatability updates
+- View edit for screen readers
+- Keyboard navigation changes
+- Accessibility edits
+
+8.1.102
+======
+- Recompile static assets
+
+
+8.1.101
+======
+- Title line length (https://trello.com/c/T7efOlKq/192-title-text-not-wrapping-to-2-lines-on-mobile)
+
+8.1.100
+======
+- Adjust mobile subnav to only show children nodes, and be hidden if none present (https://trello.com/c/HNTI4Kzc/193-hide-sidebar-if-parent-page-has-no-child-pages-mobile)
+
+8.1.99
+======
+- Add inline svg option to footer logo (https://trello.com/c/G3iamll4/189-footer-logo-image-need-svg-option)
+
 8.1.98
 ======
 - Updating libraries.yml to set index.css's media to screen to prevent screen-specific styles from carrying over to print
