@@ -1,3 +1,7 @@
+8.1.106
+======
+- Updated for D10 compatibility
+
 8.1.105
 ======
 - Fix text color and underline issues for buttons within accordions (https://bugify.idfive.com/issues/26998)
