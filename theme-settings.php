@@ -200,6 +200,7 @@ function umd_terp_form_system_theme_settings_validate_test($form, FormStateInter
  */
 function umd_terp_form_system_theme_settings_submit(&$form, FormStateInterface $form_state) {
   $values = $form_state->getValues();
+  $filename = '';
   if (!empty($values['umd_terp_footer_logo_upload'])) {
     $file = File::load($values['umd_terp_footer_logo_upload'][0]);
     if (!empty($file)) {

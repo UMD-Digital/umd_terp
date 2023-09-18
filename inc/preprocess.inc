@@ -7,6 +7,7 @@
 
 use Drupal\Component\Utility\Html;
 use Drupal\image\Entity\ImageStyle;
+use Drupal\node\Entity\Node;
 
 /**
  * Implements hook_preprocess_HOOK() for HTML document templates.
@@ -31,6 +32,7 @@ function umd_terp_preprocess_html(&$variables) {
  */
 function umd_terp_preprocess_page(&$variables) {
   $variables['hero_image'] = '';
+  $variables['hero_alt'] = '';
   $variables['hero_title'] = $variables['page']['#title'];
 
   // Make any custom theme settings available in the page tpl.
