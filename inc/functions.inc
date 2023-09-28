@@ -57,7 +57,7 @@ function _umd_terp_get_node_by_route() {
       break;
 
     case 'entity.node.revision':
-      $revision_id = \Drupal::routeMatch()->getParameter('node_revision');
+      $revision_id = \Drupal::routeMatch()->getRawParameter('node_revision');
       $node = \Drupal::entityTypeManager()->getStorage('node')->loadRevision($revision_id);
       break;
 
